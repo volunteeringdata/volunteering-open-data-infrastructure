@@ -3,5 +3,5 @@ namespace DoIt.Models;
 public class Date
 {
     [JsonPropertyName("$date")]
-    public DateTimeOffset Value { get; set; }
+    public required DateTimeOffset Value { get; set; }
 }

@@ -6,13 +6,13 @@ public class ActivityDefinitionSubDocument
     public string Id => IdObject.Value;
 
     [JsonIgnore]
-    public DateTimeOffset CreatedAt => CreatedAtDate.Value;
+    public DateTimeOffset CreatedAt => CreatedAtObject.Value;
 
     [JsonIgnore]
-    public DateTimeOffset UpdatedAt => UpdatedAtDate.Value;
+    public DateTimeOffset UpdatedAt => UpdatedAtObject.Value;
 
     [JsonPropertyName("_id")]
-    public Id IdObject { get; set; }
+    public required Id IdObject { get; set; }
 
     [JsonPropertyName("title")]
     public string Title { get; set; }
@@ -42,8 +42,8 @@ public class ActivityDefinitionSubDocument
     public AppSummary AppSummary { get; set; }
 
     [JsonPropertyName("createdAt")]
-    public Date CreatedAtDate { get; set; }
+    public Date CreatedAtObject { get; set; }
 
     [JsonPropertyName("updatedAt")]
-    public Date UpdatedAtDate { get; set; }
+    public Date UpdatedAtObject { get; set; }
 }

@@ -6,10 +6,10 @@ public class OptionItem
     public string Id => IdObject.Value;
 
     [JsonIgnore]
-    public DateTimeOffset CreatedAt => CreatedAtDate.Value;
+    public DateTimeOffset CreatedAt => CreatedAtObject.Value;
 
     [JsonIgnore]
-    public DateTimeOffset UpdatedAt => UpdatedAtDate.Value;
+    public DateTimeOffset UpdatedAt => UpdatedAtObject.Value;
 
     [JsonPropertyName("displayName")]
     public string DisplayName { get; set; }
@@ -21,11 +21,11 @@ public class OptionItem
     public Id App { get; set; }
 
     [JsonPropertyName("_id")]
-    public Id IdObject { get; set; }
+    public required Id IdObject { get; set; }
 
     [JsonPropertyName("createdAt")]
-    public Date CreatedAtDate { get; set; }
+    public required Date CreatedAtObject { get; set; }
 
     [JsonPropertyName("updatedAt")]
-    public Date UpdatedAtDate { get; set; }
+    public required Date UpdatedAtObject { get; set; }
 }

@@ -6,13 +6,13 @@ public class Activity
     public string Id => IdObject.Value;
 
     [JsonIgnore]
-    public DateTimeOffset CreatedAt => CreatedAtDate.Value;
+    public DateTimeOffset CreatedAt => CreatedAtObject.Value;
 
     [JsonIgnore]
-    public DateTimeOffset UpdatedAt => UpdatedAtDate.Value;
+    public DateTimeOffset UpdatedAt => UpdatedAtObject.Value;
 
     [JsonPropertyName("_id")]
-    public Id IdObject { get; set; }
+    public required Id IdObject { get; set; }
 
     [JsonPropertyName("volunteerNumber")]
     public int? VolunteerNumber { get; set; }
@@ -27,19 +27,19 @@ public class Activity
     public string? MeetingLink { get; set; }
 
     [JsonPropertyName("externalApplyLink")]
-    public string ExternalApplyLink { get; set; }
+    public required Uri ExternalApplyLink { get; set; }
 
     [JsonPropertyName("externalId")]
-    public string ExternalId { get; set; }
+    public string? ExternalId { get; set; }
 
     [JsonPropertyName("externalProvider")]
-    public string ExternalProvider { get; set; }
+    public string? ExternalProvider { get; set; }
 
     [JsonPropertyName("address")]
-    public Address Address { get; set; }
+    public required Address Address { get; set; }
 
     [JsonPropertyName("activityDefinitionSubDocument")]
-    public ActivityDefinitionSubDocument ActivityDefinitionSubDocument { get; set; }
+    public required ActivityDefinitionSubDocument ActivityDefinitionSubDocument { get; set; }
 
     [JsonPropertyName("bookingsNumber")]
     public int? BookingsNumber { get; set; }
@@ -51,10 +51,10 @@ public class Activity
     public int? TeamsNumber { get; set; }
 
     [JsonPropertyName("createdAt")]
-    public Date CreatedAtDate { get; set; }
+    public required Date CreatedAtObject { get; set; }
 
     [JsonPropertyName("updatedAt")]
-    public Date UpdatedAtDate { get; set; }
+    public required Date UpdatedAtObject { get; set; }
 
     [JsonPropertyName("deleted")]
     public bool? Deleted { get; set; }
