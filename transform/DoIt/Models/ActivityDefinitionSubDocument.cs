@@ -2,6 +2,8 @@ namespace DoIt.Models;
 
 public class ActivityDefinitionSubDocument
 {
+    #region Calculated convenience properties
+
     [JsonIgnore]
     public string Id => IdObject.Value;
 
@@ -11,8 +13,17 @@ public class ActivityDefinitionSubDocument
     [JsonIgnore]
     public DateTimeOffset UpdatedAt => UpdatedAtObject.Value;
 
+    #endregion
+
     [JsonPropertyName("_id")]
     public required Id IdObject { get; set; }
+
+    // activitiesSummary (all empty arrays)
+
+    // app (redundant with appSummary)
+
+    [JsonPropertyName("appSummary")]
+    public required AppSummary AppSummary { get; set; }
 
     [JsonPropertyName("title")]
     public string Title { get; set; }
@@ -37,9 +48,6 @@ public class ActivityDefinitionSubDocument
 
     [JsonPropertyName("organizationSubDocument")]
     public OrganizationSummary OrganizationSubDocument { get; set; }
-
-    [JsonPropertyName("appSummary")]
-    public AppSummary AppSummary { get; set; }
 
     [JsonPropertyName("createdAt")]
     public Date CreatedAtObject { get; set; }

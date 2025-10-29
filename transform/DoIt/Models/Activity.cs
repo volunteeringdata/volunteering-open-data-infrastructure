@@ -8,9 +8,6 @@ public class Activity
     public string Id => IdObject.Value;
 
     [JsonIgnore]
-    public string App => AppObject.Value;
-
-    [JsonIgnore]
     public DateTimeOffset CreatedAt => CreatedAtObject.Value;
 
     [JsonIgnore]
@@ -55,8 +52,7 @@ public class Activity
     [JsonPropertyName("address")]
     public Address? Address { get; set; }
 
-    [JsonPropertyName("app")]
-    public required Id AppObject { get; set; }
+    // app (redundant with appSummary.id)
 
     // All zeros except 1*1+1*2
     [JsonPropertyName("attendeesNumber")]
