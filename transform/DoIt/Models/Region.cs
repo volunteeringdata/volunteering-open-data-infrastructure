@@ -1,35 +1,19 @@
 namespace DoIt.Models;
 
-public class Region
+public class Region : Identified
 {
-    [JsonIgnore]
-    public string Id => IdObject.Value;
+    [JsonPropertyName("displayName")] public required string DisplayName { get; set; }
 
-    [JsonIgnore]
-    public DateTimeOffset CreatedAt => CreatedAtObject.Value;
-
-    [JsonIgnore]
-    public DateTimeOffset UpdatedAt => UpdatedAtObject.Value;
-
-    [JsonPropertyName("displayName")]
-    public required string DisplayName { get; set; }
-
-    [JsonPropertyName("relatedTo")]
-    public string? RelatedTo { get; set; }
+    [JsonPropertyName("relatedTo")] public string? RelatedTo { get; set; }
 
     // TODO: Enum?
-    [JsonPropertyName("type")]
-    public required string Type { get; set; }
+    [JsonPropertyName("type")] public required string Type { get; set; }
 
-    [JsonPropertyName("geocenterLocation")]
-    public required LonLat GeocenterLocation { get; set; }
+    [JsonPropertyName("geocenterLocation")] public required LonLat GeocenterLocation { get; set; }
 
-    [JsonPropertyName("_id")]
-    public required Id IdObject { get; set; }
+    [JsonPropertyName("createdAt")] public required Date CreatedAtObject { get; set; }
+    [JsonIgnore] public DateTimeOffset CreatedAt => CreatedAtObject.Value;
 
-    [JsonPropertyName("createdAt")]
-    public required Date CreatedAtObject { get; set; }
-
-    [JsonPropertyName("updatedAt")]
-    public required Date UpdatedAtObject { get; set; }
+    [JsonPropertyName("updatedAt")] public required Date UpdatedAtObject { get; set; }
+    [JsonIgnore] public DateTimeOffset UpdatedAt => UpdatedAtObject.Value;
 }

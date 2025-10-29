@@ -1,28 +1,14 @@
 namespace DoIt.Models;
 
-public class Address
+public class Address : Identified
 {
-    [JsonIgnore]
-    public string Id => IdObject.Value;
+    [JsonPropertyName("street")] public string Street { get; set; }
 
-    [JsonIgnore]
-    public DateTimeOffset CreatedAt => CreatedAtObject.Value;
+    [JsonPropertyName("location")] public Point Location { get; set; }
 
-    [JsonIgnore]
-    public DateTimeOffset UpdatedAt => UpdatedAtObject.Value;
+    [JsonPropertyName("createdAt")] public required Date CreatedAtObject { get; set; }
+    [JsonIgnore] public DateTimeOffset CreatedAt => CreatedAtObject.Value;
 
-    [JsonPropertyName("street")]
-    public string Street { get; set; }
-
-    [JsonPropertyName("location")]
-    public Point Location { get; set; }
-
-    [JsonPropertyName("_id")]
-    public required Id IdObject { get; set; }
-
-    [JsonPropertyName("createdAt")]
-    public required Date CreatedAtObject { get; set; }
-
-    [JsonPropertyName("updatedAt")]
-    public required Date UpdatedAtObject { get; set; }
+    [JsonPropertyName("updatedAt")] public required Date UpdatedAtObject { get; set; }
+    [JsonIgnore] public DateTimeOffset UpdatedAt => UpdatedAtObject.Value;
 }

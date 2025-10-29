@@ -1,6 +1,6 @@
 namespace DoIt.Models;
 
-public class OrganizationSubdocument : Identified
+public class OrganizationSubDocument : Identified
 {
     [JsonPropertyName("logo")] public Uri? Logo { get; set; }
 

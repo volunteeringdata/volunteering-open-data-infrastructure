@@ -1,31 +1,16 @@
 namespace DoIt.Models;
 
-public class OptionItem
+public class OptionItem : Identified
 {
-    [JsonIgnore]
-    public string Id => IdObject.Value;
+    [JsonPropertyName("displayName")] public string DisplayName { get; set; }
 
-    [JsonIgnore]
-    public DateTimeOffset CreatedAt => CreatedAtObject.Value;
+    [JsonPropertyName("icon")] public string Icon { get; set; }
 
-    [JsonIgnore]
-    public DateTimeOffset UpdatedAt => UpdatedAtObject.Value;
+    [JsonPropertyName("app")] public Id App { get; set; }
 
-    [JsonPropertyName("displayName")]
-    public string DisplayName { get; set; }
+    [JsonPropertyName("createdAt")] public required Date CreatedAtObject { get; set; }
+    [JsonIgnore] public DateTimeOffset CreatedAt => CreatedAtObject.Value;
 
-    [JsonPropertyName("icon")]
-    public string Icon { get; set; }
-
-    [JsonPropertyName("app")]
-    public Id App { get; set; }
-
-    [JsonPropertyName("_id")]
-    public required Id IdObject { get; set; }
-
-    [JsonPropertyName("createdAt")]
-    public required Date CreatedAtObject { get; set; }
-
-    [JsonPropertyName("updatedAt")]
-    public required Date UpdatedAtObject { get; set; }
+    [JsonPropertyName("updatedAt")] public required Date UpdatedAtObject { get; set; }
+    [JsonIgnore] public DateTimeOffset UpdatedAt => UpdatedAtObject.Value;
 }

@@ -2,6 +2,6 @@ namespace DoIt.Models;
 
 public class Point
 {
-    [JsonPropertyName("coordinates")]
-    public required double[] Coordinates { get; set; }
+    // TOTO: Harmonize with Loction
+    [JsonPropertyName("coordinates")] public required double[] Coordinates { get; set; }
 }

@@ -1,20 +1,8 @@
 ﻿namespace DoIt.Models;
 
-public class EcosystemSummary
+public class EcosystemSummary : Identified
 {
-    #region Calculated convenience properties
+    [JsonPropertyName("logo")] public required Uri Logo { get; set; }
 
-    [JsonIgnore]
-    public string Id => IdObject.Value;
-
-    #endregion
-
-    [JsonPropertyName("_id")]
-    public required Id IdObject { get; set; }
-
-    [JsonPropertyName("logo")]
-    public required Uri Logo { get; set; }
-
-    [JsonPropertyName("name")]
-    public required string Name { get; set; }
+    [JsonPropertyName("name")] public required string Name { get; set; }
 }
