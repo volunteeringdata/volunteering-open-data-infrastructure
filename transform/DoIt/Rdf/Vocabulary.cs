@@ -7,25 +7,33 @@ internal class Vocabulary
 
     private static readonly NodeFactory Factory = new();
 
-    internal static IUriNode AttendeesNumber { get; } = Node("attendeesNumber");
-    internal static IUriNode BookingsNumber { get; } = Node("bookingsNumber");
-    internal static IUriNode Deleted { get; } = Node("deleted");
-    internal static IUriNode DueDate { get; } = Node("dueDate");
-    internal static IUriNode Ecosystem { get; } = Node("ecosystem");
-    internal static IUriNode EndDate { get; } = Node("endDate");
-    internal static IUriNode ExternalApplyLink { get; } = Node("externalApplyLink");
-    internal static IUriNode IsOnline { get; } = Node("isOnline");
-    internal static IUriNode IsVolunteerNumberLimited { get; } = Node("isVolunteerNumberLimited");
-    internal static IUriNode MeetingLink { get; } = Node("meetingLink");
-    internal static IUriNode Organization { get; } = Node("organization");
-    internal static IUriNode PublishedApps { get; } = Node("publishedApps");
-    internal static IUriNode StartDate { get; } = Node("startDate");
-    internal static IUriNode VolunteerNumber { get; } = Node("volunteerNumber");
-    internal static IUriNode Title { get; } = Node("title");
-    internal static IUriNode Description { get; } = Node("description");
-    internal static IUriNode Type { get; } = Node("type");
-    internal static IUriNode EventType { get; } = Node("eventType");
-    internal static IUriNode LocationOption { get; } = Node("locationOption");
+    internal static IUriNode ActivityApp { get; } = Node("activityApp");
+    internal static IUriNode ActivityAttendees { get; } = Node("activityAttendees");
+    internal static IUriNode ActivityBookings { get; } = Node("activityBookings");
+    internal static IUriNode ActivityDeleted { get; } = Node("activityDeleted");
+    internal static IUriNode ActivityDue { get; } = Node("activityDue");
+    internal static IUriNode ActivityEcosystem { get; } = Node("activityEcosystem");
+    internal static IUriNode ActivityEnd { get; } = Node("activityEnd");
+    internal static IUriNode ActivityExternalApplyLink { get; } = Node("activityExternalApplyLink");
+    internal static IUriNode ActivityIsOnline { get; } = Node("activityIsOnline");
+    internal static IUriNode ActivityIsVolunteerNumberLimited { get; } = Node("activityIsVolunteerNumberLimited");
+    internal static IUriNode ActivityMeeting { get; } = Node("activityMeeting");
+    internal static IUriNode ActivityOrganization { get; } = Node("activityOrganization");
+    internal static IUriNode ActivityPublishedApps { get; } = Node("activityPublishedApps");
+    internal static IUriNode ActivityStart { get; } = Node("activityStart");
+    internal static IUriNode ActivityVolunteers { get; } = Node("activityVolunteers");
+    internal static IUriNode ActivityTitle { get; } = Node("activityTitle");
+    internal static IUriNode ActivityDescription { get; } = Node("activityDescription");
+    internal static IUriNode ActivityType { get; } = Node("activityType");
+    internal static IUriNode ActivityEventType { get; } = Node("activityEventType");
+    internal static IUriNode ActivityLocationOption { get; } = Node("activityLocationOption");
+
+    internal static IUriNode AppBrandColor { get; } = Node("appBrandColor");
+    internal static IUriNode AppEcosystem { get; } = Node("appEcosystem");
+    internal static IUriNode AppDescription { get; } = Node("appDescription");
+    internal static IUriNode AppLogo { get; } = Node("appLogo");
+    internal static IUriNode AppName { get; } = Node("appName");
+    internal static IUriNode AppOrganization { get; } = Node("appOrganization");
 
     private static IUriNode Node(string name) => AnyNode($"{VocabularyBaseUri}{name}");
 

@@ -13,8 +13,14 @@ var targetGraph = new Graph();
 foreach (var sourceActivity in activities!)
 {
     var targetActivity = Activity.Create(sourceActivity.Id.Value, targetGraph);
-
-    // ActivityDefinitionSubDocument.AppSummary
+    Console.WriteLine(sourceActivity.Id.Value);
+    targetActivity.App = App.Create(sourceActivity.ActivityDefinitionSubDocument.App.Id.Value, targetGraph);
+    targetActivity.App.BrandColor = sourceActivity.ActivityDefinitionSubDocument.App.BrandColor;
+    targetActivity.App.Description = sourceActivity.ActivityDefinitionSubDocument.App.Description;
+    targetActivity.App.Ecosystem = Ecosystem.Create(sourceActivity.ActivityDefinitionSubDocument.App.Ecosystem.Id.Value, targetGraph);
+    targetActivity.App.Logo = sourceActivity.ActivityDefinitionSubDocument.App.Logo;
+    targetActivity.App.Name = sourceActivity.ActivityDefinitionSubDocument.App.Name;
+    targetActivity.App.Organization = Organization.Create(sourceActivity.ActivityDefinitionSubDocument.App.Organization.Id.Value, targetGraph);
     // ActivityDefinitionSubDocument.MeasurementUnit
     targetActivity.Title = sourceActivity.ActivityDefinitionSubDocument.Title;
     targetActivity.Description = sourceActivity.ActivityDefinitionSubDocument.Description;
@@ -25,12 +31,12 @@ foreach (var sourceActivity in activities!)
     targetActivity.LocationOption = sourceActivity.ActivityDefinitionSubDocument.LocationOption;
     // ActivityDefinitionSubDocument.Organization
     // Address
-    targetActivity.AttendeesNumber = sourceActivity.AttendeesNumber;
-    targetActivity.BookingsNumber = sourceActivity.BookingsNumber;
+    targetActivity.Attendees = sourceActivity.AttendeesNumber;
+    targetActivity.Bookings = sourceActivity.BookingsNumber;
     targetActivity.Deleted = sourceActivity.Deleted;
-    targetActivity.DueDate = sourceActivity.DueDate?.Value;
+    targetActivity.Due = sourceActivity.DueDate?.Value;
     targetActivity.Ecosystem = Ecosystem.Create(sourceActivity.Ecosystem.Value, targetGraph);
-    targetActivity.EndDate = sourceActivity.DueDate?.Value;
+    targetActivity.End = sourceActivity.DueDate?.Value;
     targetActivity.ExternalApplyLink = sourceActivity.ExternalApplyLink;
     targetActivity.IsOnline = sourceActivity.IsOnline;
     targetActivity.IsVolunteerNumberLimited = sourceActivity.IsVolunteerNumberLimited;
@@ -38,8 +44,8 @@ foreach (var sourceActivity in activities!)
     targetActivity.Organization = Organization.Create(sourceActivity.Organization.Value, targetGraph);
     targetActivity.PublishedApps.UnionWith(sourceActivity.PublishedApp.Select(a => new Uri(Vocabulary.InstanceBaseUri, a.Value)));
     // Regions
-    targetActivity.StartDate = sourceActivity.StartDate?.Value;
-    targetActivity.VolunteerNumber = sourceActivity.VolunteerNumber;
+    targetActivity.Start = sourceActivity.StartDate?.Value;
+    targetActivity.Volunteers = sourceActivity.VolunteerNumber;
 
 }
 

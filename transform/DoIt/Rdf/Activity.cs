@@ -12,41 +12,47 @@ public class Activity : GraphWrapperNode
 
     internal static Activity Create(string uri, IGraph g) => Wrap(g.CreateUriNode(g.UriFactory.Create(Vocabulary.InstanceBaseUri, uri)), g);
 
-    internal int AttendeesNumber { set => this.Overwrite(Vocabulary.AttendeesNumber, value); }
+    internal int Attendees { set => this.Overwrite(Vocabulary.ActivityAttendees, value); }
 
-    internal int BookingsNumber { set => this.Overwrite(Vocabulary.BookingsNumber, value); }
+    internal int Bookings { set => this.Overwrite(Vocabulary.ActivityBookings, value); }
 
-    internal bool Deleted { set => this.Overwrite(Vocabulary.Deleted, value); }
+    internal bool Deleted { set => this.Overwrite(Vocabulary.ActivityDeleted, value); }
 
-    internal DateTimeOffset? DueDate { set => this.OverwriteNullable(Vocabulary.DueDate, value); }
+    internal DateTimeOffset? Due { set => this.OverwriteNullable(Vocabulary.ActivityDue, value); }
 
-    internal Ecosystem Ecosystem { set => this.Overwrite(Vocabulary.Ecosystem, value, Ecosystem.Wrap); }
+    internal Ecosystem Ecosystem { set => this.Overwrite(Vocabulary.ActivityEcosystem, value, Ecosystem.Wrap); }
 
-    internal DateTimeOffset? EndDate { set => this.OverwriteNullable(Vocabulary.EndDate, value); }
+    internal DateTimeOffset? End { set => this.OverwriteNullable(Vocabulary.ActivityEnd, value); }
 
-    internal Uri? ExternalApplyLink { set => this.OverwriteNullable(Vocabulary.ExternalApplyLink, value); }
+    internal Uri? ExternalApplyLink { set => this.OverwriteNullable(Vocabulary.ActivityExternalApplyLink, value); }
 
-    internal bool? IsOnline { set => this.OverwriteNullable(Vocabulary.IsOnline, value); }
+    internal bool? IsOnline { set => this.OverwriteNullable(Vocabulary.ActivityIsOnline, value); }
 
-    internal bool? IsVolunteerNumberLimited { set => this.OverwriteNullable(Vocabulary.IsVolunteerNumberLimited, value); }
+    internal bool? IsVolunteerNumberLimited { set => this.OverwriteNullable(Vocabulary.ActivityIsVolunteerNumberLimited, value); }
 
-    internal Uri? MeetingLink { set => this.OverwriteNullable(Vocabulary.MeetingLink, value); }
+    internal Uri? MeetingLink { set => this.OverwriteNullable(Vocabulary.ActivityMeeting, value); }
 
-    internal Organization Organization { set => this.Overwrite(Vocabulary.Organization, value, Organization.Wrap); }
+    internal Organization Organization { set => this.Overwrite(Vocabulary.ActivityOrganization, value, Organization.Wrap); }
 
-    internal ISet<Uri> PublishedApps { get => this.Objects(Vocabulary.PublishedApps, NodeMappings.From, ValueMappings.As<Uri>); }
+    internal ISet<Uri> PublishedApps { get => this.Objects(Vocabulary.ActivityPublishedApps, NodeMappings.From, ValueMappings.As<Uri>); }
 
-    internal DateTimeOffset? StartDate { set => this.OverwriteNullable(Vocabulary.StartDate, value); }
+    internal DateTimeOffset? Start
+    { set => this.OverwriteNullable(Vocabulary.ActivityStart, value); }
 
-    internal int? VolunteerNumber { set => this.OverwriteNullable(Vocabulary.VolunteerNumber, value); }
+    internal int? Volunteers { set => this.OverwriteNullable(Vocabulary.ActivityVolunteers, value); }
 
-    internal string Title { set => this.Overwrite(Vocabulary.Title, value); }
+    internal string Title { set => this.Overwrite(Vocabulary.ActivityTitle, value); }
 
-    internal string Description { set => this.Overwrite(Vocabulary.Description, value); }
+    internal string Description { set => this.Overwrite(Vocabulary.ActivityDescription, value); }
 
-    internal string Type { set => this.Overwrite(Vocabulary.Type, value); }
+    internal string Type { set => this.Overwrite(Vocabulary.ActivityType, value); }
 
-    internal string? EventType { set => this.OverwriteNullable(Vocabulary.EventType, value); }
+    internal string? EventType { set => this.OverwriteNullable(Vocabulary.ActivityEventType, value); }
 
-    internal string LocationOption { set => this.Overwrite(Vocabulary.LocationOption, value); }
+    internal string LocationOption { set => this.Overwrite(Vocabulary.ActivityLocationOption, value); }
+
+    internal App App { 
+        get => this.Singular(Vocabulary.ActivityApp, App.Wrap); 
+        set => this.Overwrite(Vocabulary.ActivityApp, value, App.Wrap); 
+    }
 }

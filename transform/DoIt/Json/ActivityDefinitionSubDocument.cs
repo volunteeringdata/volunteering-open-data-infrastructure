@@ -6,7 +6,7 @@ public class ActivityDefinitionSubDocument : Identified
 
     // app (redundant with appSummary)
 
-    [JsonPropertyName("appSummary")] public required App AppSummary { get; set; }
+    [JsonPropertyName("appSummary")] public required App App { get; set; }
 
     [JsonPropertyName("measurementUnitSummary")] public required MeasurementUnit MeasurementUnit { get; set; }
 

@@ -3,7 +3,7 @@ namespace DoIt.Json;
 public class App : Identified
 {
     // TODO: Color
-    [JsonPropertyName("brandColor")] public required string BrandColor { get; set; }
+    [JsonPropertyName("brandColor")] public string? BrandColor { get; set; }
 
     [JsonPropertyName("description")] public required string Description { get; set; }
 
