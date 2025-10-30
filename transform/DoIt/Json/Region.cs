@@ -10,8 +10,4 @@ public class Region : Identified
     [JsonPropertyName("type")] public required string Type { get; set; }
 
     [JsonPropertyName("geocenterLocation")] public required LonLat GeocenterLocation { get; set; }
-
-    [JsonPropertyName("createdAt")] public required Date CreatedAt { get; set; }
-
-    [JsonPropertyName("updatedAt")] public required Date UpdatedAt { get; set; }
 }

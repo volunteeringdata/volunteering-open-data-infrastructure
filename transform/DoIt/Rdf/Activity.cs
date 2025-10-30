@@ -16,8 +16,6 @@ public class Activity : GraphWrapperNode
 
     internal int BookingsNumber { set => this.Overwrite(Vocabulary.BookingsNumber, value); }
 
-    internal DateTimeOffset CreatedAt { set => this.Overwrite(Vocabulary.CreatedAt, value); }
-
     internal bool Deleted { set => this.Overwrite(Vocabulary.Deleted, value); }
 
     internal DateTimeOffset? DueDate { set => this.OverwriteNullable(Vocabulary.DueDate, value); }
@@ -39,8 +37,6 @@ public class Activity : GraphWrapperNode
     internal ISet<Uri> PublishedApps { get => this.Objects(Vocabulary.PublishedApps, NodeMappings.From, ValueMappings.As<Uri>); }
 
     internal DateTimeOffset? StartDate { set => this.OverwriteNullable(Vocabulary.StartDate, value); }
-
-    internal DateTimeOffset UpdatedAt { set => this.Overwrite(Vocabulary.UpdatedAt, value); }
 
     internal int? VolunteerNumber { set => this.OverwriteNullable(Vocabulary.VolunteerNumber, value); }
 

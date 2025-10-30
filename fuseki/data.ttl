@@ -6,7 +6,6 @@
 
 id:640f31a8a02daffd7c36acfd :attendeesNumber 0 ;
                             :bookingsNumber 27 ;
-                            :createdAt "2023-03-13T14:22:32.240000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description "We would love to spread the word about our services here at Thames Hospice, please watch the video found on our Youtube Channel here: https://youtu.be/PUB81QhOB9o and then let your friends and family know what we do to support patients and their families facing life limiting illnesses.  ";
                             :ecosystem id:64093b512eed5dcadba5088b;
@@ -15,11 +14,9 @@ id:640f31a8a02daffd7c36acfd :attendeesNumber 0 ;
                             :organization id:640f137a021e733fcd018f83;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Find out about hospice and palliative care at Thames Hospice";
-                            :type "Action";
-                            :updatedAt "2025-10-17T14:17:27.480000+00:00"^^xsd:dateTime.
+                            :type "Action".
 id:640f8c15628b687cc5df5861 :attendeesNumber 0 ;
                             :bookingsNumber 16 ;
-                            :createdAt "2023-03-13T20:48:21.362000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """WILDLIFE FRIENDLY WERRINGTON: Recording the Flora for Werrington
 We aim to record the plant species that grow wild in Werrington. We want everyone to help us record the plant species in each if the nine 1km squares that Werrington covers
@@ -42,11 +39,9 @@ This will add knowledge to national databases. The information you record will b
                             :organization id:640f8491628b687cc5df579a;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Let's Record Werrington's Wildlife (Peterborough)";
-                            :type "Action";
-                            :updatedAt "2025-10-18T09:22:10.082000+00:00"^^xsd:dateTime.
+                            :type "Action".
 id:640f950b86d09cd3570ae32d :attendeesNumber 0 ;
                             :bookingsNumber 86 ;
-                            :createdAt "2023-03-13T21:26:35.214000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Getting out and about as a new parent can be a huge challenge and many new parents worry about what people might say if their baby starts crying in a public place or they need to feed their baby. 
 
@@ -59,11 +54,9 @@ Find more info about how we support parents on our website - www.nct.org.uk or g
                             :organization id:640f82aa999365a43398c57b;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Show your support for a parent with a smile";
-                            :type "Action";
-                            :updatedAt "2025-10-19T22:40:48.019000+00:00"^^xsd:dateTime.
+                            :type "Action".
 id:6410357ed9c4923908ef3e28 :attendeesNumber 0 ;
                             :bookingsNumber 30 ;
-                            :createdAt "2023-03-14T08:51:10.169000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description "Café Volunteers make up the team that run our cafes. With the support of our trained chefs, you will cook nutritious and affordable meals, serve them up in a cafe, open to everyone and show what can be done with surplus food. ";
                             :ecosystem id:64093b512eed5dcadba5088b;
@@ -72,11 +65,9 @@ id:6410357ed9c4923908ef3e28 :attendeesNumber 0 ;
                             :organization id:641035243a461379c458a2d2;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Cafe Volunteering";
-                            :type "Action";
-                            :updatedAt "2025-10-21T12:24:44.367000+00:00"^^xsd:dateTime.
+                            :type "Action".
 id:641accae9f6c9513b07735a4 :attendeesNumber 2 ;
                             :bookingsNumber 24 ;
-                            :createdAt "2023-03-22T09:38:54.275000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Participate in cutting edge, academic research. Just 5 mins walk from Baker Street Station, London. You could be asked to ride a static bike, consume a food or drink item or simply share your thoughts on a topic. 
 
@@ -102,11 +93,9 @@ Email: lab@london.edu
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :startDate "2023-03-21T00:00:00.000000+00:00"^^xsd:dateTime;
                             :title "London Business School Research Lab - Earn £10 taking part in behavioural research";
-                            :type "Event";
-                            :updatedAt "2025-10-21T13:39:46.072000+00:00"^^xsd:dateTime.
+                            :type "Event".
 id:644f21eff6fb9b945a4e0154 :attendeesNumber 0 ;
                             :bookingsNumber 3 ;
-                            :createdAt "2023-05-01T02:20:31.102000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Do you want to be inspired by the impact of education?
 
@@ -141,11 +130,9 @@ Volunteering as a school governor is a challenging but rewarding role. As part o
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "School Governor - Bromley";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-18T13:05:53.065000+00:00"^^xsd:dateTime;
                             :volunteerNumber -1 .
 id:644f291b494c8ad3e5fff5f6 :attendeesNumber 0 ;
                             :bookingsNumber 1 ;
-                            :createdAt "2023-05-01T02:51:07.848000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Volunteer with us at Shaw Trust Enterprises and help people in  your community grow. 
 
@@ -176,11 +163,9 @@ To help individuals to maintain written records relating to the tasks they compl
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Growing Places Mentor";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-18T12:48:36.646000+00:00"^^xsd:dateTime;
                             :volunteerNumber -1 .
 id:644fbf84449fb9795b2fc297 :attendeesNumber 0 ;
                             :bookingsNumber 5 ;
-                            :createdAt "2023-05-01T13:32:52.533000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Are you a friendly, reliable, community-focused person, with previous experience working or volunteering with children?
 
@@ -211,11 +196,9 @@ Suggested commitment of 8-12 hours per month - full training and support will be
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Children's Activity Volunteer (ARLTA)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T09:08:14.569000+00:00"^^xsd:dateTime;
                             :volunteerNumber -1 .
 id:644fc343a3c53c19c9b74e57 :attendeesNumber 0 ;
                             :bookingsNumber 1 ;
-                            :createdAt "2023-05-01T13:48:51.137000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Volunteer as a Growing Places Mentor and help people in your community grow.
 
@@ -232,11 +215,9 @@ and/or
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Growing Places Mentor";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-18T13:10:21.389000+00:00"^^xsd:dateTime;
                             :volunteerNumber -1 .
 id:644fca18a3c53c19c9b76481 :attendeesNumber 0 ;
                             :bookingsNumber 1 ;
-                            :createdAt "2023-05-01T14:18:00.258000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Do you have great social and inter-personal skills? Are you a good motivator and can engage with a range of service users? Then please read on! If you enjoy being outdoors and exploring new areas whilst walking, this is the perfect volunteering opportunity for you!
 
@@ -259,11 +240,9 @@ Location: Tower Hamlets
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Walking Group Volunteer - Tower Hamlets";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-19T23:59:46.908000+00:00"^^xsd:dateTime;
                             :volunteerNumber -1 .
 id:644fca22a3c53c19c9b76a57 :attendeesNumber 0 ;
                             :bookingsNumber 2 ;
-                            :createdAt "2023-05-01T14:18:10.422000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Do you have a passion to support people on their journey of rediscovering their strengths and aspirations through art and craft?
 
@@ -285,11 +264,9 @@ Location: Folkestone Town Centre""";
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Arts and Crafts Facilitator Volunteer - Folkestone Haven";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T18:25:59.013000+00:00"^^xsd:dateTime;
                             :volunteerNumber -1 .
 id:644ff28015888780f9a64897 :attendeesNumber 0 ;
                             :bookingsNumber 1 ;
-                            :createdAt "2023-05-01T17:10:24.849000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """We need your support to help people living with Crohn’s and Colitis. 
 
@@ -317,11 +294,9 @@ Why get involved?
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Join our local team to organise events & awareness activities in East London";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T14:06:12.001000+00:00"^^xsd:dateTime;
                             :volunteerNumber -1 .
 id:644ff3b715888780f9a66950 :attendeesNumber 0 ;
                             :bookingsNumber 4 ;
-                            :createdAt "2023-05-01T17:15:35.172000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Schoolreaders need volunteers to go into local primary schools in a range of areas across London during the school day to listen to children read to them 1:1. The volunteer needs to be able to commit to once a week during term time for one hour or more.
 
@@ -334,11 +309,9 @@ Our volunteers get enormous pleasure from seeing the difference that a few hours
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Schoolreaders Volunteer London";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-19T15:56:52.234000+00:00"^^xsd:dateTime;
                             :volunteerNumber -1 .
 id:644ffe2112535322aa32cace :attendeesNumber 0 ;
                             :bookingsNumber 1 ;
-                            :createdAt "2023-05-01T18:00:01.352000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description "Youth clubs offer a safe environment where young people can meet up, make new friends and participate in a range of worthwhile activities.  Volunteers provide a vital resource to these clubs.  As a Club Co-Ordinator volunteer, you would be based in one of our youth clubs / projects, where you will provide support to the club leaders, but also ensuring necessary administration is carried out along with two-way communication to parents, volunteers and trustees.";
                             :ecosystem id:64093b512eed5dcadba5088b;
@@ -349,11 +322,9 @@ id:644ffe2112535322aa32cace :attendeesNumber 0 ;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Youth Club Co-Ordinator (Woking)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T14:10:40.600000+00:00"^^xsd:dateTime;
                             :volunteerNumber -1 .
 id:64516c1730bf811bcd697642 :attendeesNumber 0 ;
                             :bookingsNumber 2 ;
-                            :createdAt "2023-05-02T20:01:27.457000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Join us on the third Sunday of every month to help clear Ainslie Wood Road of weeds, plant native flowers and meet our neighbours!
 
@@ -365,11 +336,9 @@ We are a group of residents of Ainslie Wood Road E4, who are working with Waltha
                             :organization id:64516b3857d588ae4560f772;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Ainslie Wood Road - Gardening Volunteer Group";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T13:34:38.290000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:64527196358835be4772631c :attendeesNumber 0 ;
                             :bookingsNumber 3 ;
-                            :createdAt "2023-05-03T14:37:10.643000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Volunteering in our shops is varied, exciting and rewarding. No two days are the same and you have the chance to flex different skills regularly. Below is a flavour of some of the tasks you may help with in our shops: 
 Talking to our customers and making them feel welcome.
@@ -385,11 +354,9 @@ To find out more and sign up to volunteer in one of our shops, please visit our 
                             :organization id:6438281587df93ec1032b350;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Shop volunteer- nationwide";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-19T21:04:21.534000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:64539799fcedb918d65ee248 :attendeesNumber 0 ;
                             :bookingsNumber 48 ;
-                            :createdAt "2023-05-04T11:31:37.349000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description "Help us make art from the UK's museums and galleries more searchable online! Tagger is a crowdsourcing project inviting the public to tag artworks. Anyone can tag artworks with descriptive words to make it easier to find them. Tagging is easy, fun and safe – your tags will only go live once they are verified by other people. Have a go and contribute to making Art UK more searchable by tagging people, places and things – and discover new art and artists along the way: https://artuk.org/participate/tagger";
                             :ecosystem id:64093b512eed5dcadba5088b;
@@ -398,11 +365,9 @@ id:64539799fcedb918d65ee248 :attendeesNumber 0 ;
                             :organization id:645394f2942173c58288dc8f;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Micro-volunteering with Art UK Tagger: Help make art more accessible online";
-                            :type "Action";
-                            :updatedAt "2025-10-20T13:13:11.224000+00:00"^^xsd:dateTime.
+                            :type "Action".
 id:6454142924210def92707ae5 :attendeesNumber 0 ;
                             :bookingsNumber 1 ;
-                            :createdAt "2023-05-04T20:23:05.036000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description "Oxfam shops are local communities - but they are part of a global community. A global community of people united by a belief in a kinder, radically better world.  If you believe a fairer world is possible, join us today to overcome poverty - by fighting the injustices and inequalities that fuel it.  Just five minutes is enough to find your local shop and apply to volunteer:  https://volunteering.oxfam.org.uk/  By creating window displays, sorting and pricing donations, helping customers, or creating social media content, you can find a role that suits your skills and interests. No experience is necessary as full training will be given, all we ask is you're happy to work as part of a diverse and inclusive team. At Oxfam we know that everybody can make a real difference.  You will get to meet new people from your local community, and become part of a friendly and thriving team, helping make a positive change around the world.  To sign up, follow this link:  https://volunteering.oxfam.org.uk/ ";
                             :ecosystem id:64093b512eed5dcadba5088b;
@@ -413,11 +378,9 @@ id:6454142924210def92707ae5 :attendeesNumber 0 ;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Oxfam Shop Volunteering";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-18T19:05:35.339000+00:00"^^xsd:dateTime;
                             :volunteerNumber 1000 .
 id:6455018ad1ed7f1083d77a6d :attendeesNumber 0 ;
                             :bookingsNumber 1 ;
-                            :createdAt "2023-05-05T13:15:54.367000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Help set the record straight about diabetes by becoming an events volunteer. We are looking for Volunteers to attend local events within the district of Thanet (Kent). Ideally you'll have an excellent local knowledge and be able to suggest local events to our regional team and proactively seek out opportunities, so if you have some time to spare, this could be the role for you.
 
@@ -431,11 +394,9 @@ The events range from stands in shopping centres and high streets, to big events
                             :organization id:641879d4cf71f77116117e87;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Diabetes UK Events Volunteers - Kent";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T07:30:24.639000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:64578e61e090332d33ff0b4a :attendeesNumber 0 ;
                             :bookingsNumber 2 ;
-                            :createdAt "2023-05-07T11:41:21.800000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description "Unfold are currently looking for volunteers who can mentor on either our Mentoring for Mothers programme (female mentors only) or our Mentoring for Children and young people’s programme (female and male mentors) both of which have an adaptive programme to support asylum seekers.   On both programmes you will:  Over 12 to 24 weeks, support your mentee to help them achieve their goals and get them where they want to be through encouraging your mentee to consider future options and assist them in developing strategies to attain their goals.    Develop a trusting, supportive and non-judgemental relationship, empowering mentees to identify goals they wish to achieve.     Provide emotional, social and practical support to your mentee   Support your mentee to make social connections with their local community, services or groups.  ";
                             :ecosystem id:64093b512eed5dcadba5088b;
@@ -446,11 +407,9 @@ id:64578e61e090332d33ff0b4a :attendeesNumber 0 ;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Volunteers Mentors Needed to provide 1-2-1 Mentoring for Children and Young People and Mothers ";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-18T12:45:56.502000+00:00"^^xsd:dateTime;
                             :volunteerNumber 100 .
 id:64660b871eeca2d85e5d602d :attendeesNumber 1 ;
                             :bookingsNumber 62 ;
-                            :createdAt "2023-05-18T11:27:03.150000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Do you have the qualities needed to support and listen to people who will be experiencing a variety of emotions and reactions due to the death of a loved one?
 Bereavement happens for a variety of reasons and having the ability to offer the emotional support through a non judgmental listening ear can be challenging but also very rewarding allowing people to work through the stages of bereavement in their own way, people may be struggling with more complex grief due to not being able to say goodbye to their loved one or to have been able to attend a funeral.
@@ -465,11 +424,9 @@ Bereavement happens for a variety of reasons and having the ability to offer the
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :startDate "2023-05-17T23:00:00.000000+00:00"^^xsd:dateTime;
                             :title "Bereavement Helpline Listener Volunteer ";
-                            :type "Event";
-                            :updatedAt "2025-10-20T23:29:35.084000+00:00"^^xsd:dateTime.
+                            :type "Event".
 id:65c9fc4105dfb277d2d6718c :attendeesNumber 0 ;
                             :bookingsNumber 10 ;
-                            :createdAt "2024-02-12T11:08:49.793000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Role of  Telephone Befriender
 
@@ -484,11 +441,9 @@ id:65c9fc4105dfb277d2d6718c :attendeesNumber 0 ;
                             :organization id:6425fa7ff2d4b77a6e160b18;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Telephone Befriending";
-                            :type "Action";
-                            :updatedAt "2025-10-21T08:42:21.503000+00:00"^^xsd:dateTime.
+                            :type "Action".
 id:65ca3ab3524b96b9827fe4fa :attendeesNumber 0 ;
                             :bookingsNumber 2 ;
-                            :createdAt "2024-02-12T15:35:15.742000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """This service supports children in London aged 5 – 18 who have been through difficult or traumatic experiences.
 
@@ -500,11 +455,9 @@ They may have grown up in a family impacted by domestic violence. They might be 
                             :organization id:6425d4b7a0624f3ab9fbac79;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Mentor a child in London ";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T12:31:09.920000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:65e741ac3b33c2a2721e34a9 :attendeesNumber 0 ;
                             :bookingsNumber 1 ;
-                            :createdAt "2024-03-05T16:00:44.888000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Be the difference on your doorstep.
 Compassionate Neighbours are trained volunteers offering friendship, support and listening ear to people living in their local community, sometimes with serious, long-term or terminal illness who often struggle with loneliness.
@@ -529,11 +482,9 @@ please apply here:  https://www.pah.org.uk/volunteer-roles/compassionate-neighbo
                             :organization id:6425d5fca0624f3ab9fbc83b;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Compassionate Neighbours";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T15:55:45.429000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:65f968bfbbf8cbd3ac176677 :attendeesNumber 0 ;
                             :bookingsNumber 4 ;
-                            :createdAt "2024-03-19T10:28:15.118000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Our Pen Nib Makers demonstrate the operation of museum fly presses, allowing visitors to create their own souvenir nib. Throughout the demonstration, the nib makers educate visitors on nib design, the technical process, and the lives of women nib makers.
 All volunteers given the necessary training to be successful at this role, which includes a volunteer handbook and guidance from experience volunteers. Safety guidelines will be provided, as well as detailed materials on technical processes and the lives of 19th Century women nib makers. Additionally, we welcome volunteer research (from our collections and libraries) to add information for their tours. 
@@ -552,11 +503,9 @@ The role will you suit if:
                             :publishedApps id:65a46db14b30b7dd175eb67a,
                                            id:65a46519c9da46983ceed1bb;
                             :title "Nib Maker";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T19:35:06.520000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:6616a201ad08dd3a925f90d1 :attendeesNumber 0 ;
                             :bookingsNumber 16 ;
-                            :createdAt "2024-04-10T14:28:17.788000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """This opportunity is for those interested in writing articles/blog posts for the Writers Initiative website. 
 
@@ -577,11 +526,9 @@ Note: For some reason the posting is saying 36000 hours! You will only be asked 
                             :organization id:66169d5247af10a843126434;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Freelance Writer of Blog/Article posts ";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T12:44:34.624000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:661d321c72ed22fd04a428a6 :attendeesNumber 0 ;
                             :bookingsNumber 8 ;
-                            :createdAt "2024-04-15T13:56:44.715000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """About Sense Touchbase Pears 
 
@@ -641,11 +588,9 @@ We celebrate""";
                             :organization id:6425cd68a0624f3ab9fb0c4b;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Activity Volunteer at Sense Touchbase Pears";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T11:00:01.227000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:661d371f2307f13b3b2ef9c7 :attendeesNumber 0 ;
                             :bookingsNumber 3 ;
-                            :createdAt "2024-04-15T14:18:07.169000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Do you live in our Croydon area and could you visit patients at home, coaching and enabling them to achieve goals?
 
@@ -662,11 +607,9 @@ Increase patients’ self-confidence and ability to self-manage their difficulti
                             :organization id:65bcbcd8b620e756f16aee39;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Living Well at Home Volunteer";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T16:01:55.617000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:6620de77f8927a9404512e98 :attendeesNumber 0 ;
                             :bookingsNumber 11 ;
-                            :createdAt "2024-04-18T08:48:55.677000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """You will make weekly contact via telephone or video call for up to 1-hour, providing emotional support and a listening ear, perhaps sharing your own experiences, to help them to navigate through this challenging time.
  Telephone support is a great way to give back even when your time is limited. Telephone and virtual support can suit full time work as well as company volunteering opportunities. It is flexible and can fit in around your other regular commitments allowing you the chance to get involved and give back to your community at a time that suits you and the family you are supporting.
@@ -680,11 +623,9 @@ Weekly telephone or virtual support has become a key element of our support offe
                             :organization id:6620d75a29bfe93cfc010834;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Telephone Support";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T12:33:23.658000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:6632280848e4241e951fbe1e :attendeesNumber 0 ;
                             :bookingsNumber 14 ;
-                            :createdAt "2024-05-01T11:31:20.553000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Sense Virtual Buddying volunteers make a real difference to supporting young people and adults who may be lonely or isolated.
 
@@ -735,11 +676,9 @@ We’d love for you to consider joining us as a Sense Virtual Buddy!""";
                             :organization id:6425cd68a0624f3ab9fb0c4b;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Virtual Buddy";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T12:31:26.547000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:6633742da97c2db03ae12aee :attendeesNumber 0 ;
                             :bookingsNumber 8 ;
-                            :createdAt "2024-05-02T11:08:29.892000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """BELIFF film festival is looking for editing wizards or in the process of learning to support festival and awards (London).
 
@@ -781,11 +720,9 @@ Most importantly your efforts will ensure that both individuals and organisation
                             :organization id:6425f3b8f2d4b77a6e155b67;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Video Editor / Content Creator";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T12:29:22.783000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:6633785e2e8b9ca375ca506a :attendeesNumber 0 ;
                             :bookingsNumber 17 ;
-                            :createdAt "2024-05-02T11:26:22.699000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Job description
 We are seeking Social Media Volunteers to assist with our Social Media Marketing in creating and distributing engaging content on BELIFF's Film Festival social media platforms. Social media is integral to connecting with the film makers community, growing our organisational reach and promoting events such as our yearly screening event, in-house research and other partnering events.
@@ -843,11 +780,9 @@ A reference for your CV""";
                             :organization id:6425f3b8f2d4b77a6e155b67;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Social Media Marketing Volunteer for BELIFF Film Festival";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T12:27:04.527000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:663b4b8d427911a09c6bda40 :attendeesNumber 0 ;
                             :bookingsNumber 1 ;
-                            :createdAt "2024-05-08T09:53:18.029000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Become a call companion:
 
@@ -888,11 +823,9 @@ https://www.reengage.org.uk/volunteer/new-volunteers/
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Re engage - Older People Telephone Befriending London/National - Volunteer ";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T12:32:05.721000+00:00"^^xsd:dateTime;
                             :volunteerNumber 10 .
 id:6658756dda2232d09ec4a7f7 :attendeesNumber 0 ;
                             :bookingsNumber 1 ;
-                            :createdAt "2024-05-30T12:47:41.270000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Do you have a passion for organising social groups and meeting new people? Want a flexible voluntary role that allows you to make a difference to peoples’ lives? Then this is for you!
 
@@ -931,11 +864,9 @@ You will be provided with full training and support from NWR staff and will be p
                             :organization id:66508c7e9624a8e5c5b4ab2d;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Women's Group Organiser - multiple locations in London";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T12:32:49.561000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:665decbf05333a667b2d0efc :attendeesNumber 0 ;
                             :bookingsNumber 4 ;
-                            :createdAt "2024-06-03T16:18:07.315000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """VOLUNTEER VACANCY
 Duties & Tasks:
@@ -958,11 +889,9 @@ Analytical skills.""";
                             :organization id:665dad56103207cef4a1b743;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Graphic Designer";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T12:25:40.660000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:67582fb646ba4e08a55f0c6b :attendeesNumber 0 ;
                             :bookingsNumber 2 ;
-                            :createdAt "2024-12-10T12:10:30.947000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Position Title: Web Design and Management Volunteer
 Organization: Be Epic! London International Film Festival
@@ -1027,11 +956,9 @@ Be a part of the Be Epic! London International Film Festival’s digital transfo
                             :organization id:6425f3b8f2d4b77a6e155b67;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Web Design and Management Volunteering Position for Be Epic! London International Film Festival";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T12:29:37.180000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:67600aea8b8227d3878202ee :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2024-12-16T11:11:38.398000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Do you love Minecraft and want to make a difference to the lives of children with Autism, ADHD, PDA and SEND, and get paid for it?
 
@@ -1078,11 +1005,9 @@ Any successful applicant working with children will be required to undertake an 
                             :organization id:676008f8954c54acf0cebd9c;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Minecraft Youth Support / Mentoring Through Play";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T13:46:24.889000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:67fcb65ee156c8228c770764 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-04-14T07:16:46.584000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """We need a team to help us maintain a presence on this remote reserve as much as possible. Essentially, we like to have volunteers on the reserve every day of the week. We are looking for people who can take on a regular shift walking the reserve,  keeping an eye out for maintenance issues while engaging with visitors in a positive and friendly manner. 
 
@@ -1122,11 +1047,9 @@ Our nature reserves are very special places for people and wildlife. Right acros
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Site Checks and Maintenance Volunteer (Roving Ranger Snettisham reserve)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T03:00:55.955000+00:00"^^xsd:dateTime;
                             :volunteerNumber 2 .
 id:67fcb662e156c8228c77080b :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-04-14T07:16:50.204000+00:00"^^xsd:dateTime;
                             :deleted true;
                             :description """Did you know that there are RSPB Youth Groups throughout the UK? Our network is growing and expanding, so we need more volunteers to lead and shape our youth group teams. 
 
@@ -1165,11 +1088,9 @@ IMPORTANT: if you are a member of RSPB staff please contact YGsupport@rspb.org.u
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Youth Group Main Leader (RSPB Sandwell Swans Wildlife Explorers)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T03:00:46.594000+00:00"^^xsd:dateTime;
                             :volunteerNumber 1 .
 id:67fcb6750b3376a790e4b7bc :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-04-14T07:17:09.664000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Did you know that there are RSPB Youth Groups across the UK, and our network is growing and expanding, so we need more inspirational Assistant Leaders to join our team!
 
@@ -1207,11 +1128,9 @@ IMPORTANT: if you are a member of RSPB staff please contact YGsupport@rspb.org.u
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Youth Group Assistant Leader (Assistant leader Fen Drayton Wildlife Explorers)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T03:01:01.913000+00:00"^^xsd:dateTime;
                             :volunteerNumber 1 .
 id:67fcb67c0b3376a790e4baea :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-04-14T07:17:16.165000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """The RSPB manages a big network of nature reserves which are havens for wildlife, and importantly very special places for people of all ages and abilities to visit and experience a nature rich landscape.  
 
@@ -1242,11 +1161,9 @@ There is always the opportunity to learn new things and gain skills through volu
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Visitor Engagement Volunteer (On Reserves) (RSPB Campfield Marsh Meet and Greet Volunteer Bowness on Solway)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T03:01:01.493000+00:00"^^xsd:dateTime;
                             :volunteerNumber 2 .
 id:67fcb6800b3376a790e4bbb5 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-04-14T07:17:20.545000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Volunteers are the lifeblood of the RSPB. Their contribution to our work to save nature is vital. We are on the lookout for new volunteers at RSPB Campfield Marsh to help us in our effort to restore key habitats, including lowland wet grassland, lowland raised bog, and saltmarsh. In doing so, you will be aiding the RSPB achieve some of its key objectives: species recovery and climate change adaptation and mitigation. If you want to contribute to the saving of lapwing, redshank, curlew, and the marsh fritillary, please get in touch. If you want to play a key role in the restoration of wetlands crucial in combatting climate change, get in touch! 
 
@@ -1274,11 +1191,9 @@ Come and play your part in ensuring that the Solway Plain continues to consist o
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Practical Reserve Work (Campfield Marsh, Bowness On Solway)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-18T03:01:05.777000+00:00"^^xsd:dateTime;
                             :volunteerNumber 4 .
 id:680463602ef59bbc063002d9 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-04-20T03:00:48.110000+00:00"^^xsd:dateTime;
                             :deleted true;
                             :description """The RSPB manages a big network of nature reserves which are havens for wildlife, and importantly very special places for people of all ages and abilities to visit and experience a nature rich landscape.
 
@@ -1305,11 +1220,9 @@ This role is not suitable for under 18’s.""";
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Visitor Centre Welcome (RSPB Ynys-hir Reserve Ceredigion)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-19T03:00:44.890000+00:00"^^xsd:dateTime;
                             :volunteerNumber 1 .
 id:682c5fcff6cef6a0a0a0127f :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-05-20T10:56:15.244000+00:00"^^xsd:dateTime;
                             :deleted true;
                             :description """Could you help to raise vital funds for SSAFA in your local area? You don’t need a military background, just the ability to get on with all kinds of people and some occasional free time. 
 
@@ -1383,11 +1296,9 @@ Contact our friendly Volunteer Experience (VE) Team at VE-Support@ssafa.org.uk T
                             :organization id:6696569fe1a9ec9394b33f56;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Volunteer Fundraiser (Lanarkshire)";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T08:13:54.319000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:682c6029e2b7d37b979293f5 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-05-20T10:57:45.497000+00:00"^^xsd:dateTime;
                             :deleted true;
                             :description """Could you help to raise vital funds for SSAFA in your local area? You don’t need a military background, just the ability to get on with all kinds of people and some occasional free time. 
 
@@ -1461,11 +1372,9 @@ Contact our friendly Volunteer Experience (VE) Team at VE-Support@ssafa.org.uk T
                             :organization id:6696569fe1a9ec9394b33f56;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Volunteer Fundraiser (Ross & Cromarty)";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T08:14:07.933000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:682e936de979c3e5a8192765 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-05-22T03:01:01.710000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Volunteers are the heart and soul of our shop and are essential in helping visitors to get everything they want from their time with us. We want our visitors to be welcomed with a warm smile and a friendly hello, in a well-kept, clean and full shop. By giving your time to this role you’ll be making a huge difference to the wildlife and habitat here at Fairburn Ings, as all our profits go straight back to helping nature. 
 
@@ -1502,11 +1411,9 @@ Thank you for reading this description of the role. Clicking on ‘more about th
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Retail Volunteer (Fairburn Ings)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-18T03:01:05.374000+00:00"^^xsd:dateTime;
                             :volunteerNumber 10 .
 id:687c5be7d1707e2da912c969 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-07-20T03:00:55.518000+00:00"^^xsd:dateTime;
                             :deleted true;
                             :description """Rathlin Island is home to Northern Ireland’s largest seabird colony, with over 200,000 birds, including the largest Guillemot colony in the UK and Ireland and over 1,000 Puffins. However, these populations are under serious threat from invasive non-native predators—rats and ferrets—which prey on seabird eggs, chicks, and adults. 
 
@@ -1582,11 +1489,9 @@ If you volunteer for LIFE Raft, the RSPB will reimburse you for travel and subsi
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "RSPB Team Member (Biosecurity Island Incursion Team Member)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-18T03:00:46.935000+00:00"^^xsd:dateTime;
                             :volunteerNumber 35 .
 id:687c5be8d1707e2da912c98e :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-07-20T03:00:56.576000+00:00"^^xsd:dateTime;
                             :deleted true;
                             :description """Rathlin Island is one of Northern Ireland's most treasured wildlife havens, home to internationally important seabird colonies and unique native species. To help keep the island free from invasive predators like rats - which can devastate nesting birds - we are building a network of trained biosecurity volunteers. This is your chance to play a vital role in safeguarding Rathlin's natural heritage while spending time in one of the most beautiful and diverse places in the country.
 
@@ -1632,11 +1537,9 @@ If you are not a Rathlin resident it will be possible to carry out day trips. Ho
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "RSPB Team Member (Biosecurity Island Monitoring Team Member)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-18T03:00:46.413000+00:00"^^xsd:dateTime;
                             :volunteerNumber 2 .
 id:688c2dee0ffd8303426d8f9a :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-08-01T03:01:02.618000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """We are looking for work party volunteers to join us on our reserves. RSPB nature reserves are special places for people and wildlife and we rely on volunteers to keeps these habitats thriving and in good shape. This role is suitable for under 18s. 
 
@@ -1663,11 +1566,9 @@ We are a friendly and supportive team. If you are volunteering to learn new skil
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Practical Reserve Work (Minsmere Work Party Volunteer)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-18T03:01:06.114000+00:00"^^xsd:dateTime;
                             :volunteerNumber 12 .
 id:6890b08c338cf04062dd1115 :attendeesNumber 0 ;
                             :bookingsNumber 14 ;
-                            :createdAt "2025-08-04T13:07:24.309000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Volunteer opportunity-DV advisor 
 
@@ -1708,11 +1609,9 @@ If you believe in empowering women and want to make a difference in your communi
                             :organization id:64260fe2de05bf8ae7c99f64;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Volunteer opportunity-DV advisor ";
-                            :type "Action";
-                            :updatedAt "2025-10-20T08:19:19.154000+00:00"^^xsd:dateTime.
+                            :type "Action".
 id:68bf986ebc9447e87dc438aa :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-09-09T03:01:02.459000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Imagine a day out without a coffee and cake, or a refreshing cup of tea!  Our café volunteers understand the importance of a little break and help visitors to relax and refuel during their visit to Leighton Moss.  We have different roles available, so you’re bound to find something to suit.  
 
@@ -1747,11 +1646,9 @@ You can choose which shifts to do to fit round your other commitments.""";
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Café Volunteer (Leighton Moss)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T03:01:02.293000+00:00"^^xsd:dateTime;
                             :volunteerNumber 0 .
 id:68c4de63007c3361fc650144 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-09-13T03:00:51.576000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """We are looking for work party volunteers to join us on our reserves. RSPB nature reserves are special places for people and wildlife and we rely on volunteers to keeps these habitats thriving and in good shape. This role is suitable for under 18’s. 
 
@@ -1778,11 +1675,9 @@ We are a friendly and supportive team. If you are volunteering to learn new skil
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Practical Reserve Work (Culbin Sands, Nigg Bay, Udale Bay, Fairy Glen, Loch Ruthven)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T03:01:02.612000+00:00"^^xsd:dateTime;
                             :volunteerNumber 13 .
 id:68cbf07e91dd7c503ab229f0 :attendeesNumber 0 ;
                             :bookingsNumber 6 ;
-                            :createdAt "2025-09-18T11:43:58.905000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Get into the festive spirit by volunteering at X Factor's G4’s Christmas Concert. Hear wonderful renditions of Christmas classics, even join in on a few tunes yourself, all while supporting the charity Missing People. This is a fantastic opportunity to volunteer at a truly enjoyable evening so don’t miss out.
 
@@ -1806,11 +1701,9 @@ The event is from 19:30 – 21:30, but we’d ask for you to arrive at the venue
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :startDate "2025-11-21T18:00:00.000000+00:00"^^xsd:dateTime;
                             :title "Christmas Concert Ushers - Missing People";
-                            :type "Event";
-                            :updatedAt "2025-10-17T20:16:38.285000+00:00"^^xsd:dateTime.
+                            :type "Event".
 id:68d4b072f8fe06e6423350cd :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-09-25T03:01:06.279000+00:00"^^xsd:dateTime;
                             :deleted true;
                             :description """We are looking for a volunteer placement assistant warden at RSPB Middleton Lakes! Our placement opportunities help people gain the skills and experience needed to start a career in conservation. You will get to meet new people and help save nature too. Assistant warden volunteer placements bring in a variety of ideas, experiences and energy into our teams, it's so much more than just getting work done; we want to hear from you if you feel like you have the motivation and passion to save nature.
 
@@ -1892,11 +1785,9 @@ All the training necessary and background information will be provided and since
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Practical Reserve Work (Assistant Warden Volunteer Placement)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T03:00:43.354000+00:00"^^xsd:dateTime;
                             :volunteerNumber 1 .
 id:68d6bab822c5c958c1c99b39 :attendeesNumber 0 ;
                             :bookingsNumber 8 ;
-                            :createdAt "2025-09-26T16:09:29.196000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """We Are Explorers CIC supports Neurodivergent LGBTQ+ young people and adults, offering safe, engaging, and person-led spaces for connection, learning, and self-expression. Our mission is to create a better, more inclusive world for Neurodivergent LGBTQ+ communities. Now, we want to take our impact to the next level—and we need your ideas, skills, and energy!
 
@@ -1942,11 +1833,9 @@ Sign up through this platform or contact us at jam@weareexplorers.org. Let’s b
                             :organization id:6807c51be1f731a9de22a5ed;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Improve We Are Explorers CIC's Self-Sustainability";
-                            :type "Action";
-                            :updatedAt "2025-10-20T00:46:31.044000+00:00"^^xsd:dateTime.
+                            :type "Action".
 id:68e08de04037602aab298c1d :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-04T03:00:48.599000+00:00"^^xsd:dateTime;
                             :deleted true;
                             :description """Description
 Where: Lincolnshire. RSPB Lincolnshire Wash Reserves: Frampton Marsh and Freiston Shore
@@ -2009,11 +1898,9 @@ The RSPB is the UK's largest nature conservation charity! Join our fantastic vol
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Residential on Reserve (More than 4 weeks) (RSPB Frampton Marsh)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T03:00:47.192000+00:00"^^xsd:dateTime;
                             :volunteerNumber 1 .
 id:68e7d02030da2758adfb36c4 :attendeesNumber 0 ;
                             :bookingsNumber 3 ;
-                            :createdAt "2025-10-09T15:09:20.280000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Grimsby Community Energy (GCE) is seeking a volunteer solicitor to support our renewable energy projects by helping us finalise and manage legal agreements with host sites. This role is ideal for a qualified or recently retired solicitor with experience in commercial property or energy law, who wants to use their expertise to benefit a local, community-owned energy enterprise.
 Key Responsibilities
@@ -2038,11 +1925,9 @@ Skills and Experience
                             :organization id:68e793d5bebfd220e4aec748;
                             :publishedApps id:67b3a3ab839566a5b7a0d60d;
                             :title "Legal support advising and checking";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-19T07:10:51.018000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68ef0e6bea1549dcd93842b0 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-15T03:00:59.648000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Join Our Conservation Volunteer Team!
 Opportunities between Barrow and Kendal
@@ -2080,11 +1965,9 @@ If this sounds like something you’d enjoy, we’d love to hear from you. Toget
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Practical Reserve Work (South Lakes Conservation Volunteer)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-18T03:01:14.543000+00:00"^^xsd:dateTime;
                             :volunteerNumber 18 .
 id:68ef81b80a306d0e59da38f9 :attendeesNumber 0 ;
                             :bookingsNumber 1 ;
-                            :createdAt "2025-10-15T11:12:56.808000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """If you're looking to take your first step into a Motorsport career, we need YOU! 🏁
 If you’ve ever wanted to be part of something fast-paced, inspiring, and full of future innovators, this is your moment. Whether you’re a teacher, student, motorsport fan, or simply passionate about STEM, volunteering at the National Finals is a chance to get behind the scenes of an unforgettable event. At STEM On Track, we help schools bring STEM to life through hands-on go-kart kits and online modules, giving students a real taste of engineering, motorsport, and marketing.
@@ -2111,11 +1994,9 @@ Test Days: 7th of May
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :startDate "2026-06-20T07:00:00.000000+00:00"^^xsd:dateTime;
                             :title "STEM On Track National Finals";
-                            :type "Event";
-                            :updatedAt "2025-10-20T15:15:09.113000+00:00"^^xsd:dateTime.
+                            :type "Event".
 id:68f1b16cf7915f22a8e6ab5f :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-17T03:01:00.313000+00:00"^^xsd:dateTime;
                             :deleted true;
                             :description """Maintaining Flatford Wildlife Garden in the best condition for wildlife and to inspire visitors to make their own gardens welcoming to nature takes a lot of effort and many hands. We’re looking for someone to join the Thursday work party team at Flatford Wildlife Garden to help keep on top of basic garden maintenance tasks.
 
@@ -2140,11 +2021,9 @@ We are a friendly and supportive team. If you are volunteering to learn new skil
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Practical Reserve Work (Thursday Garden maintenance volunteer at Flatford Wildlife Garden)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-18T03:00:47.215000+00:00"^^xsd:dateTime;
                             :volunteerNumber 2 .
 id:68f22cec9fbece0881485a26 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-17T11:47:56.538000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """We are looking for trustees to join our small independent charity in Sheringham. We are interested in hearing from you if you are a recent graduate, later on in your career or retired with some spare time to offer.  Experience in finance, governance, management, fundraising or operations is desirable but lived experience ie equally important.
 Commitment is 6 to 8 hours per month, which includes a 2 hour trustee meeting held in Sheringham once a month.  We will support you in any training required.""";
@@ -2156,11 +2035,9 @@ Commitment is 6 to 8 hours per month, which includes a 2 hour trustee meeting he
                             :organization id:68f229a206abd725874e1612;
                             :publishedApps id:65bab9cfb6f4d44ce2b9c119;
                             :title "Trustee";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T11:47:56.538000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f24c113c09770c24988bf6 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-17T14:00:49.168000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """At St John Ambulance, we are looking to develop our volunteering offer and become an even more integral part of our communities through delivering community first aid and education. 
 
@@ -2197,11 +2074,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Community First Aider (Derbyshire)";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T14:00:49.168000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f24c2fb46b80bec83ae166 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-17T14:01:19.638000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Support the work of St John Ambulance in your community by volunteering as a Community Volunteer, an exciting new role which is designed to revamp how volunteering looks in the modern world; flexible, innovative and is open for all.
 
@@ -2255,11 +2130,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Community Volunteer (Wiltshire)";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T14:01:19.638000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f25736a9026f6338603e37 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-17T14:48:22.475000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Support the work of St John Ambulance in your community by volunteering as a Community Volunteer, an exciting new role which is designed to revamp how volunteering looks in the modern world; flexible, innovative and is open for all.
 
@@ -2313,11 +2186,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Community Volunteer (West Midlands)";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T14:48:22.475000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f25dd439b539c18d98cea4 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-17T15:16:36.627000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Support the work of St John Ambulance in your community by volunteering as a Community Volunteer, an exciting new role which is designed to revamp how volunteering looks in the modern world; flexible, innovative and is open for all.
 
@@ -2364,11 +2235,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Community Volunteer (Devon)";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T15:16:36.627000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f25df339b539c18d98cfdb :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-17T15:17:08.010000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """At St John Ambulance, we are looking to develop our volunteering offer and become an even more integral part of our communities through delivering community first aid and education. 
 
@@ -2405,11 +2274,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Community First Aider (Devon)";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T15:17:08.010000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f25e3e39b539c18d98d24e :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-17T15:18:22.228000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """At St John Ambulance, we are looking to develop our volunteering offer and become an even more integral part of our communities through delivering community first aid and education. 
 
@@ -2446,11 +2313,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Community First Aider (Wiltshire)";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T15:18:22.228000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f25e5a3d728ac578a6042c :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-17T15:18:50.589000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Support the work of St John Ambulance in your community by volunteering as a Community Volunteer, an exciting new role which is designed to revamp how volunteering looks in the modern world; flexible, innovative and is open for all.
 
@@ -2495,11 +2360,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Community Volunteer (South Norfolk)";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-17T15:18:50.589000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f302ee7d586b2facb5a11d :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-18T03:01:02.333000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Help Save the Slavonian Grebe – Become a Data Volunteer
 
@@ -2540,11 +2403,9 @@ Make a real impact for nature—join us in protecting one of Scotland’s most i
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "RSPB Team Member (Saving Slavonian Grebes – Remote Data Volunteer)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-18T03:01:02.333000+00:00"^^xsd:dateTime;
                             :volunteerNumber 13 .
 id:68f302ef7d586b2facb5a148 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-18T03:01:03.412000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """RSPB reserves are special places for people and wildlife. We need volunteers to help keep the habitats, paths, benches and fences in good shape. This rewarding role offers the chance to meet new people and make a positive impact for nature. 
 
@@ -2598,11 +2459,9 @@ In this role you will be helping others to succeed, especially as you induct and
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Work Party Leader (Weymouth Wetlands)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-18T03:01:03.412000+00:00"^^xsd:dateTime;
                             :volunteerNumber 1 .
 id:68f45467b440e67bbbf66fe1 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-19T03:00:55.548000+00:00"^^xsd:dateTime;
                             :deleted true;
                             :description """**We are looking for adult Work Party Volunteers to make the regular commitment to join us on our Lochwinnoch reserve every Friday from 9.30am until 4pm.**
 
@@ -2636,11 +2495,9 @@ Please disregard the additional information, below, which states that this role 
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Practical Reserve Work (Work Party Volunteer)";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T03:00:43.817000+00:00"^^xsd:dateTime;
                             :volunteerNumber 10 .
 id:68f4f6d575567fd1f1bee8c1 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-19T14:33:57.762000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """In many African communities, poverty and tradition force children into adult roles far too soon, becoming parents, spouses, or laborers as early as age 12. Education is often cut short, and support is limited.
 
@@ -2661,11 +2518,9 @@ Be the reason a child keeps believing. Join us today.""";
                             :organization id:68f4e3bffe3f8f55aef0e544;
                             :publishedApps id:65bab9cfb6f4d44ce2b9c119;
                             :title "Write a Pen Pal letter to an African Child in Need!";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-19T14:33:57.762000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f5406090268edd4a86435a :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-19T19:47:44.548000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Beyond Theory is a youth-led, nonprofit initiative dedicated to providing free academic mentorship and personal development opportunities for students aged 11–16, particularly those from underrepresented or disadvantaged backgrounds.
 
@@ -2682,11 +2537,9 @@ We are looking for people to promote our organisation through outreach with loca
                             :organization id:68f53f8346b712131f0148e7;
                             :publishedApps id:65bab9cfb6f4d44ce2b9c119;
                             :title "Beyond Theory Learning : Long Term Volunteer Opportunities";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-19T19:47:44.548000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f5f0809017447fbcbba347 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T08:19:12.360000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Cadet Group Leaders work directly with young people in St John Ambulance Badger Setts and Cadet Units. By organising a mixed weekly programme, this role will support the learning and development of young people into the next generation of health citizens. Youth Leaders also help young people develop their confidence, teamwork skills, self-discipline, and generally encourage them to strive to be the best they can be, as well as supervise and support other adult volunteers in their team.
 
@@ -2706,11 +2559,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Cadet Group Lead";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T08:19:12.360000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f5f3ef44f57c928faa1ba0 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T08:33:51.147000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Cadet Group Leaders work directly with young people in St John Ambulance Badger Setts and Cadet Units. By organising a mixed weekly programme, this role will support the learning and development of young people into the next generation of health citizens. Youth Leaders also help young people develop their confidence, teamwork skills, self-discipline, and generally encourage them to strive to be the best they can be, as well as supervise and support other adult volunteers in their team.
 
@@ -2730,11 +2581,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Cadet Group Lead";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T08:33:51.147000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f5f40ea7fc2683be93f71f :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T08:34:22.664000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Cadet Group Leaders work directly with young people in St John Ambulance Badger Setts and Cadet Units. By organising a mixed weekly programme, this role will support the learning and development of young people into the next generation of health citizens. Youth Leaders also help young people develop their confidence, teamwork skills, self-discipline, and generally encourage them to strive to be the best they can be, as well as supervise and support other adult volunteers in their team.
 
@@ -2754,11 +2603,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Cadet Group Lead";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T08:34:22.664000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f6062013569e79fd3b7e06 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T09:51:28.204000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Are you committed to delivering high quality care? Do you have experience working as part of a multidisciplinary team?
 
@@ -2784,11 +2631,9 @@ For more information please contact joe.cartwright@sja.org.uk""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "County Youth Lead";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T09:51:28.204000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f6065134bda533c75ee6db :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T09:52:17.265000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Cadet Group Leaders work directly with young people in St John Ambulance Badger Setts and Cadet Units. By organising a mixed weekly programme, this role will support the learning and development of young people into the next generation of health citizens. Youth Leaders also help young people develop their confidence, teamwork skills, self-discipline, and generally encourage them to strive to be the best they can be, as well as supervise and support other adult volunteers in their team.
 
@@ -2808,11 +2653,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Cadet Group Lead";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T09:52:17.265000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f61a1c32ee7335d6c08c68 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T11:16:44.311000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """At St John Ambulance we are looking to embed ourselves within our communities, delivering support which is tailored to the needs of those communities whilst providing a positive experience for our Volunteers.
 
@@ -2841,11 +2684,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Network President";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T11:16:44.311000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f61a9c5d932a14a15c7532 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T11:18:52.196000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """At St John Ambulance we are looking to embed ourselves within our communities, delivering support which is tailored to the needs of those communities whilst providing a positive experience for our Volunteers.
 
@@ -2874,11 +2715,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Network President";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T11:18:52.196000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f61b040cd32bc0a073828c :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T11:20:36.241000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """
 Youth Leaders work directly with young people in St John Ambulance Badger Setts and Cadet Units. By organising a mixed weekly programme, this role will support the learning and development of young people into the next generation of health citizens. Youth Leaders also help young people develop their confidence, teamwork skills, self-discipline, and generally encourage them to strive to be the best they can be, as well as supervise and support other adult volunteers in their team.
@@ -2899,11 +2738,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Badger Sett Lead";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T11:20:36.241000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f61c110cd32bc0a0738541 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T11:25:05.940000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """At St John Ambulance we are looking to embed ourselves within our communities, delivering support which is tailored to the needs of those communities whilst providing a positive experience for our Volunteers.
 
@@ -2932,11 +2769,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Network President";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T11:25:05.940000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f61d29d5459d1095a831af :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T11:29:45.637000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Are you committed to delivering high quality care? Do you have experience working as part of a multidisciplinary team?
 
@@ -2960,11 +2795,9 @@ For more information please contact Adam.parkersteed@sja.org.uk""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "County Youth Lead";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T11:29:45.637000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f61d4faa380776696f6082 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T11:30:23.451000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Youth Leaders work directly with young people in St John Ambulance Badger Setts and Cadet Units. By organising a mixed weekly programme, this role will support the learning and development of young people into the next generation of health citizens. Youth Leaders also help young people develop their confidence, teamwork skills, self-discipline, and generally encourage them to strive to be the best they can be, as well as supervise and support other adult volunteers in their team.
 
@@ -2984,11 +2817,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Badger Sett Lead";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T11:30:23.451000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f6210c846f376c3ac70ec6 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T11:46:20.335000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """At St John Ambulance, we are looking to embed ourselves within our communities, delivering support which is tailored to the needs of those communities whilst providing a positive experience for our Volunteers.
 
@@ -3016,11 +2847,9 @@ To apply for this opportunity, please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Network Community Lead";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T11:46:20.335000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f621e6330c569ddb906022 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T11:49:58.854000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """We are seeking a dynamic and dedicated individual to take on the role of Community First Aid Network Leader who can work and lead volunteering groups and leaders in their own way, supported by our central teams
 
@@ -3050,11 +2879,9 @@ To apply for this opportunity, please follow the link below""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Network Event Services Lead";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T11:49:58.854000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f6323eebb559c732fc46b8 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T12:59:42.356000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """At St John Ambulance, we are looking to embed ourselves within our communities, delivering support which is tailored to the needs of those communities whilst providing a positive experience for our Volunteers.
 
@@ -3082,11 +2909,9 @@ To apply for this opportunity, please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Network Operational Support Lead";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T12:59:42.356000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f632965faa53da0cbcc030 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T13:01:10.717000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """We are seeking a dynamic and dedicated individual to take on the role of Network Training Lead who can work and lead volunteering groups and leaders in their own way, supported by our central teams
 
@@ -3116,11 +2941,9 @@ To apply for this opportunity, please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Network Training Lead";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T13:01:10.717000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f64398690f0cb6a142ca11 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T14:13:44.317000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Y’s Girls Mentoring Programme at YMCA Bradford supports girls aged 9 to 14 who may be at risk of poor mental health, low self-esteem, or social isolation. Each girl is matched with a trained volunteer mentor who meets with her weekly to build trust, explore emotions, and try new things.
 
@@ -3158,11 +2981,9 @@ YMCA Bradford and local community settings across Bradford""";
                             :organization id:68f2666fa512aaa2c7ddf9fb;
                             :publishedApps id:65bab9cfb6f4d44ce2b9c119;
                             :title "Y's Girls Volunteer Mentor";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T14:13:44.317000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f650cd8236aa05dfeb83ca :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T15:10:05.712000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """We need leaders who are passionate about making a difference in their communities, who care about helping and developing others, who will lead and inspire a volunteer movement across a geographical area to deliver Community First Aid, Community Education and Community Fundraising as well as develop our offering for young people. Through leading a team of Volunteer leaders, you will drive excellence in delivery, develop an inclusive and diverse volunteering experience for new and current volunteers, and help navigate through change to build a bigger and better St John Ambulance.
 
@@ -3188,11 +3009,9 @@ For more information please contact hiring manager lee.hitchings@sja.org.uk""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Network Youth Services Lead";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-20T15:10:05.712000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f651fd8236aa05dfeb872e :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-20T15:15:09.451000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """If you're looking to take your first step into a Motorsport career, we need YOU! 🏁
 If you’ve ever wanted to be part of something fast-paced, inspiring, and full of future innovators, this is your moment. Whether you’re a teacher, student, motorsport fan, or simply passionate about STEM, volunteering at the National Finals is a chance to get behind the scenes of an unforgettable event. At STEM On Track, we help schools bring STEM to life through hands-on go-kart kits and online modules, giving students a real taste of engineering, motorsport, and marketing.
@@ -3219,11 +3038,9 @@ Test Days: 7th of May
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :startDate "2026-05-07T07:00:00.000000+00:00"^^xsd:dateTime;
                             :title "STEM On Track National Finals";
-                            :type "Event";
-                            :updatedAt "2025-10-20T15:15:09.451000+00:00"^^xsd:dateTime.
+                            :type "Event".
 id:68f6f76a16d68426b764eb7b :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-21T03:00:58.453000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Our nature reserves are special places for people and wildlife. We need volunteers to complete a variety of surveys to collect essential data. This science will contribute to habitat management, inform policy and help influence external organisations. 
 
@@ -3259,11 +3076,9 @@ You will be contributing to Saving Nature; our survey and monitoring work helps 
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Reserve Biodiversity Monitor and Surveyor ";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T03:00:58.453000+00:00"^^xsd:dateTime;
                             :volunteerNumber 2 .
 id:68f6f76b16d68426b764eba6 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-21T03:00:59.494000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """We are looking for work party volunteers to join us on our reserves. RSPB nature reserves are special places for people and wildlife and we rely on volunteers to keeps these habitats thriving and in good shape. This role is suitable for under 18’s. 
 
@@ -3290,11 +3105,9 @@ We are a friendly and supportive team. If you are volunteering to learn new skil
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Practical Reserve Work ";
                             :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T03:00:59.494000+00:00"^^xsd:dateTime;
                             :volunteerNumber 10 .
 id:68f73e25bebfc67316bf3d51 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-21T08:02:46.033000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Volunteering for Sense
 
@@ -3366,11 +3179,9 @@ We include. We collaborate. We find a way. We challenge. We celebrate.
                             :organization id:6425cd68a0624f3ab9fb0c4b;
                             :publishedApps id:65a46519c9da46983ceed1bb;
                             :title "Charity Shop Volunteer - Ashington Shop";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T08:02:46.033000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f7637a85339cb028ffbbfe :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-21T10:42:02.408000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """At St John Ambulance, we are looking to develop our volunteering offer and become an even more integral part of our communities through delivering community first aid and education. 
 
@@ -3405,11 +3216,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Emergency Responder (West Midlands)";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T10:42:02.408000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f7637c1bf63c8c4873edfe :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-21T10:42:04.114000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Support the work of St John Ambulance in your community by volunteering as a Community Volunteer, an exciting new role which is designed to revamp how volunteering looks in the modern world; flexible, innovative and is open for all.
 
@@ -3454,11 +3263,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Community Volunteer (North Essex)";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T10:42:04.114000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f7639e7c2e122047de80a7 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-21T10:42:39.005000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Support the work of St John Ambulance in your community by volunteering as a Community Volunteer, an exciting new role which is designed to revamp how volunteering looks in the modern world; flexible, innovative and is open for all.
 
@@ -3510,11 +3317,9 @@ To apply for this opportunity please follow the link below:""";
                             :organization id:6425cee7a0624f3ab9fb35be;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Community Volunteer (North Devon & Torridge Network)";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T10:42:39.005000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f76661cdac2ef46ad1dbd8 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-21T10:54:25.434000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Are you a UK-based university student, graduate, or experienced tutor with a passion for sharing knowledge? Join us at Tutor The Nation and help make a positive impact on students' lives!
 
@@ -3547,11 +3352,9 @@ Ready to give just 1 hour a week and change a life? Apply now and be a part of s
                             :organization id:660c0023022dfe06f1ef3341;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Volunteer Online Tutor";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T10:54:25.434000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f773eef0a993a66e386c81 :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-21T11:52:14.542000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Across the UK, our 270 local groups play a vital part in supporting people affected by MS. They provide sense of belonging, unity and friendship. And they deliver services and support for their local MS community.
 
@@ -3587,11 +3390,9 @@ The MS Society is committed to promoting diversity. We can only offer roles to o
                             :organization id:6425eae8c794380477b70969;
                             :publishedApps id:65a46db14b30b7dd175eb67a;
                             :title "Support Volunteer (Lambeth and Southwark)";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T11:52:14.542000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".
 id:68f792b0bf48f6d5969d0ead :attendeesNumber 0 ;
                             :bookingsNumber 0 ;
-                            :createdAt "2025-10-21T14:03:28.796000+00:00"^^xsd:dateTime;
                             :deleted false;
                             :description """Location:  Stepney City Farm, Stepney Way, London, E1 3DG
 When: Tuesdays or Thursdays (or both) 12:30pm–16:30pm
@@ -3630,5 +3431,4 @@ If you have a disability or any accessibility needs, we will do our best to make
                             :organization id:68f787b818bf1e8a57ae9db6;
                             :publishedApps id:65bab9cfb6f4d44ce2b9c119;
                             :title "Greencare Support Volunteer ";
-                            :type "OngoingOpportunity";
-                            :updatedAt "2025-10-21T14:03:28.796000+00:00"^^xsd:dateTime.
+                            :type "OngoingOpportunity".

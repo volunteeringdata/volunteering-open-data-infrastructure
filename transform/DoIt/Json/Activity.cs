@@ -17,8 +17,6 @@ public class Activity : Identified
 
     [JsonPropertyName("bookingsNumber")] public required int BookingsNumber { get; set; }
 
-    [JsonPropertyName("createdAt")] public required Date CreatedAt { get; set; }
-
     [JsonPropertyName("deleted")] public required bool Deleted { get; set; }
 
     [JsonPropertyName("dueDate")] public Date? DueDate { get; set; }
@@ -57,8 +55,6 @@ public class Activity : Identified
 
     // All zeros except a few nulls
     [JsonPropertyName("teamsNumber")] public int? TeamsNumber { get; set; }
-
-    [JsonPropertyName("updatedAt")] public required Date UpdatedAt { get; set; }
 
     [JsonPropertyName("volunteerNumber")] public int? VolunteerNumber { get; set; }
 }

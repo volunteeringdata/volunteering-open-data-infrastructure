@@ -25,8 +25,4 @@ public class ActivityDefinitionSubDocument : Identified
     [JsonPropertyName("locationOption")] public required string LocationOption { get; set; }
 
     [JsonPropertyName("organizationSubDocument")] public required OrganizationSubDocument Organization { get; set; }
-
-    [JsonPropertyName("createdAt")] public required Date CreatedAt { get; set; }
-
-    [JsonPropertyName("updatedAt")] public required Date UpdatedAt { get; set; }
 }

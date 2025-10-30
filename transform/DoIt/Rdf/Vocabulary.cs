@@ -9,7 +9,6 @@ internal class Vocabulary
 
     internal static IUriNode AttendeesNumber { get; } = Node("attendeesNumber");
     internal static IUriNode BookingsNumber { get; } = Node("bookingsNumber");
-    internal static IUriNode CreatedAt { get; } = Node("createdAt");
     internal static IUriNode Deleted { get; } = Node("deleted");
     internal static IUriNode DueDate { get; } = Node("dueDate");
     internal static IUriNode Ecosystem { get; } = Node("ecosystem");
@@ -21,7 +20,6 @@ internal class Vocabulary
     internal static IUriNode Organization { get; } = Node("organization");
     internal static IUriNode PublishedApps { get; } = Node("publishedApps");
     internal static IUriNode StartDate { get; } = Node("startDate");
-    internal static IUriNode UpdatedAt { get; } = Node("updatedAt");
     internal static IUriNode VolunteerNumber { get; } = Node("volunteerNumber");
     internal static IUriNode Title { get; } = Node("title");
     internal static IUriNode Description { get; } = Node("description");

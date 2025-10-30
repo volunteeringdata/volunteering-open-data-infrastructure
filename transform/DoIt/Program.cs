@@ -27,7 +27,6 @@ foreach (var sourceActivity in activities!)
     // Address
     targetActivity.AttendeesNumber = sourceActivity.AttendeesNumber;
     targetActivity.BookingsNumber = sourceActivity.BookingsNumber;
-    targetActivity.CreatedAt = sourceActivity.CreatedAt.Value;
     targetActivity.Deleted = sourceActivity.Deleted;
     targetActivity.DueDate = sourceActivity.DueDate?.Value;
     targetActivity.Ecosystem = Ecosystem.Create(sourceActivity.Ecosystem.Value, targetGraph);
@@ -40,7 +39,6 @@ foreach (var sourceActivity in activities!)
     targetActivity.PublishedApps.UnionWith(sourceActivity.PublishedApp.Select(a => new Uri(Vocabulary.InstanceBaseUri, a.Value)));
     // Regions
     targetActivity.StartDate = sourceActivity.StartDate?.Value;
-    targetActivity.UpdatedAt = sourceActivity.UpdatedAt.Value;
     targetActivity.VolunteerNumber = sourceActivity.VolunteerNumber;
 
 }
