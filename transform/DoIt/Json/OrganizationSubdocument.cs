@@ -10,8 +10,7 @@ public class OrganizationSubDocument : Identified
 
     [JsonPropertyName("contactPhoneNumber")] public string? ContactPhoneNumber { get; set; }
 
-    [JsonPropertyName("createdAt")] public Date? CreatedAtObject { get; set; }
-    [JsonIgnore] public DateTimeOffset? CreatedAt => CreatedAtObject?.Value;
+    [JsonPropertyName("createdAt")] public Date? CreatedAt { get; set; }
 
     [JsonPropertyName("deleted")] public bool? Deleted { get; set; }
 
@@ -32,8 +31,7 @@ public class OrganizationSubDocument : Identified
     // TODO: Enum?
     [JsonPropertyName("type")] public string? Type { get; set; }
 
-    [JsonPropertyName("updatedAt")] public required Date UpdatedAtObject { get; set; }
-    [JsonIgnore] public DateTimeOffset UpdatedAt => UpdatedAtObject.Value;
+    [JsonPropertyName("updatedAt")] public required Date UpdatedAt { get; set; }
 
     [JsonPropertyName("websiteLink")] public string? WebsiteLinkNullable { get; set; }
     [JsonIgnore]

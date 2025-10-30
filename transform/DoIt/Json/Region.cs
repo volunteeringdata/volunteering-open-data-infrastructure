@@ -11,9 +11,7 @@ public class Region : Identified
 
     [JsonPropertyName("geocenterLocation")] public required LonLat GeocenterLocation { get; set; }
 
-    [JsonPropertyName("createdAt")] public required Date CreatedAtObject { get; set; }
-    [JsonIgnore] public DateTimeOffset CreatedAt => CreatedAtObject.Value;
+    [JsonPropertyName("createdAt")] public required Date CreatedAt { get; set; }
 
-    [JsonPropertyName("updatedAt")] public required Date UpdatedAtObject { get; set; }
-    [JsonIgnore] public DateTimeOffset UpdatedAt => UpdatedAtObject.Value;
+    [JsonPropertyName("updatedAt")] public required Date UpdatedAt { get; set; }
 }

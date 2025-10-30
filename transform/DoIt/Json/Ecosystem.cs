@@ -1,6 +1,6 @@
 ﻿namespace DoIt.Json;
 
-public class EcosystemSummary : Identified
+public class Ecosystem : Identified
 {
     [JsonPropertyName("logo")] public required Uri Logo { get; set; }
 

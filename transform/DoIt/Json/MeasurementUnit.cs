@@ -1,6 +1,6 @@
 ﻿namespace DoIt.Json;
 
-public class MeasurementUnitSummary : Identified
+public class MeasurementUnit : Identified
 {
     // TODO: Enum?
     [JsonPropertyName("category")] public required string Category { get; set; }

@@ -17,19 +17,15 @@ public class Activity : Identified
 
     [JsonPropertyName("bookingsNumber")] public required int BookingsNumber { get; set; }
 
-    [JsonPropertyName("createdAt")] public required Date CreatedAtObject { get; set; }
-    [JsonIgnore] public DateTimeOffset CreatedAt => CreatedAtObject.Value;
+    [JsonPropertyName("createdAt")] public required Date CreatedAt { get; set; }
 
-    [JsonPropertyName("deleted")] public bool? Deleted { get; set; }
+    [JsonPropertyName("deleted")] public required bool Deleted { get; set; }
 
-    [JsonPropertyName("dueDate")] public Date? DueDateObject { get; set; }
-    [JsonIgnore] public DateTimeOffset? DueDate => DueDateObject?.Value;
+    [JsonPropertyName("dueDate")] public Date? DueDate { get; set; }
 
-    [JsonPropertyName("ecosystem")] public required Id EcosystemObject { get; set; }
-    [JsonIgnore] public string Ecosystem => EcosystemObject.Value;
+    [JsonPropertyName("ecosystem")] public required Id Ecosystem { get; set; }
 
-    [JsonPropertyName("endDate")] public Date? EndDateObject { get; set; }
-    [JsonIgnore] public DateTimeOffset? EndDate => EndDateObject?.Value;
+    [JsonPropertyName("endDate")] public Date? EndDate { get; set; }
 
     [JsonPropertyName("externalApplyLink")] public Uri? ExternalApplyLink { get; set; }
 
@@ -44,8 +40,7 @@ public class Activity : Identified
     [JsonPropertyName("meetingLink")] public string? MeetingLinkString { get; set; }
     [JsonIgnore] public Uri? MeetingLink => string.IsNullOrWhiteSpace(MeetingLinkString) ? null : new Uri(MeetingLinkString);
 
-    [JsonPropertyName("organization")] public required Id OrganizationObject { get; set; }
-    [JsonIgnore] public string Organization => OrganizationObject.Value;
+    [JsonPropertyName("organization")] public required Id Organization { get; set; }
 
     [JsonPropertyName("publishedApps")] public required IEnumerable<Id> PublishedAppObjects { get; set; }
     [JsonIgnore] public IEnumerable<string> PublishedApps => PublishedAppObjects.Select(a => a.Value);
@@ -53,8 +48,7 @@ public class Activity : Identified
     [JsonIgnore] public IEnumerable<Region> Regions => RegionsNullable ?? [];
     [JsonPropertyName("regions")] public IEnumerable<Region>? RegionsNullable { get; set; }
 
-    [JsonPropertyName("startDate")] public Date? StartDateObject { get; set; }
-    [JsonIgnore] public DateTimeOffset? StartDate => StartDateObject?.Value;
+    [JsonPropertyName("startDate")] public Date? StartDate { get; set; }
 
     // All zeros except a few nulls
     [JsonPropertyName("teamsMaxSize")] public int? TeamsMaxSize { get; set; }
@@ -65,8 +59,7 @@ public class Activity : Identified
     // All zeros except a few nulls
     [JsonPropertyName("teamsNumber")] public int? TeamsNumber { get; set; }
 
-    [JsonPropertyName("updatedAt")] public required Date UpdatedAtObject { get; set; }
-    [JsonIgnore] public DateTimeOffset UpdatedAt => UpdatedAtObject.Value;
+    [JsonPropertyName("updatedAt")] public required Date UpdatedAt { get; set; }
 
     [JsonPropertyName("volunteerNumber")] public int? VolunteerNumber { get; set; }
 }
