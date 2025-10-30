@@ -35,7 +35,7 @@ public class Activity : Identified
 
     [JsonPropertyName("isOnline")] public bool? IsOnline { get; set; }
 
-    [JsonPropertyName("isVolunteerNumberLimited")] public bool? IsVolunteerNumberLimited { get; set; }
+    [JsonPropertyName("isVolunteerNumberLimited")] public required bool IsVolunteerNumberLimited { get; set; }
 
     [JsonPropertyName("meetingLink")] public string? MeetingLinkString { get; set; }
     [JsonIgnore] public Uri? MeetingLink => string.IsNullOrWhiteSpace(MeetingLinkString) ? null : new Uri(MeetingLinkString);
