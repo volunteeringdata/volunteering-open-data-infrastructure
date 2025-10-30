@@ -21,6 +21,8 @@ foreach (var source in activities!)
     target.App.Logo = source.Details.App.Logo;
     target.App.Name = source.Details.App.Name;
     target.App.Organization = Organization.Create(source.Details.App.Organization.Id.Value, targetGraph);
+    target.App.Organization.Logo = source.Details.App.Organization.Logo;
+    target.App.Organization.Name = source.Details.App.Organization.Name;
     target.MeasurementUnit = MeasurementUnit.Create(source.Details.MeasurementUnit.Id.Value, targetGraph);
     target.MeasurementUnit.Category = source.Details.MeasurementUnit.Category;
     target.MeasurementUnit.PluralLabel = source.Details.MeasurementUnit.PluralLabel;

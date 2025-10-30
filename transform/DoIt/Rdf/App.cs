@@ -22,5 +22,8 @@ public class App : GraphWrapperNode
    
     internal string Name{ set => this.Overwrite(Vocabulary.AppName, value); }
 
-    internal Organization Organization { set => this.Overwrite(Vocabulary.AppOrganization, value, Organization.Wrap); }
+    internal Organization Organization { 
+        get => this.Singular(Vocabulary.AppOrganization, Organization.Wrap); 
+        set => this.Overwrite(Vocabulary.AppOrganization, value, Organization.Wrap); 
+    }
 }

@@ -4,6 +4,8 @@
 @prefix id: <https://id.example.org/>.
 @prefix : <https://id.example.org/schema/>.
 
+id:64093b512eed5dcadba50889 :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/4868792e-a31b-4bed-a43c-c209ea90a813_2024-10-15T17:57:01.299Z.jpeg>;
+                            :organizationName "Do it".
 id:64093b532eed5dcadba50895 :optionApp id:65bab9cfb6f4d44ce2b9c119;
                             :optionDisplayName "Older people";
                             :optionIcon "https://s3.eu-west-2.amazonaws.com/doit2.0-production-static/activity-categories/person-cane.svg".
@@ -889,6 +891,8 @@ id:65935202ea6975704c8df5d0 :optionApp id:65a46db14b30b7dd175eb67a;
 id:65935203ea6975704c8df5dd :optionApp id:65a46db14b30b7dd175eb67a;
                             :optionDisplayName "Sustainability, heritage and environment";
                             :optionIcon "https://s3.eu-west-2.amazonaws.com/doit2.0-production-static/sustainability.png".
+id:65a4650ac9da46983ceed177 :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-static/fslogo.png>;
+                            :organizationName "FareShare UK".
 id:65a46519c9da46983ceed1bb :appBrandColor "#6BBF3A";
                             :appDescription "";
                             :appEcosystem id:65a4650bc9da46983ceed17f;
@@ -1667,6 +1671,8 @@ Any successful applicant working with children will be required to undertake an 
                                                  id:661dbb6ac8ab0cb083e72ebf;
                             :activityTitle "Minecraft Youth Support / Mentoring Through Play";
                             :activityType "OngoingOpportunity".
+id:67aa00bb8e0715d8c0eefd61 :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/d4b2eb74-0389-4319-98d3-ecec40918058_2025-02-10T13:48:03.020Z.jpeg>;
+                            :organizationName "Younity".
 id:67b3a3ab839566a5b7a0d60d :appDescription "Volunteer your time with community energy groups.";
                             :appEcosystem id:67aa00bc8e0715d8c0eefd6f;
                             :appLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-static/app-logos/connect.png>;
