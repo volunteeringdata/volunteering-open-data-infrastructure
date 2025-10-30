@@ -19,6 +19,10 @@ internal class Vocabulary
     internal static IUriNode IsVolunteerNumberLimited { get; } = Node("isVolunteerNumberLimited");
     internal static IUriNode MeetingLink { get; } = Node("meetingLink");
     internal static IUriNode Organization { get; } = Node("organization");
+    internal static IUriNode PublishedApps { get; } = Node("publishedApps");
+    internal static IUriNode StartDate { get; } = Node("startDate");
+    internal static IUriNode UpdatedAt { get; } = Node("updatedAt");
+    internal static IUriNode VolunteerNumber { get; } = Node("volunteerNumber");
 
     private static IUriNode Node(string name) => AnyNode($"{VocabularyBaseUri}{name}");
 

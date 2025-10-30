@@ -35,4 +35,12 @@ public class Activity : GraphWrapperNode
     internal Uri? MeetingLink { set => this.OverwriteNullable(Vocabulary.MeetingLink, value); }
 
     internal Organization Organization { set => this.Overwrite(Vocabulary.Organization, value, Organization.Wrap); }
+
+    internal ISet<Uri> PublishedApps { get => this.Objects(Vocabulary.PublishedApps, NodeMappings.From, ValueMappings.As<Uri>); }
+
+    internal DateTimeOffset? StartDate { set => this.OverwriteNullable(Vocabulary.StartDate, value); }
+
+    internal DateTimeOffset UpdatedAt { set => this.Overwrite(Vocabulary.UpdatedAt, value); }
+
+    internal int? VolunteerNumber { set => this.OverwriteNullable(Vocabulary.VolunteerNumber, value); }
 }

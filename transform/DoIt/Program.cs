@@ -13,6 +13,8 @@ foreach (var sourceActivity in activities!)
 {
     var targetActivity = Activity.Create(sourceActivity.Id.Value, targetGraph);
 
+    // activityDefinitionSubDocument
+    // address
     targetActivity.AttendeesNumber = sourceActivity.AttendeesNumber;
     targetActivity.BookingsNumber = sourceActivity.BookingsNumber;
     targetActivity.CreatedAt = sourceActivity.CreatedAt.Value;
@@ -25,6 +27,12 @@ foreach (var sourceActivity in activities!)
     targetActivity.IsVolunteerNumberLimited = sourceActivity.IsVolunteerNumberLimited;
     targetActivity.MeetingLink = sourceActivity.MeetingLink;
     targetActivity.Organization = Organization.Create(sourceActivity.Organization.Value, targetGraph);
+    targetActivity.PublishedApps.UnionWith(sourceActivity.PublishedApp.Select(a => new Uri(Vocabulary.InstanceBaseUri, a.Value)));
+    // regions
+    targetActivity.StartDate = sourceActivity.StartDate?.Value;
+    targetActivity.UpdatedAt = sourceActivity.UpdatedAt.Value;
+    targetActivity.VolunteerNumber = sourceActivity.VolunteerNumber;
+
 }
 
 targetGraph.SaveToFile(outputRdfFile);
