@@ -27,6 +27,7 @@ internal class Vocabulary
     internal static IUriNode ActivityType { get; } = Node("activityType");
     internal static IUriNode ActivityEventType { get; } = Node("activityEventType");
     internal static IUriNode ActivityLocationOption { get; } = Node("activityLocationOption");
+    internal static IUriNode ActivityMeasurementUnit { get; } = Node("activityMeasurementUnit");
 
     internal static IUriNode AppBrandColor { get; } = Node("appBrandColor");
     internal static IUriNode AppEcosystem { get; } = Node("appEcosystem");
@@ -34,6 +35,10 @@ internal class Vocabulary
     internal static IUriNode AppLogo { get; } = Node("appLogo");
     internal static IUriNode AppName { get; } = Node("appName");
     internal static IUriNode AppOrganization { get; } = Node("appOrganization");
+
+    internal static IUriNode MeasurementUnitCategory { get; } = Node("measurementUnitCategory");
+    internal static IUriNode MeasurementUnitPluralLabel { get; } = Node("measurementUnitPluralLabel");
+    internal static IUriNode MeasurementUnitSingularLabel { get; } = Node("measurementUnitSingularLabel");
 
     private static IUriNode Node(string name) => AnyNode($"{VocabularyBaseUri}{name}");
 

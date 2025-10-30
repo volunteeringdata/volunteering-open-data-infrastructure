@@ -51,8 +51,15 @@ public class Activity : GraphWrapperNode
 
     internal string LocationOption { set => this.Overwrite(Vocabulary.ActivityLocationOption, value); }
 
-    internal App App { 
-        get => this.Singular(Vocabulary.ActivityApp, App.Wrap); 
-        set => this.Overwrite(Vocabulary.ActivityApp, value, App.Wrap); 
+    internal App App
+    {
+        get => this.Singular(Vocabulary.ActivityApp, App.Wrap);
+        set => this.Overwrite(Vocabulary.ActivityApp, value, App.Wrap);
+    }
+
+    internal MeasurementUnit MeasurementUnit
+    {
+        get => this.Singular(Vocabulary.ActivityMeasurementUnit, MeasurementUnit.Wrap);
+        set => this.Overwrite(Vocabulary.ActivityMeasurementUnit, value, MeasurementUnit.Wrap);
     }
 }

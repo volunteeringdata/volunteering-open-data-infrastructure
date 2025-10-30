@@ -21,7 +21,10 @@ foreach (var sourceActivity in activities!)
     targetActivity.App.Logo = sourceActivity.ActivityDefinitionSubDocument.App.Logo;
     targetActivity.App.Name = sourceActivity.ActivityDefinitionSubDocument.App.Name;
     targetActivity.App.Organization = Organization.Create(sourceActivity.ActivityDefinitionSubDocument.App.Organization.Id.Value, targetGraph);
-    // ActivityDefinitionSubDocument.MeasurementUnit
+    targetActivity.MeasurementUnit = MeasurementUnit.Create(sourceActivity.ActivityDefinitionSubDocument.MeasurementUnit.Id.Value, targetGraph);
+    targetActivity.MeasurementUnit.Category = sourceActivity.ActivityDefinitionSubDocument.MeasurementUnit.Category;
+    targetActivity.MeasurementUnit.PluralLabel = sourceActivity.ActivityDefinitionSubDocument.MeasurementUnit.PluralLabel;
+    targetActivity.MeasurementUnit.SingularLabel = sourceActivity.ActivityDefinitionSubDocument.MeasurementUnit.SingularLabel;
     targetActivity.Title = sourceActivity.ActivityDefinitionSubDocument.Title;
     targetActivity.Description = sourceActivity.ActivityDefinitionSubDocument.Description;
     targetActivity.Type = sourceActivity.ActivityDefinitionSubDocument.Type;
