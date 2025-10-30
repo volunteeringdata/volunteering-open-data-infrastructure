@@ -13,7 +13,7 @@ var targetGraph = new Graph();
 foreach (var sourceActivity in activities!)
 {
     var targetActivity = Activity.Create(sourceActivity.Id.Value, targetGraph);
-    Console.WriteLine(sourceActivity.Id.Value);
+
     targetActivity.App = App.Create(sourceActivity.ActivityDefinitionSubDocument.App.Id.Value, targetGraph);
     targetActivity.App.BrandColor = sourceActivity.ActivityDefinitionSubDocument.App.BrandColor;
     targetActivity.App.Description = sourceActivity.ActivityDefinitionSubDocument.App.Description;
