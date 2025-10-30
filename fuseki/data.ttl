@@ -25,6 +25,18 @@ id:64093b552eed5dcadba508a1 :optionApp id:65a46db14b30b7dd175eb67a;
 id:64093b552eed5dcadba508a3 :optionApp id:65a46db14b30b7dd175eb67a;
                             :optionDisplayName "Sustainability, heritage and environment";
                             :optionIcon "https://s3.eu-west-2.amazonaws.com/doit2.0-production-static/sustainability.png".
+id:64093b562eed5dcadba508a5 :optionApp id:65bab9cfb6f4d44ce2b9c119;
+                            :optionDisplayName "+14".
+id:64093b562eed5dcadba508a7 :optionApp id:65a46db14b30b7dd175eb67a;
+                            :optionDisplayName "+16".
+id:64093b562eed5dcadba508a9 :optionApp id:65a46db14b30b7dd175eb67a;
+                            :optionDisplayName "+18".
+id:64093b572eed5dcadba508ab :optionApp id:65a46db14b30b7dd175eb67a;
+                            :optionDisplayName "Own Transport".
+id:64093b572eed5dcadba508ad :optionApp id:65a46db14b30b7dd175eb67a;
+                            :optionDisplayName "Must live or work locally".
+id:64093b572eed5dcadba508af :optionApp id:65a46db14b30b7dd175eb67a;
+                            :optionDisplayName "Will require references".
 id:640f31a8a02daffd7c36acfd :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 27 ;
@@ -128,6 +140,9 @@ Email: lab@london.edu
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:641acaa302fe9a5308510539;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9,
+                                                 id:64093b572eed5dcadba508ab,
+                                                 id:64093b572eed5dcadba508ad;
                             :activityStart "2023-03-21T00:00:00.000000+00:00"^^xsd:dateTime;
                             :activityTitle "London Business School Research Lab - Earn £10 taking part in behavioural research";
                             :activityType "Event".
@@ -208,6 +223,7 @@ To help individuals to maintain written records relating to the tasks they compl
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cd40a0624f3ab9fb07c7;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b572eed5dcadba508af;
                             :activityTitle "Growing Places Mentor";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers -1 .
@@ -247,6 +263,7 @@ Suggested commitment of 8-12 hours per month - full training and support will be
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425d048a0624f3ab9fb4c7a;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b572eed5dcadba508af;
                             :activityTitle "Children's Activity Volunteer (ARLTA)";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers -1 .
@@ -296,6 +313,7 @@ Location: Tower Hamlets
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cec6a0624f3ab9fb3209;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b572eed5dcadba508af;
                             :activityTitle "Walking Group Volunteer - Tower Hamlets";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers -1 .
@@ -324,6 +342,7 @@ Location: Folkestone Town Centre""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cec6a0624f3ab9fb3209;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b572eed5dcadba508af;
                             :activityTitle "Arts and Crafts Facilitator Volunteer - Folkestone Haven";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers -1 .
@@ -379,6 +398,7 @@ Our volunteers get enormous pleasure from seeing the difference that a few hours
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:64242e9d5163ce4fdbb8beab;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b572eed5dcadba508af;
                             :activityTitle "Schoolreaders Volunteer London";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers -1 .
@@ -395,6 +415,7 @@ id:644ffe2112535322aa32cace :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cdcba0624f3ab9fb1471;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b572eed5dcadba508af;
                             :activityTitle "Youth Club Co-Ordinator (Woking)";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers -1 .
@@ -464,6 +485,7 @@ id:6454142924210def92707ae5 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:64103c352a0eedb6aef42d3d;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Oxfam Shop Volunteering";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers 1000 .
@@ -484,6 +506,7 @@ The events range from stands in shopping centres and high streets, to big events
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:641879d4cf71f77116117e87;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Diabetes UK Events Volunteers - Kent";
                             :activityType "OngoingOpportunity".
 id:64578e61e090332d33ff0b4a :activityApp id:65a46db14b30b7dd175eb67a;
@@ -520,6 +543,7 @@ Bereavement happens for a variety of reasons and having the ability to offer the
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:640f1da74e4230f618e17f70;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityStart "2023-05-17T23:00:00.000000+00:00"^^xsd:dateTime;
                             :activityTitle "Bereavement Helpline Listener Volunteer ";
                             :activityType "Event".
@@ -586,6 +610,8 @@ They may have grown up in a family impacted by domestic violence. They might be 
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425d4b7a0624f3ab9fbac79;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b572eed5dcadba508ad,
+                                                 id:64093b572eed5dcadba508af;
                             :activityTitle "Mentor a child in London ";
                             :activityType "OngoingOpportunity".
 id:65e741ac3b33c2a2721e34a9 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -617,6 +643,8 @@ please apply here:  https://www.pah.org.uk/volunteer-roles/compassionate-neighbo
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425d5fca0624f3ab9fbc83b;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9,
+                                                 id:64093b572eed5dcadba508af;
                             :activityTitle "Compassionate Neighbours";
                             :activityType "OngoingOpportunity".
 id:65f968bfbbf8cbd3ac176677 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -641,6 +669,7 @@ The role will you suit if:
                             :activityOrganization id:6425d131a0624f3ab9fb595b;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a,
                                                    id:65a46519c9da46983ceed1bb;
+                            :activityRequirement id:64093b562eed5dcadba508a7;
                             :activityTitle "Nib Maker";
                             :activityType "OngoingOpportunity".
 id:6616a201ad08dd3a925f90d1 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -667,6 +696,7 @@ Note: For some reason the posting is saying 36000 hours! You will only be asked 
                             :activityMeeting <https://www.writersinitiative.com/>;
                             :activityOrganization id:66169d5247af10a843126434;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a7;
                             :activityTitle "Freelance Writer of Blog/Article posts ";
                             :activityType "OngoingOpportunity".
 id:661d321c72ed22fd04a428a6 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -732,6 +762,7 @@ We celebrate""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cd68a0624f3ab9fb0c4b;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Activity Volunteer at Sense Touchbase Pears";
                             :activityType "OngoingOpportunity".
 id:661d371f2307f13b3b2ef9c7 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -754,8 +785,13 @@ Increase patients’ self-confidence and ability to self-manage their difficulti
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:65bcbcd8b620e756f16aee39;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Living Well at Home Volunteer";
                             :activityType "OngoingOpportunity".
+id:661dbb2fc8ab0cb083e72ebe :optionApp id:65a46db14b30b7dd175eb67a;
+                            :optionDisplayName "None".
+id:661dbb6ac8ab0cb083e72ebf :optionApp id:65a46db14b30b7dd175eb67a;
+                            :optionDisplayName "Background checks".
 id:6620de77f8927a9404512e98 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 11 ;
@@ -774,6 +810,9 @@ Weekly telephone or virtual support has become a key element of our support offe
                             :activityMeeting <https://www.homestartinsuffolk.org/>;
                             :activityOrganization id:6620d75a29bfe93cfc010834;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9,
+                                                 id:64093b572eed5dcadba508af,
+                                                 id:661dbb6ac8ab0cb083e72ebf;
                             :activityTitle "Telephone Support";
                             :activityType "OngoingOpportunity".
 id:6632280848e4241e951fbe1e :activityApp id:65a46db14b30b7dd175eb67a;
@@ -830,6 +869,7 @@ We’d love for you to consider joining us as a Sense Virtual Buddy!""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cd68a0624f3ab9fb0c4b;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Virtual Buddy";
                             :activityType "OngoingOpportunity".
 id:6633742da97c2db03ae12aee :activityApp id:65a46db14b30b7dd175eb67a;
@@ -877,6 +917,7 @@ Most importantly your efforts will ensure that both individuals and organisation
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425f3b8f2d4b77a6e155b67;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Video Editor / Content Creator";
                             :activityType "OngoingOpportunity".
 id:6633785e2e8b9ca375ca506a :activityApp id:65a46db14b30b7dd175eb67a;
@@ -940,6 +981,7 @@ A reference for your CV""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425f3b8f2d4b77a6e155b67;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Social Media Marketing Volunteer for BELIFF Film Festival";
                             :activityType "OngoingOpportunity".
 id:663b4b8d427911a09c6bda40 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -985,6 +1027,9 @@ https://www.reengage.org.uk/volunteer/new-volunteers/
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6426107cde05bf8ae7c9af41;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9,
+                                                 id:64093b572eed5dcadba508af,
+                                                 id:661dbb6ac8ab0cb083e72ebf;
                             :activityTitle "Re engage - Older People Telephone Befriending London/National - Volunteer ";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers 10 .
@@ -1030,6 +1075,7 @@ You will be provided with full training and support from NWR staff and will be p
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:66508c7e9624a8e5c5b4ab2d;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Women's Group Organiser - multiple locations in London";
                             :activityType "OngoingOpportunity".
 id:665decbf05333a667b2d0efc :activityApp id:65a46db14b30b7dd175eb67a;
@@ -1059,6 +1105,7 @@ Analytical skills.""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:665dad56103207cef4a1b743;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Graphic Designer";
                             :activityType "OngoingOpportunity".
 id:66982ffbbf338eca22aa267b :optionApp id:65bab9cfb6f4d44ce2b9c119;
@@ -1135,6 +1182,7 @@ Be a part of the Be Epic! London International Film Festival’s digital transfo
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425f3b8f2d4b77a6e155b67;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Web Design and Management Volunteering Position for Be Epic! London International Film Festival";
                             :activityType "OngoingOpportunity".
 id:67600aea8b8227d3878202ee :activityApp id:65a46db14b30b7dd175eb67a;
@@ -1187,6 +1235,9 @@ Any successful applicant working with children will be required to undertake an 
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:676008f8954c54acf0cebd9c;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a7,
+                                                 id:64093b572eed5dcadba508af,
+                                                 id:661dbb6ac8ab0cb083e72ebf;
                             :activityTitle "Minecraft Youth Support / Mentoring Through Play";
                             :activityType "OngoingOpportunity".
 id:67b3a3ab839566a5b7a0d60d :appDescription "Volunteer your time with community energy groups.";
@@ -1512,6 +1563,10 @@ Contact our friendly Volunteer Experience (VE) Team at VE-Support@ssafa.org.uk T
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6696569fe1a9ec9394b33f56;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9,
+                                                 id:64093b572eed5dcadba508ad,
+                                                 id:64093b572eed5dcadba508af,
+                                                 id:661dbb6ac8ab0cb083e72ebf;
                             :activityTitle "Volunteer Fundraiser (Lanarkshire)";
                             :activityType "OngoingOpportunity".
 id:682c6029e2b7d37b979293f5 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -1593,6 +1648,10 @@ Contact our friendly Volunteer Experience (VE) Team at VE-Support@ssafa.org.uk T
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6696569fe1a9ec9394b33f56;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9,
+                                                 id:64093b572eed5dcadba508ad,
+                                                 id:64093b572eed5dcadba508af,
+                                                 id:661dbb6ac8ab0cb083e72ebf;
                             :activityTitle "Volunteer Fundraiser (Ross & Cromarty)";
                             :activityType "OngoingOpportunity".
 id:682e936de979c3e5a8192765 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -1951,6 +2010,7 @@ The event is from 19:30 – 21:30, but we’d ask for you to arrive at the venue
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cdf8a0624f3ab9fb196a;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityStart "2025-11-21T18:00:00.000000+00:00"^^xsd:dateTime;
                             :activityTitle "Christmas Concert Ushers - Missing People";
                             :activityType "Event".
@@ -2193,6 +2253,7 @@ Skills and Experience
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:68e793d5bebfd220e4aec748;
                             :activityPublishedApps id:67b3a3ab839566a5b7a0d60d;
+                            :activityRequirement id:64093b572eed5dcadba508af;
                             :activityTitle "Legal support advising and checking";
                             :activityType "OngoingOpportunity".
 id:68ef0e6bea1549dcd93842b0 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2268,6 +2329,8 @@ Test Days: 7th of May
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:68ef7c9fb239d50f07154216;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a5,
+                                                 id:64093b572eed5dcadba508ab;
                             :activityStart "2026-06-20T07:00:00.000000+00:00"^^xsd:dateTime;
                             :activityTitle "STEM On Track National Finals";
                             :activityType "Event".
@@ -2317,6 +2380,7 @@ Commitment is 6 to 8 hours per month, which includes a 2 hour trustee meeting he
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:68f229a206abd725874e1612;
                             :activityPublishedApps id:65bab9cfb6f4d44ce2b9c119;
+                            :activityRequirement id:64093b572eed5dcadba508af;
                             :activityTitle "Trustee";
                             :activityType "OngoingOpportunity".
 id:68f24c113c09770c24988bf6 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2359,6 +2423,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Community First Aider (Derbyshire)";
                             :activityType "OngoingOpportunity".
 id:68f24c2fb46b80bec83ae166 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2418,6 +2483,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Community Volunteer (Wiltshire)";
                             :activityType "OngoingOpportunity".
 id:68f25736a9026f6338603e37 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2477,6 +2543,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Community Volunteer (West Midlands)";
                             :activityType "OngoingOpportunity".
 id:68f25dd439b539c18d98cea4 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2529,6 +2596,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Community Volunteer (Devon)";
                             :activityType "OngoingOpportunity".
 id:68f25df339b539c18d98cfdb :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2571,6 +2639,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Community First Aider (Devon)";
                             :activityType "OngoingOpportunity".
 id:68f25e3e39b539c18d98d24e :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2613,6 +2682,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Community First Aider (Wiltshire)";
                             :activityType "OngoingOpportunity".
 id:68f25e5a3d728ac578a6042c :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2663,6 +2733,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Community Volunteer (South Norfolk)";
                             :activityType "OngoingOpportunity".
 id:68f302ee7d586b2facb5a11d :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2836,6 +2907,7 @@ Be the reason a child keeps believing. Join us today.""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:68f4e3bffe3f8f55aef0e544;
                             :activityPublishedApps id:65bab9cfb6f4d44ce2b9c119;
+                            :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Write a Pen Pal letter to an African Child in Need!";
                             :activityType "OngoingOpportunity".
 id:68f5406090268edd4a86435a :activityApp id:65bab9cfb6f4d44ce2b9c119;
@@ -2858,6 +2930,7 @@ We are looking for people to promote our organisation through outreach with loca
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:68f53f8346b712131f0148e7;
                             :activityPublishedApps id:65bab9cfb6f4d44ce2b9c119;
+                            :activityRequirement id:64093b562eed5dcadba508a5;
                             :activityTitle "Beyond Theory Learning : Long Term Volunteer Opportunities";
                             :activityType "OngoingOpportunity".
 id:68f5f0809017447fbcbba347 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2883,6 +2956,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Cadet Group Lead";
                             :activityType "OngoingOpportunity".
 id:68f5f3ef44f57c928faa1ba0 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2908,6 +2982,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Cadet Group Lead";
                             :activityType "OngoingOpportunity".
 id:68f5f40ea7fc2683be93f71f :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2933,6 +3008,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Cadet Group Lead";
                             :activityType "OngoingOpportunity".
 id:68f6062013569e79fd3b7e06 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2964,6 +3040,7 @@ For more information please contact joe.cartwright@sja.org.uk""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "County Youth Lead";
                             :activityType "OngoingOpportunity".
 id:68f6065134bda533c75ee6db :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2989,6 +3066,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Cadet Group Lead";
                             :activityType "OngoingOpportunity".
 id:68f61a1c32ee7335d6c08c68 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3023,6 +3101,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Network President";
                             :activityType "OngoingOpportunity".
 id:68f61a9c5d932a14a15c7532 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3057,6 +3136,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Network President";
                             :activityType "OngoingOpportunity".
 id:68f61b040cd32bc0a073828c :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3083,6 +3163,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Badger Sett Lead";
                             :activityType "OngoingOpportunity".
 id:68f61c110cd32bc0a0738541 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3117,6 +3198,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Network President";
                             :activityType "OngoingOpportunity".
 id:68f61d29d5459d1095a831af :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3146,6 +3228,7 @@ For more information please contact Adam.parkersteed@sja.org.uk""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "County Youth Lead";
                             :activityType "OngoingOpportunity".
 id:68f61d4faa380776696f6082 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3171,6 +3254,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Badger Sett Lead";
                             :activityType "OngoingOpportunity".
 id:68f6210c846f376c3ac70ec6 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3204,6 +3288,7 @@ To apply for this opportunity, please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Network Community Lead";
                             :activityType "OngoingOpportunity".
 id:68f621e6330c569ddb906022 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3239,6 +3324,7 @@ To apply for this opportunity, please follow the link below""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Network Event Services Lead";
                             :activityType "OngoingOpportunity".
 id:68f6323eebb559c732fc46b8 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3272,6 +3358,7 @@ To apply for this opportunity, please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Network Operational Support Lead";
                             :activityType "OngoingOpportunity".
 id:68f632965faa53da0cbcc030 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3307,6 +3394,7 @@ To apply for this opportunity, please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Network Training Lead";
                             :activityType "OngoingOpportunity".
 id:68f64398690f0cb6a142ca11 :activityApp id:65bab9cfb6f4d44ce2b9c119;
@@ -3351,6 +3439,7 @@ YMCA Bradford and local community settings across Bradford""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:68f2666fa512aaa2c7ddf9fb;
                             :activityPublishedApps id:65bab9cfb6f4d44ce2b9c119;
+                            :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Y's Girls Volunteer Mentor";
                             :activityType "OngoingOpportunity".
 id:68f650cd8236aa05dfeb83ca :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3382,6 +3471,7 @@ For more information please contact hiring manager lee.hitchings@sja.org.uk""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Network Youth Services Lead";
                             :activityType "OngoingOpportunity".
 id:68f651fd8236aa05dfeb872e :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3413,6 +3503,8 @@ Test Days: 7th of May
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:68ef7c9fb239d50f07154216;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a5,
+                                                 id:64093b572eed5dcadba508ab;
                             :activityStart "2026-05-07T07:00:00.000000+00:00"^^xsd:dateTime;
                             :activityTitle "STEM On Track National Finals";
                             :activityType "Event".
@@ -3566,6 +3658,7 @@ We include. We collaborate. We find a way. We challenge. We celebrate.
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cd68a0624f3ab9fb0c4b;
                             :activityPublishedApps id:65a46519c9da46983ceed1bb;
+                            :activityRequirement id:64093b562eed5dcadba508a7;
                             :activityTitle "Charity Shop Volunteer - Ashington Shop";
                             :activityType "OngoingOpportunity".
 id:68f7637a85339cb028ffbbfe :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3606,6 +3699,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Emergency Responder (West Midlands)";
                             :activityType "OngoingOpportunity".
 id:68f7637c1bf63c8c4873edfe :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3656,6 +3750,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Community Volunteer (North Essex)";
                             :activityType "OngoingOpportunity".
 id:68f7639e7c2e122047de80a7 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3713,6 +3808,7 @@ To apply for this opportunity please follow the link below:""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Community Volunteer (North Devon & Torridge Network)";
                             :activityType "OngoingOpportunity".
 id:68f76661cdac2ef46ad1dbd8 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3751,6 +3847,9 @@ Ready to give just 1 hour a week and change a life? Apply now and be a part of s
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:660c0023022dfe06f1ef3341;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9,
+                                                 id:64093b572eed5dcadba508af,
+                                                 id:661dbb6ac8ab0cb083e72ebf;
                             :activityTitle "Volunteer Online Tutor";
                             :activityType "OngoingOpportunity".
 id:68f773eef0a993a66e386c81 :activityApp id:65a46db14b30b7dd175eb67a;
@@ -3792,6 +3891,7 @@ The MS Society is committed to promoting diversity. We can only offer roles to o
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425eae8c794380477b70969;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Support Volunteer (Lambeth and Southwark)";
                             :activityType "OngoingOpportunity".
 id:68f792b0bf48f6d5969d0ead :activityApp id:65bab9cfb6f4d44ce2b9c119;
@@ -3838,5 +3938,7 @@ If you have a disability or any accessibility needs, we will do our best to make
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:68f787b818bf1e8a57ae9db6;
                             :activityPublishedApps id:65bab9cfb6f4d44ce2b9c119;
+                            :activityRequirement id:64093b562eed5dcadba508a9,
+                                                 id:661dbb6ac8ab0cb083e72ebf;
                             :activityTitle "Greencare Support Volunteer ";
                             :activityType "OngoingOpportunity".

@@ -62,5 +62,7 @@ public class Activity : GraphWrapperNode
         set => this.Overwrite(Vocabulary.ActivityMeasurementUnit, value, MeasurementUnit.Wrap);
     }
 
-    internal ISet<Option> Causes { get => this.Objects(Vocabulary.ActivityCause, Option.Wrap, Option.Wrap); }
+    internal ISet<Option> Cause { get => this.Objects(Vocabulary.ActivityCause, Option.Wrap, Option.Wrap); }
+
+    internal ISet<Option> Requirement { get => this.Objects(Vocabulary.ActivityRequirement, Option.Wrap, Option.Wrap); }
 }

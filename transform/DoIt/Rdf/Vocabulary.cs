@@ -21,6 +21,7 @@ internal class Vocabulary
     internal static IUriNode ActivityMeeting { get; } = Node("activityMeeting");
     internal static IUriNode ActivityOrganization { get; } = Node("activityOrganization");
     internal static IUriNode ActivityPublishedApps { get; } = Node("activityPublishedApps");
+    internal static IUriNode ActivityRequirement { get; } = Node("activityRequirement");
     internal static IUriNode ActivityStart { get; } = Node("activityStart");
     internal static IUriNode ActivityVolunteers { get; } = Node("activityVolunteers");
     internal static IUriNode ActivityTitle { get; } = Node("activityTitle");
