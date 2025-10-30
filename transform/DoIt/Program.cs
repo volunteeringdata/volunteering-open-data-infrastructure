@@ -1,5 +1,6 @@
 ﻿using DoIt.Rdf;
 using System.Text.Json;
+using VDS.RDF.Writing;
 using Json = DoIt.Json;
 
 var inputJsonFile = Path.Combine(Environment.CurrentDirectory, args[0]);
@@ -35,4 +36,7 @@ foreach (var sourceActivity in activities!)
 
 }
 
-targetGraph.SaveToFile(outputRdfFile);
+var turtleWriter = new CompressingTurtleWriter();
+turtleWriter.DefaultNamespaces.AddNamespace("id", Vocabulary.InstanceBaseUri);
+turtleWriter.DefaultNamespaces.AddNamespace("", new Uri(Vocabulary.VocabularyBaseUri));
+turtleWriter.Save(targetGraph, outputRdfFile);
