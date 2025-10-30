@@ -2,7 +2,10 @@
 using System.Text.Json;
 using Json = DoIt.Json;
 
-var activities = await JsonSerializer.DeserializeAsync<IEnumerable<Json.Activity>>(File.OpenRead("../../../../../data/doit/activities.json"));
+var inputJsonFile = Path.Combine(Environment.CurrentDirectory, args[0]);
+var outputRdfFile = Path.Combine(Environment.CurrentDirectory, args[1]);
+
+var activities = await JsonSerializer.DeserializeAsync<IEnumerable<Json.Activity>>(File.OpenRead(inputJsonFile));
 
 var targetGraph = new Graph();
 
@@ -13,4 +16,4 @@ foreach (var sourceActivity in activities)
     targetActivity.AttendeesNumber = sourceActivity.AttendeesNumber;
 }
 
-targetGraph.SaveToFile("../../../../../fuseki/data.ttl");
+targetGraph.SaveToFile(outputRdfFile);

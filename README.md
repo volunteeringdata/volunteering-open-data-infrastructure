@@ -1,5 +1,13 @@
 # x
 
+## Transformation
+
+The following creates RDF from JSON:
+
+```zsh
+dotnet run ./data/doit/activities.json ./fuseki/data.ttl --project ./transform/DoIt/
+```
+
 ## Graph Backend
 
 The Dockerfile loads `./fuseki/data.ttl` and runs a readonly fuseki instance.
