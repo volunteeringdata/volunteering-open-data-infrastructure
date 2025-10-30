@@ -18,9 +18,9 @@ public class ActivityDefinitionSubDocument : Identified
 
     [JsonPropertyName("eventType")] public string? EventType { get; set; }
 
-    [JsonPropertyName("causeOptions")] public required List<OptionItem> Causes { get; set; }
+    [JsonPropertyName("causeOptions")] public required IEnumerable<OptionItem> Causes { get; set; }
 
-    [JsonPropertyName("requirementOptions")] public required List<OptionItem> Requirements { get; set; }
+    [JsonPropertyName("requirementOptions")] public required IEnumerable<OptionItem> Requirements { get; set; }
 
     [JsonPropertyName("locationOption")] public required string LocationOption { get; set; }
 

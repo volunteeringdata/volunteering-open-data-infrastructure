@@ -42,8 +42,7 @@ public class Activity : Identified
 
     [JsonPropertyName("organization")] public required Id Organization { get; set; }
 
-    [JsonPropertyName("publishedApps")] public required IEnumerable<Id> PublishedAppObjects { get; set; }
-    [JsonIgnore] public IEnumerable<string> PublishedApps => PublishedAppObjects.Select(a => a.Value);
+    [JsonPropertyName("publishedApps")] public required IEnumerable<Id> PublishedApp { get; set; }
 
     [JsonIgnore] public IEnumerable<Region> Regions => RegionsNullable ?? [];
     [JsonPropertyName("regions")] public IEnumerable<Region>? RegionsNullable { get; set; }
