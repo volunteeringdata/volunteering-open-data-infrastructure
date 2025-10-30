@@ -43,4 +43,14 @@ public class Activity : GraphWrapperNode
     internal DateTimeOffset UpdatedAt { set => this.Overwrite(Vocabulary.UpdatedAt, value); }
 
     internal int? VolunteerNumber { set => this.OverwriteNullable(Vocabulary.VolunteerNumber, value); }
+
+    internal string Title { set => this.Overwrite(Vocabulary.Title, value); }
+
+    internal string Description { set => this.Overwrite(Vocabulary.Description, value); }
+
+    internal string Type { set => this.Overwrite(Vocabulary.Type, value); }
+
+    internal string? EventType { set => this.OverwriteNullable(Vocabulary.EventType, value); }
+
+    internal string LocationOption { set => this.Overwrite(Vocabulary.LocationOption, value); }
 }

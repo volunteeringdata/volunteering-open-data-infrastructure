@@ -23,6 +23,11 @@ internal class Vocabulary
     internal static IUriNode StartDate { get; } = Node("startDate");
     internal static IUriNode UpdatedAt { get; } = Node("updatedAt");
     internal static IUriNode VolunteerNumber { get; } = Node("volunteerNumber");
+    internal static IUriNode Title { get; } = Node("title");
+    internal static IUriNode Description { get; } = Node("description");
+    internal static IUriNode Type { get; } = Node("type");
+    internal static IUriNode EventType { get; } = Node("eventType");
+    internal static IUriNode LocationOption { get; } = Node("locationOption");
 
     private static IUriNode Node(string name) => AnyNode($"{VocabularyBaseUri}{name}");
 

@@ -14,8 +14,17 @@ foreach (var sourceActivity in activities!)
 {
     var targetActivity = Activity.Create(sourceActivity.Id.Value, targetGraph);
 
-    // activityDefinitionSubDocument
-    // address
+    // ActivityDefinitionSubDocument.AppSummary
+    // ActivityDefinitionSubDocument.MeasurementUnit
+    targetActivity.Title = sourceActivity.ActivityDefinitionSubDocument.Title;
+    targetActivity.Description = sourceActivity.ActivityDefinitionSubDocument.Description;
+    targetActivity.Type = sourceActivity.ActivityDefinitionSubDocument.Type;
+    targetActivity.EventType = sourceActivity.ActivityDefinitionSubDocument.EventType;
+    // ActivityDefinitionSubDocument.Causes
+    // ActivityDefinitionSubDocument.Requirements
+    targetActivity.LocationOption = sourceActivity.ActivityDefinitionSubDocument.LocationOption;
+    // ActivityDefinitionSubDocument.Organization
+    // Address
     targetActivity.AttendeesNumber = sourceActivity.AttendeesNumber;
     targetActivity.BookingsNumber = sourceActivity.BookingsNumber;
     targetActivity.CreatedAt = sourceActivity.CreatedAt.Value;
@@ -29,7 +38,7 @@ foreach (var sourceActivity in activities!)
     targetActivity.MeetingLink = sourceActivity.MeetingLink;
     targetActivity.Organization = Organization.Create(sourceActivity.Organization.Value, targetGraph);
     targetActivity.PublishedApps.UnionWith(sourceActivity.PublishedApp.Select(a => new Uri(Vocabulary.InstanceBaseUri, a.Value)));
-    // regions
+    // Regions
     targetActivity.StartDate = sourceActivity.StartDate?.Value;
     targetActivity.UpdatedAt = sourceActivity.UpdatedAt.Value;
     targetActivity.VolunteerNumber = sourceActivity.VolunteerNumber;
