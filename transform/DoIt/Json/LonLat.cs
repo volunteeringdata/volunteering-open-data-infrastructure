@@ -1,4 +1,4 @@
-namespace DoIt.Models;
+namespace DoIt.Json;
 
 public class LonLat
 {

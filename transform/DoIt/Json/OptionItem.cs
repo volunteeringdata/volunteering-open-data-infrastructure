@@ -1,10 +1,12 @@
-namespace DoIt.Models;
+namespace DoIt.Json;
 
-public class Address : Identified
+public class OptionItem : Identified
 {
-    [JsonPropertyName("street")] public string Street { get; set; }
+    [JsonPropertyName("displayName")] public string DisplayName { get; set; }
 
-    [JsonPropertyName("location")] public Point Location { get; set; }
+    [JsonPropertyName("icon")] public string Icon { get; set; }
+
+    [JsonPropertyName("app")] public Id App { get; set; }
 
     [JsonPropertyName("createdAt")] public required Date CreatedAtObject { get; set; }
     [JsonIgnore] public DateTimeOffset CreatedAt => CreatedAtObject.Value;
