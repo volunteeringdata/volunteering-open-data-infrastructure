@@ -24,10 +24,6 @@
         "sku": {
             "defaultValue": "Basic",
             "type": "string"
-        },
-        "tags": {
-            "defaultValue": {},
-            "type": "object"
         }
     },
     "resources": [
@@ -43,8 +39,7 @@
             },
             "sku": {
                 "name": "[parameters('sku')]"
-            },
-            "tags": "[parameters('tags')]"
+            }
         }
     ],
     "outputs": {}

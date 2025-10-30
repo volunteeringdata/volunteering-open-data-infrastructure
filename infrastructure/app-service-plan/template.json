@@ -16,10 +16,6 @@
         "sku_name": {
             "defaultValue": "B1",
             "type": "string"
-        },
-        "tags": {
-            "defaultValue": {},
-            "type": "object"
         }
     },
     "resources": [
@@ -37,8 +33,7 @@
             "sku": {
                 "Tier": "[parameters('sku_tier')]",
                 "Name": "[parameters('sku_name')]"
-            },
-            "tags": "[parameters('tags')]"
+            }
         }
     ]
 }
