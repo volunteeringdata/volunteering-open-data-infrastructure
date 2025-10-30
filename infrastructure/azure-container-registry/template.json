@@ -1,0 +1,51 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "type": "string"
+        },
+        "location": {
+            "defaultValue": "[resourceGroup().location]",
+            "type": "string"
+        },
+        "public_network_access": {
+            "defaultValue": "Enabled",
+            "type": "string"
+        },
+        "zone_redundancy": {
+            "defaultValue": "disabled",
+            "type": "string"
+        },
+        "role_assignment_mode": {
+            "defaultValue": "LegacyRegistryPermissions",
+            "type": "string"
+        },
+        "sku": {
+            "defaultValue": "Basic",
+            "type": "string"
+        },
+        "tags": {
+            "defaultValue": {},
+            "type": "object"
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.ContainerRegistry/registries",
+            "apiVersion": "2025-11-01",
+            "name": "[parameters('name')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "publicNetworkAccess": "[parameters('public_network_access')]",
+                "zoneRedundancy": "[parameters('zone_redundancy')]",
+                "roleAssignmentMode": "[parameters('role_assignment_mode')]"
+            },
+            "sku": {
+                "name": "[parameters('sku')]"
+            },
+            "tags": "[parameters('tags')]"
+        }
+    ],
+    "outputs": {}
+}

@@ -1,0 +1,44 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "type": "string"
+        },
+        "location": {
+            "defaultValue": "[resourceGroup().location]",
+            "type": "string"
+        },
+        "sku_tier": {
+            "defaultValue": "Basic",
+            "type": "string"
+        },
+        "sku_name": {
+            "defaultValue": "B1",
+            "type": "string"
+        },
+        "tags": {
+            "defaultValue": {},
+            "type": "object"
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Web/serverfarms",
+            "apiVersion": "2025-03-01",
+            "name": "[parameters('name')]",
+            "location": "[parameters('location')]",
+            "kind": "linux",
+            "properties": {
+                "targetWorkerCount": 0,
+                "targetWorkerSizeId": 0,
+                "zoneRedundant": false
+            },
+            "sku": {
+                "Tier": "[parameters('sku_tier')]",
+                "Name": "[parameters('sku_name')]"
+            },
+            "tags": "[parameters('tags')]"
+        }
+    ]
+}
