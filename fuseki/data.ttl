@@ -11,10 +11,10 @@ id:64093b532eed5dcadba50895 :optionApp id:65bab9cfb6f4d44ce2b9c119;
                             :optionIcon "https://s3.eu-west-2.amazonaws.com/doit2.0-production-static/activity-categories/person-cane.svg".
 id:64093b542eed5dcadba50897 :optionApp id:65a46db14b30b7dd175eb67a;
                             :optionDisplayName "Community";
-                            :optionIcon "https://s3.eu-west-2.amazonaws.com/doit2.0-production-static/activity-categories/users.svg".
+                            :optionIcon "https://s3.eu-west-2.amazonaws.com/doit2.0-production-static/cummunity.png".
 id:64093b542eed5dcadba50899 :optionApp id:65a46db14b30b7dd175eb67a;
                             :optionDisplayName "Crisis and Welfare";
-                            :optionIcon "https://s3.eu-west-2.amazonaws.com/doit2.0-production-static/activity-categories/triangle-exclamation.svg".
+                            :optionIcon "https://s3.eu-west-2.amazonaws.com/doit2.0-production-static/crisis.png".
 id:64093b552eed5dcadba5089d :optionApp id:65a46db14b30b7dd175eb67a;
                             :optionDisplayName "Sports, art and culture";
                             :optionIcon "https://s3.eu-west-2.amazonaws.com/doit2.0-production-static/sports_arts.png".
@@ -39,13 +39,15 @@ id:64093b572eed5dcadba508ad :optionApp id:65a46db14b30b7dd175eb67a;
                             :optionDisplayName "Must live or work locally".
 id:64093b572eed5dcadba508af :optionApp id:65a46db14b30b7dd175eb67a;
                             :optionDisplayName "Will require references".
-id:640f137a021e733fcd018f83 :organizationDeleted false;
+id:640f137a021e733fcd018f83 :organizationCause id:64093b552eed5dcadba508a1;
+                            :organizationDeleted false;
                             :organizationDescription "Proudly serving the community for more than 35 years, we are a leading UK Hospice providing inpatient and community palliative and end-of-life care services to people aged 16 and over across East Berkshire and South Buckinghamshire.";
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/0128825b-f495-436c-b218-8b56f5fd1678_2023-03-13T12:13:45.850Z.jpeg>;
                             :organizationName "Thames Hospice";
                             :organizationPurpose "Proudly serving the community for more than 35 years, we are a leading UK Hospice providing inpatient and community palliative and end-of-life care services to people aged 16 and over across East Berkshire and South Buckinghamshire.";
                             :organizationWebsite <https://www.thameshospice.org.uk/>.
-id:640f1da74e4230f618e17f70 :organizationDeleted false;
+id:640f1da74e4230f618e17f70 :organizationCause id:64093b552eed5dcadba508a1;
+                            :organizationDeleted false;
                             :organizationDescription """St Barnabas Hospice is a local independent charity and every year they support more than 9,000 people across Lincolnshire. They deliver free, high-quality, compassionate end-of-life care and support to adults living with a life-limiting or terminal illness, their family and carers.
 
 St Barnabas offers the patient and their family hospice care and support via: specialist in-patient care, community ‘hospice at home’ service, day therapy, physiotherapy, occupational therapy & complementary therapy, welfare advice & support and bereavement support. All the services are free.
@@ -69,7 +71,8 @@ id:640f31a8a02daffd7c36acfd :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityTitle "Find out about hospice and palliative care at Thames Hospice";
                             :activityType "Action".
-id:640f82aa999365a43398c57b :organizationDeleted false;
+id:640f82aa999365a43398c57b :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription """We are the charity that supports people as they become parents. We're here for you through pregnancy, birth, and early parenthood.
 
 Our charity has a proud 65-year history of creating transformative change in the lives of parents. We are a trusted voice, a reassuring presence and a strong advocate, campaigning on the issues that matter most.
@@ -92,7 +95,8 @@ We build local capacity in communities so we can be there for parents, now and i
 
 """;
                             :organizationWebsite <https://nct.org.uk/>.
-id:640f8491628b687cc5df579a :organizationDeleted false;
+id:640f8491628b687cc5df579a :organizationCause id:64093b552eed5dcadba508a3;
+                            :organizationDeleted false;
                             :organizationDescription """Werrington Neighbourhood Council was established over 50 years ago and its aims are to:
 
 - Represent and promote the best interests of the inhabitants of Werrington,
@@ -151,7 +155,9 @@ Find more info about how we support parents on our website - www.nct.org.uk or g
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityTitle "Show your support for a parent with a smile";
                             :activityType "Action".
-id:641035243a461379c458a2d2 :organizationDeleted false;
+id:641035243a461379c458a2d2 :organizationCause id:64093b542eed5dcadba50897,
+                                               id:64093b552eed5dcadba508a3;
+                            :organizationDeleted false;
                             :organizationDescription "We're a social enterprise working to build fair and sustainable food for Sheffield. We work with surplus and locally grown food. We save 500 tonnes of food a year from going to landfill which makes over a million meals!";
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/8a6dac42-069d-4894-ae81-d7edac0f3837_2023-03-14T08:49:39.771Z.jpeg>;
                             :organizationName "Food Works";
@@ -172,13 +178,16 @@ id:6410357ed9c4923908ef3e28 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityTitle "Cafe Volunteering";
                             :activityType "Action".
-id:64103c352a0eedb6aef42d3d :organizationDeleted false;
+id:64103c352a0eedb6aef42d3d :organizationCause id:64093b542eed5dcadba50899,
+                                               id:64093b552eed5dcadba508a3;
+                            :organizationDeleted false;
                             :organizationDescription "Oxfam is a global community of people who believe in a kinder, and radically better world, where everyone has the power to thrive not just survive. We believe we can overcome poverty by fighting the injustices and inequalities that fuel it.";
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/118da345-9185-4cda-b8cc-2f58ffeda2a6_2023-03-14T09:19:48.824Z.jpeg>;
                             :organizationName "Oxfam";
                             :organizationPurpose "Oxfam is a global community of people who believe in a kinder, and radically better world, where everyone has the power to thrive not just survive. We believe we can overcome poverty by fighting the injustices and inequalities that fuel it.";
                             :organizationWebsite <https://www.oxfam.org.uk/>.
-id:64119bf12a79fbd15e8912b6 :organizationDeleted false;
+id:64119bf12a79fbd15e8912b6 :organizationCause id:64093b552eed5dcadba508a3;
+                            :organizationDeleted false;
                             :organizationDescription """Working locally in the UK and around the world, we take a bird’s eye view of all the issues that the natural world can face. We look at the bigger picture, and focus in on the detail too. 
 
 We’re in a nature and climate emergency, and individual species, habitats and landscapes are in jeopardy.
@@ -202,13 +211,16 @@ We’re all connected by the wonder of nature. The health of the natural world i
                             :organizationPhone "+441767680551";
                             :organizationPurpose "The RSPB is a charity for the conservation of birds and nature. We bring people together who love birds and other wildlife, and who want to do something to restore the health and diversity of the natural world.";
                             :organizationWebsite <https://www.rspb.org.uk/helping-nature/support-the-rspb/volunteering>.
-id:64183a63685ab4e440f10c5e :organizationDeleted false;
+id:64183a63685ab4e440f10c5e :organizationCause id:64093b542eed5dcadba50897,
+                                               id:64093b552eed5dcadba5089f;
+                            :organizationDeleted false;
                             :organizationDescription "Unfold is charity organisation who through the support of amazing volunteers, provide 1-1 mentoring for children and young people between the ages 10-25 and for mothers with children aged 5+. Our method of mentoring is based on a psychological approach where we empower our mentees to get to where they want to be through achieving our aims of boosting Confidence, building lasting Independence and Connecting mentees with 1 or more organisation.  ";
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/aead59d9-2133-4860-8629-29dd097648e4_2023-03-20T10:50:09.320Z.png>;
                             :organizationName "Unfold";
                             :organizationPurpose "Provide the opportunity for the community of Westminster, Kessington and Chelsea and the surrounding boroughs to be supported through 1-2-1 mentoring and Womens Groups in order to boost confidence, build lasting Independence and Connect with 1 or more organisation.  ";
                             :organizationWebsite <https://www.unfold.org.uk/>.
-id:641879d4cf71f77116117e87 :organizationDeleted false;
+id:641879d4cf71f77116117e87 :organizationCause id:64093b552eed5dcadba508a1;
+                            :organizationDeleted false;
                             :organizationDescription """Our vision is a world where diabetes can do no harm.
 
 We’re leading the fight against the UK's biggest and growing health crisis. And it's a fight that involves us all – sharing knowledge and taking on diabetes together.""";
@@ -218,7 +230,8 @@ We’re leading the fight against the UK's biggest and growing health crisis. An
 
 We’re leading the fight against the UK's biggest and growing health crisis. And it's a fight that involves us all – sharing knowledge and taking on diabetes together.""";
                             :organizationWebsite <https://www.diabetes.org.uk/>.
-id:64197c09f0ca30c4afc562bf :organizationDeleted false;
+id:64197c09f0ca30c4afc562bf :organizationCause id:64093b552eed5dcadba5089f;
+                            :organizationDeleted false;
                             :organizationDescription """We are an independent education charity that supports volunteers and state-funded schools across England and Wales.
 
 Schools register their board vacancies with us, and we recruit, match and support volunteers to join them.
@@ -235,7 +248,8 @@ You don’t need to be a parent or education expert to volunteer as a governor. 
 
 We support schools across England and Wales to run effectively by finding high calibre governors to bring their skills and expertise to the table – and improve education for children.""";
                             :organizationWebsite <https://www.governorsforschools.org.uk/>.
-id:641acaa302fe9a5308510539 :organizationDeleted false;
+id:641acaa302fe9a5308510539 :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription "In our Research Lab, behavioural research ideas are tested in person, online or in the field. Since its foundation more than 17,000 volunteers have participated in over 850 studies to create positive social change.  ";
                             :organizationName "London Business School Research Lab";
                             :organizationPurpose "Recruit people to take part in behavioural research. They volunteer their time for under an hour for any studies they're eligible for, and are reimbursed £10 for their time. https://lbs.sona-systems.com";
@@ -274,7 +288,8 @@ Email: lab@london.edu
                             :activityStart "2023-03-21T00:00:00.000000+00:00"^^xsd:dateTime;
                             :activityTitle "London Business School Research Lab - Earn £10 taking part in behavioural research";
                             :activityType "Event".
-id:64242e9d5163ce4fdbb8beab :organizationDeleted false;
+id:64242e9d5163ce4fdbb8beab :organizationCause id:64093b552eed5dcadba5089f;
+                            :organizationDeleted false;
                             :organizationDescription """Schoolreaders goal is for all children, regardless of background, to leave primary school being able to read well so they can go on to access their secondary education fully and maximise their future life chances.
 
 Established in 2013, Schoolreaders matches volunteers to local primary schools - focusing on schools with the greatest need - where they give one-to-one reading sessions.""";
@@ -282,7 +297,8 @@ Established in 2013, Schoolreaders matches volunteers to local primary schools -
                             :organizationName "Schoolreaders";
                             :organizationPurpose "Schoolreaders provide reading volunteers to primary schools across England.";
                             :organizationWebsite <https://www.schoolreaders.org/>.
-id:6425cd40a0624f3ab9fb07c7 :organizationDeleted false;
+id:6425cd40a0624f3ab9fb07c7 :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription """Volunteer with Shaw Trust and help create brighter futures for people in your community. 
 
 Shaw Trust provides employment opportunities, skills development training, and health and wellbeing services across the UK. We operate charitable social enterprises and retail shops, and work alongside Shaw Education Trust, which runs a diverse chain of academy schools.
@@ -298,13 +314,15 @@ To find out more about becoming a Shaw Trust volunteer please email volunteers@s
                             :organizationName "Shaw Trust";
                             :organizationPurpose "Help others";
                             :organizationWebsite <http://www.shaw-trust.org.uk/>.
-id:6425cd68a0624f3ab9fb0c4b :organizationDeleted false;
+id:6425cd68a0624f3ab9fb0c4b :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription "Sense is a national disability charity that supports people with complex communication needs to be understood, connected and valued. We are here for every person who faces communication barriers in a world that relies on being able to see and hear well to be connected. Our flexible and personalised services empower people to communicate and express themselves � be it through speech or sign, touch or movement, gesture or sound, art or dance. Together, we connect differently and campaign passionately for the right to lead connected and fulfilled lives.";
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/Untitled_yrLMfaApyuQHzQkYGQUT5k.125x125.jpg>;
                             :organizationName "Sense";
                             :organizationPurpose "Help others";
                             :organizationWebsite <http://www.sense.org.uk/>.
-id:6425cdb8a0624f3ab9fb122e :organizationDeleted false;
+id:6425cdb8a0624f3ab9fb122e :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription """Crohn�s Disease and Ulcerative Colitis - two of the main forms of Inflammatory Bowel Disease (or IBD), affect more than 300,000 people in the UK. Yet it is largely a hidden disease, and one that causes stigma, fear and isolation. We�re the UK�s leading charity in the battle against Crohn�s Disease and Ulcerative Colitis. 
 
 Our mission is to work with all those affected by these conditions to achieve a better quality of life, improve services, and ultimately find a cure. 
@@ -316,19 +334,22 @@ See how we work to make life better for the 300,000 people in the UK with Crohn�
                             :organizationName "Crohn's and Colitis UK";
                             :organizationPurpose "Help others";
                             :organizationWebsite <http://www.crohnsandcolitis.org.uk/>.
-id:6425cdcba0624f3ab9fb1471 :organizationDeleted false;
+id:6425cdcba0624f3ab9fb1471 :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription "Surrey Clubs for Young People (SCYP) is a charity dedicated to ensuring that young people across Surrey and South London have access to high quality youth provision. Our aim is to provide a range of exciting and challenging opportunities for young people, through which they can develop into confident young adults. We do this by supporting a large network of volunteers to run youth clubs and projects across the area.";
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/SCYP_Logo.png>;
                             :organizationName "Surrey Clubs for Young People (SCYP)";
                             :organizationPurpose "Help others";
                             :organizationWebsite <http://www.scyp.co.uk/>.
-id:6425cdf8a0624f3ab9fb196a :organizationDeleted false;
+id:6425cdf8a0624f3ab9fb196a :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription "Missing People offers a lifeline for the 250,000 people who run away and go missing each year in the UK. For those left behind, we provide specialised support to ease the heartache and confusion, and help search for their missing loved ones.";
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/Final-New-Missing-People-Logo-Rectangle.jpg>;
                             :organizationName "Missing People";
                             :organizationPurpose "Help others";
                             :organizationWebsite <http://www.missingpeople.org.uk/>.
-id:6425cec6a0624f3ab9fb3209 :organizationDeleted false;
+id:6425cec6a0624f3ab9fb3209 :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription """At Hestia, we have been supporting adults and children across London in times of crisis since 1970. 2020 marked our 50th anniversary!
 
 Last year we supported 14,007 men, women and children.
@@ -338,13 +359,15 @@ This includes victims of modern slavery, women and children who have experienced
                             :organizationName "Hestia";
                             :organizationPurpose "Help others";
                             :organizationWebsite <http://www.hestia.org.uk/>.
-id:6425cee7a0624f3ab9fb35be :organizationDeleted false;
+id:6425cee7a0624f3ab9fb35be :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription "Our vision is that everyone who needs it should receive first aid from those around them. No one should suffer for the lack of trained first aiders. Everything we do at St John Ambulance must be judged by whether it brings about a world where everyone who needs it receives first aid.";
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/SJA_2D_pos_60mm_3K3s9ZrNiQA4yKXRPiiS3A.125x125.jpg>;
                             :organizationName "St John Ambulance1";
                             :organizationPurpose "Help others";
                             :organizationWebsite <http://www.sja.org.uk/>.
-id:6425d048a0624f3ab9fb4c7a :organizationDeleted false;
+id:6425d048a0624f3ab9fb4c7a :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription """Caudwell Children provide family support services, equipment, treatment and therapies for disabled children and their families across the UK. We also provide autism assessment and support at our purpose built Caudwell Internation Children's Centre based in Staffordshire. 
 
 Passionate, positive and practical; we are motivated to improve the lives of the estimated 770,000 disabled children living in the UK, starting with the 400,000 living in or on the margins of poverty.""";
@@ -352,7 +375,10 @@ Passionate, positive and practical; we are motivated to improve the lives of the
                             :organizationName "Caudwell Children Charity";
                             :organizationPurpose "Help others";
                             :organizationWebsite <http://www.caudwellchildren.com/>.
-id:6425d131a0624f3ab9fb595b :organizationDeleted false;
+id:6425d131a0624f3ab9fb595b :organizationCause id:64093b542eed5dcadba50897,
+                                               id:64093b552eed5dcadba5089d,
+                                               id:64093b552eed5dcadba508a3;
+                            :organizationDeleted false;
                             :organizationDescription """We volunteer at the Museum to share our enthusiasm for pens and our city’s history. Our contributions are essential in maintaining the museum’s operations, and in return, we can engage with people from all over the world, gain valuable work experience, and enjoy the diverse collection of quills, nibs, and typewriters in the museum!
 
 Our volunteers range from the museum’s original founders in 2001 and other long serving volunters to students who were so engaged during their placements that they chose to stay on. Together, we form a collective of historians, pen aficionados, and calligraphers collaborating in the heritage and tourism industry. Our dedication is valued by visitors, who consistently praise our friendliness and knowledge as the highlight of their museum experience.
@@ -366,7 +392,8 @@ Interested in being part of this Museum and contributing to our cause? Consider 
                             :organizationPhone "+441212369834";
                             :organizationPurpose "Our museum prides itself on its Values as we seek to fulfil our Vision and Aims to provide a museum of which the citizens of Birmingham can be proud. In doing so, ensuring that both they and visitors to our city remember Birmingham’s leading role in the steel pen trade and its role in spreading literacy everywhere.";
                             :organizationWebsite <http://www.penmuseum.org.uk/>.
-id:6425d4b7a0624f3ab9fbac79 :organizationDeleted false;
+id:6425d4b7a0624f3ab9fbac79 :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription """Established in 1977, Friendship Works is the UK�s first youth mentoring service and is a pioneer in the field.  We are a distinct service operating as part of the national charity Family Action. 
 
 We improve the emotional well-being and life chances of children and young people who are facing multiple disadvantages on a daily basis. We provide the vital support these children need to brighten their experience of childhood and build resilience for the future, by matching them with friendship mentors who give one-to-one support for at least two years. We accept referrals for children and young people aged 5-16 in London.
@@ -380,7 +407,9 @@ Our volunteers receive ongoing training and support from our dedicated team of p
                             :organizationName "Friendship Works";
                             :organizationPurpose "Help others";
                             :organizationWebsite <http://www.family-action.org.uk/friendshipworks>.
-id:6425d5fca0624f3ab9fbc83b :organizationDeleted false;
+id:6425d5fca0624f3ab9fbc83b :organizationCause id:64093b542eed5dcadba50897,
+                                               id:64093b552eed5dcadba508a1;
+                            :organizationDeleted false;
                             :organizationDescription """Princess Alice Hospice is a local charity dedicated to providing free, high-quality compassionate care and support for patients, their families and carers. We care for people with cancer and other illnesses living in a large part of Surrey, south west London and Middlesex.
 
 We aim to enable all patients to have the best possible quality of life to the end, responding quickly to their needs and wishes. We recognise that family, carers and friends have needs of their own and we are here to provide them with support, comfort and advice at every stage of illness and after death
@@ -394,7 +423,8 @@ Founded by our local community, fundraising and community support are crucially 
                             :organizationPhone "+441372461856";
                             :organizationPurpose "Princess Alice Hospice is here to provide free, holistic palliative care for patients with advanced illness and those approaching the end of their lives. We aim to reach out to more people by delivering outstanding care, nurturing compassionate communities, sharing our knowledge and expertise and influencing the debate around death and dying​.";
                             :organizationWebsite <http://www.pah.org.uk/>.
-id:6425eae8c794380477b70969 :organizationDeleted false;
+id:6425eae8c794380477b70969 :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription """100,000 people live with multiple sclerosis in the UK. Every one of them shares the uncertainty of life with MS.
 
 MS is usually diagnosed in your 20s or 30s; news that can be scary and heart breaking. MS can get steadily worse, or symptoms can come and go unpredictably throughout your life.
@@ -403,7 +433,8 @@ We�re the UK charity for people with MS. We�re fighting for better treatment
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/163.jpg>;
                             :organizationName "Multiple Sclerosis Society - Haringey";
                             :organizationPurpose "Help others".
-id:6425f3b8f2d4b77a6e155b67 :organizationDeleted false;
+id:6425f3b8f2d4b77a6e155b67 :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription """Be Epic! London International Film Festival is a yearly ?lm festival that is looking especially for meaningful, innovative, free of cliche filmmaking.
 
 BELIFF encourages young and old ?lm makers from around the world to contribute to the shaping of society through inspirational ?lms that combine with valuable messages and innovative ideas. BELIFF aims to be the rising point of ?lm makers and up and coming new artists by promoting value and hard work and we are dedicating ourselves to stand up for everyone who is looking to re?ne and discover ?lm both as entertaining and educating audiences from all around the globe.
@@ -417,7 +448,9 @@ Those who will get the best out of BELIFF film festival are:
                             :organizationName "Be Epic! London International Film Festival";
                             :organizationPurpose "Help others";
                             :organizationWebsite <https://www.beliff.co.uk/>.
-id:6425fa7ff2d4b77a6e160b18 :organizationDeleted false;
+id:6425fa7ff2d4b77a6e160b18 :organizationCause id:64093b542eed5dcadba50897,
+                                               id:64093b552eed5dcadba508a1;
+                            :organizationDeleted false;
                             :organizationDescription """Remote Telephone Befriending is a vital opportunity to engage with another person and provide companionship through conversation. It helps reduce feelings of loneliness and increase wellbeing and is especially important during this time, when more people than ever will be feeling socially isolated. Telephone Befriending is a voluntary, mutually beneficial relationship in which the Volunteer Telephone Befriender gives their time to support and encourage someone. 
 """;
                             :organizationEmail "befriending@thebridgeproject.org.uk";
@@ -427,7 +460,8 @@ id:6425fa7ff2d4b77a6e160b18 :organizationDeleted false;
                             :organizationPurpose """Remote Volunteering -This Service aims to alleviate some of these tensions by people making regular contact with you by telephone to have a conversation, giving you the chance to connect to others from your own home and is available for anyone 18 years or above.
 """;
                             :organizationWebsite <https://youtu.be/EwszKOJ1-sI>.
-id:64260fe2de05bf8ae7c99f64 :organizationDeleted false;
+id:64260fe2de05bf8ae7c99f64 :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription """The Middle Eastern Women and Society Organisation (MEWSo) is a registered charity set up to support Middle Eastern, North African and Asian women in London. We reject every form of discrimination, inequality, and exclusion and aspire to a society where every woman lives in safety with equal opportunities.  We hope for a community in which diversity is considered an element of strength and not of division. 
 Founded in 2010, MEWSo aims to:
 - Protect and prevent violence against women in BAME communities through its various campaigns.
@@ -437,7 +471,8 @@ Founded in 2010, MEWSo aims to:
                             :organizationName "Middle Eastern Women and Society Organisation";
                             :organizationPurpose "Help others";
                             :organizationWebsite <https://www.mewso.org/>.
-id:6426107cde05bf8ae7c9af41 :organizationDeleted false;
+id:6426107cde05bf8ae7c9af41 :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription """Volunteer Centre
 """;
                             :organizationEmail "enquiries@hfvc.org.uk";
@@ -446,12 +481,14 @@ id:6426107cde05bf8ae7c9af41 :organizationDeleted false;
                             :organizationPhone "+442087419876";
                             :organizationPurpose "Hammersmith and Fulham Volunteer Centre promote, support and develop volunteering within the borough. We provide information, advice, guidance and training to individuals and empower them to find volunteering opportunities that meet their skills, interests and aspirations. We are committed to assisting local charities and non-profit organisations in the pursuit, provision and growth of volunteering within our community.";
                             :organizationWebsite <https://hfvc.org.uk/>.
-id:642613a4de05bf8ae7ca1628 :organizationDeleted false;
+id:642613a4de05bf8ae7ca1628 :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription "Community Links Bromley (CLB) is the Council for Voluntary Service (CVS) and Volunteer Centre for the London Borough of Bromley. CLB was established in 1965 and is a membership organisation that supports, promotes and facilitates the development of a strong, diverse, confident and effective voluntary, community and social enterprise sector, in ways which will enable the sector to improve the quality of life for people and their communities.";
                             :organizationName "Community Links Bromley";
                             :organizationPurpose "Help others";
                             :organizationWebsite <https://www.communitylinksbromley.org.uk/>.
-id:6438281587df93ec1032b350 :organizationDeleted false;
+id:6438281587df93ec1032b350 :organizationCause id:64093b552eed5dcadba508a1;
+                            :organizationDeleted false;
                             :organizationDescription "";
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/180b96d5-a7a1-46cb-ad75-3b9c0d8a6151_2023-04-13T16:04:36.868Z.jpeg>;
                             :organizationName "Cancer Research UK";
@@ -731,7 +768,8 @@ id:644ffe2112535322aa32cace :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityTitle "Youth Club Co-Ordinator (Woking)";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers -1 .
-id:64516b3857d588ae4560f772 :organizationDeleted false;
+id:64516b3857d588ae4560f772 :organizationCause id:64093b552eed5dcadba508a3;
+                            :organizationDeleted false;
                             :organizationDescription "We are a group of residents of Ainslie Wood Road E4, who are working with Waltham Forest Council to turn the road into a bee friendly street. We are looking for volunteers to join us once a month to help keep the road clear of weeds and plant native flowers to ensure beneficial wildlife can thrive in our area. No prior experience required!";
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/784ff897-7c2b-4c4a-a569-57d4a1c2b8ad_2023-05-02T19:57:43.574Z.jpeg>;
                             :organizationName "Ainslie Wood Bee Friendly Street";
@@ -775,7 +813,8 @@ To find out more and sign up to volunteer in one of our shops, please visit our 
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityTitle "Shop volunteer- nationwide";
                             :activityType "OngoingOpportunity".
-id:645394f2942173c58288dc8f :organizationDeleted false;
+id:645394f2942173c58288dc8f :organizationCause id:64093b552eed5dcadba5089d;
+                            :organizationDeleted false;
                             :organizationDescription """Building on this wonderful repository of artworks, the Art UK website is rich in story content and learning resources, and it offers many ways for everyone to engage with art.
  
 Through our work, we make art accessible to all – for enjoyment, learning and research. Thanks to our generous supporters, it's all free.
@@ -911,7 +950,10 @@ id:65bab9cfb6f4d44ce2b9c119 :appBrandColor "#3b52a5";
                             :appLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-static/app-logos/doit.jpg>;
                             :appName "Do it Day";
                             :appOrganization id:64093b512eed5dcadba50889.
-id:65bcbcd8b620e756f16aee39 :organizationDeleted false;
+id:65bcbcd8b620e756f16aee39 :organizationCause id:64093b532eed5dcadba50895,
+                                               id:64093b542eed5dcadba50897,
+                                               id:64093b552eed5dcadba508a1;
+                            :organizationDeleted false;
                             :organizationDescription "";
                             :organizationEmail "volunteering@stchristophers.org.uk";
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/7a7ee9d9-c46a-426b-82b2-e5c4ee50aa9e_2024-02-02T10:00:49.698Z.png>;
@@ -1026,7 +1068,8 @@ The role will you suit if:
                             :activityRequirement id:64093b562eed5dcadba508a7;
                             :activityTitle "Nib Maker";
                             :activityType "OngoingOpportunity".
-id:660c0023022dfe06f1ef3341 :organizationDeleted false;
+id:660c0023022dfe06f1ef3341 :organizationCause id:64093b552eed5dcadba5089f;
+                            :organizationDeleted false;
                             :organizationDescription "Tutor The Nation is a new charity working towards a fairer education system in the UK. We aim to help State school pupils develop the confidence and skills they need to achieve their goals through free, online tutoring delivered by passionate volunteers. Our volunteers are helping to transform lives, one tutoring session at a time.";
                             :organizationEmail "volunteer@tutorthenation.org";
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/7b092a02-8da0-4287-8bf2-9644e3c0760d_2024-04-02T12:54:58.384Z.png>;
@@ -1035,7 +1078,8 @@ id:660c0023022dfe06f1ef3341 :organizationDeleted false;
                             :organizationPurpose "Tutor The Nation is a new charity working towards a fairer education system in the UK. We aim to help State school pupils develop the confidence and skills they need to achieve their goals through free, online tutoring delivered by passionate volunteers. Our volunteers are helping to transform lives, one tutoring session at a time.";
                             :organizationType "NFP";
                             :organizationWebsite <https://tutorthenation.org/>.
-id:66169d5247af10a843126434 :organizationDeleted false;
+id:66169d5247af10a843126434 :organizationCause id:64093b552eed5dcadba5089d;
+                            :organizationDeleted false;
                             :organizationDescription """Craft your writing skills, so you can evoke the desired emotions and interests with your audience, or if you wish to improve and refine your English grammar to articulate your writing to a higher standard.
 
 Then the Writers Initiative can help you with the cultivation of your writing, so in turn the better you will be able to entertain, inform or educate your readers.""";
@@ -1165,7 +1209,10 @@ id:661dbb2fc8ab0cb083e72ebe :optionApp id:65a46db14b30b7dd175eb67a;
                             :optionDisplayName "None".
 id:661dbb6ac8ab0cb083e72ebf :optionApp id:65a46db14b30b7dd175eb67a;
                             :optionDisplayName "Background checks".
-id:6620d75a29bfe93cfc010834 :organizationDeleted false;
+id:6620d75a29bfe93cfc010834 :organizationCause id:64093b542eed5dcadba50897,
+                                               id:64093b552eed5dcadba5089f,
+                                               id:64093b552eed5dcadba508a1;
+                            :organizationDeleted false;
                             :organizationDescription "Family challenges can sometimes be difficult to manage. Parents and carers can often find the pressures of family life overwhelming and simply too much to cope with alone. As they navigate challenges, Home-Start in Suffolk’s network of volunteers offer practical and confidential emotional support, when they need it most. ";
                             :organizationEmail "volunteer@homestartinsuffolk.org";
                             :organizationName "Home Start in Suffolk";
@@ -1414,7 +1461,8 @@ https://www.reengage.org.uk/volunteer/new-volunteers/
                             :activityTitle "Re engage - Older People Telephone Befriending London/National - Volunteer ";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers 10 .
-id:66508c7e9624a8e5c5b4ab2d :organizationDeleted false;
+id:66508c7e9624a8e5c5b4ab2d :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription """NWR is a membership organisation for women that has been bringing women together for over 60 years for social activities. We provide an opportunity for women to meet to take part in informal discussions and other fun activities to promote friendship, self-education and confidence.
 
 We hear from many members about how much joy NWR membership has brought to their lives; the friendships formed, companionship and wide-ranging conversations held. We want to reach more women to give them this opportunity.""";
@@ -1469,7 +1517,11 @@ You will be provided with full training and support from NWR staff and will be p
                             :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Women's Group Organiser - multiple locations in London";
                             :activityType "OngoingOpportunity".
-id:665dad56103207cef4a1b743 :organizationDeleted false;
+id:665dad56103207cef4a1b743 :organizationCause id:64093b542eed5dcadba50897,
+                                               id:64093b542eed5dcadba50899,
+                                               id:64093b552eed5dcadba5089f,
+                                               id:64093b552eed5dcadba508a1;
+                            :organizationDeleted false;
                             :organizationDescription """Shake My Hand is a media campaign working to increase the number of rape and sexual abuse Survivors who are reporting their experiences to the Police. We plan to do this in a number of ways. These will include Awareness Training facilitated by Survivors for the organisations helping and supporting Survivors at the time of them considering reporting their experiences, as well as providing 1:1 Peer Survivor Support and supporting National Petitions.
 The Campaign is very much in its early days - we have just created our social media accounts and website. The Campaign Founder; award-winning mental health UK Blogger with over 1.3 million readers and sexual abuse and rape Survivor; Aimee Wilson, is currently working on our Campaign Strategy and various organisational documents to then begin collaborations and securing endorsements with her already established connections with the Chief Executive in the NHS and the Mental Health Lead of the Police. 
 We will then be looking to hire Volunteers in various positions. 
@@ -1510,7 +1562,9 @@ Analytical skills.""";
                             :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Graphic Designer";
                             :activityType "OngoingOpportunity".
-id:6696569fe1a9ec9394b33f56 :organizationDeleted false;
+id:6696569fe1a9ec9394b33f56 :organizationCause id:64093b542eed5dcadba50897,
+                                               id:64093b542eed5dcadba50899;
+                            :organizationDeleted false;
                             :organizationDescription """SSAFA, the Armed Forces charity, supports the person behind the uniform; any time they need us, in any way they need us, for as long as they need us. Every year, SSAFA helps more than 82,000 people from the Forces family to get back on their feet; those currently serving, reserves, veterans and their families. Support is there for people at any stage in their military career; from the youngest recruit to the oldest veteran – no one’s service is ever forgotten. We give hope, help and personal support for as long as it takes to get that person’s life back to where they want it to be
 SSAFA was established in 1885 and has been working tirelessly to support those in the UK Armed Forces ever since.  We support thousands of people in the UK and on military bases around the world. We understand the unique demands of service life, whether it’s on UK soil or overseas. We have more than 4,000 trained SSAFA volunteers who provide personalised, face-to-face support to those in their local area.
 Our trained welfare advisors and volunteers work with each person to find out exactly what they need. Once we’ve assessed what is required, we’ll help the individual or family access appropriate support. This may just be someone to listen to them, but, more often than not, we access financial assistance from statutory and military benevolent funds or foundations that we work with. In addition, we signpost to our other charity partners who can give much needed assistance to help people get their lives back on track.
@@ -1600,7 +1654,8 @@ Be a part of the Be Epic! London International Film Festival’s digital transfo
                             :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Web Design and Management Volunteering Position for Be Epic! London International Film Festival";
                             :activityType "OngoingOpportunity".
-id:676008f8954c54acf0cebd9c :organizationDeleted false;
+id:676008f8954c54acf0cebd9c :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription """Creative Active Lives supports children, young people and teenagers who are new to the country, in financial hardship, or who have learning disabilities, autism, physical disabilities, ADHD and other neurodiversities by creating playful, nurturing and safe 'third spaces' where they can develop supportive peer networks, raise their aspiration and support skills and interests development pre and post-16.   In 2024 we have supported over 5000 children.
 
 We have created a bespoke accessible Minecraft server to allow children with SEND who are isolated and often not in school, the opportunity to make friends, find a supportive peer network, and build their self confidence and self esteem in a safeguarded, secure, nurturing gaming environment.  We currently support 56 young people with a private Discord Server, 2 x hosted social sessions per week,  24/7 access to our server, custom safeguarding plug ins, weekly coding and group design and build sessions with a Global  Minecraft Ambassador.
@@ -1917,7 +1972,8 @@ This role is not suitable for under 18’s.""";
                             :activityTitle "Visitor Centre Welcome (RSPB Ynys-hir Reserve Ceredigion)";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers 1 .
-id:6807c51be1f731a9de22a5ed :organizationDeleted false;
+id:6807c51be1f731a9de22a5ed :organizationCause id:64093b542eed5dcadba50897;
+                            :organizationDeleted false;
                             :organizationDescription """At We Are Explorers, we create radically inclusive, joyful spaces for LGBTQ+ people — with a proud focus on Neurodivergent people. Because while 3.8% of the UK population identifies as LGBTQ+, a huge 25% of Neurodivergent people do. So why are so many queer spaces still inaccessible, overwhelming, or just not built with us in mind?
 
 We exist to change that.
@@ -2686,7 +2742,8 @@ The RSPB is the UK's largest nature conservation charity! Join our fantastic vol
                             :activityTitle "Residential on Reserve (More than 4 weeks) (RSPB Frampton Marsh)";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers 1 .
-id:68e793d5bebfd220e4aec748 :organizationDeleted false;
+id:68e793d5bebfd220e4aec748 :organizationCause id:64093b552eed5dcadba508a3;
+                            :organizationDeleted false;
                             :organizationDescription """Launched in 2016 by a committed group of people determined to deliver locally owned community energy. Award-winning Grimsby Community Energy is a community benefit society (CBS), a form of not-for-profit cooperative owned and run by local people that works for the benefit of the community.
 
 Over the last eight years we have raised over £894,000 of investment to deliver renewable energy across Grimsby, Cleethorpes and North East Lincolnshire, installing 697kW of solar PV (photovoltaic) panels for community organisations, generating 1.14GWh of clean electricity and saving 279t of CO2.
@@ -2779,7 +2836,8 @@ If this sounds like something you’d enjoy, we’d love to hear from you. Toget
                             :activityTitle "Practical Reserve Work (South Lakes Conservation Volunteer)";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers 18 .
-id:68ef7c9fb239d50f07154216 :organizationDeleted false;
+id:68ef7c9fb239d50f07154216 :organizationCause id:64093b552eed5dcadba5089f;
+                            :organizationDeleted false;
                             :organizationDescription """At STEM On Track, we provide go-kart kits and online modules to schools, giving students hands-on experience in engineering, motorsport, and STEM subjects. Our programme bridges classroom learning with real-world application, helping students develop skills, confidence, and creativity.
 """;
                             :organizationEmail "info@espireeducation.co.uk";
@@ -2854,7 +2912,8 @@ We are a friendly and supportive team. If you are volunteering to learn new skil
                             :activityTitle "Practical Reserve Work (Thursday Garden maintenance volunteer at Flatford Wildlife Garden)";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers 2 .
-id:68f229a206abd725874e1612 :organizationDeleted false;
+id:68f229a206abd725874e1612 :organizationCause id:64093b532eed5dcadba50895;
+                            :organizationDeleted false;
                             :organizationDescription "We are an independent Day Centre providing day care services to older people in our local community, supporting carers and deliver hot freshly cooked meals in our local area.";
                             :organizationEmail "enquiries@sheringhamdayservices.co.uk";
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/f61d03e5-b670-4538-bc6d-390e10830ffd_2025-10-17T11:33:53.735Z.jpeg>;
@@ -3234,7 +3293,9 @@ To apply for this opportunity please follow the link below:""";
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityTitle "Community Volunteer (South Norfolk)";
                             :activityType "OngoingOpportunity".
-id:68f2666fa512aaa2c7ddf9fb :organizationDeleted false;
+id:68f2666fa512aaa2c7ddf9fb :organizationCause id:64093b542eed5dcadba50897,
+                                               id:64093b552eed5dcadba5089f;
+                            :organizationDeleted false;
                             :organizationDescription "";
                             :organizationEmail "volunteer@bradfordymca.org.uk";
                             :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/734662a2-6945-482f-8fb4-64bbfb8d75cd_2025-10-17T16:08:33.577Z.jpeg>;
@@ -3394,7 +3455,10 @@ Please disregard the additional information, below, which states that this role 
                             :activityTitle "Practical Reserve Work (Work Party Volunteer)";
                             :activityType "OngoingOpportunity";
                             :activityVolunteers 10 .
-id:68f4e3bffe3f8f55aef0e544 :organizationDeleted false;
+id:68f4e3bffe3f8f55aef0e544 :organizationCause id:64093b542eed5dcadba50897,
+                                               id:64093b552eed5dcadba5089f,
+                                               id:64093b552eed5dcadba508a1;
+                            :organizationDeleted false;
                             :organizationDescription """Murphy Charitable Foundation Uganda, established in 2018, is a registered humanitarian nonprofit organization based in Bukedea, Eastern Uganda. Its mission is to uplift marginalized rural communities by focusing on the needs of vulnerable children, youth, and women. The foundation is committed to providing equal access to education, healthcare, clean water, and livelihood opportunities to break the cycle of poverty. Its goal is to empower and enhance the lives of these individuals, believing that everyone deserves a chance to succeed.
 
 Guided by Christian values, the foundation strives to implement effective and innovative solutions to pressing community issues. It operates at the grassroots level, planning and executing projects that address local challenges and promote sustainable development. Through collaboration with volunteers, donors, and community partners, the foundation aims to create lasting positive change in Uganda's most vulnerable populations.
@@ -3434,7 +3498,8 @@ Be the reason a child keeps believing. Join us today.""";
                             :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Write a Pen Pal letter to an African Child in Need!";
                             :activityType "OngoingOpportunity".
-id:68f53f8346b712131f0148e7 :organizationDeleted false;
+id:68f53f8346b712131f0148e7 :organizationCause id:64093b552eed5dcadba5089f;
+                            :organizationDeleted false;
                             :organizationDescription """Beyond Theory is a youth-led, nonprofit initiative dedicated to providing free academic mentorship and personal development opportunities for students aged 11–16, particularly those from underrepresented or disadvantaged backgrounds.
 
 Our programme connects students with passionate volunteer mentors who offer one-on-one and group sessions to improve academic confidence, develop study skills, and inspire future aspirations.
@@ -4436,7 +4501,10 @@ The MS Society is committed to promoting diversity. We can only offer roles to o
                             :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Support Volunteer (Lambeth and Southwark)";
                             :activityType "OngoingOpportunity".
-id:68f787b818bf1e8a57ae9db6 :organizationDeleted false;
+id:68f787b818bf1e8a57ae9db6 :organizationCause id:64093b542eed5dcadba50897,
+                                               id:64093b552eed5dcadba508a3,
+                                               id:66982ffbbf338eca22aa267b;
+                            :organizationDeleted false;
                             :organizationDescription """Location:  Stepney City Farm, Stepney Way, London, E1 3DG
 When: Tuesdays or Thursdays (or both) 12:30pm–16:30pm
 Type: Voluntary (unpaid – expenses reimbursed if applicable)

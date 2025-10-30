@@ -56,6 +56,7 @@ internal class Vocabulary
     internal static IUriNode OrganizationTos { get; } = Node("organizationTos");
     internal static IUriNode OrganizationType { get; } = Node("organizationType");
     internal static IUriNode OrganizationWebsite { get; } = Node("organizationWebsite");
+    internal static IUriNode OrganizationCause { get; } = Node("organizationCause");
 
     private static IUriNode Node(string name) => AnyNode($"{VocabularyBaseUri}{name}");
 

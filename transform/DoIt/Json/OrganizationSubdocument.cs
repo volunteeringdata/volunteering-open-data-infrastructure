@@ -5,7 +5,7 @@ public class OrganizationSubDocument : Identified
     [JsonPropertyName("logo")] public string? LogoNullable { get; set; }
     [JsonIgnore] public Uri? Logo => string.IsNullOrWhiteSpace(LogoNullable) ? null : new Uri(LogoNullable);
 
-    [JsonPropertyName("causeOptions")] public required IEnumerable<OptionItem> CauseOptions { get; set; }
+    [JsonPropertyName("causeOptions")] public required IEnumerable<OptionItem> Causes { get; set; }
 
     [JsonPropertyName("contactEmail")] public string? ContactEmail { get; set; }
 

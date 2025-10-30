@@ -31,4 +31,6 @@ public class Organization : GraphWrapperNode
     internal string? Type { set => this.OverwriteNullable(Vocabulary.OrganizationType, value); }
 
     internal Uri? Website { set => this.OverwriteNullable(Vocabulary.OrganizationWebsite, value); }
+
+    internal ISet<Option> Cause { get => this.Objects(Vocabulary.OrganizationCause, Option.Wrap, Option.Wrap); }
 }

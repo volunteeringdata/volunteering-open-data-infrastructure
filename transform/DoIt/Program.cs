@@ -50,7 +50,14 @@ foreach (var source in activities!)
     target.LocationOption = source.Details.LocationOption;
     target.Organization = Organization.Create(source.Details.Organization.Id.Value, targetGraph);
     target.Organization.Logo = source.Details.Organization.Logo;
-    // organizationSubDocument.causeOptions
+    target.Organization.Cause.UnionWith(source.Details.Organization.Causes.Select(c =>
+    {
+        var option = Option.Create(c.Id.Value, targetGraph);
+        option.DisplayName = c.DisplayName;
+        option.Icon = c.Icon;
+        option.App = App.Create(source.Details.App.Id.Value, targetGraph);
+        return option;
+    }));
     target.Organization.Email = source.Details.Organization.ContactEmail;
     target.Organization.Phone = source.Details.Organization.ContactPhoneNumber;
     target.Organization.Deleted = source.Details.Organization.Deleted;
