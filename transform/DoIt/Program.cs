@@ -29,6 +29,14 @@ foreach (var sourceActivity in activities!)
     targetActivity.Description = sourceActivity.ActivityDefinitionSubDocument.Description;
     targetActivity.Type = sourceActivity.ActivityDefinitionSubDocument.Type;
     targetActivity.EventType = sourceActivity.ActivityDefinitionSubDocument.EventType;
+    targetActivity.Causes.UnionWith(sourceActivity.ActivityDefinitionSubDocument.Causes.Select(c =>
+    {
+        var option = Option.Create(c.Id.Value, targetGraph);
+        option.DisplayName = c.DisplayName;
+        option.Icon = c.Icon;
+        option.App = App.Create(sourceActivity.ActivityDefinitionSubDocument.App.Id.Value, targetGraph);
+        return option;
+    }));
     // ActivityDefinitionSubDocument.Causes
     // ActivityDefinitionSubDocument.Requirements
     targetActivity.LocationOption = sourceActivity.ActivityDefinitionSubDocument.LocationOption;
