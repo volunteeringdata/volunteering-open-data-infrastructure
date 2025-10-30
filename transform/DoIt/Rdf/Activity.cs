@@ -12,8 +12,27 @@ public class Activity : GraphWrapperNode
 
     internal static Activity Create(string uri, IGraph g) => Wrap(g.CreateUriNode(g.UriFactory.Create(Vocabulary.InstanceBaseUri, uri)), g);
 
-    internal int AttendeesNumber
-    {
-        set => this.Overwrite(Vocabulary.attendeesNumber, value);
-    }
+    internal int AttendeesNumber { set => this.Overwrite(Vocabulary.AttendeesNumber, value); }
+
+    internal int BookingsNumber { set => this.Overwrite(Vocabulary.BookingsNumber, value); }
+
+    internal DateTimeOffset CreatedAt { set => this.Overwrite(Vocabulary.CreatedAt, value); }
+
+    internal bool Deleted { set => this.Overwrite(Vocabulary.Deleted, value); }
+
+    internal DateTimeOffset? DueDate { set => this.OverwriteNullable(Vocabulary.DueDate, value); }
+
+    internal Ecosystem Ecosystem { set => this.Overwrite(Vocabulary.Ecosystem, value, Ecosystem.Wrap); }
+
+    internal DateTimeOffset? EndDate { set => this.OverwriteNullable(Vocabulary.EndDate, value); }
+
+    internal Uri? ExternalApplyLink { set => this.OverwriteNullable(Vocabulary.ExternalApplyLink, value); }
+
+    internal bool? IsOnline { set => this.OverwriteNullable(Vocabulary.IsOnline, value); }
+
+    internal bool? IsVolunteerNumberLimited { set => this.OverwriteNullable(Vocabulary.IsVolunteerNumberLimited, value); }
+
+    internal Uri? MeetingLink { set => this.OverwriteNullable(Vocabulary.MeetingLink, value); }
+
+    internal Organization Organization { set => this.Overwrite(Vocabulary.Organization, value, Organization.Wrap); }
 }

@@ -9,11 +9,22 @@ var activities = await JsonSerializer.DeserializeAsync<IEnumerable<Json.Activity
 
 var targetGraph = new Graph();
 
-foreach (var sourceActivity in activities)
+foreach (var sourceActivity in activities!)
 {
-    var targetActivity = Activity.Create(sourceActivity.Id, targetGraph);
+    var targetActivity = Activity.Create(sourceActivity.Id.Value, targetGraph);
 
     targetActivity.AttendeesNumber = sourceActivity.AttendeesNumber;
+    targetActivity.BookingsNumber = sourceActivity.BookingsNumber;
+    targetActivity.CreatedAt = sourceActivity.CreatedAt.Value;
+    targetActivity.Deleted = sourceActivity.Deleted;
+    targetActivity.DueDate = sourceActivity.DueDate?.Value;
+    targetActivity.Ecosystem = Ecosystem.Create(sourceActivity.Ecosystem.Value, targetGraph);
+    targetActivity.EndDate = sourceActivity.DueDate?.Value;
+    targetActivity.ExternalApplyLink = sourceActivity.ExternalApplyLink;
+    targetActivity.IsOnline = sourceActivity.IsOnline;
+    targetActivity.IsVolunteerNumberLimited = sourceActivity.IsVolunteerNumberLimited;
+    targetActivity.MeetingLink = sourceActivity.MeetingLink;
+    targetActivity.Organization = Organization.Create(sourceActivity.Organization.Value, targetGraph);
 }
 
 targetGraph.SaveToFile(outputRdfFile);
