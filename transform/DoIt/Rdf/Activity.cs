@@ -36,8 +36,7 @@ public class Activity : GraphWrapperNode
 
     internal ISet<Uri> PublishedApps { get => this.Objects(Vocabulary.ActivityPublishedApps, NodeMappings.From, ValueMappings.As<Uri>); }
 
-    internal DateTimeOffset? Start
-    { set => this.OverwriteNullable(Vocabulary.ActivityStart, value); }
+    internal DateTimeOffset? Start { set => this.OverwriteNullable(Vocabulary.ActivityStart, value); }
 
     internal int? Volunteers { set => this.OverwriteNullable(Vocabulary.ActivityVolunteers, value); }
 
@@ -62,4 +61,6 @@ public class Activity : GraphWrapperNode
         get => this.Singular(Vocabulary.ActivityMeasurementUnit, MeasurementUnit.Wrap);
         set => this.Overwrite(Vocabulary.ActivityMeasurementUnit, value, MeasurementUnit.Wrap);
     }
+
+    internal ISet<Option> Causes { get => this.Objects(Vocabulary.ActivityCause, Option.Wrap, Option.Wrap); }
 }
