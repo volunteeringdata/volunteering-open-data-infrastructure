@@ -2,7 +2,8 @@ namespace DoIt.Json;
 
 public class OrganizationSubDocument : Identified
 {
-    [JsonPropertyName("logo")] public Uri? Logo { get; set; }
+    [JsonPropertyName("logo")] public string? LogoNullable { get; set; }
+    [JsonIgnore] public Uri? Logo => string.IsNullOrWhiteSpace(LogoNullable) ? null : new Uri(LogoNullable);
 
     [JsonPropertyName("causeOptions")] public required IEnumerable<OptionItem> CauseOptions { get; set; }
 
@@ -14,7 +15,7 @@ public class OrganizationSubDocument : Identified
 
     [JsonPropertyName("description")] public string? Description { get; set; }
 
-    // domainSlug (don't see why we'd need
+    // domainSlug (don't see why we'd need)
 
     [JsonPropertyName("fullAddress")] public Address? FullAddress { get; set; }
 

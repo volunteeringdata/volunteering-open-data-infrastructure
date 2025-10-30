@@ -46,6 +46,17 @@ internal class Vocabulary
     internal static IUriNode OptionIcon { get; } = Node("optionIcon");
     internal static IUriNode OptionApp { get; } = Node("optionApp");
 
+    internal static IUriNode OrganizationLogo { get; } = Node("organizationLogo");
+    internal static IUriNode OrganizationEmail { get; } = Node("organizationEmail");
+    internal static IUriNode OrganizationPhone { get; } = Node("organizationPhone");
+    internal static IUriNode OrganizationDeleted { get; } = Node("organizationDeleted");
+    internal static IUriNode OrganizationDescription { get; } = Node("organizationDescription");
+    internal static IUriNode OrganizationName { get; } = Node("organizationName");
+    internal static IUriNode OrganizationPurpose { get; } = Node("organizationPurpose");
+    internal static IUriNode OrganizationTos { get; } = Node("organizationTos");
+    internal static IUriNode OrganizationType { get; } = Node("organizationType");
+    internal static IUriNode OrganizationWebsite { get; } = Node("organizationWebsite");
+
     private static IUriNode Node(string name) => AnyNode($"{VocabularyBaseUri}{name}");
 
     private static IUriNode AnyNode(string uri) => Factory.CreateUriNode(Factory.UriFactory.Create(uri));

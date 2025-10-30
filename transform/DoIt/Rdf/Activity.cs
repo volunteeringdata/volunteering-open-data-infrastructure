@@ -30,9 +30,12 @@ public class Activity : GraphWrapperNode
 
     internal bool? IsVolunteerNumberLimited { set => this.OverwriteNullable(Vocabulary.ActivityIsVolunteerNumberLimited, value); }
 
-    internal Uri? MeetingLink { set => this.OverwriteNullable(Vocabulary.ActivityMeeting, value); }
+    internal Uri? Meeting { set => this.OverwriteNullable(Vocabulary.ActivityMeeting, value); }
 
-    internal Organization Organization { set => this.Overwrite(Vocabulary.ActivityOrganization, value, Organization.Wrap); }
+    internal Organization Organization { 
+        get => this.Singular(Vocabulary.ActivityOrganization, Organization.Wrap); 
+        set => this.Overwrite(Vocabulary.ActivityOrganization, value, Organization.Wrap); 
+    }
 
     internal ISet<Uri> PublishedApps { get => this.Objects(Vocabulary.ActivityPublishedApps, NodeMappings.From, ValueMappings.As<Uri>); }
 

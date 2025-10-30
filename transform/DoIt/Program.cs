@@ -10,62 +10,70 @@ var activities = await JsonSerializer.DeserializeAsync<IEnumerable<Json.Activity
 
 var targetGraph = new Graph();
 
-foreach (var sourceActivity in activities!)
+foreach (var source in activities!)
 {
-    var targetActivity = Activity.Create(sourceActivity.Id.Value, targetGraph);
+    var target = Activity.Create(source.Id.Value, targetGraph);
 
-    targetActivity.App = App.Create(sourceActivity.ActivityDefinitionSubDocument.App.Id.Value, targetGraph);
-    targetActivity.App.BrandColor = sourceActivity.ActivityDefinitionSubDocument.App.BrandColor;
-    targetActivity.App.Description = sourceActivity.ActivityDefinitionSubDocument.App.Description;
-    targetActivity.App.Ecosystem = Ecosystem.Create(sourceActivity.ActivityDefinitionSubDocument.App.Ecosystem.Id.Value, targetGraph);
-    targetActivity.App.Logo = sourceActivity.ActivityDefinitionSubDocument.App.Logo;
-    targetActivity.App.Name = sourceActivity.ActivityDefinitionSubDocument.App.Name;
-    targetActivity.App.Organization = Organization.Create(sourceActivity.ActivityDefinitionSubDocument.App.Organization.Id.Value, targetGraph);
-    targetActivity.MeasurementUnit = MeasurementUnit.Create(sourceActivity.ActivityDefinitionSubDocument.MeasurementUnit.Id.Value, targetGraph);
-    targetActivity.MeasurementUnit.Category = sourceActivity.ActivityDefinitionSubDocument.MeasurementUnit.Category;
-    targetActivity.MeasurementUnit.PluralLabel = sourceActivity.ActivityDefinitionSubDocument.MeasurementUnit.PluralLabel;
-    targetActivity.MeasurementUnit.SingularLabel = sourceActivity.ActivityDefinitionSubDocument.MeasurementUnit.SingularLabel;
-    targetActivity.Title = sourceActivity.ActivityDefinitionSubDocument.Title;
-    targetActivity.Description = sourceActivity.ActivityDefinitionSubDocument.Description;
-    targetActivity.Type = sourceActivity.ActivityDefinitionSubDocument.Type;
-    targetActivity.EventType = sourceActivity.ActivityDefinitionSubDocument.EventType;
-    targetActivity.Cause.UnionWith(sourceActivity.ActivityDefinitionSubDocument.Causes.Select(c =>
+    target.App = App.Create(source.Details.App.Id.Value, targetGraph);
+    target.App.BrandColor = source.Details.App.BrandColor;
+    target.App.Description = source.Details.App.Description;
+    target.App.Ecosystem = Ecosystem.Create(source.Details.App.Ecosystem.Id.Value, targetGraph);
+    target.App.Logo = source.Details.App.Logo;
+    target.App.Name = source.Details.App.Name;
+    target.App.Organization = Organization.Create(source.Details.App.Organization.Id.Value, targetGraph);
+    target.MeasurementUnit = MeasurementUnit.Create(source.Details.MeasurementUnit.Id.Value, targetGraph);
+    target.MeasurementUnit.Category = source.Details.MeasurementUnit.Category;
+    target.MeasurementUnit.PluralLabel = source.Details.MeasurementUnit.PluralLabel;
+    target.MeasurementUnit.SingularLabel = source.Details.MeasurementUnit.SingularLabel;
+    target.Title = source.Details.Title;
+    target.Description = source.Details.Description;
+    target.Type = source.Details.Type;
+    target.EventType = source.Details.EventType;
+    target.Cause.UnionWith(source.Details.Causes.Select(c =>
     {
         var option = Option.Create(c.Id.Value, targetGraph);
         option.DisplayName = c.DisplayName;
         option.Icon = c.Icon;
-        option.App = App.Create(sourceActivity.ActivityDefinitionSubDocument.App.Id.Value, targetGraph);
+        option.App = App.Create(source.Details.App.Id.Value, targetGraph);
         return option;
     }));
-    targetActivity.Requirement.UnionWith(sourceActivity.ActivityDefinitionSubDocument.Requirements.Select(c =>
+    target.Requirement.UnionWith(source.Details.Requirements.Select(c =>
     {
         var option = Option.Create(c.Id.Value, targetGraph);
         option.DisplayName = c.DisplayName;
         option.Icon = c.Icon;
-        option.App = App.Create(sourceActivity.ActivityDefinitionSubDocument.App.Id.Value, targetGraph);
+        option.App = App.Create(source.Details.App.Id.Value, targetGraph);
         return option;
     }));
-    // ActivityDefinitionSubDocument.Causes
-    // ActivityDefinitionSubDocument.Requirements
-    targetActivity.LocationOption = sourceActivity.ActivityDefinitionSubDocument.LocationOption;
-    // ActivityDefinitionSubDocument.Organization
+    target.LocationOption = source.Details.LocationOption;
+    target.Organization = Organization.Create(source.Details.Organization.Id.Value, targetGraph);
+    target.Organization.Logo = source.Details.Organization.Logo;
+    // organizationSubDocument.causeOptions
+    target.Organization.Email = source.Details.Organization.ContactEmail;
+    target.Organization.Phone = source.Details.Organization.ContactPhoneNumber;
+    target.Organization.Deleted = source.Details.Organization.Deleted;
+    target.Organization.Description = source.Details.Organization.Description;
+    // organizationSubDocument.fullAddress
+    target.Organization.Name = source.Details.Organization.Name;
+    target.Organization.Purpose = source.Details.Organization.Purpose;
+    target.Organization.Tos = source.Details.Organization.TermsOfServicesLink;
+    target.Organization.Type = source.Details.Organization.Type;
+    target.Organization.Website = source.Details.Organization.WebsiteLink;
     // Address
-    targetActivity.Attendees = sourceActivity.AttendeesNumber;
-    targetActivity.Bookings = sourceActivity.BookingsNumber;
-    targetActivity.Deleted = sourceActivity.Deleted;
-    targetActivity.Due = sourceActivity.DueDate?.Value;
-    targetActivity.Ecosystem = Ecosystem.Create(sourceActivity.Ecosystem.Value, targetGraph);
-    targetActivity.End = sourceActivity.DueDate?.Value;
-    targetActivity.ExternalApplyLink = sourceActivity.ExternalApplyLink;
-    targetActivity.IsOnline = sourceActivity.IsOnline;
-    targetActivity.IsVolunteerNumberLimited = sourceActivity.IsVolunteerNumberLimited;
-    targetActivity.MeetingLink = sourceActivity.MeetingLink;
-    targetActivity.Organization = Organization.Create(sourceActivity.Organization.Value, targetGraph);
-    targetActivity.PublishedApps.UnionWith(sourceActivity.PublishedApp.Select(a => new Uri(Vocabulary.InstanceBaseUri, a.Value)));
+    target.Attendees = source.AttendeesNumber;
+    target.Bookings = source.BookingsNumber;
+    target.Deleted = source.Deleted;
+    target.Due = source.DueDate?.Value;
+    target.Ecosystem = Ecosystem.Create(source.Ecosystem.Value, targetGraph);
+    target.End = source.DueDate?.Value;
+    target.ExternalApplyLink = source.ExternalApplyLink;
+    target.IsOnline = source.IsOnline;
+    target.IsVolunteerNumberLimited = source.IsVolunteerNumberLimited;
+    target.Meeting = source.MeetingLink;
+    target.PublishedApps.UnionWith(source.PublishedApp.Select(a => new Uri(Vocabulary.InstanceBaseUri, a.Value)));
     // Regions
-    targetActivity.Start = sourceActivity.StartDate?.Value;
-    targetActivity.Volunteers = sourceActivity.VolunteerNumber;
-
+    target.Start = source.StartDate?.Value;
+    target.Volunteers = source.VolunteerNumber;
 }
 
 var turtleWriter = new CompressingTurtleWriter();

@@ -6,7 +6,7 @@ public class Activity : Identified
 
     // activityDefinition (redundant with subdocument)
 
-    [JsonPropertyName("activityDefinitionSubDocument")] public required ActivityDefinitionSubDocument ActivityDefinitionSubDocument { get; set; }
+    [JsonPropertyName("activityDefinitionSubDocument")] public required ActivityDefinitionSubDocument Details { get; set; }
 
     [JsonPropertyName("address")] public Address? Address { get; set; }
 
@@ -38,7 +38,7 @@ public class Activity : Identified
     [JsonPropertyName("meetingLink")] public string? MeetingLinkString { get; set; }
     [JsonIgnore] public Uri? MeetingLink => string.IsNullOrWhiteSpace(MeetingLinkString) ? null : new Uri(MeetingLinkString);
 
-    [JsonPropertyName("organization")] public required Id Organization { get; set; }
+    // organization (redundant with activityDefinitionSubDocument.organizationSubDocument._id)
 
     [JsonPropertyName("publishedApps")] public required IEnumerable<Id> PublishedApp { get; set; }
 
