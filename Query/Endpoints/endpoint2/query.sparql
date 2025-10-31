@@ -1,0 +1,19 @@
+﻿BASE <https://id.example.org/>
+PREFIX : <schema/>
+
+CONSTRUCT {
+    ?activity
+        :app ?app ;
+        :name ?title ;
+.
+
+    ?app :name ?name .
+}
+WHERE {
+    ?activity
+        :activityApp ?app ;
+        :activityTitle ?title ;
+    .
+
+    ?app :appName ?name .
+}

@@ -1,0 +1,8 @@
+﻿{
+  "app": {},
+
+  "@context": {
+    "@base": "https://id.example.org/",
+    "@vocab": "https://id.example.org/schema/"
+  }
+}
