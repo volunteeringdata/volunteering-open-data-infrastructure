@@ -286,8 +286,11 @@ Email: lab@london.edu
                                                  id:64093b572eed5dcadba508ab,
                                                  id:64093b572eed5dcadba508ad;
                             :activityStart "2023-03-21T00:00:00.000000+00:00"^^xsd:dateTime;
+                            :activityStreet "Research Lab - London Business School, Park Road, London";
                             :activityTitle "London Business School Research Lab - Earn £10 taking part in behavioural research";
-                            :activityType "Event".
+                            :activityType "Event";
+                            :latitude "51.5253179"^^xsd:double;
+                            :longitude "-0.1603055"^^xsd:double.
 id:64242e9d5163ce4fdbb8beab :organizationCause id:64093b552eed5dcadba5089f;
                             :organizationDeleted false;
                             :organizationDescription """Schoolreaders goal is for all children, regardless of background, to leave primary school being able to read well so they can go on to access their secondary education fully and maximise their future life chances.
@@ -533,9 +536,12 @@ Volunteering as a school governor is a challenging but rewarding role. As part o
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:64197c09f0ca30c4afc562bf;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Bromley BR1 3UH, UK";
                             :activityTitle "School Governor - Bromley";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers -1 .
+                            :activityVolunteers -1 ;
+                            :latitude "51.4038792"^^xsd:double;
+                            :longitude "0.0203771"^^xsd:double.
 id:644f291b494c8ad3e5fff5f6 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 1 ;
@@ -573,9 +579,12 @@ To help individuals to maintain written records relating to the tasks they compl
                             :activityOrganization id:6425cd40a0624f3ab9fb07c7;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b572eed5dcadba508af;
+                            :activityStreet "Scadbury Park Nature Reserve, Old Perry St, Chislehurst BR7 6PT, UK";
                             :activityTitle "Growing Places Mentor";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers -1 .
+                            :activityVolunteers -1 ;
+                            :latitude "51.414866"^^xsd:double;
+                            :longitude "0.08728040000000001"^^xsd:double.
 id:644fbf84449fb9795b2fc297 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 5 ;
@@ -613,9 +622,12 @@ Suggested commitment of 8-12 hours per month - full training and support will be
                             :activityOrganization id:6425d048a0624f3ab9fb4c7a;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b572eed5dcadba508af;
+                            :activityStreet "Messenger Rd, Smethwick B66 3DX, UK";
                             :activityTitle "Children's Activity Volunteer (ARLTA)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers -1 .
+                            :activityVolunteers -1 ;
+                            :latitude "52.4940011"^^xsd:double;
+                            :longitude "-1.9565199"^^xsd:double.
 id:644fc343a3c53c19c9b74e57 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 1 ;
@@ -635,9 +647,12 @@ and/or
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:642613a4de05bf8ae7ca1628;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Scadbury Park Cottages, Chislehurst BR7 6LS, UK";
                             :activityTitle "Growing Places Mentor";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers -1 .
+                            :activityVolunteers -1 ;
+                            :latitude "51.4115862"^^xsd:double;
+                            :longitude "0.09614199999999999"^^xsd:double.
 id:644fca18a3c53c19c9b76481 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 1 ;
@@ -663,9 +678,12 @@ Location: Tower Hamlets
                             :activityOrganization id:6425cec6a0624f3ab9fb3209;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b572eed5dcadba508af;
+                            :activityStreet "London EC3A 7DT, UK";
                             :activityTitle "Walking Group Volunteer - Tower Hamlets";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers -1 .
+                            :activityVolunteers -1 ;
+                            :latitude "51.51492469999999"^^xsd:double;
+                            :longitude "-0.0755014"^^xsd:double.
 id:644fca22a3c53c19c9b76a57 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 2 ;
@@ -692,9 +710,12 @@ Location: Folkestone Town Centre""";
                             :activityOrganization id:6425cec6a0624f3ab9fb3209;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b572eed5dcadba508af;
+                            :activityStreet "69 Sandgate Rd, Folkestone CT20 2AF, UK";
                             :activityTitle "Arts and Crafts Facilitator Volunteer - Folkestone Haven";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers -1 .
+                            :activityVolunteers -1 ;
+                            :latitude "51.0782756"^^xsd:double;
+                            :longitude "1.1783798"^^xsd:double.
 id:644ff28015888780f9a64897 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 1 ;
@@ -728,9 +749,12 @@ Why get involved?
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cdb8a0624f3ab9fb122e;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "London E15 2GN, UK";
                             :activityTitle "Join our local team to organise events & awareness activities in East London";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers -1 .
+                            :activityVolunteers -1 ;
+                            :latitude "51.5337099"^^xsd:double;
+                            :longitude "-0.0018082"^^xsd:double.
 id:644ff3b715888780f9a66950 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 4 ;
@@ -748,9 +772,12 @@ Our volunteers get enormous pleasure from seeing the difference that a few hours
                             :activityOrganization id:64242e9d5163ce4fdbb8beab;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b572eed5dcadba508af;
+                            :activityStreet "Roberts Rd, London E17, UK";
                             :activityTitle "Schoolreaders Volunteer London";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers -1 .
+                            :activityVolunteers -1 ;
+                            :latitude "51.5974873"^^xsd:double;
+                            :longitude "-0.0140356"^^xsd:double.
 id:644ffe2112535322aa32cace :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 1 ;
@@ -765,9 +792,12 @@ id:644ffe2112535322aa32cace :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityOrganization id:6425cdcba0624f3ab9fb1471;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b572eed5dcadba508af;
+                            :activityStreet "Middle Walk, Woking GU21 6XT, UK";
                             :activityTitle "Youth Club Co-Ordinator (Woking)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers -1 .
+                            :activityVolunteers -1 ;
+                            :latitude "51.3187826"^^xsd:double;
+                            :longitude "-0.5593485"^^xsd:double.
 id:64516b3857d588ae4560f772 :organizationCause id:64093b552eed5dcadba508a3;
                             :organizationDeleted false;
                             :organizationDescription "We are a group of residents of Ainslie Wood Road E4, who are working with Waltham Forest Council to turn the road into a bee friendly street. We are looking for volunteers to join us once a month to help keep the road clear of weeds and plant native flowers to ensure beneficial wildlife can thrive in our area. No prior experience required!";
@@ -790,8 +820,11 @@ We are a group of residents of Ainslie Wood Road E4, who are working with Waltha
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:64516b3857d588ae4560f772;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Ainslie Wood Road, London";
                             :activityTitle "Ainslie Wood Road - Gardening Volunteer Group";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "51.6120572"^^xsd:double;
+                            :longitude "-0.0134945"^^xsd:double.
 id:64527196358835be4772631c :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 3 ;
@@ -811,8 +844,11 @@ To find out more and sign up to volunteer in one of our shops, please visit our 
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6438281587df93ec1032b350;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Redman Place, London";
                             :activityTitle "Shop volunteer- nationwide";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "51.5430805"^^xsd:double;
+                            :longitude "-0.0115352"^^xsd:double.
 id:645394f2942173c58288dc8f :organizationCause id:64093b552eed5dcadba5089d;
                             :organizationDeleted false;
                             :organizationDescription """Building on this wonderful repository of artworks, the Art UK website is rich in story content and learning resources, and it offers many ways for everyone to engage with art.
@@ -860,9 +896,12 @@ id:6454142924210def92707ae5 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityOrganization id:64103c352a0eedb6aef42d3d;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b562eed5dcadba508a9;
+                            :activityStreet "89 Lauriston Rd, London E9 7HJ, UK";
                             :activityTitle "Oxfam Shop Volunteering";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 1000 .
+                            :activityVolunteers 1000 ;
+                            :latitude "51.5378025"^^xsd:double;
+                            :longitude "-0.0444895"^^xsd:double.
 id:6455018ad1ed7f1083d77a6d :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 1 ;
@@ -881,8 +920,11 @@ The events range from stands in shopping centres and high streets, to big events
                             :activityOrganization id:641879d4cf71f77116117e87;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b562eed5dcadba508a9;
+                            :activityStreet "Kent";
                             :activityTitle "Diabetes UK Events Volunteers - Kent";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "51.2787075"^^xsd:double;
+                            :longitude "0.5217254000000001"^^xsd:double.
 id:64578e61e090332d33ff0b4a :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 2 ;
@@ -897,9 +939,12 @@ id:64578e61e090332d33ff0b4a :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:64183a63685ab4e440f10c5e;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "London SE9, UK";
                             :activityTitle "Volunteers Mentors Needed to provide 1-2-1 Mentoring for Children and Young People and Mothers ";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 100 .
+                            :activityVolunteers 100 ;
+                            :latitude "51.4414439"^^xsd:double;
+                            :longitude "0.05853159999999999"^^xsd:double.
 id:64660b871eeca2d85e5d602d :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 1 ;
                             :activityBookings 62 ;
@@ -919,8 +964,11 @@ Bereavement happens for a variety of reasons and having the ability to offer the
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityStart "2023-05-17T23:00:00.000000+00:00"^^xsd:dateTime;
+                            :activityStreet "Hawthorn Road, Lincoln";
                             :activityTitle "Bereavement Helpline Listener Volunteer ";
-                            :activityType "Event".
+                            :activityType "Event";
+                            :latitude "53.244796"^^xsd:double;
+                            :longitude "-0.4738618"^^xsd:double.
 id:64d25c55ac1f5f7596c5671a :measurementUnitCategory "Time";
                             :measurementUnitPluralLabel "Hours";
                             :measurementUnitSingularLabel "Hour".
@@ -1008,8 +1056,11 @@ They may have grown up in a family impacted by domestic violence. They might be 
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b572eed5dcadba508ad,
                                                  id:64093b572eed5dcadba508af;
+                            :activityStreet "London";
                             :activityTitle "Mentor a child in London ";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "51.5072178"^^xsd:double;
+                            :longitude "-0.1275862"^^xsd:double.
 id:65e741ac3b33c2a2721e34a9 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 1 ;
@@ -1041,8 +1092,11 @@ please apply here:  https://www.pah.org.uk/volunteer-roles/compassionate-neighbo
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b562eed5dcadba508a9,
                                                  id:64093b572eed5dcadba508af;
+                            :activityStreet "Leatherhead KT22";
                             :activityTitle "Compassionate Neighbours";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "51.2941182"^^xsd:double;
+                            :longitude "-0.3386888"^^xsd:double.
 id:65f968bfbbf8cbd3ac176677 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 4 ;
@@ -1066,8 +1120,11 @@ The role will you suit if:
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a,
                                                    id:65a46519c9da46983ceed1bb;
                             :activityRequirement id:64093b562eed5dcadba508a7;
+                            :activityStreet "Pen Museum, Frederick Street, Birmingham";
                             :activityTitle "Nib Maker";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.4845193"^^xsd:double;
+                            :longitude "-1.9115684"^^xsd:double.
 id:660c0023022dfe06f1ef3341 :organizationCause id:64093b552eed5dcadba5089f;
                             :organizationDeleted false;
                             :organizationDescription "Tutor The Nation is a new charity working towards a fairer education system in the UK. We aim to help State school pupils develop the confidence and skills they need to achieve their goals through free, online tutoring delivered by passionate volunteers. Our volunteers are helping to transform lives, one tutoring session at a time.";
@@ -1114,8 +1171,11 @@ Note: For some reason the posting is saying 36000 hours! You will only be asked 
                             :activityOrganization id:66169d5247af10a843126434;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b562eed5dcadba508a7;
+                            :activityStreet "https://www.writersinitiative.com";
                             :activityTitle "Freelance Writer of Blog/Article posts ";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.5647271"^^xsd:double;
+                            :longitude "-1.4671882"^^xsd:double.
 id:661d321c72ed22fd04a428a6 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 8 ;
@@ -1180,8 +1240,11 @@ We celebrate""";
                             :activityOrganization id:6425cd68a0624f3ab9fb0c4b;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b562eed5dcadba508a9;
+                            :activityStreet "Bristol Rd, Selly Oak, Birmingham B29 6NA, UK";
                             :activityTitle "Activity Volunteer at Sense Touchbase Pears";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.4408861"^^xsd:double;
+                            :longitude "-1.9385372"^^xsd:double.
 id:661d371f2307f13b3b2ef9c7 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 3 ;
@@ -1203,8 +1266,11 @@ Increase patients’ self-confidence and ability to self-manage their difficulti
                             :activityOrganization id:65bcbcd8b620e756f16aee39;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b562eed5dcadba508a9;
+                            :activityStreet "";
                             :activityTitle "Living Well at Home Volunteer";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "0"^^xsd:double;
+                            :longitude "0"^^xsd:double.
 id:661dbb2fc8ab0cb083e72ebe :optionApp id:65a46db14b30b7dd175eb67a;
                             :optionDisplayName "None".
 id:661dbb6ac8ab0cb083e72ebf :optionApp id:65a46db14b30b7dd175eb67a;
@@ -1241,8 +1307,11 @@ Weekly telephone or virtual support has become a key element of our support offe
                             :activityRequirement id:64093b562eed5dcadba508a9,
                                                  id:64093b572eed5dcadba508af,
                                                  id:661dbb6ac8ab0cb083e72ebf;
+                            :activityStreet "";
                             :activityTitle "Telephone Support";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "0"^^xsd:double;
+                            :longitude "0"^^xsd:double.
 id:6632280848e4241e951fbe1e :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 14 ;
@@ -1298,8 +1367,11 @@ We’d love for you to consider joining us as a Sense Virtual Buddy!""";
                             :activityOrganization id:6425cd68a0624f3ab9fb0c4b;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b562eed5dcadba508a9;
+                            :activityStreet "From Home";
                             :activityTitle "Virtual Buddy";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.5647271"^^xsd:double;
+                            :longitude "-1.4671882"^^xsd:double.
 id:6633742da97c2db03ae12aee :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 8 ;
@@ -1346,8 +1418,11 @@ Most importantly your efforts will ensure that both individuals and organisation
                             :activityOrganization id:6425f3b8f2d4b77a6e155b67;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b562eed5dcadba508a9;
+                            :activityStreet "From Home";
                             :activityTitle "Video Editor / Content Creator";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.5647271"^^xsd:double;
+                            :longitude "-1.4671882"^^xsd:double.
 id:6633785e2e8b9ca375ca506a :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 17 ;
@@ -1410,8 +1485,11 @@ A reference for your CV""";
                             :activityOrganization id:6425f3b8f2d4b77a6e155b67;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b562eed5dcadba508a9;
+                            :activityStreet "From Home";
                             :activityTitle "Social Media Marketing Volunteer for BELIFF Film Festival";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.5647271"^^xsd:double;
+                            :longitude "-1.4671882"^^xsd:double.
 id:663b4b8d427911a09c6bda40 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 1 ;
@@ -1458,9 +1536,12 @@ https://www.reengage.org.uk/volunteer/new-volunteers/
                             :activityRequirement id:64093b562eed5dcadba508a9,
                                                  id:64093b572eed5dcadba508af,
                                                  id:661dbb6ac8ab0cb083e72ebf;
+                            :activityStreet "London, UK";
                             :activityTitle "Re engage - Older People Telephone Befriending London/National - Volunteer ";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 10 .
+                            :activityVolunteers 10 ;
+                            :latitude "51.5072178"^^xsd:double;
+                            :longitude "-0.1275862"^^xsd:double.
 id:66508c7e9624a8e5c5b4ab2d :organizationCause id:64093b542eed5dcadba50897;
                             :organizationDeleted false;
                             :organizationDescription """NWR is a membership organisation for women that has been bringing women together for over 60 years for social activities. We provide an opportunity for women to meet to take part in informal discussions and other fun activities to promote friendship, self-education and confidence.
@@ -1515,8 +1596,11 @@ You will be provided with full training and support from NWR staff and will be p
                             :activityOrganization id:66508c7e9624a8e5c5b4ab2d;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b562eed5dcadba508a9;
+                            :activityStreet "London, UK";
                             :activityTitle "Women's Group Organiser - multiple locations in London";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "51.5072178"^^xsd:double;
+                            :longitude "-0.1275862"^^xsd:double.
 id:665dad56103207cef4a1b743 :organizationCause id:64093b542eed5dcadba50897,
                                                id:64093b542eed5dcadba50899,
                                                id:64093b552eed5dcadba5089f,
@@ -1560,8 +1644,11 @@ Analytical skills.""";
                             :activityOrganization id:665dad56103207cef4a1b743;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b562eed5dcadba508a9;
+                            :activityStreet "From Home";
                             :activityTitle "Graphic Designer";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.5647271"^^xsd:double;
+                            :longitude "-1.4671882"^^xsd:double.
 id:6696569fe1a9ec9394b33f56 :organizationCause id:64093b542eed5dcadba50897,
                                                id:64093b542eed5dcadba50899;
                             :organizationDeleted false;
@@ -1652,8 +1739,11 @@ Be a part of the Be Epic! London International Film Festival’s digital transfo
                             :activityOrganization id:6425f3b8f2d4b77a6e155b67;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b562eed5dcadba508a9;
+                            :activityStreet "From Home";
                             :activityTitle "Web Design and Management Volunteering Position for Be Epic! London International Film Festival";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.5647271"^^xsd:double;
+                            :longitude "-1.4671882"^^xsd:double.
 id:676008f8954c54acf0cebd9c :organizationCause id:64093b542eed5dcadba50897;
                             :organizationDeleted false;
                             :organizationDescription """Creative Active Lives supports children, young people and teenagers who are new to the country, in financial hardship, or who have learning disabilities, autism, physical disabilities, ADHD and other neurodiversities by creating playful, nurturing and safe 'third spaces' where they can develop supportive peer networks, raise their aspiration and support skills and interests development pre and post-16.   In 2024 we have supported over 5000 children.
@@ -1724,8 +1814,11 @@ Any successful applicant working with children will be required to undertake an 
                             :activityRequirement id:64093b562eed5dcadba508a7,
                                                  id:64093b572eed5dcadba508af,
                                                  id:661dbb6ac8ab0cb083e72ebf;
+                            :activityStreet "From Home";
                             :activityTitle "Minecraft Youth Support / Mentoring Through Play";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.5647271"^^xsd:double;
+                            :longitude "-1.4671882"^^xsd:double.
 id:67aa00bb8e0715d8c0eefd61 :organizationLogo <https://s3.eu-west-2.amazonaws.com/doit2.0-production-uploads/OrganizationPicture/d4b2eb74-0389-4319-98d3-ecec40918058_2025-02-10T13:48:03.020Z.jpeg>;
                             :organizationName "Younity".
 id:67b3a3ab839566a5b7a0d60d :appDescription "Volunteer your time with community energy groups.";
@@ -1776,9 +1869,12 @@ Our nature reserves are very special places for people and wildlife. Right acros
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/25171-site-checks-and-maintenance-volunteer-roving-ranger-snettisham-reserve-2022-01-22>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Titchwell Marsh, Main Road, Titchwell, King's Lynn, Norfolk, PE31 8BB, England";
                             :activityTitle "Site Checks and Maintenance Volunteer (Roving Ranger Snettisham reserve)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 2 .
+                            :activityVolunteers 2 ;
+                            :latitude "52.961798"^^xsd:double;
+                            :longitude "0.617419"^^xsd:double.
 id:67fcb662e156c8228c77080b :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -1821,9 +1917,12 @@ IMPORTANT: if you are a member of RSPB staff please contact YGsupport@rspb.org.u
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/80657-youth-group-main-leader-rspb-sandwell-swans-wildlife-explorers-2025-01-21>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Sandwell Valley, Tanhouse Avenue, Birmingham, West Midlands, B43 5AG, England";
                             :activityTitle "Youth Group Main Leader (RSPB Sandwell Swans Wildlife Explorers)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 1 .
+                            :activityVolunteers 1 ;
+                            :latitude "52.533139"^^xsd:double;
+                            :longitude "-1.950071"^^xsd:double.
 id:67fcb6750b3376a790e4b7bc :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -1865,9 +1964,12 @@ IMPORTANT: if you are a member of RSPB staff please contact YGsupport@rspb.org.u
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/72748-youth-group-assistant-leader-assistant-leader-fen-drayton-wildlife-explorers-2024-09-16>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Fen Drayton Lakes RSPB Wildlife Explorers, Fen Drayton Lakes Discovery Zone, Swavesey, Cambridgeshire, CB24 4QG, England";
                             :activityTitle "Youth Group Assistant Leader (Assistant leader Fen Drayton Wildlife Explorers)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 1 .
+                            :activityVolunteers 1 ;
+                            :latitude "52.301596"^^xsd:double;
+                            :longitude "-0.003208"^^xsd:double.
 id:67fcb67c0b3376a790e4baea :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -1902,9 +2004,12 @@ There is always the opportunity to learn new things and gain skills through volu
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/50987-visitor-engagement-volunteer-on-reserves-rspb-campfield-marsh-meet-and-greet-volunteer-bowness-on-solway-2023-07-24>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Campfield Marsh, Wigton, Cumbria, CA7 5AG, England";
                             :activityTitle "Visitor Engagement Volunteer (On Reserves) (RSPB Campfield Marsh Meet and Greet Volunteer Bowness on Solway)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 2 .
+                            :activityVolunteers 2 ;
+                            :latitude "54.942549"^^xsd:double;
+                            :longitude "-3.247348"^^xsd:double.
 id:67fcb6800b3376a790e4bbb5 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -1936,9 +2041,12 @@ Come and play your part in ensuring that the Solway Plain continues to consist o
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/75300-practical-reserve-work-campfield-marsh-bowness-on-solway-2024-10-22>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Campfield Marsh, Wigton, Cumbria, CA7 5AG, England";
                             :activityTitle "Practical Reserve Work (Campfield Marsh, Bowness On Solway)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 4 .
+                            :activityVolunteers 4 ;
+                            :latitude "54.942549"^^xsd:double;
+                            :longitude "-3.247348"^^xsd:double.
 id:680463602ef59bbc063002d9 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -1969,9 +2077,12 @@ This role is not suitable for under 18’s.""";
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/87857-visitor-centre-welcome-rspb-ynys-hir-reserve-ceredigion-2025-04-19>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Ynys-hir, Eglyws-fach, Machynlleth, Ceredigion, SY20 8TA, Wales";
                             :activityTitle "Visitor Centre Welcome (RSPB Ynys-hir Reserve Ceredigion)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 1 .
+                            :activityVolunteers 1 ;
+                            :latitude "52.544741"^^xsd:double;
+                            :longitude "-3.945012"^^xsd:double.
 id:6807c51be1f731a9de22a5ed :organizationCause id:64093b542eed5dcadba50897;
                             :organizationDeleted false;
                             :organizationDescription """At We Are Explorers, we create radically inclusive, joyful spaces for LGBTQ+ people — with a proud focus on Neurodivergent people. Because while 3.8% of the UK population identifies as LGBTQ+, a huge 25% of Neurodivergent people do. So why are so many queer spaces still inaccessible, overwhelming, or just not built with us in mind?
@@ -2084,8 +2195,11 @@ Contact our friendly Volunteer Experience (VE) Team at VE-Support@ssafa.org.uk T
                                                  id:64093b572eed5dcadba508ad,
                                                  id:64093b572eed5dcadba508af,
                                                  id:661dbb6ac8ab0cb083e72ebf;
+                            :activityStreet "Lanarkshire, Lanark";
                             :activityTitle "Volunteer Fundraiser (Lanarkshire)";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "55.583333"^^xsd:double;
+                            :longitude "-3.833333"^^xsd:double.
 id:682c6029e2b7d37b979293f5 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -2169,8 +2283,11 @@ Contact our friendly Volunteer Experience (VE) Team at VE-Support@ssafa.org.uk T
                                                  id:64093b572eed5dcadba508ad,
                                                  id:64093b572eed5dcadba508af,
                                                  id:661dbb6ac8ab0cb083e72ebf;
+                            :activityStreet "Cromarty";
                             :activityTitle "Volunteer Fundraiser (Ross & Cromarty)";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "57.680609"^^xsd:double;
+                            :longitude "-4.034678"^^xsd:double.
 id:682e936de979c3e5a8192765 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -2211,9 +2328,12 @@ Thank you for reading this description of the role. Clicking on ‘more about th
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/66987-retail-volunteer-fairburn-ings-2024-05-30>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Fairburn Ings, Newton Lane, Castleford, Yorkshire West Riding, WF10 2BH, England";
                             :activityTitle "Retail Volunteer (Fairburn Ings)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 10 .
+                            :activityVolunteers 10 ;
+                            :latitude "53.745685"^^xsd:double;
+                            :longitude "-1.324136"^^xsd:double.
 id:687c5be7d1707e2da912c969 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -2293,9 +2413,12 @@ If you volunteer for LIFE Raft, the RSPB will reimburse you for travel and subsi
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/92062-rspb-team-member-biosecurity-island-incursion-team-member-2025-06-25>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Rathlin West Light Seabird Centre, Rathlin West Light Seabird Centre, Rathlin Ireland, Ballycastle, Co Antrim, BT54 6RT, United Kingdom";
                             :activityTitle "RSPB Team Member (Biosecurity Island Incursion Team Member)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 35 .
+                            :activityVolunteers 35 ;
+                            :latitude "55.293389"^^xsd:double;
+                            :longitude "-6.197745"^^xsd:double.
 id:687c5be8d1707e2da912c98e :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -2345,9 +2468,12 @@ If you are not a Rathlin resident it will be possible to carry out day trips. Ho
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/92058-rspb-team-member-biosecurity-island-monitoring-team-member-2025-06-25>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Rathlin West Light Seabird Centre, Rathlin West Light Seabird Centre, Rathlin Ireland, Ballycastle, Co Antrim, BT54 6RT, United Kingdom";
                             :activityTitle "RSPB Team Member (Biosecurity Island Monitoring Team Member)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 2 .
+                            :activityVolunteers 2 ;
+                            :latitude "55.293389"^^xsd:double;
+                            :longitude "-6.197745"^^xsd:double.
 id:688c2dee0ffd8303426d8f9a :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -2378,9 +2504,12 @@ We are a friendly and supportive team. If you are volunteering to learn new skil
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/94401-practical-reserve-work-minsmere-work-party-volunteer-2025-08-01>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Minsmere, Sheepwash Lane, Saxmundham, Suffolk, IP17 3BY, England";
                             :activityTitle "Practical Reserve Work (Minsmere Work Party Volunteer)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 12 .
+                            :activityVolunteers 12 ;
+                            :latitude "52.248947"^^xsd:double;
+                            :longitude "1.607202"^^xsd:double.
 id:6890b08c338cf04062dd1115 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 14 ;
@@ -2465,9 +2594,12 @@ You can choose which shifts to do to fit round your other commitments.""";
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/95395-cafe-volunteer-leighton-moss-2025-08-19>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Leighton Moss, Storrs Lane, Silverdale, Carnforth, Lancashire, LA5 0SW, England";
                             :activityTitle "Café Volunteer (Leighton Moss)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 0 .
+                            :activityVolunteers 0 ;
+                            :latitude "54.168246"^^xsd:double;
+                            :longitude "-2.802461"^^xsd:double.
 id:68c4de63007c3361fc650144 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -2498,9 +2630,12 @@ We are a friendly and supportive team. If you are volunteering to learn new skil
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/97155-practical-reserve-work-culbin-sands-nigg-bay-udale-bay-fairy-glen-loch-ruthven-2025-09-12>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Etive House, IV2 3BW, Etive House, Beechwood Park, Inverness, Highland, IV2 3BW, United Kingdom";
                             :activityTitle "Practical Reserve Work (Culbin Sands, Nigg Bay, Udale Bay, Fairy Glen, Loch Ruthven)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 13 .
+                            :activityVolunteers 13 ;
+                            :latitude "57.472161"^^xsd:double;
+                            :longitude "-4.187902"^^xsd:double.
 id:68cbf07e91dd7c503ab229f0 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 6 ;
@@ -2529,8 +2664,11 @@ The event is from 19:30 – 21:30, but we’d ask for you to arrive at the venue
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
                             :activityStart "2025-11-21T18:00:00.000000+00:00"^^xsd:dateTime;
+                            :activityStreet "Edward St, Stockport SK1 3XE, UK";
                             :activityTitle "Christmas Concert Ushers - Missing People";
-                            :activityType "Event".
+                            :activityType "Event";
+                            :latitude "53.4059945"^^xsd:double;
+                            :longitude "-2.1581884"^^xsd:double.
 id:68d4b072f8fe06e6423350cd :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -2616,9 +2754,12 @@ All the training necessary and background information will be provided and since
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/95077-practical-reserve-work-assistant-warden-volunteer-placement-2025-08-18>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Middleton Lakes, Bodymoor Heath Road, Tamworth, Staffordshire, B78 2BB, England";
                             :activityTitle "Practical Reserve Work (Assistant Warden Volunteer Placement)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 1 .
+                            :activityVolunteers 1 ;
+                            :latitude "52.581657"^^xsd:double;
+                            :longitude "-1.71588"^^xsd:double.
 id:68d6baae22c5c958c1c99b1c :measurementUnitCategory "Custom unit";
                             :measurementUnitPluralLabel "Steps";
                             :measurementUnitSingularLabel "Step".
@@ -2739,9 +2880,12 @@ The RSPB is the UK's largest nature conservation charity! Join our fantastic vol
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/97407-residential-on-reserve-more-than-4-weeks-rspb-frampton-marsh-2025-09-17>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Frampton Marsh, Roads Farmhouse, Frampton Roads, Frampton, Boston, Lincolnshire, PE20 1AY, England";
                             :activityTitle "Residential on Reserve (More than 4 weeks) (RSPB Frampton Marsh)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 1 .
+                            :activityVolunteers 1 ;
+                            :latitude "52.931387"^^xsd:double;
+                            :longitude "0.018938"^^xsd:double.
 id:68e793d5bebfd220e4aec748 :organizationCause id:64093b552eed5dcadba508a3;
                             :organizationDeleted false;
                             :organizationDescription """Launched in 2016 by a committed group of people determined to deliver locally owned community energy. Award-winning Grimsby Community Energy is a community benefit society (CBS), a form of not-for-profit cooperative owned and run by local people that works for the benefit of the community.
@@ -2790,8 +2934,11 @@ Skills and Experience
                             :activityOrganization id:68e793d5bebfd220e4aec748;
                             :activityPublishedApps id:67b3a3ab839566a5b7a0d60d;
                             :activityRequirement id:64093b572eed5dcadba508af;
+                            :activityStreet "From Home";
                             :activityTitle "Legal support advising and checking";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.5647271"^^xsd:double;
+                            :longitude "-1.4671882"^^xsd:double.
 id:68ef0e6bea1549dcd93842b0 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -2833,9 +2980,12 @@ If this sounds like something you’d enjoy, we’d love to hear from you. Toget
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/99562-practical-reserve-work-south-lakes-conservation-volunteer-2025-10-14>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Abbey Road, Barrow-in-Furness, Westmorland and Furness, England, United Kingdom, Abbey Road, Barrow-in-Furness, Cumbria, LA14 5QS, United Kingdom";
                             :activityTitle "Practical Reserve Work (South Lakes Conservation Volunteer)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 18 .
+                            :activityVolunteers 18 ;
+                            :latitude "54.116186"^^xsd:double;
+                            :longitude "-3.22694"^^xsd:double.
 id:68ef7c9fb239d50f07154216 :organizationCause id:64093b552eed5dcadba5089f;
                             :organizationDeleted false;
                             :organizationDescription """At STEM On Track, we provide go-kart kits and online modules to schools, giving students hands-on experience in engineering, motorsport, and STEM subjects. Our programme bridges classroom learning with real-world application, helping students develop skills, confidence, and creativity.
@@ -2879,8 +3029,11 @@ Test Days: 7th of May
                             :activityRequirement id:64093b562eed5dcadba508a5,
                                                  id:64093b572eed5dcadba508ab;
                             :activityStart "2026-06-20T07:00:00.000000+00:00"^^xsd:dateTime;
+                            :activityStreet "Whilton Mill, Whilton Locks, Whilton, Daventry NN11 2NH";
                             :activityTitle "STEM On Track National Finals";
-                            :activityType "Event".
+                            :activityType "Event";
+                            :latitude "52.2747073"^^xsd:double;
+                            :longitude "-1.0894797"^^xsd:double.
 id:68f1b16cf7915f22a8e6ab5f :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -2909,9 +3062,12 @@ We are a friendly and supportive team. If you are volunteering to learn new skil
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/99760-practical-reserve-work-thursday-garden-maintenance-volunteer-at-flatford-wildlife-garden-2025-10-16>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Flatford Wildlife Garden, Flatford Road, East Bergholt, Colchester, Suffolk, CO7 6UL, England";
                             :activityTitle "Practical Reserve Work (Thursday Garden maintenance volunteer at Flatford Wildlife Garden)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 2 .
+                            :activityVolunteers 2 ;
+                            :latitude "51.959711"^^xsd:double;
+                            :longitude "1.020152"^^xsd:double.
 id:68f229a206abd725874e1612 :organizationCause id:64093b532eed5dcadba50895;
                             :organizationDeleted false;
                             :organizationDescription "We are an independent Day Centre providing day care services to older people in our local community, supporting carers and deliver hot freshly cooked meals in our local area.";
@@ -2938,8 +3094,11 @@ Commitment is 6 to 8 hours per month, which includes a 2 hour trustee meeting he
                             :activityOrganization id:68f229a206abd725874e1612;
                             :activityPublishedApps id:65bab9cfb6f4d44ce2b9c119;
                             :activityRequirement id:64093b572eed5dcadba508af;
+                            :activityStreet "35B Cremer Street, Sheringham";
                             :activityTitle "Trustee";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.9418985"^^xsd:double;
+                            :longitude "1.2135604"^^xsd:double.
 id:68f24c113c09770c24988bf6 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -2981,8 +3140,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Ilkeston Road, Heanor DE75 7DT";
                             :activityTitle "Community First Aider (Derbyshire)";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "53.0103045"^^xsd:double;
+                            :longitude "-1.3497262"^^xsd:double.
 id:68f24c2fb46b80bec83ae166 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3041,8 +3203,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Devizes SN10 2EY";
                             :activityTitle "Community Volunteer (Wiltshire)";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "51.3679922"^^xsd:double;
+                            :longitude "-1.9673429"^^xsd:double.
 id:68f25736a9026f6338603e37 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3101,8 +3266,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Lionel Street, Birmingham B3 1DG";
                             :activityTitle "Community Volunteer (West Midlands)";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.4831152"^^xsd:double;
+                            :longitude "-1.9042133"^^xsd:double.
 id:68f25dd439b539c18d98cea4 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3154,8 +3322,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Sisna Park Road, Plymouth PL6 7AE";
                             :activityTitle "Community Volunteer (Devon)";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "50.4222203"^^xsd:double;
+                            :longitude "-4.0925302"^^xsd:double.
 id:68f25df339b539c18d98cfdb :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3197,8 +3368,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "43 Sisna Park Road, Plymouth";
                             :activityTitle "Community First Aider (Devon)";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "50.4223951"^^xsd:double;
+                            :longitude "-4.0917101"^^xsd:double.
 id:68f25e3e39b539c18d98d24e :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3240,8 +3414,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Devizes SN10 2EY";
                             :activityTitle "Community First Aider (Wiltshire)";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "51.3679922"^^xsd:double;
+                            :longitude "-1.9673429"^^xsd:double.
 id:68f25e5a3d728ac578a6042c :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3291,8 +3468,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "King Street, Norwich NR1 1PH";
                             :activityTitle "Community Volunteer (South Norfolk)";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.627371"^^xsd:double;
+                            :longitude "1.2999344"^^xsd:double.
 id:68f2666fa512aaa2c7ddf9fb :organizationCause id:64093b542eed5dcadba50897,
                                                id:64093b552eed5dcadba5089f;
                             :organizationDeleted false;
@@ -3352,9 +3532,12 @@ Make a real impact for nature—join us in protecting one of Scotland’s most i
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/98640-rspb-team-member-saving-slavonian-grebes-remote-data-volunteer-2025-10-02>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Etive House, IV2 3BW, Etive House, Beechwood Park, Inverness, Highland, IV2 3BW, United Kingdom";
                             :activityTitle "RSPB Team Member (Saving Slavonian Grebes – Remote Data Volunteer)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 13 .
+                            :activityVolunteers 13 ;
+                            :latitude "57.472161"^^xsd:double;
+                            :longitude "-4.187902"^^xsd:double.
 id:68f302ef7d586b2facb5a148 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3412,9 +3595,12 @@ In this role you will be helping others to succeed, especially as you induct and
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/99938-work-party-leader-weymouth-wetlands-2025-10-17>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Radipole Lake, Radipole Park Drive, Weymouth, Dorset, DT4 7TZ, England";
                             :activityTitle "Work Party Leader (Weymouth Wetlands)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 1 .
+                            :activityVolunteers 1 ;
+                            :latitude "50.615309"^^xsd:double;
+                            :longitude "-2.459903"^^xsd:double.
 id:68f45467b440e67bbbf66fe1 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3452,9 +3638,12 @@ Please disregard the additional information, below, which states that this role 
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/97208-practical-reserve-work-practical-reserve-work-work-party-volunteer-2025-09-14>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Lochwinnoch, Largs Road, Lochwinnoch, Renfrewshire, PA12 4JF, Scotland";
                             :activityTitle "Practical Reserve Work (Work Party Volunteer)";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 10 .
+                            :activityVolunteers 10 ;
+                            :latitude "55.788567"^^xsd:double;
+                            :longitude "-4.618736"^^xsd:double.
 id:68f4e3bffe3f8f55aef0e544 :organizationCause id:64093b542eed5dcadba50897,
                                                id:64093b552eed5dcadba5089f,
                                                id:64093b552eed5dcadba508a1;
@@ -3496,8 +3685,11 @@ Be the reason a child keeps believing. Join us today.""";
                             :activityOrganization id:68f4e3bffe3f8f55aef0e544;
                             :activityPublishedApps id:65bab9cfb6f4d44ce2b9c119;
                             :activityRequirement id:64093b562eed5dcadba508a9;
+                            :activityStreet "From Home";
                             :activityTitle "Write a Pen Pal letter to an African Child in Need!";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.5647271"^^xsd:double;
+                            :longitude "-1.4671882"^^xsd:double.
 id:68f53f8346b712131f0148e7 :organizationCause id:64093b552eed5dcadba5089f;
                             :organizationDeleted false;
                             :organizationDescription """Beyond Theory is a youth-led, nonprofit initiative dedicated to providing free academic mentorship and personal development opportunities for students aged 11–16, particularly those from underrepresented or disadvantaged backgrounds.
@@ -3538,8 +3730,11 @@ We are looking for people to promote our organisation through outreach with loca
                             :activityOrganization id:68f53f8346b712131f0148e7;
                             :activityPublishedApps id:65bab9cfb6f4d44ce2b9c119;
                             :activityRequirement id:64093b562eed5dcadba508a5;
+                            :activityStreet "From Home";
                             :activityTitle "Beyond Theory Learning : Long Term Volunteer Opportunities";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.5647271"^^xsd:double;
+                            :longitude "-1.4671882"^^xsd:double.
 id:68f5f0809017447fbcbba347 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3564,8 +3759,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Hassocks Lane, Beeston, Nottingham NG9 2GQ";
                             :activityTitle "Cadet Group Lead";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.9300042"^^xsd:double;
+                            :longitude "-1.2010623"^^xsd:double.
 id:68f5f3ef44f57c928faa1ba0 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3590,8 +3788,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Hollinwood Lane, Calverton, Nottingham NG14 6NR";
                             :activityTitle "Cadet Group Lead";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "53.0435987"^^xsd:double;
+                            :longitude "-1.1008476"^^xsd:double.
 id:68f5f40ea7fc2683be93f71f :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3616,8 +3817,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Candleby Lane, Cotgrave, Nottingham NG12 3JG";
                             :activityTitle "Cadet Group Lead";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.9100704"^^xsd:double;
+                            :longitude "-1.0390487"^^xsd:double.
 id:68f6062013569e79fd3b7e06 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3648,8 +3852,11 @@ For more information please contact joe.cartwright@sja.org.uk""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Bedminster, Bristol BS3 1AP";
                             :activityTitle "County Youth Lead";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "51.4438918"^^xsd:double;
+                            :longitude "-2.6112201"^^xsd:double.
 id:68f6065134bda533c75ee6db :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3674,8 +3881,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Broadfield Close, Sheffield S8 0XN";
                             :activityTitle "Cadet Group Lead";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "53.3571172"^^xsd:double;
+                            :longitude "-1.4813979"^^xsd:double.
 id:68f61a1c32ee7335d6c08c68 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3709,8 +3919,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Mulbarton, Norwich NR14 8JG";
                             :activityTitle "Network President";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.5592787"^^xsd:double;
+                            :longitude "1.2351851"^^xsd:double.
 id:68f61a9c5d932a14a15c7532 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3744,8 +3957,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Marsh Barton, Exeter EX2 8PF";
                             :activityTitle "Network President";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "50.69749359999999"^^xsd:double;
+                            :longitude "-3.5246276"^^xsd:double.
 id:68f61b040cd32bc0a073828c :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3771,8 +3987,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Candleby Lane, Cotgrave, Nottingham NG12 3JG";
                             :activityTitle "Badger Sett Lead";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.9100704"^^xsd:double;
+                            :longitude "-1.0390487"^^xsd:double.
 id:68f61c110cd32bc0a0738541 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3806,8 +4025,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Bridport Road, Dorchester DT1 2NH";
                             :activityTitle "Network President";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "50.7127498"^^xsd:double;
+                            :longitude "-2.4543844"^^xsd:double.
 id:68f61d29d5459d1095a831af :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3836,8 +4058,11 @@ For more information please contact Adam.parkersteed@sja.org.uk""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Church Street, Maidstone ME14 1EL";
                             :activityTitle "County Youth Lead";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "51.2747859"^^xsd:double;
+                            :longitude "0.5247562"^^xsd:double.
 id:68f61d4faa380776696f6082 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3862,8 +4087,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Bridport Road, Dorchester DT1 2NH";
                             :activityTitle "Badger Sett Lead";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "50.7127498"^^xsd:double;
+                            :longitude "-2.4543844"^^xsd:double.
 id:68f6210c846f376c3ac70ec6 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3896,8 +4124,11 @@ To apply for this opportunity, please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Bridport Road, Dorchester DT1 2NH";
                             :activityTitle "Network Community Lead";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "50.7127498"^^xsd:double;
+                            :longitude "-2.4543844"^^xsd:double.
 id:68f621e6330c569ddb906022 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3932,8 +4163,11 @@ To apply for this opportunity, please follow the link below""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Bridport Road, Dorchester DT1 2NH";
                             :activityTitle "Network Event Services Lead";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "50.7127498"^^xsd:double;
+                            :longitude "-2.4543844"^^xsd:double.
 id:68f6323eebb559c732fc46b8 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -3966,8 +4200,11 @@ To apply for this opportunity, please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Bridport Road, Dorchester DT1 2NH";
                             :activityTitle "Network Operational Support Lead";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "50.7127498"^^xsd:double;
+                            :longitude "-2.4543844"^^xsd:double.
 id:68f632965faa53da0cbcc030 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -4002,8 +4239,11 @@ To apply for this opportunity, please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Bridport Road, Dorchester DT1 2NH";
                             :activityTitle "Network Training Lead";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "50.7127498"^^xsd:double;
+                            :longitude "-2.4543844"^^xsd:double.
 id:68f64398690f0cb6a142ca11 :activityApp id:65bab9cfb6f4d44ce2b9c119;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -4047,8 +4287,11 @@ YMCA Bradford and local community settings across Bradford""";
                             :activityOrganization id:68f2666fa512aaa2c7ddf9fb;
                             :activityPublishedApps id:65bab9cfb6f4d44ce2b9c119;
                             :activityRequirement id:64093b562eed5dcadba508a9;
+                            :activityStreet "125 Thornton Rd, Bradford BD1 2EP, UK";
                             :activityTitle "Y's Girls Volunteer Mentor";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "53.7931442"^^xsd:double;
+                            :longitude "-1.7601062"^^xsd:double.
 id:68f650cd8236aa05dfeb83ca :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -4079,8 +4322,11 @@ For more information please contact hiring manager lee.hitchings@sja.org.uk""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Bridport Road, Dorchester DT1 2NH";
                             :activityTitle "Network Youth Services Lead";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "50.7127498"^^xsd:double;
+                            :longitude "-2.4543844"^^xsd:double.
 id:68f651fd8236aa05dfeb872e :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -4113,8 +4359,11 @@ Test Days: 7th of May
                             :activityRequirement id:64093b562eed5dcadba508a5,
                                                  id:64093b572eed5dcadba508ab;
                             :activityStart "2026-05-07T07:00:00.000000+00:00"^^xsd:dateTime;
+                            :activityStreet "Whilton Mill, Whilton Locks, Whilton, Daventry NN11 2NH";
                             :activityTitle "STEM On Track National Finals";
-                            :activityType "Event".
+                            :activityType "Event";
+                            :latitude "52.2747073"^^xsd:double;
+                            :longitude "-1.0894797"^^xsd:double.
 id:68f6f76a16d68426b764eb7b :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -4154,9 +4403,12 @@ You will be contributing to Saving Nature; our survey and monitoring work helps 
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/94870-reserve-biodiversity-monitor-and-surveyor-2025-08-11>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Franchises Lodge, Telegraph Hill, Redlynch, Wiltshire, SP5 2PX, England";
                             :activityTitle "Reserve Biodiversity Monitor and Surveyor ";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 2 .
+                            :activityVolunteers 2 ;
+                            :latitude "50.948769"^^xsd:double;
+                            :longitude "-1.676576"^^xsd:double.
 id:68f6f76b16d68426b764eba6 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -4187,9 +4439,12 @@ We are a friendly and supportive team. If you are volunteering to learn new skil
                             :activityMeeting <https://volunteer.rspb.org.uk/opportunities/98394-practical-reserve-work-2025-09-30>;
                             :activityOrganization id:64119bf12a79fbd15e8912b6;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityStreet "Franchises Lodge, Telegraph Hill, Redlynch, Wiltshire, SP5 2PX, England";
                             :activityTitle "Practical Reserve Work ";
                             :activityType "OngoingOpportunity";
-                            :activityVolunteers 10 .
+                            :activityVolunteers 10 ;
+                            :latitude "50.948769"^^xsd:double;
+                            :longitude "-1.676576"^^xsd:double.
 id:68f73e25bebfc67316bf3d51 :activityApp id:65a46519c9da46983ceed1bb;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -4266,8 +4521,11 @@ We include. We collaborate. We find a way. We challenge. We celebrate.
                             :activityOrganization id:6425cd68a0624f3ab9fb0c4b;
                             :activityPublishedApps id:65a46519c9da46983ceed1bb;
                             :activityRequirement id:64093b562eed5dcadba508a7;
+                            :activityStreet "Station Road, Ashington NE63 9UJ";
                             :activityTitle "Charity Shop Volunteer - Ashington Shop";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "55.183068"^^xsd:double;
+                            :longitude "-1.57091"^^xsd:double.
 id:68f7637a85339cb028ffbbfe :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -4307,8 +4565,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Lionel Street, Birmingham B3 1DG";
                             :activityTitle "Emergency Responder (West Midlands)";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.4831152"^^xsd:double;
+                            :longitude "-1.9042133"^^xsd:double.
 id:68f7637c1bf63c8c4873edfe :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -4358,8 +4619,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Greenstead Road, Colchester CO1 2SL";
                             :activityTitle "Community Volunteer (North Essex)";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "51.8874984"^^xsd:double;
+                            :longitude "0.9272125999999998"^^xsd:double.
 id:68f7639e7c2e122047de80a7 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -4416,8 +4680,11 @@ To apply for this opportunity please follow the link below:""";
                             :activityOrganization id:6425cee7a0624f3ab9fb35be;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:661dbb2fc8ab0cb083e72ebe;
+                            :activityStreet "Princess St, Barnstaple EX32 7EU";
                             :activityTitle "Community Volunteer (North Devon & Torridge Network)";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "51.08409890000001"^^xsd:double;
+                            :longitude "-4.055714399999999"^^xsd:double.
 id:68f76661cdac2ef46ad1dbd8 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -4457,8 +4724,11 @@ Ready to give just 1 hour a week and change a life? Apply now and be a part of s
                             :activityRequirement id:64093b562eed5dcadba508a9,
                                                  id:64093b572eed5dcadba508af,
                                                  id:661dbb6ac8ab0cb083e72ebf;
+                            :activityStreet "From Home";
                             :activityTitle "Volunteer Online Tutor";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "52.5647271"^^xsd:double;
+                            :longitude "-1.4671882"^^xsd:double.
 id:68f773eef0a993a66e386c81 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 0 ;
@@ -4499,8 +4769,11 @@ The MS Society is committed to promoting diversity. We can only offer roles to o
                             :activityOrganization id:6425eae8c794380477b70969;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
                             :activityRequirement id:64093b562eed5dcadba508a9;
+                            :activityStreet "London SW2 1RW";
                             :activityTitle "Support Volunteer (Lambeth and Southwark)";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "51.4606611"^^xsd:double;
+                            :longitude "-0.1168977"^^xsd:double.
 id:68f787b818bf1e8a57ae9db6 :organizationCause id:64093b542eed5dcadba50897,
                                                id:64093b552eed5dcadba508a3,
                                                id:66982ffbbf338eca22aa267b;
@@ -4592,5 +4865,8 @@ If you have a disability or any accessibility needs, we will do our best to make
                             :activityPublishedApps id:65bab9cfb6f4d44ce2b9c119;
                             :activityRequirement id:64093b562eed5dcadba508a9,
                                                  id:661dbb6ac8ab0cb083e72ebf;
+                            :activityStreet "London E1 3DG";
                             :activityTitle "Greencare Support Volunteer ";
-                            :activityType "OngoingOpportunity".
+                            :activityType "OngoingOpportunity";
+                            :latitude "51.5171364"^^xsd:double;
+                            :longitude "-0.0428627"^^xsd:double.

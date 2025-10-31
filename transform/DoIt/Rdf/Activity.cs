@@ -68,4 +68,10 @@ public class Activity : GraphWrapperNode
     internal ISet<Option> Cause { get => this.Objects(Vocabulary.ActivityCause, Option.Wrap, Option.Wrap); }
 
     internal ISet<Option> Requirement { get => this.Objects(Vocabulary.ActivityRequirement, Option.Wrap, Option.Wrap); }
+
+    internal string? Street { set => this.OverwriteNullable(Vocabulary.ActivityStreet, value); }
+
+    internal double? Latitude { set => this.OverwriteNullable(Vocabulary.Latitude, value); }
+
+    internal double? Longitude { set => this.OverwriteNullable(Vocabulary.Longitude, value); }
 }

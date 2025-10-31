@@ -68,7 +68,9 @@ foreach (var source in activities!)
     target.Organization.Tos = source.Details.Organization.TermsOfServicesLink;
     target.Organization.Type = source.Details.Organization.Type;
     target.Organization.Website = source.Details.Organization.WebsiteLink;
-    // Address
+    target.Street = source.Address?.Street;
+    target.Longitude = source.Address?.Location?.Coordinates[0];
+    target.Latitude = source.Address?.Location?.Coordinates[1];
     target.Attendees = source.AttendeesNumber;
     target.Bookings = source.BookingsNumber;
     target.Deleted = source.Deleted;
