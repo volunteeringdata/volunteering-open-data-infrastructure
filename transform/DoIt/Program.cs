@@ -62,13 +62,15 @@ foreach (var source in activities!)
     target.Organization.Phone = source.Details.Organization.ContactPhoneNumber;
     target.Organization.Deleted = source.Details.Organization.Deleted;
     target.Organization.Description = source.Details.Organization.Description;
-    // organizationSubDocument.fullAddress
+    target.Organization.Address = source.Details.Organization.FullAddress?.Street;
+    target.Organization.Longitude = source.Details.Organization.FullAddress?.Location?.Coordinates[0];
+    target.Organization.Latitude = source.Details.Organization.FullAddress?.Location?.Coordinates[1];
     target.Organization.Name = source.Details.Organization.Name;
     target.Organization.Purpose = source.Details.Organization.Purpose;
     target.Organization.Tos = source.Details.Organization.TermsOfServicesLink;
     target.Organization.Type = source.Details.Organization.Type;
     target.Organization.Website = source.Details.Organization.WebsiteLink;
-    target.Street = source.Address?.Street;
+    target.Address = source.Address?.Street;
     target.Longitude = source.Address?.Location?.Coordinates[0];
     target.Latitude = source.Address?.Location?.Coordinates[1];
     target.Attendees = source.AttendeesNumber;
