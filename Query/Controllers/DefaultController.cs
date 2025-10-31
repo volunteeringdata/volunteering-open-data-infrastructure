@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using System.Reflection;
-using System.Xml.Linq;
-using VDS.RDF;
-using VDS.RDF.JsonLd;
 using VDS.RDF.Parsing;
 using VDS.RDF.Query;
 using VDS.RDF.Writing;
@@ -46,14 +43,11 @@ public class DefaultController(HttpClient httpClient) : ControllerBase
 
             var frame = JToken.Parse(frameText);
 
-            var ts = new TripleStore();
-            ts.Add(result);
-            var jsonLdNode = new JsonLdWriter().SerializeStore(ts);
-            var framingResult = JsonLdProcessor
-                .Frame(jsonLdNode, frame, new JsonLdProcessorOptions())
-                .ToString();
-
-            return this.Ok(framingResult);
+            return this.Ok(new ResponseContainer
+            {
+                Graph = result,
+                Frame = frame,
+            });
         }
         else
         {
