@@ -53,8 +53,7 @@ public class DefaultController(HttpClient httpClient) : ControllerBase
         else
         {
             var resultSetResult = await sparqlClient.QueryWithResultSetAsync(sparqlText, ct);
-            var resultText = VDS.RDF.Writing.StringWriter.Write(resultSetResult, new SparqlJsonWriter());
-            return this.Ok(resultText);
+            return this.Ok(resultSetResult);
         }
     }
 }
