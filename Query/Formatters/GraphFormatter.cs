@@ -4,9 +4,9 @@ using VDS.RDF;
 
 namespace Query.Formatters;
 
-internal class GraphOutputFormatter : TextOutputFormatter
+internal class GraphFormatter : TextOutputFormatter
 {
-    public GraphOutputFormatter()
+    public GraphFormatter()
     {
         var writers = MimeTypesHelper.Definitions
            .Where(static definition => definition.CanWriteRdfDatasets || definition.CanWriteRdf)

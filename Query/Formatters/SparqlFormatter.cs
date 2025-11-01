@@ -5,9 +5,9 @@ using VDS.RDF.Query;
 
 namespace Query.Formatters;
 
-internal class SparqlResultSetFormatter : TextOutputFormatter
+internal class SparqlFormatter : TextOutputFormatter
 {
-    public SparqlResultSetFormatter()
+    public SparqlFormatter()
     {
         var writers = MimeTypesHelper.Definitions
            .Where(static definition => definition.CanWriteSparqlResults)

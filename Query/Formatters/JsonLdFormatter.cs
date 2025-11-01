@@ -7,9 +7,9 @@ using VDS.RDF.Writing;
 
 namespace Query.Formatters;
 
-internal class JsonLdGraphOutputFormatter : TextOutputFormatter
+internal class JsonLdFormatter : TextOutputFormatter
 {
-    public JsonLdGraphOutputFormatter()
+    public JsonLdFormatter()
     {
         foreach (var mime in MimeTypesHelper.JsonLd)
         {
