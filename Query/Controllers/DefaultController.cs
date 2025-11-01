@@ -9,6 +9,7 @@ namespace Query.Controllers;
 
 [Route("/{name}")]
 [ApiController]
+[AllowSynchronousIO]
 public class DefaultController(HttpClient httpClient) : ControllerBase
 {
     [HttpGet]

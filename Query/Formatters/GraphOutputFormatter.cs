@@ -10,6 +10,8 @@ internal class GraphOutputFormatter : IOutputFormatter
 
     public async Task WriteAsync(OutputFormatterWriteContext context)
     {
+        using var streamWriter = new StreamWriter(context.HttpContext.Response.Body);
+
         var graph = ((ResponseContainer)context.Object!).Graph;
 
         var datasetWriter = MimeTypesHelper
@@ -22,10 +24,7 @@ internal class GraphOutputFormatter : IOutputFormatter
             var ts = new TripleStore();
             ts.Add(graph);
 
-            using var stream = new MemoryStream();
-            using var writer = new StreamWriter(stream);
-            datasetWriter.First().Save(ts, writer);
-            await context.HttpContext.Response.BodyWriter.WriteAsync(stream.ToArray());
+            datasetWriter.First().Save(ts, streamWriter);
             return;
         }
 
@@ -34,11 +33,6 @@ internal class GraphOutputFormatter : IOutputFormatter
             .First(static definition => definition.CanWriteRdf)
             .GetRdfWriter();
 
-        using var stream1 = new MemoryStream();
-        using var writer1 = new StreamWriter(stream1);
-
-        rdfWriter.Save(graph, writer1);
-
-        await context.HttpContext.Response.BodyWriter.WriteAsync(stream1.ToArray());
+        rdfWriter.Save(graph, streamWriter);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Formatters;
+using Newtonsoft.Json;
 using VDS.RDF;
 using VDS.RDF.JsonLd;
 using VDS.RDF.Writing;
@@ -20,13 +21,10 @@ internal class JsonLdGraphOutputFormatter : IOutputFormatter
         ts.Add(container.Graph);
 
         var jsonLdNode = new JsonLdWriter().SerializeStore(ts);
-        var framingResult = JsonLdProcessor
+        using var textWriter = new StreamWriter(context.HttpContext.Response.Body);
+        using var writer = new JsonTextWriter(textWriter);
+        await JsonLdProcessor
                    .Frame(jsonLdNode, container.Frame, new JsonLdProcessorOptions())
-                   .ToString();
-
-
-        var bytes = System.Text.Encoding.UTF8.GetBytes(framingResult);
-
-        await context.HttpContext.Response.BodyWriter.WriteAsync(bytes);
+                   .WriteToAsync(writer);
     }
 }
