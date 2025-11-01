@@ -34,15 +34,10 @@ public class DefaultController(HttpClient httpClient) : ControllerBase
 
             var frameResourceName = $"Query.Endpoints.{name}.frame.jsonld";
             using var frameStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(frameResourceName);
-            if (frameStream is null)
-            {
-                throw new Exception("Frame resource not found");
-            }
+            using var frameReader = frameStream is null ? null : new StreamReader(frameStream);
+            var frameText = frameReader?.ReadToEnd();
 
-            using var frameReader = new StreamReader(frameStream);
-            var frameText = frameReader.ReadToEnd();
-
-            var frame = JToken.Parse(frameText);
+            var frame = frameText is null ? null : JToken.Parse(frameText);
 
             return this.Ok(new ResponseContainer
             {

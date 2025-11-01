@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Formatters;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Text;
 using VDS.RDF;
 using VDS.RDF.JsonLd;
@@ -23,18 +24,24 @@ internal class JsonLdFormatter : TextOutputFormatter
 
     public override async Task WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
     {
-        var container = (ResponseContainer)context.Object!;
+        using var streamWriter = new StreamWriter(context.HttpContext.Response.Body, selectedEncoding);
 
-        var datasetWriter = new JsonLdWriter();
+        var container = (ResponseContainer)context.Object!;
 
         var ts = new TripleStore();
         ts.Add(container.Graph);
 
-        var jsonLdNode = new JsonLdWriter().SerializeStore(ts);
-        using var textWriter = new StreamWriter(context.HttpContext.Response.Body, selectedEncoding);
-        using var writer = new JsonTextWriter(textWriter);
-        await JsonLdProcessor
-                   .Frame(jsonLdNode, container.Frame, new JsonLdProcessorOptions())
-                   .WriteToAsync(writer);
+        if (container.Frame is JToken frame)
+        {
+            var jsonLdNode = new JsonLdWriter().SerializeStore(ts);
+            using var writer = new JsonTextWriter(streamWriter);
+            await JsonLdProcessor
+                .Frame(jsonLdNode, frame, new JsonLdProcessorOptions())
+                .WriteToAsync(writer);
+        }
+        else
+        {
+            new JsonLdWriter().Save(ts, streamWriter);
+        }
     }
 }
