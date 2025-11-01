@@ -1,14 +1,30 @@
 ﻿using Microsoft.AspNetCore.Mvc.Formatters;
+using System.Text;
 using VDS.RDF;
 
 namespace Query.Formatters;
 
-internal class GraphOutputFormatter : IOutputFormatter
+internal class GraphOutputFormatter : TextOutputFormatter
 {
-    public bool CanWriteResult(OutputFormatterCanWriteContext context) =>
-        context.Object is ResponseContainer && context.ContentType != MimeTypesHelper.JsonLd[0];
+    public GraphOutputFormatter()
+    {
+        var writers = MimeTypesHelper.Definitions
+           .Where(static definition => definition.CanWriteRdfDatasets || definition.CanWriteRdf)
+           .Select(static definition => definition.CanonicalMimeType)
+           .Distinct();
 
-    public async Task WriteAsync(OutputFormatterWriteContext context)
+
+        foreach (var mime in writers)
+        {
+            SupportedMediaTypes.Add(mime);
+        }
+
+        SupportedEncodings.Add(Encoding.UTF8);
+    }
+
+    protected override bool CanWriteType(Type? type) => type!.IsAssignableFrom(typeof(ResponseContainer));
+
+    public override Task WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
     {
         using var streamWriter = new StreamWriter(context.HttpContext.Response.Body);
 
@@ -17,22 +33,26 @@ internal class GraphOutputFormatter : IOutputFormatter
         var datasetWriter = MimeTypesHelper
             .GetDefinitions(context.ContentType.ToString())
             .Where(static definition => definition.CanWriteRdfDatasets)
-            .Select(static definition => definition.GetRdfDatasetWriter());
+            .Select(static definition => definition.GetRdfDatasetWriter())
+            .FirstOrDefault();
 
-        if (datasetWriter.Any())
+        if (datasetWriter is not null)
         {
             var ts = new TripleStore();
             ts.Add(graph);
 
-            datasetWriter.First().Save(ts, streamWriter);
-            return;
+            datasetWriter.Save(ts, streamWriter);
+        }
+        else
+        {
+            var rdfWriter = MimeTypesHelper
+                .GetDefinitions([context.ContentType.ToString(), .. MimeTypesHelper.Turtle])
+                .First(static definition => definition.CanWriteRdf)
+                .GetRdfWriter();
+
+            rdfWriter.Save(graph, streamWriter);
         }
 
-        var rdfWriter = MimeTypesHelper
-            .GetDefinitions([context.ContentType.ToString(), .. MimeTypesHelper.Turtle])
-            .First(static definition => definition.CanWriteRdf)
-            .GetRdfWriter();
-
-        rdfWriter.Save(graph, streamWriter);
+        return Task.CompletedTask;
     }
 }
