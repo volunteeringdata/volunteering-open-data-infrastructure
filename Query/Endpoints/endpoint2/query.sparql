@@ -1,5 +1,5 @@
 ﻿BASE <https://id.example.org/>
-PREFIX : <schema/>
+PREFIX : <https://id.example.org/schema/>
 
 CONSTRUCT {
     ?activity

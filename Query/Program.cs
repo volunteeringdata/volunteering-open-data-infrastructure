@@ -9,6 +9,8 @@ builder.Services.AddControllers(options =>
     // So we don't get default JSON serializations of things
     options.OutputFormatters.Clear();
 
+    options.OutputFormatters.Insert(0, new OpenApiFormatter());
+
     options.OutputFormatters.Insert(0, new SparqlFormatter());
     options.OutputFormatters.Insert(0, new GraphFormatter());
 

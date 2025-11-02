@@ -73,7 +73,7 @@ public class DefaultController(HttpClient httpClient) : ControllerBase
         return sparql.ToString();
     }
 
-    private static IDictionary<string, Endpoint> Endpoints => new Dictionary<string, Endpoint>
+    internal static IDictionary<string, Endpoint> Endpoints => new Dictionary<string, Endpoint>
     {
         ["endpoint1"] = new([
             new("limit", NodeType.Literal, XmlSpecsHelper.XmlSchemaDataTypeInteger)
