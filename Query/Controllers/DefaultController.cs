@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using System.Reflection;
+using VDS.RDF;
 using VDS.RDF.Parsing;
 using VDS.RDF.Query;
-using VDS.RDF.Writing;
 
 namespace Query.Controllers;
 
@@ -22,8 +22,7 @@ public class DefaultController(HttpClient httpClient) : ControllerBase
             return this.NotFound();
         }
 
-        using var reader = new StreamReader(stream);
-        var sparqlText = reader.ReadToEnd();
+        var sparqlText = this.NewMethod(name, stream);
 
         var sparqlQuery = new SparqlQueryParser().ParseFromString(sparqlText);
         var sparqlClient = new SparqlQueryClient(httpClient, new Uri("https://202510300952apptriplestoretest.azurewebsites.net/sparql"));
@@ -51,4 +50,36 @@ public class DefaultController(HttpClient httpClient) : ControllerBase
             return this.Ok(resultSetResult);
         }
     }
+
+    private string NewMethod(string name, Stream stream)
+    {
+        using var reader = new StreamReader(stream);
+        var sparql = new SparqlParameterizedString(reader.ReadToEnd());
+
+        foreach (var parameter in Endpoints[name].Parameters)
+        {
+            var value = Request.Query[parameter.Name].ToString();
+
+            switch (parameter.Type)
+            {
+                case NodeType.Literal:
+                    sparql.SetLiteral(parameter.Name, value, new Uri(parameter.Datatype), false);
+                    break;
+                default:
+                    throw new InvalidOperationException("unknown node type");
+            }
+        }
+
+        return sparql.ToString();
+    }
+
+    private static IDictionary<string, Endpoint> Endpoints => new Dictionary<string, Endpoint>
+    {
+        ["endpoint1"] = new([
+            new("limit", NodeType.Literal, XmlSpecsHelper.XmlSchemaDataTypeInteger)
+        ]),
+        ["endpoint3"] = new([
+            new("name")
+        ]),
+    };
 }
