@@ -1203,12 +1203,171 @@ Note: For some reason the posting is saying 36000 hours! You will only be asked 
                             :activityMeeting <https://www.writersinitiative.com/>;
                             :activityOrganization id:66169d5247af10a843126434;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a482,
+                                            id:661729ab4666b3ef2101a47e,
+                                            id:661729ab4666b3ef2101a480,
+                                            id:661729ab4666b3ef2101a484,
+                                            id:661729ab4666b3ef2101a488,
+                                            id:661729ab4666b3ef2101a48a,
+                                            id:661729ab4666b3ef2101a492,
+                                            id:661729ab4666b3ef2101a494,
+                                            id:661729ab4666b3ef2101a496,
+                                            id:661729ab4666b3ef2101a498,
+                                            id:661729ab4666b3ef2101a4a2,
+                                            id:661729ab4666b3ef2101a4a6,
+                                            id:661729ab4666b3ef2101a4aa,
+                                            id:661729ab4666b3ef2101a4ac,
+                                            id:661729ab4666b3ef2101a471,
+                                            id:661729ab4666b3ef2101a476,
+                                            id:661729ab4666b3ef2101a486,
+                                            id:661729ab4666b3ef2101a48c,
+                                            id:661729ab4666b3ef2101a490,
+                                            id:661729ab4666b3ef2101a49c,
+                                            id:661729ab4666b3ef2101a4a4,
+                                            id:661729ab4666b3ef2101a4a8,
+                                            id:661729ab4666b3ef2101a47a,
+                                            id:661729ab4666b3ef2101a48e,
+                                            id:661729ab4666b3ef2101a49f,
+                                            id:661729ab4666b3ef2101a49a,
+                                            id:661d7a8b48a32b3f859685af;
                             :activityRequirement id:64093b562eed5dcadba508a7;
                             :activityTitle "Freelance Writer of Blog/Article posts ";
                             :activityType "OngoingOpportunity";
                             :address "https://www.writersinitiative.com";
                             :latitude "52.5647271"^^xsd:double;
                             :longitude "-1.4671882"^^xsd:double.
+id:661729ab4666b3ef2101a46b :latitude "52.5647271"^^xsd:double;
+                            :longitude "-1.4671882"^^xsd:double;
+                            :regionDisplayName "England";
+                            :regionType "Nation".
+id:661729ab4666b3ef2101a471 :latitude "54.05651865718741"^^xsd:double;
+                            :longitude "-2.723378238152881"^^xsd:double;
+                            :regionDisplayName "North West England";
+                            :regionTelatedTo "England";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a476 :latitude "51.50053112666327"^^xsd:double;
+                            :longitude "-0.11143439290121118"^^xsd:double;
+                            :regionDisplayName "London";
+                            :regionTelatedTo "England";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a47a :latitude "52.48030364692121"^^xsd:double;
+                            :longitude "-2.270800738613271"^^xsd:double;
+                            :regionDisplayName "West Midlands";
+                            :regionTelatedTo "England";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a47e :latitude "52.25114448093611"^^xsd:double;
+                            :longitude "0.5392721144970108"^^xsd:double;
+                            :regionDisplayName "East of England";
+                            :regionTelatedTo "England";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a480 :latitude "52.92698969377111"^^xsd:double;
+                            :longitude "-0.8056163843458732"^^xsd:double;
+                            :regionDisplayName "East Midlands";
+                            :regionTelatedTo "England";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a482 :latitude "55.01997952163754"^^xsd:double;
+                            :longitude "-1.9051714515294074"^^xsd:double;
+                            :regionDisplayName "North East England";
+                            :regionTelatedTo "England";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a484 :latitude "51.280892193580755"^^xsd:double;
+                            :longitude "-0.5340635597193196"^^xsd:double;
+                            :regionDisplayName "South East England";
+                            :regionTelatedTo "England";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a486 :latitude "51.00117456613314"^^xsd:double;
+                            :longitude "-3.1306561466497658"^^xsd:double;
+                            :regionDisplayName "South West England";
+                            :regionTelatedTo "England";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a488 :latitude "53.96545804527552"^^xsd:double;
+                            :longitude "-1.2295336817923235"^^xsd:double;
+                            :regionDisplayName "Yorkshire and The Humber";
+                            :regionTelatedTo "England";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a48a :latitude "54.60835687629352"^^xsd:double;
+                            :longitude "-6.683128305224275"^^xsd:double;
+                            :regionDisplayName "Northern Ireland";
+                            :regionType "Nation".
+id:661729ab4666b3ef2101a48c :latitude "55.12"^^xsd:double;
+                            :longitude "-6.19"^^xsd:double;
+                            :regionDisplayName "North of Northern Ireland";
+                            :regionTelatedTo "Northern Ireland";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a48e :latitude "54.6"^^xsd:double;
+                            :longitude "-5.93"^^xsd:double;
+                            :regionDisplayName "East of Northern Ireland";
+                            :regionTelatedTo "Northern Ireland";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a490 :latitude "54.6"^^xsd:double;
+                            :longitude "-5.89"^^xsd:double;
+                            :regionDisplayName "Outer Belfast";
+                            :regionTelatedTo "Northern Ireland";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a492 :latitude "54.59"^^xsd:double;
+                            :longitude "-5.93"^^xsd:double;
+                            :regionDisplayName "Belfast";
+                            :regionTelatedTo "Northern Ireland";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a494 :latitude "54.59"^^xsd:double;
+                            :longitude "-6.85"^^xsd:double;
+                            :regionDisplayName "West and South of Northern Ireland";
+                            :regionTelatedTo "Northern Ireland";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a496 :latitude "56.837152959578184"^^xsd:double;
+                            :longitude "-4.181586568158662"^^xsd:double;
+                            :regionDisplayName "Scotland";
+                            :regionType "Nation".
+id:661729ab4666b3ef2101a498 :latitude "57"^^xsd:double;
+                            :longitude "-5"^^xsd:double;
+                            :regionDisplayName "Highlands and Islands";
+                            :regionTelatedTo "Scotland";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a49a :latitude "57.15"^^xsd:double;
+                            :longitude "-2.1"^^xsd:double;
+                            :regionDisplayName "North East Scotland";
+                            :regionTelatedTo "Scotland";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a49c :latitude "55.85"^^xsd:double;
+                            :longitude "-4.25"^^xsd:double;
+                            :regionDisplayName "South Western Scotland";
+                            :regionTelatedTo "Scotland";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a49f :latitude "56"^^xsd:double;
+                            :longitude "-3.2"^^xsd:double;
+                            :regionDisplayName "Eastern Scotland";
+                            :regionTelatedTo "Scotland";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a4a2 :latitude "52.33614730872424"^^xsd:double;
+                            :longitude "-3.763081039075162"^^xsd:double;
+                            :regionDisplayName "Wales";
+                            :regionType "Nation".
+id:661729ab4666b3ef2101a4a4 :latitude "51.48"^^xsd:double;
+                            :longitude "-3.22"^^xsd:double;
+                            :regionDisplayName "Cardiff & Vale";
+                            :regionTelatedTo "Wales";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a4a6 :latitude "51.6"^^xsd:double;
+                            :longitude "-3.35"^^xsd:double;
+                            :regionDisplayName "Cwm Taf Morgannwg";
+                            :regionTelatedTo "Wales";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a4a8 :latitude "51.6"^^xsd:double;
+                            :longitude "-3.35"^^xsd:double;
+                            :regionDisplayName "Gwent";
+                            :regionTelatedTo "Wales";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a4aa :latitude "51.89"^^xsd:double;
+                            :longitude "-4.31"^^xsd:double;
+                            :regionDisplayName "West Wales";
+                            :regionTelatedTo "Wales";
+                            :regionType "Region".
+id:661729ab4666b3ef2101a4ac :latitude "51.75"^^xsd:double;
+                            :longitude "-3.78"^^xsd:double;
+                            :regionDisplayName "West Glamorgan and Powys";
+                            :regionTelatedTo "Wales";
+                            :regionType "Region".
 id:661d321c72ed22fd04a428a6 :activityApp id:65a46db14b30b7dd175eb67a;
                             :activityAttendees 0 ;
                             :activityBookings 8 ;
@@ -1298,12 +1457,19 @@ Increase patients’ self-confidence and ability to self-manage their difficulti
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:65bcbcd8b620e756f16aee39;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a476;
                             :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Living Well at Home Volunteer";
                             :activityType "OngoingOpportunity";
                             :address "";
                             :latitude "0"^^xsd:double;
                             :longitude "0"^^xsd:double.
+id:661d7a8b48a32b3f859685af :latitude "53.09"^^xsd:double;
+                            :longitude "-3.81"^^xsd:double;
+                            :regionDisplayName "North Wales";
+                            :regionTelatedTo "Wales";
+                            :regionType "Region".
 id:661dbb2fc8ab0cb083e72ebe :optionApp id:65a46db14b30b7dd175eb67a;
                             :optionDisplayName "None".
 id:661dbb6ac8ab0cb083e72ebf :optionApp id:65a46db14b30b7dd175eb67a;
@@ -1340,6 +1506,34 @@ Weekly telephone or virtual support has become a key element of our support offe
                             :activityMeeting <https://www.homestartinsuffolk.org/>;
                             :activityOrganization id:6620d75a29bfe93cfc010834;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a482,
+                                            id:661729ab4666b3ef2101a47e,
+                                            id:661729ab4666b3ef2101a480,
+                                            id:661729ab4666b3ef2101a484,
+                                            id:661729ab4666b3ef2101a488,
+                                            id:661729ab4666b3ef2101a48a,
+                                            id:661729ab4666b3ef2101a492,
+                                            id:661729ab4666b3ef2101a494,
+                                            id:661729ab4666b3ef2101a496,
+                                            id:661729ab4666b3ef2101a498,
+                                            id:661729ab4666b3ef2101a4a2,
+                                            id:661729ab4666b3ef2101a4a6,
+                                            id:661729ab4666b3ef2101a4aa,
+                                            id:661729ab4666b3ef2101a4ac,
+                                            id:661729ab4666b3ef2101a471,
+                                            id:661729ab4666b3ef2101a476,
+                                            id:661729ab4666b3ef2101a486,
+                                            id:661729ab4666b3ef2101a48c,
+                                            id:661729ab4666b3ef2101a490,
+                                            id:661729ab4666b3ef2101a49c,
+                                            id:661729ab4666b3ef2101a4a4,
+                                            id:661729ab4666b3ef2101a4a8,
+                                            id:661729ab4666b3ef2101a47a,
+                                            id:661729ab4666b3ef2101a48e,
+                                            id:661729ab4666b3ef2101a49f,
+                                            id:661729ab4666b3ef2101a49a,
+                                            id:661d7a8b48a32b3f859685af;
                             :activityRequirement id:64093b562eed5dcadba508a9,
                                                  id:64093b572eed5dcadba508af,
                                                  id:661dbb6ac8ab0cb083e72ebf;
@@ -1402,6 +1596,34 @@ We’d love for you to consider joining us as a Sense Virtual Buddy!""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425cd68a0624f3ab9fb0c4b;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a471,
+                                            id:661729ab4666b3ef2101a476,
+                                            id:661729ab4666b3ef2101a47a,
+                                            id:661729ab4666b3ef2101a47e,
+                                            id:661729ab4666b3ef2101a480,
+                                            id:661729ab4666b3ef2101a482,
+                                            id:661729ab4666b3ef2101a484,
+                                            id:661729ab4666b3ef2101a486,
+                                            id:661729ab4666b3ef2101a488,
+                                            id:661729ab4666b3ef2101a48a,
+                                            id:661729ab4666b3ef2101a48c,
+                                            id:661729ab4666b3ef2101a48e,
+                                            id:661729ab4666b3ef2101a490,
+                                            id:661729ab4666b3ef2101a492,
+                                            id:661729ab4666b3ef2101a494,
+                                            id:661729ab4666b3ef2101a496,
+                                            id:661729ab4666b3ef2101a498,
+                                            id:661729ab4666b3ef2101a49a,
+                                            id:661729ab4666b3ef2101a49c,
+                                            id:661729ab4666b3ef2101a49f,
+                                            id:661729ab4666b3ef2101a4a2,
+                                            id:661729ab4666b3ef2101a4a4,
+                                            id:661729ab4666b3ef2101a4a6,
+                                            id:661729ab4666b3ef2101a4a8,
+                                            id:661729ab4666b3ef2101a4aa,
+                                            id:661729ab4666b3ef2101a4ac,
+                                            id:661d7a8b48a32b3f859685af;
                             :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Virtual Buddy";
                             :activityType "OngoingOpportunity";
@@ -1453,6 +1675,34 @@ Most importantly your efforts will ensure that both individuals and organisation
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425f3b8f2d4b77a6e155b67;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a471,
+                                            id:661729ab4666b3ef2101a476,
+                                            id:661729ab4666b3ef2101a47a,
+                                            id:661729ab4666b3ef2101a47e,
+                                            id:661729ab4666b3ef2101a480,
+                                            id:661729ab4666b3ef2101a482,
+                                            id:661729ab4666b3ef2101a484,
+                                            id:661729ab4666b3ef2101a486,
+                                            id:661729ab4666b3ef2101a488,
+                                            id:661729ab4666b3ef2101a48a,
+                                            id:661729ab4666b3ef2101a48c,
+                                            id:661729ab4666b3ef2101a48e,
+                                            id:661729ab4666b3ef2101a490,
+                                            id:661729ab4666b3ef2101a492,
+                                            id:661729ab4666b3ef2101a494,
+                                            id:661729ab4666b3ef2101a496,
+                                            id:661729ab4666b3ef2101a498,
+                                            id:661729ab4666b3ef2101a49a,
+                                            id:661729ab4666b3ef2101a49c,
+                                            id:661729ab4666b3ef2101a49f,
+                                            id:661729ab4666b3ef2101a4a2,
+                                            id:661729ab4666b3ef2101a4a4,
+                                            id:661729ab4666b3ef2101a4a6,
+                                            id:661729ab4666b3ef2101a4a8,
+                                            id:661729ab4666b3ef2101a4aa,
+                                            id:661729ab4666b3ef2101a4ac,
+                                            id:661d7a8b48a32b3f859685af;
                             :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Video Editor / Content Creator";
                             :activityType "OngoingOpportunity";
@@ -1520,6 +1770,34 @@ A reference for your CV""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425f3b8f2d4b77a6e155b67;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a471,
+                                            id:661729ab4666b3ef2101a476,
+                                            id:661729ab4666b3ef2101a47a,
+                                            id:661729ab4666b3ef2101a47e,
+                                            id:661729ab4666b3ef2101a480,
+                                            id:661729ab4666b3ef2101a482,
+                                            id:661729ab4666b3ef2101a484,
+                                            id:661729ab4666b3ef2101a486,
+                                            id:661729ab4666b3ef2101a488,
+                                            id:661729ab4666b3ef2101a48a,
+                                            id:661729ab4666b3ef2101a48c,
+                                            id:661729ab4666b3ef2101a48e,
+                                            id:661729ab4666b3ef2101a490,
+                                            id:661729ab4666b3ef2101a492,
+                                            id:661729ab4666b3ef2101a494,
+                                            id:661729ab4666b3ef2101a496,
+                                            id:661729ab4666b3ef2101a498,
+                                            id:661729ab4666b3ef2101a49a,
+                                            id:661729ab4666b3ef2101a49c,
+                                            id:661729ab4666b3ef2101a49f,
+                                            id:661729ab4666b3ef2101a4a2,
+                                            id:661729ab4666b3ef2101a4a4,
+                                            id:661729ab4666b3ef2101a4a6,
+                                            id:661729ab4666b3ef2101a4a8,
+                                            id:661729ab4666b3ef2101a4aa,
+                                            id:661729ab4666b3ef2101a4ac,
+                                            id:661d7a8b48a32b3f859685af;
                             :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Social Media Marketing Volunteer for BELIFF Film Festival";
                             :activityType "OngoingOpportunity";
@@ -1685,6 +1963,34 @@ Analytical skills.""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:665dad56103207cef4a1b743;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a482,
+                                            id:661729ab4666b3ef2101a47e,
+                                            id:661729ab4666b3ef2101a480,
+                                            id:661729ab4666b3ef2101a484,
+                                            id:661729ab4666b3ef2101a488,
+                                            id:661729ab4666b3ef2101a48a,
+                                            id:661729ab4666b3ef2101a492,
+                                            id:661729ab4666b3ef2101a494,
+                                            id:661729ab4666b3ef2101a496,
+                                            id:661729ab4666b3ef2101a498,
+                                            id:661729ab4666b3ef2101a4a2,
+                                            id:661729ab4666b3ef2101a4a6,
+                                            id:661729ab4666b3ef2101a4aa,
+                                            id:661729ab4666b3ef2101a4ac,
+                                            id:661729ab4666b3ef2101a471,
+                                            id:661729ab4666b3ef2101a476,
+                                            id:661729ab4666b3ef2101a486,
+                                            id:661729ab4666b3ef2101a48c,
+                                            id:661729ab4666b3ef2101a490,
+                                            id:661729ab4666b3ef2101a49c,
+                                            id:661729ab4666b3ef2101a4a4,
+                                            id:661729ab4666b3ef2101a4a8,
+                                            id:661729ab4666b3ef2101a47a,
+                                            id:661729ab4666b3ef2101a48e,
+                                            id:661729ab4666b3ef2101a49f,
+                                            id:661729ab4666b3ef2101a49a,
+                                            id:661d7a8b48a32b3f859685af;
                             :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Graphic Designer";
                             :activityType "OngoingOpportunity";
@@ -1783,6 +2089,34 @@ Be a part of the Be Epic! London International Film Festival’s digital transfo
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:6425f3b8f2d4b77a6e155b67;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a482,
+                                            id:661729ab4666b3ef2101a47e,
+                                            id:661729ab4666b3ef2101a480,
+                                            id:661729ab4666b3ef2101a484,
+                                            id:661729ab4666b3ef2101a488,
+                                            id:661729ab4666b3ef2101a48a,
+                                            id:661729ab4666b3ef2101a492,
+                                            id:661729ab4666b3ef2101a494,
+                                            id:661729ab4666b3ef2101a496,
+                                            id:661729ab4666b3ef2101a498,
+                                            id:661729ab4666b3ef2101a4a2,
+                                            id:661729ab4666b3ef2101a4a6,
+                                            id:661729ab4666b3ef2101a4aa,
+                                            id:661729ab4666b3ef2101a4ac,
+                                            id:661729ab4666b3ef2101a471,
+                                            id:661729ab4666b3ef2101a476,
+                                            id:661729ab4666b3ef2101a486,
+                                            id:661729ab4666b3ef2101a48c,
+                                            id:661729ab4666b3ef2101a490,
+                                            id:661729ab4666b3ef2101a49c,
+                                            id:661729ab4666b3ef2101a4a4,
+                                            id:661729ab4666b3ef2101a4a8,
+                                            id:661729ab4666b3ef2101a47a,
+                                            id:661729ab4666b3ef2101a48e,
+                                            id:661729ab4666b3ef2101a49f,
+                                            id:661729ab4666b3ef2101a49a,
+                                            id:661d7a8b48a32b3f859685af;
                             :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Web Design and Management Volunteering Position for Be Epic! London International Film Festival";
                             :activityType "OngoingOpportunity";
@@ -1859,6 +2193,34 @@ Any successful applicant working with children will be required to undertake an 
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:676008f8954c54acf0cebd9c;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a482,
+                                            id:661729ab4666b3ef2101a47e,
+                                            id:661729ab4666b3ef2101a480,
+                                            id:661729ab4666b3ef2101a484,
+                                            id:661729ab4666b3ef2101a488,
+                                            id:661729ab4666b3ef2101a48a,
+                                            id:661729ab4666b3ef2101a492,
+                                            id:661729ab4666b3ef2101a494,
+                                            id:661729ab4666b3ef2101a496,
+                                            id:661729ab4666b3ef2101a498,
+                                            id:661729ab4666b3ef2101a4a2,
+                                            id:661729ab4666b3ef2101a4a6,
+                                            id:661729ab4666b3ef2101a4aa,
+                                            id:661729ab4666b3ef2101a4ac,
+                                            id:661729ab4666b3ef2101a471,
+                                            id:661729ab4666b3ef2101a476,
+                                            id:661729ab4666b3ef2101a486,
+                                            id:661729ab4666b3ef2101a48c,
+                                            id:661729ab4666b3ef2101a490,
+                                            id:661729ab4666b3ef2101a49c,
+                                            id:661729ab4666b3ef2101a4a4,
+                                            id:661729ab4666b3ef2101a4a8,
+                                            id:661729ab4666b3ef2101a47a,
+                                            id:661729ab4666b3ef2101a48e,
+                                            id:661729ab4666b3ef2101a49f,
+                                            id:661729ab4666b3ef2101a49a,
+                                            id:661d7a8b48a32b3f859685af;
                             :activityRequirement id:64093b562eed5dcadba508a7,
                                                  id:64093b572eed5dcadba508af,
                                                  id:661dbb6ac8ab0cb083e72ebf;
@@ -2605,6 +2967,34 @@ If you believe in empowering women and want to make a difference in your communi
                             :activityMeeting <https://mewso.org/>;
                             :activityOrganization id:64260fe2de05bf8ae7c99f64;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a482,
+                                            id:661729ab4666b3ef2101a47e,
+                                            id:661729ab4666b3ef2101a480,
+                                            id:661729ab4666b3ef2101a484,
+                                            id:661729ab4666b3ef2101a488,
+                                            id:661729ab4666b3ef2101a48a,
+                                            id:661729ab4666b3ef2101a492,
+                                            id:661729ab4666b3ef2101a494,
+                                            id:661729ab4666b3ef2101a496,
+                                            id:661729ab4666b3ef2101a498,
+                                            id:661729ab4666b3ef2101a4a2,
+                                            id:661729ab4666b3ef2101a4a6,
+                                            id:661729ab4666b3ef2101a4aa,
+                                            id:661729ab4666b3ef2101a4ac,
+                                            id:661729ab4666b3ef2101a471,
+                                            id:661729ab4666b3ef2101a476,
+                                            id:661729ab4666b3ef2101a486,
+                                            id:661729ab4666b3ef2101a48c,
+                                            id:661729ab4666b3ef2101a490,
+                                            id:661729ab4666b3ef2101a49c,
+                                            id:661729ab4666b3ef2101a4a4,
+                                            id:661729ab4666b3ef2101a4a8,
+                                            id:661729ab4666b3ef2101a47a,
+                                            id:661729ab4666b3ef2101a48e,
+                                            id:661729ab4666b3ef2101a49f,
+                                            id:661729ab4666b3ef2101a49a,
+                                            id:661d7a8b48a32b3f859685af;
                             :activityTitle "Volunteer opportunity-DV advisor ";
                             :activityType "Action".
 id:68bf986ebc9447e87dc438aa :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2863,6 +3253,34 @@ Sign up through this platform or contact us at jam@weareexplorers.org. Let’s b
                             :activityMeasurementUnit id:68d6baae22c5c958c1c99b1c;
                             :activityOrganization id:6807c51be1f731a9de22a5ed;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a471,
+                                            id:661729ab4666b3ef2101a476,
+                                            id:661729ab4666b3ef2101a47a,
+                                            id:661729ab4666b3ef2101a47e,
+                                            id:661729ab4666b3ef2101a480,
+                                            id:661729ab4666b3ef2101a482,
+                                            id:661729ab4666b3ef2101a484,
+                                            id:661729ab4666b3ef2101a486,
+                                            id:661729ab4666b3ef2101a488,
+                                            id:661729ab4666b3ef2101a48a,
+                                            id:661729ab4666b3ef2101a48c,
+                                            id:661729ab4666b3ef2101a48e,
+                                            id:661729ab4666b3ef2101a490,
+                                            id:661729ab4666b3ef2101a492,
+                                            id:661729ab4666b3ef2101a494,
+                                            id:661729ab4666b3ef2101a496,
+                                            id:661729ab4666b3ef2101a498,
+                                            id:661729ab4666b3ef2101a49a,
+                                            id:661729ab4666b3ef2101a49c,
+                                            id:661729ab4666b3ef2101a49f,
+                                            id:661729ab4666b3ef2101a4a2,
+                                            id:661729ab4666b3ef2101a4a4,
+                                            id:661729ab4666b3ef2101a4a6,
+                                            id:661729ab4666b3ef2101a4a8,
+                                            id:661729ab4666b3ef2101a4aa,
+                                            id:661729ab4666b3ef2101a4ac,
+                                            id:661d7a8b48a32b3f859685af;
                             :activityTitle "Improve We Are Explorers CIC's Self-Sustainability";
                             :activityType "Action".
 id:68e08de04037602aab298c1d :activityApp id:65a46db14b30b7dd175eb67a;
@@ -2987,6 +3405,34 @@ Skills and Experience
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:68e793d5bebfd220e4aec748;
                             :activityPublishedApps id:67b3a3ab839566a5b7a0d60d;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a482,
+                                            id:661729ab4666b3ef2101a47e,
+                                            id:661729ab4666b3ef2101a480,
+                                            id:661729ab4666b3ef2101a484,
+                                            id:661729ab4666b3ef2101a488,
+                                            id:661729ab4666b3ef2101a48a,
+                                            id:661729ab4666b3ef2101a492,
+                                            id:661729ab4666b3ef2101a494,
+                                            id:661729ab4666b3ef2101a496,
+                                            id:661729ab4666b3ef2101a498,
+                                            id:661729ab4666b3ef2101a4a2,
+                                            id:661729ab4666b3ef2101a4a6,
+                                            id:661729ab4666b3ef2101a4aa,
+                                            id:661729ab4666b3ef2101a4ac,
+                                            id:661729ab4666b3ef2101a471,
+                                            id:661729ab4666b3ef2101a476,
+                                            id:661729ab4666b3ef2101a486,
+                                            id:661729ab4666b3ef2101a48c,
+                                            id:661729ab4666b3ef2101a490,
+                                            id:661729ab4666b3ef2101a49c,
+                                            id:661729ab4666b3ef2101a4a4,
+                                            id:661729ab4666b3ef2101a4a8,
+                                            id:661729ab4666b3ef2101a47a,
+                                            id:661729ab4666b3ef2101a48e,
+                                            id:661729ab4666b3ef2101a49f,
+                                            id:661729ab4666b3ef2101a49a,
+                                            id:661d7a8b48a32b3f859685af;
                             :activityRequirement id:64093b572eed5dcadba508af;
                             :activityTitle "Legal support advising and checking";
                             :activityType "OngoingOpportunity";
@@ -3750,6 +4196,34 @@ Be the reason a child keeps believing. Join us today.""";
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:68f4e3bffe3f8f55aef0e544;
                             :activityPublishedApps id:65bab9cfb6f4d44ce2b9c119;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a471,
+                                            id:661729ab4666b3ef2101a476,
+                                            id:661729ab4666b3ef2101a47a,
+                                            id:661729ab4666b3ef2101a47e,
+                                            id:661729ab4666b3ef2101a480,
+                                            id:661729ab4666b3ef2101a482,
+                                            id:661729ab4666b3ef2101a484,
+                                            id:661729ab4666b3ef2101a486,
+                                            id:661729ab4666b3ef2101a488,
+                                            id:661729ab4666b3ef2101a48a,
+                                            id:661729ab4666b3ef2101a48c,
+                                            id:661729ab4666b3ef2101a48e,
+                                            id:661729ab4666b3ef2101a490,
+                                            id:661729ab4666b3ef2101a492,
+                                            id:661729ab4666b3ef2101a494,
+                                            id:661729ab4666b3ef2101a496,
+                                            id:661729ab4666b3ef2101a498,
+                                            id:661729ab4666b3ef2101a49a,
+                                            id:661729ab4666b3ef2101a49c,
+                                            id:661729ab4666b3ef2101a49f,
+                                            id:661729ab4666b3ef2101a4a2,
+                                            id:661729ab4666b3ef2101a4a4,
+                                            id:661729ab4666b3ef2101a4a6,
+                                            id:661729ab4666b3ef2101a4a8,
+                                            id:661729ab4666b3ef2101a4aa,
+                                            id:661729ab4666b3ef2101a4ac,
+                                            id:661d7a8b48a32b3f859685af;
                             :activityRequirement id:64093b562eed5dcadba508a9;
                             :activityTitle "Write a Pen Pal letter to an African Child in Need!";
                             :activityType "OngoingOpportunity";
@@ -3798,6 +4272,34 @@ We are looking for people to promote our organisation through outreach with loca
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:68f53f8346b712131f0148e7;
                             :activityPublishedApps id:65bab9cfb6f4d44ce2b9c119;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a471,
+                                            id:661729ab4666b3ef2101a476,
+                                            id:661729ab4666b3ef2101a47a,
+                                            id:661729ab4666b3ef2101a47e,
+                                            id:661729ab4666b3ef2101a480,
+                                            id:661729ab4666b3ef2101a482,
+                                            id:661729ab4666b3ef2101a484,
+                                            id:661729ab4666b3ef2101a486,
+                                            id:661729ab4666b3ef2101a488,
+                                            id:661729ab4666b3ef2101a48a,
+                                            id:661729ab4666b3ef2101a48c,
+                                            id:661729ab4666b3ef2101a48e,
+                                            id:661729ab4666b3ef2101a490,
+                                            id:661729ab4666b3ef2101a492,
+                                            id:661729ab4666b3ef2101a494,
+                                            id:661729ab4666b3ef2101a496,
+                                            id:661729ab4666b3ef2101a498,
+                                            id:661729ab4666b3ef2101a49a,
+                                            id:661729ab4666b3ef2101a49c,
+                                            id:661729ab4666b3ef2101a49f,
+                                            id:661729ab4666b3ef2101a4a2,
+                                            id:661729ab4666b3ef2101a4a4,
+                                            id:661729ab4666b3ef2101a4a6,
+                                            id:661729ab4666b3ef2101a4a8,
+                                            id:661729ab4666b3ef2101a4aa,
+                                            id:661729ab4666b3ef2101a4ac,
+                                            id:661d7a8b48a32b3f859685af;
                             :activityRequirement id:64093b562eed5dcadba508a5;
                             :activityTitle "Beyond Theory Learning : Long Term Volunteer Opportunities";
                             :activityType "OngoingOpportunity";
@@ -4790,6 +5292,34 @@ Ready to give just 1 hour a week and change a life? Apply now and be a part of s
                             :activityMeasurementUnit id:64d25c55ac1f5f7596c5671a;
                             :activityOrganization id:660c0023022dfe06f1ef3341;
                             :activityPublishedApps id:65a46db14b30b7dd175eb67a;
+                            :activityRegion id:661729ab4666b3ef2101a46b,
+                                            id:661729ab4666b3ef2101a471,
+                                            id:661729ab4666b3ef2101a476,
+                                            id:661729ab4666b3ef2101a47a,
+                                            id:661729ab4666b3ef2101a47e,
+                                            id:661729ab4666b3ef2101a480,
+                                            id:661729ab4666b3ef2101a482,
+                                            id:661729ab4666b3ef2101a484,
+                                            id:661729ab4666b3ef2101a486,
+                                            id:661729ab4666b3ef2101a488,
+                                            id:661729ab4666b3ef2101a48a,
+                                            id:661729ab4666b3ef2101a48c,
+                                            id:661729ab4666b3ef2101a48e,
+                                            id:661729ab4666b3ef2101a490,
+                                            id:661729ab4666b3ef2101a492,
+                                            id:661729ab4666b3ef2101a494,
+                                            id:661729ab4666b3ef2101a496,
+                                            id:661729ab4666b3ef2101a498,
+                                            id:661729ab4666b3ef2101a49a,
+                                            id:661729ab4666b3ef2101a49c,
+                                            id:661729ab4666b3ef2101a49f,
+                                            id:661729ab4666b3ef2101a4a2,
+                                            id:661729ab4666b3ef2101a4a4,
+                                            id:661729ab4666b3ef2101a4a6,
+                                            id:661729ab4666b3ef2101a4a8,
+                                            id:661729ab4666b3ef2101a4aa,
+                                            id:661729ab4666b3ef2101a4ac,
+                                            id:661d7a8b48a32b3f859685af;
                             :activityRequirement id:64093b562eed5dcadba508a9,
                                                  id:64093b572eed5dcadba508af,
                                                  id:661dbb6ac8ab0cb083e72ebf;
