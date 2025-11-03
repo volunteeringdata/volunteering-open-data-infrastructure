@@ -85,6 +85,16 @@ foreach (var source in activities!)
     target.Meeting = source.MeetingLink;
     target.PublishedApps.UnionWith(source.PublishedApp.Select(a => new Uri(Vocabulary.InstanceBaseUri, a.Value)));
     // Regions
+    target.Regions.UnionWith(source.Regions.Select(r => {
+        var region = Region.Create(r.Id.Value, targetGraph);
+        region.DisplayName = r.DisplayName;
+        region.RelatedTo = r.RelatedTo;
+        region.Type = r.Type;
+        region.Longitude = r.GeocenterLocation?.Lon;
+        region.Latitude = r.GeocenterLocation?.Lat;
+        return region;
+    }));
+
     target.Start = source.StartDate?.Value;
     target.Volunteers = source.VolunteerNumber;
 }

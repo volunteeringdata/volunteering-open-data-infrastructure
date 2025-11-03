@@ -74,4 +74,7 @@ public class Activity : GraphWrapperNode
     internal double? Latitude { set => this.OverwriteNullable(Vocabulary.Latitude, value); }
 
     internal double? Longitude { set => this.OverwriteNullable(Vocabulary.Longitude, value); }
+
+
+    internal ISet<Region> Regions { get => this.Objects(Vocabulary.ActivityRegion, Region.Wrap, Region.Wrap); }
 }

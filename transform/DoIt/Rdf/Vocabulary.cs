@@ -30,6 +30,7 @@ internal class Vocabulary
     internal static IUriNode ActivityEventType { get; } = Node("activityEventType");
     internal static IUriNode ActivityLocationOption { get; } = Node("activityLocationOption");
     internal static IUriNode ActivityMeasurementUnit { get; } = Node("activityMeasurementUnit");
+    internal static IUriNode ActivityRegion { get; } = Node("activityRegion");
 
     internal static IUriNode Address { get; } = Node("address");
 
@@ -46,7 +47,7 @@ internal class Vocabulary
     internal static IUriNode MeasurementUnitCategory { get; } = Node("measurementUnitCategory");
     internal static IUriNode MeasurementUnitPluralLabel { get; } = Node("measurementUnitPluralLabel");
     internal static IUriNode MeasurementUnitSingularLabel { get; } = Node("measurementUnitSingularLabel");
-  
+
     internal static IUriNode OptionDisplayName { get; } = Node("optionDisplayName");
     internal static IUriNode OptionIcon { get; } = Node("optionIcon");
     internal static IUriNode OptionApp { get; } = Node("optionApp");
@@ -67,4 +68,7 @@ internal class Vocabulary
 
     private static IUriNode AnyNode(string uri) => Factory.CreateUriNode(Factory.UriFactory.Create(uri));
 
+    internal static IUriNode RegionDisplayName { get; } = Node("regionDisplayName");
+    internal static IUriNode RegionRelatedTo { get; } = Node("regionRelatedTo");
+    internal static IUriNode RegionType { get; } = Node("regionType");
 }
