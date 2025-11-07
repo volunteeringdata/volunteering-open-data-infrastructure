@@ -7,9 +7,10 @@ using VDS.RDF.Query;
 
 namespace Query.Controllers;
 
-[Route("/{name}")]
+[Route("/{name}.{format?}")]
 [ApiController]
 [AllowSynchronousIO]
+[FormatFilter]
 public class DefaultController(HttpClient httpClient) : ControllerBase
 {
     [HttpGet]
