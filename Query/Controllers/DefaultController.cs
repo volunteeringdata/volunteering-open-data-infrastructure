@@ -57,17 +57,20 @@ public class DefaultController(HttpClient httpClient) : ControllerBase
         using var reader = new StreamReader(stream);
         var sparql = new SparqlParameterizedString(reader.ReadToEnd());
 
-        foreach (var parameter in Endpoints[name].Parameters)
+        if (Endpoints.TryGetValue(name, out var endpoint))
         {
-            var value = Request.Query[parameter.Name].ToString();
-
-            switch (parameter.Type)
+            foreach (var parameter in endpoint.Parameters)
             {
-                case NodeType.Literal:
-                    sparql.SetLiteral(parameter.Name, value, new Uri(parameter.Datatype), false);
-                    break;
-                default:
-                    throw new InvalidOperationException("unknown node type");
+                var value = Request.Query[parameter.Name].ToString();
+
+                switch (parameter.Type)
+                {
+                    case NodeType.Literal:
+                        sparql.SetLiteral(parameter.Name, value, new Uri(parameter.Datatype), false);
+                        break;
+                    default:
+                        throw new InvalidOperationException("unknown node type");
+                }
             }
         }
 
