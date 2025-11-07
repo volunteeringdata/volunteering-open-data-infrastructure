@@ -138,6 +138,10 @@ ADD data.ttl .
 
 RUN $JENA_HOME/bin/tdb2.tdbloader --loc $DATABASE data.ttl
 
+ADD croissant.ttl .
+
+RUN $JENA_HOME/bin/tdb2.tdbloader --loc $DATABASE croissant.ttl
+
 EXPOSE 3030
 
 ENTRYPOINT ["./entrypoint.sh" ]
