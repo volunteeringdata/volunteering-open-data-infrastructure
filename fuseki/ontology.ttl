@@ -1,0 +1,50 @@
+prefix :                <https://id.example.org/>
+prefix volunteering:    <https://id.example.org/schema/>
+
+:schema
+    a owl:Ontology ;
+    rdfs:isDefinedBy :schema ;
+    dc:issued "2025-10-31"^^xsd:date ;
+    vann:preferredNamespacePrefix "volunteering" ;
+    vann:preferredNamespaceUri "https://id.example.org/schema"^^xsd:anyURI ;
+    rdfs:label "Volunteering and Social Action ontology"@en ;
+    rdfs:comment "Defines a vocabulary to describe Volunteering Activities, Volunteer Involving Organisations and Volunteering Management Systems."@en .
+
+volunteering:Activity
+    a rdfs:Class ;
+    rdfs:label "Volunteering Activity"@en ;
+    rdfs:comment "Any kind of activity that involves volunteers."@en .
+
+volunteering:Organisation
+    a rdfs:Class ;
+    rdfs:label "Volunteer Involving Organisation"@en ;
+    rdfs:comment "Any organisation running activities that involve volunteers."@en .
+
+volunteering:System
+    a rdfs:Class ;
+    rdfs:label "Volunteering Management System"@en ;
+    rdfs:comment "Any system that is used to manage activities that involve volunteers."@en .
+
+volunteering:activityTitle
+    a rdf:Property ;
+    rdfs:subPropertyOf volunteering:title ;
+    rdfs:domain volunteering:Activity ;
+    rdfs:label "activity title"@en .
+
+volunteering:activityDescription
+    a rdf:Property ;
+    rdfs:subPropertyOf volunteering:title ;
+    rdfs:domain volunteering:Activity ;
+    rdfs:label "activity description"@en .
+
+volunteering:organisationName
+    a rdf:Property ;
+    rdfs:subPropertyOf volunteering:title ;
+    rdfs:domain volunteering:Organisation ;
+    rdfs:label "organisation name"@en .
+
+volunteering:organisationDescription
+    a rdf:Property ;
+    rdfs:subPropertyOf volunteering:title ;
+    rdfs:domain volunteering:Activity ;
+    rdfs:label "organisation description"@en .
