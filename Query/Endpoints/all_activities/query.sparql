@@ -1,0 +1,36 @@
+﻿BASE <https://id.example.org/>
+PREFIX : <https://id.example.org/schema/>
+
+SELECT *
+WHERE {
+    ?activity
+        :activityAttendees ?attendees ;
+        :activityBookings ?bookings ;
+        :activityDeleted ?deleted ;
+        :activityEcosystem ?ecosystem ;
+        :activityOrganization ?organization ;
+        :activityPublishedApps ?publishedApps ;
+        :activityTitle ?title ;
+        :activityDescription ?description ;
+        :activityType ?type ;
+        :activityLocationOption ?locationOption ;
+        :activityApp ?app ;
+        :activityMeasurementUnit ?measurementUnit ;
+        :activityCause ?cause ;
+    .
+
+    OPTIONAL { ?activity :activityDue ?due . }
+    OPTIONAL { ?activity :activityEnd ?end . }
+    OPTIONAL { ?activity :activityExternalApplyLink ?externalApplyLink . }
+    OPTIONAL { ?activity :activityIsOnline ?isOnline . }
+    OPTIONAL { ?activity :activityIsVolunteerNumberLimited ?isVolunteerNumberLimited . }
+    OPTIONAL { ?activity :activityMeeting ?meeting . }
+    OPTIONAL { ?activity :activityStart ?start . }
+    OPTIONAL { ?activity :activityVolunteers ?volunteers . }
+    OPTIONAL { ?activity :activityEventType ?eventType . }
+    OPTIONAL { ?activity :activityRequirement ?requirement . }
+    OPTIONAL { ?activity :activityAddress ?address . }
+    OPTIONAL { ?activity :activityLatitude ?latitude . }
+    OPTIONAL { ?activity :activityLongitude ?longitude . }
+    OPTIONAL { ?activity :activityRegion ?region . }
+}

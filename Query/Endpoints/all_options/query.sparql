@@ -1,0 +1,12 @@
+﻿BASE <https://id.example.org/>
+PREFIX : <https://id.example.org/schema/>
+
+SELECT *
+WHERE {
+    ?option
+        :optionDisplayName ?displayName ;
+        :optionApp ?app ;
+    .
+
+    OPTIONAL { ?option :optionIcon ?icon .}
+}

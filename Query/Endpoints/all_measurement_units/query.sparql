@@ -1,0 +1,11 @@
+﻿BASE <https://id.example.org/>
+PREFIX : <https://id.example.org/schema/>
+
+SELECT *
+WHERE {
+    ?measurementUnit
+        :measurementUnitCategory ?unitCategory ;
+        :measurementUnitPluralLabel ?unitPluralLabel ;
+        :measurementUnitSingularLabel ?unitSingularLabel ;
+    .
+}

@@ -1,0 +1,15 @@
+﻿BASE <https://id.example.org/>
+PREFIX : <https://id.example.org/schema/>
+
+SELECT *
+WHERE {
+    ?app
+        :appDescription ?description ;
+        :appEcosystem ?ecosystem ;
+        :appLogo ?logo ;
+        :appName ?name ;
+        :appOrganization ?organization ;
+    .
+
+    OPTIONAL { ?app :appBrandColor ?brandColor . }
+}

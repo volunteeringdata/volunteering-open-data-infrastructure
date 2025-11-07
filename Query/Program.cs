@@ -10,11 +10,12 @@ builder.Services.AddControllers(options =>
     options.FormatterMappings.SetMediaTypeMappingForFormat("ttl", MimeTypesHelper.Turtle[0]);
     options.FormatterMappings.SetMediaTypeMappingForFormat("rdf", MimeTypesHelper.RdfXml[0]);
     options.FormatterMappings.SetMediaTypeMappingForFormat("nt", MimeTypesHelper.NTriples[0]);
+    options.FormatterMappings.SetMediaTypeMappingForFormat("html", MimeTypesHelper.Html[0]);
 
     options.ReturnHttpNotAcceptable = true;
 
     // So we don't get default JSON serializations of things
-    options.OutputFormatters.Clear();
+    //options.OutputFormatters.Clear();
 
     options.OutputFormatters.Insert(0, new OpenApiFormatter());
 
