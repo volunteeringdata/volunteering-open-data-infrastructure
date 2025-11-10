@@ -54,15 +54,21 @@ az deployment group create --resource-group $INFRASTRUCTURE_RESOURCE_GROUP_NAME 
 
 ### Azure App Service: Data Container
 
-A container-web-hosting service. `202510300952registry.azurecr.io/fuseki:latest`
+A container-web-hosting service.
 
 ```zsh
 az deployment group create --resource-group $INFRASTRUCTURE_RESOURCE_GROUP_NAME --template-file ./infrastructure/app-service-data-container/template.json --parameters name=$INFRASTRUCTURE_DATA_CONTAINER_APP_SERVICE_NAME app_service_plan_name=$INFRASTRUCTURE_APP_SERVICE_PLAN_NAME
 ```
 
+NOTE: There seem to be a bug with ARM template of type linux container, the windows kind works (https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.web/app-service-docs-windows-container/azuredeploy.json) but it is more expensive. TODO: Potentially find a workaround.
+
+Create through Azure UI.
+
 ### Azure Container Registry Web Hook
 
+Deploy a new version of the Data Container to the Azure App Service everytime an image with the `latest` tag is published.
 
+Make sure the Continuous Deployment option is activated and SCM basic authentication is enabled (the webhook URL will show if it is) in the App Service's Deployment Center
 
 
 ## Data Container
