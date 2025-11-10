@@ -41,6 +41,8 @@ A container registry where images can be pushed and automatically deployed via w
 az deployment group create --resource-group $INFRASTRUCTURE_RESOURCE_GROUP_NAME --template-file ./infrastructure/azure-container-registry/template.json --parameters name=$INFRASTRUCTURE_CONTAINER_REGISTRY_NAME
 ```
 
+See: openvolunteering.azurecr.io
+
 ### Azure App Service Plan
 
 A set of compute resources for web apps to run.
@@ -64,33 +66,39 @@ az deployment group create --resource-group $INFRASTRUCTURE_RESOURCE_GROUP_NAME 
 
 ## Data Container
 
-A readonly triplestore with a sparql endpoint containing the latest data (data in `./fuseki/data.ttl`).
+A readonly triplestore with a sparql endpoint containing the latest data (including `./fuseki/data.ttl` & `./fuseki/vocabulary.ttl`).
+
+TODO: Try smaller or more optimized formats for RDF loading.
+
+### Build Container
 
 ```zsh
 docker build --build-arg JENA_VERSION=5.6.0 --tag $INFRASTRUCTURE_DATA_CONTAINER ./fuseki
 ```
 
-```zsh
-# Alternative dev
-INFRASTRUCTURE_DATA_CONTAINER="202510300952registry.azurecr.io/fuseki"
+### Deploy Container
 
-docker build --build-arg JENA_VERSION=5.6.0 --tag 202510300952registry.azurecr.io/fuseki:latest ./fuseki
-az acr login --name 202510300952registry
-docker push 202510300952registry.azurecr.io/fuseki:latest
+```zsh
+az login
+az acr login --name $INFRASTRUCTURE_CONTAINER_REGISTRY_NAME
+docker push $INFRASTRUCTURE_DATA_CONTAINER
 ```
 
-TODO: Try smaller or more optimized formats for RDF loading.
-
-### Running the Data Container locally
+### Run Container
 
 SPARQL endpoint accessible at http://localhost:3030/sparql.
 
 ```zsh
 docker compose build --build-arg JENA_VERSION=5.6.0
 docker compose run --rm --service-ports fuseki
+
+docker run --rm -p 3030:3030 $INFRASTRUCTURE_DATA_CONTAINER
 ```
 
-Example Query: `http://localhost:3030/sparql?query=CONSTRUCT { ?s ?p ?o } WHERE { ?s ?p ?o }`.
+Example Query (URI encode the query and use http://localhost:3030/sparql?query=):
+- Get all activities `CONSTRUCT { ?s <https://id.example.org/schema/activityTitle> ?o } WHERE { ?s <https://id.example.org/schema/activityTitle> ?o }`
+- Get all statements `CONSTRUCT { ?s ?p ?o } WHERE { ?s ?p ?o }`
+- Get the vocabulary `CONSTRUCT { ?s ?p ?o . } WHERE { ?s ?p ?o ; <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://id.example.org/schema> . }`
 
 ```http
 sparql?query=CONSTRUCT { ?s <t> ?o } WHERE { ?s <https://id.example.org/schema/activityTitle> ?o }
