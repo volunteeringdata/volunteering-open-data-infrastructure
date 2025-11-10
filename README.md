@@ -1,6 +1,7 @@
-# x
+# Open Volunteering Infrastructure
 
-## Transformation
+
+## Data Transformation
 
 The following creates RDF from JSON:
 
@@ -68,8 +69,6 @@ az deployment group create --resource-group $INFRASTRUCTURE_RESOURCE_GROUP_NAME 
 
 A readonly triplestore with a sparql endpoint containing the latest data (including `./fuseki/data.ttl` & `./fuseki/vocabulary.ttl`).
 
-TODO: Try smaller or more optimized formats for RDF loading.
-
 ### Build Container
 
 ```zsh
@@ -89,9 +88,6 @@ docker push $INFRASTRUCTURE_DATA_CONTAINER
 SPARQL endpoint accessible at http://localhost:3030/sparql.
 
 ```zsh
-docker compose build --build-arg JENA_VERSION=5.6.0
-docker compose run --rm --service-ports fuseki
-
 docker run --rm -p 3030:3030 $INFRASTRUCTURE_DATA_CONTAINER
 ```
 
@@ -100,17 +96,6 @@ Example Query (URI encode the query and use http://localhost:3030/sparql?query=)
 - Get all statements `CONSTRUCT { ?s ?p ?o } WHERE { ?s ?p ?o }`
 - Get the vocabulary `CONSTRUCT { ?s ?p ?o . } WHERE { ?s ?p ?o ; <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://id.example.org/schema> . }`
 
-```http
-sparql?query=CONSTRUCT { ?s <t> ?o } WHERE { ?s <https://id.example.org/schema/activityTitle> ?o }
-```
-
-
-### Deploy Data Container to Azure Container Registry
-
-```zsh
-az acr login --name $INFRASTRUCTURE_CONTAINER_REGISTRY_NAME
-docker push $INFRASTRUCTURE_CONTAINER_REGISTRY_URL/$INFRASTRUCTURE_DATA_CONTAINER_NAME:$INFRASTRUCTURE_DATA_CONTAINER_TAG
-```
 
 
 
@@ -118,20 +103,9 @@ docker push $INFRASTRUCTURE_CONTAINER_REGISTRY_URL/$INFRASTRUCTURE_DATA_CONTAINE
 
 # TODO
 
-1. Sign in to the ODI OpenVolunteering Azure Subscription
-1. Create Azure Container Registry: odi-openvolunteering (odi-openvolunteering.azurecr.io)
-1. Deploy the fuseki image to it
-1. 
-
-Create service principal route? (only useful for CD, probs overkill right now)
-
-
-# FIRST THING
-
-Export arm template from existing service/resource group
-
-fix up app service data container.
-
+Try smaller or more optimized formats for RDF loading.
+Create service principal route? (only useful for CD, probs overkill right now).
+Export full arm template from Resource Group.
 
 
 ## IDEAS
