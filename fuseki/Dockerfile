@@ -138,9 +138,9 @@ ADD data.ttl .
 
 RUN $JENA_HOME/bin/tdb2.tdbloader --loc $DATABASE data.ttl
 
-ADD croissant.ttl .
+ADD vocabulary.ttl .
 
-RUN $JENA_HOME/bin/tdb2.tdbloader --loc $DATABASE croissant.ttl
+RUN $JENA_HOME/bin/tdb2.tdbloader --loc $DATABASE vocabulary.ttl
 
 EXPOSE 3030
 
