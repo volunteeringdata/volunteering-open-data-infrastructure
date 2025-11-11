@@ -28,7 +28,7 @@ jobs:
         run: dotnet build Query --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish Query -c Release
+        run: dotnet publish Query -c Release --output Query/published
 
       - name: Login to Azure
         uses: azure/login@v2
@@ -43,5 +43,4 @@ jobs:
         with:
           app-name: 'openvolunteeringapi'
           slot-name: 'Production'
-          package: .
-          
+          package: Query/published
