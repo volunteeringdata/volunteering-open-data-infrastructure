@@ -3,7 +3,7 @@ name: .NET Core CI
 on:
   push:
     branches:
-      - nope
+      - main
   workflow_dispatch:
 
 env:
