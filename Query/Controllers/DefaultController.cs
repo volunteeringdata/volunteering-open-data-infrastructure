@@ -86,5 +86,10 @@ public class DefaultController(HttpClient httpClient) : ControllerBase
         ["endpoint3"] = new([
             new("name")
         ]),
+        ["geo_example2"] = new([
+            new("lat", datatype: XmlSpecsHelper.XmlSchemaDataTypeDouble),
+            new("lon", datatype: XmlSpecsHelper.XmlSchemaDataTypeDouble),
+            new("within", datatype: XmlSpecsHelper.XmlSchemaDataTypeInteger),
+        ]),
     };
 }

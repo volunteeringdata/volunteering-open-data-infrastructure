@@ -1,0 +1,23 @@
+PREFIX : <https://id.example.org/schema/>
+PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/>
+PREFIX spatialF: <http://jena.apache.org/function/spatial#>
+
+SELECT ?name1 ?name2 ?distance {
+    ?org1
+        :latitude ?lat1 ;
+        :longitude ?lon1 ;
+        :organizationName ?name1 ;
+    .
+
+    ?org2
+        :latitude ?lat2 ;
+        :longitude ?lon2 ;
+        :organizationName ?name2 ;
+    .
+
+    FILTER(?org1 != ?org2)
+
+    BIND(spatialF:convertLatLon(?lat1, ?lon1) as ?point1)
+    BIND(spatialF:convertLatLon(?lat2, ?lon2) as ?point2)
+    BIND(spatialF:distance(?point1, ?point2, units:meter) AS ?distance)
+}
