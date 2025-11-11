@@ -26,7 +26,8 @@ public class DefaultController(HttpClient httpClient) : ControllerBase
         var sparqlText = this.NewMethod(name, stream);
 
         var sparqlQuery = new SparqlQueryParser().ParseFromString(sparqlText);
-        var sparqlClient = new SparqlQueryClient(httpClient, new Uri("https://202510300952apptriplestoretest.azurewebsites.net/sparql"));
+        // TODO: Extract endpoint uri to config
+        var sparqlClient = new SparqlQueryClient(httpClient, new Uri("https://openvolunteeringdata-edd0h6d2dwcaa8br.uksouth-01.azurewebsites.net/sparql"));
 
         if (sparqlQuery.QueryType == SparqlQueryType.Construct || sparqlQuery.QueryType == SparqlQueryType.Describe || sparqlQuery.QueryType == SparqlQueryType.DescribeAll)
         {
