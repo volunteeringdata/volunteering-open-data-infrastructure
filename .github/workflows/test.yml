@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write #This is required for requesting the JWT
-      contents: read
+      contents: read #This is required for actions/checkout
 
     steps:
       # Check out the repo
@@ -33,7 +33,7 @@ jobs:
         run: |
           dotnet restore
           dotnet build --configuration Release
-          dotnet publish -c Release --property:PublishDir='${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp' 
+          dotnet publish -c Release -r win-x86 --property:PublishDir='${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp' 
 
       # Login to Azure
       - name: Login to Azure
