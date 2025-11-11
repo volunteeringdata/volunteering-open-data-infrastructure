@@ -1,0 +1,48 @@
+name: .NET Core CI
+
+on:
+  push:
+    branches:
+      - nope
+  workflow_dispatch:
+
+env:
+  AZURE_WEBAPP_NAME: openvolunteeringapi
+  AZURE_WEBAPP_PACKAGE_PATH: '.'
+  DOTNET_VERSION: '9.x'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the repo
+      - uses: actions/checkout@v5
+      
+      # Setup .NET Core SDK
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }} 
+      
+      # Run dotnet build and publish
+      - name: dotnet build and publish
+        run: |
+          dotnet restore
+          dotnet build --configuration Release
+          dotnet publish -c Release --property:PublishDir='${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp' 
+
+      # Login to Azure
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_60342768C2E6402F8107EA7317518A7E }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9CC34914B1764EE8AB5CF0815FEA4C4B }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_082FC03842724373AA163A431CA996D6 }}
+          
+      # Deploy to Azure Web apps
+      - name: 'Run Azure webapp deploy action using publish profile credentials'
+        uses: azure/webapps-deploy@v3
+        with: 
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp'
