@@ -106,7 +106,7 @@ id:schema
 :ActivitySystem
     a owl:Class ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subClassOf :Time ;
+    rdfs:subClassOf :System ;
     rdfs:label "Activity System" ;
     rdfs:label "System"@en ;
     rdfs:comment "Any system related to a volunteering activity."@en .
@@ -146,7 +146,7 @@ id:schema
 :OrganisationSystem
     a owl:Class ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subClassOf :Time ;
+    rdfs:subClassOf :System ;
     rdfs:label "Organisation System" ;
     rdfs:label "System"@en ;
     rdfs:comment "Any system related to a volunteer involving organisation."@en .
