@@ -23,9 +23,27 @@ public class OrganizationSubDocument : Identified
 
     [JsonPropertyName("purpose")] public required string Purpose { get; set; }
 
-    // All null but 1
     [JsonPropertyName("termsOfServicesLink")] public string? TermsOfServicesLinkNullable { get; set; }
-    [JsonIgnore] public Uri? TermsOfServicesLink => string.IsNullOrWhiteSpace(TermsOfServicesLinkNullable) ? null : new Uri(TermsOfServicesLinkNullable);
+    [JsonIgnore]
+    public Uri? TermsOfServicesLink
+    {
+        get
+        {
+            if (string.IsNullOrWhiteSpace(TermsOfServicesLinkNullable))
+            {
+                return null;
+            }
+
+            try
+            {
+                return new Uri(TermsOfServicesLinkNullable!);
+            }
+            catch (UriFormatException)
+            {
+                return null;
+            }
+        }
+    }
 
     // TODO: Enum?
     [JsonPropertyName("type")] public string? Type { get; set; }
@@ -47,7 +65,16 @@ public class OrganizationSubDocument : Identified
             }
             catch (UriFormatException)
             {
-                return new Uri($"https://{WebsiteLinkNullable}");
+                try
+                {
+                    return new Uri($"https://{WebsiteLinkNullable}");
+
+                }
+                catch (Exception)
+                {
+
+                    return null;
+                }
             }
         }
     }
