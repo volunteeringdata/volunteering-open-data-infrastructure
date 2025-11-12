@@ -1,0 +1,9 @@
+﻿{
+  "@type": "Activity",
+  "@context": {
+    "@base": "https://id.example.org/",
+    "@vocab": "https://id.example.org/schema/",
+    "id": "@id",
+    "type": "@type"
+  }
+}

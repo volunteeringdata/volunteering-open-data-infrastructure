@@ -1,0 +1,29 @@
+﻿BASE <https://id.example.org/>
+PREFIX : <https://id.example.org/schema/>
+
+CONSTRUCT {
+    ?activity
+        a :Activity ;
+        :app ?app ;
+        :name ?title ;
+        :cause ?cause ;
+    .
+
+    ?app :name ?name .
+  
+    ?cause :name ?causeName ; :app ?causeApp .
+  
+    ?causeApp :name ?causeAppName .
+}
+WHERE {
+    ?activity
+        :activityApp ?app ;
+        :activityLabel ?title ;
+        :activityCause ?cause ;
+    .
+
+    ?app :appName ?name .
+  
+    ?causeApp :appName ?causeAppName .
+    ?cause :optionDisplayName ?causeName ; :optionApp ?causeApp .
+}
