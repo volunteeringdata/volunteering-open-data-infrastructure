@@ -1,4 +1,7 @@
-﻿DESCRIBE ?s
+﻿PREFIX : <https://id.example.org/schema/>
+
+DESCRIBE ?organisation
 WHERE {
-    ?s <https://id.example.org/schema/organizationLabel> $name ;
+    ?organisation :organizationLabel ?name .
+    FILTER CONTAINS(lcase(?name), lcase($name))
 }
