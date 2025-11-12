@@ -12,7 +12,7 @@ public class ActivityDefinitionSubDocument : Identified
 
     [JsonPropertyName("title")] public required string Title { get; set; }
 
-    [JsonPropertyName("description")] public required string Description { get; set; }
+    [JsonPropertyName("description")] public string? Description { get; set; }
 
     [JsonPropertyName("type")] public required string Type { get; set; }
 
