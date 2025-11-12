@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi;
+using System.Reflection;
 using VDS.RDF;
 using VDS.RDF.Parsing;
+using VDS.RDF.Query;
 
 namespace Query.Controllers;
 
@@ -10,6 +12,9 @@ namespace Query.Controllers;
 [AllowSynchronousIO]
 public class OpenApiController() : ControllerBase
 {
+    private const string graphResponse = "graphResponse";
+    private const string nonGraphResponse = "nonGraphResponse";
+
     [HttpGet]
     public OpenApiDocument Get() => new()
     {
@@ -19,6 +24,30 @@ public class OpenApiController() : ControllerBase
             Version = "1" // TODO: Don't hardcode
         },
         Paths = Paths,
+        Components = new OpenApiComponents
+        {
+            Responses = new Dictionary<string, IOpenApiResponse>
+            {
+                [graphResponse] = new OpenApiResponse
+                {
+                    Description = "OK",
+                    Content = MimeTypesHelper.Definitions
+                        .Where(d => d.CanWriteRdfDatasets || d.CanWriteRdf)
+                        .Select(d => d.CanonicalMimeType)
+                        .Distinct()
+                        .ToDictionary(d => d, d => new OpenApiMediaType()),
+                },
+                [nonGraphResponse] = new OpenApiResponse
+                {
+                    Description = "OK",
+                    Content = MimeTypesHelper.Definitions
+                        .Where(d => d.CanWriteSparqlResults)
+                        .Select(d => d.CanonicalMimeType)
+                        .Distinct()
+                        .ToDictionary(d => d, d => new OpenApiMediaType { }),
+                },
+            },
+        },
     };
 
 
@@ -28,8 +57,26 @@ public class OpenApiController() : ControllerBase
         {
             var paths = new OpenApiPaths();
 
-            foreach (var endpoint in DefaultController.Endpoints)
+            foreach (var endpoint in DefaultController.Endpoints) // TODO: Iterate resources instead or ensure Endpoints has all of them
             {
+                var name = endpoint.Key;
+                var resourceName = $"Query.Endpoints.{name}.query.sparql";
+                using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName);
+                using var reader = new StreamReader(stream!);
+                var sparqlText = reader.ReadToEnd();
+                var sparqlQuery = new SparqlQueryParser().ParseFromString(sparqlText);
+                var responses = new OpenApiResponses
+                {
+                    ["200"] = sparqlQuery.QueryType switch
+                    {
+                        SparqlQueryType.Construct or
+                        SparqlQueryType.Describe or
+                        SparqlQueryType.DescribeAll => new OpenApiResponseReference(graphResponse),
+
+                        _ => new OpenApiResponseReference(nonGraphResponse),
+                    },
+                };
+
                 var pathItem = new OpenApiPathItem
                 {
                     Operations = new()
@@ -44,11 +91,7 @@ public class OpenApiController() : ControllerBase
                                 },
                                 Required = true,
                             })],
-                            Responses = {
-                                ["200"] = new OpenApiResponse {
-                                    Description = "" // TODO: Take from endpoint definition
-                                },
-                            }
+                            Responses = responses
                         }
                     }
                 };
