@@ -1,6 +1,6 @@
 BASE <https://id.example.org/schema/>
 PREFIX : <https://id.example.org/>
-PREFIX schema: <https://id.example.org/schema/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 CONSTRUCT {
@@ -9,6 +9,7 @@ CONSTRUCT {
 }
 WHERE {
     FILTER(?vocabularyClass = IRI($class))
+    FILTER(?vocabularyPropertyProperty != IRI(owl:inverseOf))
     ?vocabularyClass ?vocabularyClassProperty ?vocabularyClassValue .
       
     ?vocabularyProperty
