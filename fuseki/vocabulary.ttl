@@ -219,34 +219,40 @@ volunteering:contactOrganisation
 ## Datatype Properties
 volunteering:label
     a owl:DatatypeProperty ;
+    rdfs:domain volunteering:Thing ;
     rdfs:isDefinedBy :schema ;
     rdfs:subPropertyOf rdfs:label ;
     rdfs:label "label"@en .
 
 volunteering:description
     a owl:DatatypeProperty ;
+    rdfs:domain volunteering:Thing ;
     rdfs:isDefinedBy :schema ;
     rdfs:subPropertyOf dc:description ;
     rdfs:label "description"@en .
 
 volunteering:url
     a owl:DatatypeProperty ;
+    rdfs:domain volunteering:Thing ;
     rdfs:isDefinedBy :schema ;
     rdfs:subPropertyOf rdfs:seeAlso ;
     rdfs:label "url"@en .
 
 volunteering:address
     a owl:DatatypeProperty ;
+    rdfs:domain volunteering:Thing ;
     rdfs:isDefinedBy :schema ;
     rdfs:label "address"@en .
 
 volunteering:longitude
     a owl:DatatypeProperty ;
+    rdfs:domain volunteering:Thing ;
     rdfs:isDefinedBy :schema ;
     rdfs:label "longitude"@en .
 
 volunteering:latitude
     a owl:DatatypeProperty ;
+    rdfs:domain volunteering:Thing ;
     rdfs:isDefinedBy :schema ;
     rdfs:subPropertyOf rdfs:seeAlso ;
     rdfs:label "latitude"@en .
