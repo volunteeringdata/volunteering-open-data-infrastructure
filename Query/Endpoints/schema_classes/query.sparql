@@ -14,5 +14,6 @@ WHERE {
 
     ?vocabularyObjectProperty
         ?vocabularyObjectPropertyProperty ?vocabularyObjectPropertyValue ;
+        rdfs:domain ?domain ;
         a owl:ObjectProperty .
 }
