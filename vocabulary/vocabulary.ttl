@@ -2,8 +2,8 @@
 
 ## Namespaces
 ### Ontology Base URI
-prefix :                <https://id.example.org/>
-prefix volunteering:    <https://id.example.org/schema/>
+prefix id:                <https://id.example.org/>
+prefix :    <https://id.example.org/schema/>
 
 ### Core W3C ontologies (OWL 2 reserved vocabulary)
 prefix rdf:             <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -17,9 +17,9 @@ prefix vann:            <http://purl.org/vocab/vann/>
 
 
 ## Ontology
-:schema
+id:schema
     a owl:Ontology ;
-    rdfs:isDefinedBy :schema ;
+    rdfs:isDefinedBy id:schema ;
     dc:issued "2025-10-31"^^xsd:date ;
     vann:preferredNamespacePrefix "volunteering" ;
     vann:preferredNamespaceUri "https://id.example.org/schema"^^xsd:anyURI ;
@@ -28,361 +28,442 @@ prefix vann:            <http://purl.org/vocab/vann/>
 
 
 ## Classes
-volunteering:Activity
+:Activity
     a owl:Class ;
     rdfs:isDefinedBy :schema ;
-    rdfs:label "Volunteering Activity"@en ;
+    rdfs:label "Volunteering Activity" ;
+    rdfs:label "Activity"@en ;
     rdfs:comment "Any kind of activity that involves volunteers."@en .
 
-volunteering:Organisation
+:Concept
     a owl:Class ;
     rdfs:isDefinedBy :schema ;
-    rdfs:label "Volunteer Involving Organisation"@en ;
-    rdfs:comment "Any organisation running activities that involve volunteers."@en .
+    rdfs:label "Volunteering Concept" ;
+    rdfs:label "Concept"@en ;
+    rdfs:comment "Any conceptual information related to volunteering activities."@en .
 
-volunteering:System
+:Contact
     a owl:Class ;
     rdfs:isDefinedBy :schema ;
-    rdfs:label "Volunteering Management System"@en ;
-    rdfs:comment "Any system that is used to manage activities that involve volunteers."@en .
-
-volunteering:Location
-    a owl:Class ;
-    rdfs:isDefinedBy :schema ;
-    rdfs:label "Volunteering Location"@en ;
-    rdfs:comment "Any location related to volunteering activities."@en .
-
-volunteering:Contact
-    a owl:Class ;
-    rdfs:isDefinedBy :schema ;
-    rdfs:label "Volunteering Contact"@en ;
+    rdfs:label "Volunteering Contact" ;
+    rdfs:label "Contact"@en ;
     rdfs:comment "Any contact related to volunteering activities."@en .
 
-volunteering:Time
+:Location
     a owl:Class ;
     rdfs:isDefinedBy :schema ;
-    rdfs:label "Volunteering Time"@en ;
+    rdfs:label "Volunteering Location" ;
+    rdfs:label "Location"@en ;
+    rdfs:comment "Any location related to volunteering activities."@en .
+
+:Organisation
+    a owl:Class ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:label "Volunteer Involving Organisation" ;
+    rdfs:label "Organisation"@en ;
+    rdfs:comment "Any organisation running activities that involve volunteers."@en .
+
+:System
+    a owl:Class ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:label "Volunteering Management System" ;
+    rdfs:label "System"@en ;
+    rdfs:comment "Any system that is used to manage activities that involve volunteers."@en .
+
+:Time
+    a owl:Class ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:label "Volunteering Time" ;
+    rdfs:label "Time"@en ;
     rdfs:comment "Any time information related to volunteering activities."@en .
 
-volunteering:Concept
+
+## Specialised Classes
+:ActivityConcept
     a owl:Class ;
     rdfs:isDefinedBy :schema ;
-    rdfs:label "Volunteering Concept"@en ;
-    rdfs:comment "Any conceptual information related to volunteering activities."@en .
+    rdfs:subClassOf :Concept ;
+    rdfs:label "Activity Concept" ;
+    rdfs:label "Concept"@en ;
+    rdfs:comment "Any concept related to a volunteering activity."@en .
+
+:ActivityContact
+    a owl:Class ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subClassOf :Contact ;
+    rdfs:label "Activity Contact" ;
+    rdfs:label "Contact"@en ;
+    rdfs:comment "Any contact information related to a volunteering activity."@en .
+
+:ActivityLocation
+    a owl:Class ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subClassOf :Location ;
+    rdfs:label "Activity Location" ;
+    rdfs:label "Location"@en ;
+    rdfs:comment "Any location information related to a volunteering activity."@en .
+
+:ActivitySystem
+    a owl:Class ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subClassOf :Time ;
+    rdfs:label "Activity System" ;
+    rdfs:label "System"@en ;
+    rdfs:comment "Any system related to a volunteering activity."@en .
+
+:ActivityTime
+    a owl:Class ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subClassOf :Time ;
+    rdfs:label "Activity Time" ;
+    rdfs:label "Time"@en ;
+    rdfs:comment "Any time information related to a volunteering activity."@en .
+
+:OrganisationConcept
+    a owl:Class ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subClassOf :Concept ;
+    rdfs:label "Organisation Concept" ;
+    rdfs:label "Concept"@en ;
+    rdfs:comment "Any concept related to a volunteer involving organisation."@en .
+
+:OrganisationContact
+    a owl:Class ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subClassOf :Contact ;
+    rdfs:label "Organisation Contact" ;
+    rdfs:label "Contact"@en ;
+    rdfs:comment "Any contact information related to a volunteer involving organisation."@en .
+
+:OrganisationLocation
+    a owl:Class ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subClassOf :Location ;
+    rdfs:label "Organisation Location" ;
+    rdfs:label "Location"@en ;
+    rdfs:comment "Any location information related to a volunteer involving organisation."@en .
+
+:OrganisationSystem
+    a owl:Class ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subClassOf :Time ;
+    rdfs:label "Organisation System" ;
+    rdfs:label "System"@en ;
+    rdfs:comment "Any system related to a volunteer involving organisation."@en .
 
 
 ## Object Properties
-volunteering:activity
+:activity
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:range volunteering:Activity ;
+    rdfs:range :Activity ;
     rdfs:label "activity"@en .
 
-volunteering:contact
+:contact
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:range volunteering:Contact ;
+    rdfs:range :Contact ;
     rdfs:label "contact"@en .
 
-volunteering:concept
+:concept
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:range volunteering:Concept ;
+    rdfs:range :Concept ;
     rdfs:label "concept"@en .
 
-volunteering:location
+:location
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:range volunteering:Location ;
+    rdfs:range :Location ;
     rdfs:label "location"@en .
 
-volunteering:organisation
+:organisation
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:range volunteering:Organisation ;
+    rdfs:range :Organisation ;
     rdfs:label "organisation"@en .
 
-volunteering:system
+:system
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:range volunteering:System ;
+    rdfs:range :System ;
     rdfs:label "system"@en .
 
-volunteering:time
+:time
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:range volunteering:Time ;
+    rdfs:range :Time ;
     rdfs:label "time"@en .
 
 
 ## Classification Object Properties
-volunteering:activityConcept
+:activityConcept
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:conceptActivity ;
-    rdfs:domain volunteering:Activity ;
-    rdfs:range volunteering:Concept ;
+    owl:inverseOf :conceptActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivityConcept ;
     rdfs:label "activity has concept"@en .
 
-volunteering:activityContact
+:activityContact
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:contactActivity ;
-    rdfs:domain volunteering:Activity ;
-    rdfs:range volunteering:Contact ;
+    owl:inverseOf :contactActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivityContact ;
     rdfs:label "activity has contact"@en .
 
-volunteering:activityLocation
+:activityLocation
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:locationActivity ;
-    rdfs:domain volunteering:Activity ;
-    rdfs:range volunteering:Location ;
+    owl:inverseOf :locationActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivityLocation ;
     rdfs:label "activity has location"@en .
 
-volunteering:activityOrganisation
+:activityOrganisation
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:organisationActivity ;
-    rdfs:domain volunteering:Activity ;
-    rdfs:range volunteering:Organisation ;
+    owl:inverseOf :organisationActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :Organisation ;
     rdfs:label "activity has organisation"@en .
 
-volunteering:activitySystem
+:activitySystem
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:systemActivity ;
-    rdfs:domain volunteering:Activity ;
-    rdfs:range volunteering:System ;
+    owl:inverseOf :systemActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivitySystem ;
     rdfs:label "activity has system"@en .
 
-volunteering:activityTime
+:activityTime
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:timeActivity ;
-    rdfs:domain volunteering:Activity ;
-    rdfs:range volunteering:Time ;
+    owl:inverseOf :timeActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivityTime ;
     rdfs:label "activity has time"@en .
 
-volunteering:conceptActivity
+:conceptActivity
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:activityConcept ;
-    rdfs:domain volunteering:Concept ;
-    rdfs:range volunteering:Activity ;
+    owl:inverseOf :activityConcept ;
+    rdfs:domain :ActivityConcept ;
+    rdfs:range :Activity ;
     rdfs:label "concept has activity"@en .
 
-volunteering:conceptOrganisation
+:conceptOrganisation
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:organisationConcept ;
-    rdfs:domain volunteering:Concept ;
-    rdfs:range volunteering:Organisation ;
+    owl:inverseOf :organisationConcept ;
+    rdfs:domain :OrganisationConcept ;
+    rdfs:range :Organisation ;
     rdfs:label "concept has organisation"@en .
 
-volunteering:contactActivity
+:contactActivity
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:activityContact ;
-    rdfs:domain volunteering:Contact ;
-    rdfs:range volunteering:Activity ;
+    owl:inverseOf :activityContact ;
+    rdfs:domain :ActivityContact ;
+    rdfs:range :Activity ;
     rdfs:label "contact has activity"@en .
 
-volunteering:contactOrganisation
+:contactOrganisation
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:organisationContact ;
-    rdfs:domain volunteering:Contact ;
-    rdfs:range volunteering:Organisation ;
+    owl:inverseOf :organisationContact ;
+    rdfs:domain :OrganisationContact ;
+    rdfs:range :Organisation ;
     rdfs:label "contact has organisation"@en .
 
-volunteering:locationActivity
+:locationActivity
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:activityLocation ;
-    rdfs:domain volunteering:Location ;
-    rdfs:range volunteering:Activity ;
+    owl:inverseOf :activityLocation ;
+    rdfs:domain :ActivityLocation ;
+    rdfs:range :Activity ;
     rdfs:label "location has activity"@en .
 
-volunteering:locationOrganisation
+:locationOrganisation
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:organisationLocation ;
-    rdfs:domain volunteering:Location ;
-    rdfs:range volunteering:Organisation ;
+    owl:inverseOf :organisationLocation ;
+    rdfs:domain :OrganisationLocation ;
+    rdfs:range :Organisation ;
     rdfs:label "location has organisation"@en .
 
-volunteering:organisationActivity
+:organisationActivity
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:activityOrganisation ;
-    rdfs:domain volunteering:Organisation ;
-    rdfs:range volunteering:Activity ;
+    owl:inverseOf :activityOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :Activity ;
     rdfs:label "organisation has activity"@en .
 
-volunteering:organisationConcept
+:organisationConcept
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:conceptOrganisation ;
-    rdfs:domain volunteering:Organisation ;
-    rdfs:range volunteering:Concept ;
+    owl:inverseOf :conceptOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :OrganisationConcept ;
     rdfs:label "organisation has concept"@en .
 
-volunteering:organisationContact
+:organisationContact
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:contactOrganisation ;
-    rdfs:domain volunteering:Organisation ;
-    rdfs:range volunteering:Contact ;
+    owl:inverseOf :contactOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :OrganisationContact ;
     rdfs:label "organisation has contact"@en .
 
-volunteering:organisationLocation
+:organisationLocation
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:locationOrganisation ;
-    rdfs:domain volunteering:Organisation ;
-    rdfs:range volunteering:Location ;
+    owl:inverseOf :locationOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :OrganisationLocation ;
     rdfs:label "organisation has location"@en .
 
-volunteering:organisationSystem
+:organisationSystem
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:systemOrganisation ;
-    rdfs:domain volunteering:Organisation ;
-    rdfs:range volunteering:System ;
+    owl:inverseOf :systemOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :OrganisationSystem ;
     rdfs:label "organisation has system"@en .
 
-volunteering:systemActivity
+:systemActivity
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:activitySystem ;
-    rdfs:domain volunteering:System ;
-    rdfs:range volunteering:Activity ;
+    owl:inverseOf :activitySystem ;
+    rdfs:domain :ActivitySystem ;
+    rdfs:range :Activity ;
     rdfs:label "system has activity"@en .
 
-volunteering:systemOrganisation
+:systemOrganisation
     a owl:ObjectProperty ;
     rdfs:isDefinedBy :schema ;
-    owl:inverseOf volunteering:organisationSystem ;
-    rdfs:domain volunteering:System ;
-    rdfs:range volunteering:Organisation ;
+    owl:inverseOf :organisationSystem ;
+    rdfs:domain :OrganisationSystem ;
+    rdfs:range :Organisation ;
     rdfs:label "system has organisation"@en .
 
 
 ## Datatype Properties
-volunteering:label
+:label
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
     rdfs:subPropertyOf rdfs:label ;
     rdfs:label "label"@en .
 
-volunteering:description
+:description
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
     rdfs:subPropertyOf dc:description ;
     rdfs:label "description"@en .
 
-volunteering:url
+:url
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
     rdfs:subPropertyOf rdfs:seeAlso ;
     rdfs:label "url"@en .
 
-volunteering:address
+:address
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:domain volunteering:Location ;
+    rdfs:domain :Location ;
     rdfs:label "address"@en .
 
-volunteering:longitude
+:longitude
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:domain volunteering:Location ;
+    rdfs:domain :Location ;
     rdfs:label "longitude"@en .
 
-volunteering:latitude
+:latitude
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
     rdfs:subPropertyOf rdfs:seeAlso ;
-    rdfs:domain volunteering:Location ;
+    rdfs:domain :Location ;
     rdfs:label "latitude"@en .
 
 
 ## Classification Datatype Properties
-volunteering:activityLabel
+:activityLabel
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:label ;
-    rdfs:domain volunteering:Activity ;
+    rdfs:subPropertyOf :label ;
+    rdfs:domain :Activity ;
     rdfs:Range rdfs:Literal ;
     rdfs:label "activity label"@en .
 
-volunteering:activityDescription
+:activityDescription
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:description ;
-    rdfs:domain volunteering:Activity ;
+    rdfs:subPropertyOf :description ;
+    rdfs:domain :Activity ;
     rdfs:label "activity description"@en .
 
-volunteering:activityUrl
+:activityUrl
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:url ;
-    rdfs:domain volunteering:Activity ;
+    rdfs:subPropertyOf :url ;
+    rdfs:domain :Activity ;
     rdfs:label "activity URL"@en .
 
-volunteering:organisationLabel
+:organisationLabel
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:label ;
-    rdfs:domain volunteering:Organisation ;
+    rdfs:subPropertyOf :label ;
+    rdfs:domain :Organisation ;
     rdfs:label "organisation label"@en .
 
-volunteering:organisationDescription
+:organisationDescription
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:description ;
-    rdfs:domain volunteering:Organisation ;
+    rdfs:subPropertyOf :description ;
+    rdfs:domain :Organisation ;
     rdfs:label "organisation description"@en .
 
-volunteering:organisationUrl
+:organisationUrl
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:url ;
-    rdfs:domain volunteering:Organisation ;
+    rdfs:subPropertyOf :url ;
+    rdfs:domain :Organisation ;
     rdfs:label "organisation URL"@en .
 
-volunteering:systemLabel
+:systemLabel
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:label ;
-    rdfs:domain volunteering:System ;
+    rdfs:subPropertyOf :label ;
+    rdfs:domain :System ;
     rdfs:label "system label"@en .
 
-volunteering:systemDescription
+:systemDescription
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:description ;
-    rdfs:domain volunteering:System ;
+    rdfs:subPropertyOf :description ;
+    rdfs:domain :System ;
     rdfs:label "system description"@en .
 
-volunteering:systemUrl
+:systemUrl
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:url ;
-    rdfs:domain volunteering:System ;
+    rdfs:subPropertyOf :url ;
+    rdfs:domain :System ;
     rdfs:label "system URL"@en .
 
-volunteering:locationLabel
+:locationLabel
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:label ;
-    rdfs:domain volunteering:Location ;
+    rdfs:subPropertyOf :label ;
+    rdfs:domain :Location ;
     rdfs:label "location label"@en .
 
-volunteering:locationDescription
+:locationDescription
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:description ;
-    rdfs:domain volunteering:System ;
+    rdfs:subPropertyOf :description ;
+    rdfs:domain :System ;
     rdfs:label "location description"@en .
