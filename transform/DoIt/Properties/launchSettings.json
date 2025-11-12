@@ -2,7 +2,7 @@
   "profiles": {
     "DoIt": {
       "commandName": "Project",
-      "commandLineArgs": "../../../../../data/doit/activities.json ../../../../../fuseki/data.ttl"
+      "commandLineArgs": "../../../../../data/doit/activities.json ../../../../../data/doit/data.ttl"
     }
   }
 }

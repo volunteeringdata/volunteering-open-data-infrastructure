@@ -21,7 +21,7 @@ https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/openap
 The following creates RDF from JSON:
 
 ```zsh
-dotnet run ./data/doit/activities.json ./fuseki/data.ttl --project ./transform/DoIt/
+dotnet run ./data/doit/activities.json ./data/doit/data.ttl --project ./transform/DoIt/
 ```
 
 ### Publish Data
@@ -99,12 +99,12 @@ Make sure the Continuous Deployment option is activated and SCM basic authentica
 
 ## Data Container
 
-A readonly triplestore with a sparql endpoint containing the latest data (including `./fuseki/data.ttl` & `./fuseki/vocabulary.ttl`).
+A readonly triplestore with a sparql endpoint containing the latest data (including `.ttl` files).
 
 ### Build Container
 
 ```zsh
-docker build --tag $INFRASTRUCTURE_DATA_CONTAINER ./fuseki
+docker build --tag $INFRASTRUCTURE_DATA_CONTAINER .
 ```
 
 ### Deploy Container
