@@ -1,5 +1,7 @@
 ﻿{
-  "app": {},
+  "app": {
+    "cause": {}
+  },
 
   "@context": {
     "@base": "https://id.example.org/",

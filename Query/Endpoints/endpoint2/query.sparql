@@ -5,15 +5,25 @@ CONSTRUCT {
     ?activity
         :app ?app ;
         :name ?title ;
-.
+        :cause ?cause ;
+    .
 
     ?app :name ?name .
+  
+    ?cause :name ?causeName ; :app ?causeApp .
+  
+    ?causeApp :name ?causeAppName .
 }
 WHERE {
+    FILTER(?activity = IRI($id))
     ?activity
         :activityApp ?app ;
         :activityLabel ?title ;
+        :activityCause ?cause ;
     .
 
     ?app :appName ?name .
+  
+    ?causeApp :appName ?causeAppName .
+    ?cause :optionDisplayName ?causeName ; :optionApp ?causeApp .
 }
