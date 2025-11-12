@@ -3,13 +3,13 @@ name: .NET Core CI
 on:
   push:
     branches:
-      - main
+      - nope
   workflow_dispatch:
 
 env:
   AZURE_WEBAPP_NAME: openvolunteeringapi
   AZURE_WEBAPP_PACKAGE_PATH: 'Query'
-  DOTNET_VERSION: '9.x'
+  DOTNET_VERSION: '9.0.x'
 
 jobs:
   build:

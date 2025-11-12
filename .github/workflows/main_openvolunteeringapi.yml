@@ -4,15 +4,15 @@
 name: Build and deploy ASP.Net Core app to Azure Web App - openvolunteeringapi
 
 env:
-  AZURE_WEBAPP_NAME: Query
-  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: '5'                 # set this to the .NET Core version to use
+  AZURE_WEBAPP_NAME: 'openvolunteeringapi'
+  AZURE_WEBAPP_PACKAGE_PATH: 'Query/published'
+  DOTNET_VERSION: '9.0.x'
 
 
 on:
   push:
     branches:
-      - nope
+      - main
   workflow_dispatch:
 
 jobs:
@@ -28,13 +28,13 @@ jobs:
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: '9.x'
+          dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Build with dotnet
         run: dotnet build Query --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish Query -c Release --output Query/published
+        run: dotnet publish Query -c Release --output ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
       - name: Login to Azure
         uses: azure/login@v2
@@ -44,9 +44,7 @@ jobs:
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_082FC03842724373AA163A431CA996D6 }}
 
       - name: Deploy to Azure Web App
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'openvolunteeringapi'
-          slot-name: 'Production'
-          package: Query/published
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
