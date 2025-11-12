@@ -4,13 +4,27 @@
 
 https://service.tib.eu/webvowl/#iri=https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/schema
 
-## Data Transformation
+
+## How To
+
+### Transform Data
 
 The following creates RDF from JSON:
 
 ```zsh
 dotnet run ./data/doit/activities.json ./fuseki/data.ttl --project ./transform/DoIt/
 ```
+
+### Publish Data
+
+```zsh
+source .env
+docker build --build-arg JENA_VERSION=5.6.0 --tag $INFRASTRUCTURE_DATA_CONTAINER ./fuseki
+az login
+az acr login --name $INFRASTRUCTURE_CONTAINER_REGISTRY_NAME
+docker push $INFRASTRUCTURE_DATA_CONTAINER
+```
+
 
 ## Infrastructure
 
@@ -104,12 +118,6 @@ Example Query (URI encode the query and use http://localhost:3030/sparql?query=)
 - Get all activities `CONSTRUCT { ?s <https://id.example.org/schema/activityTitle> ?o } WHERE { ?s <https://id.example.org/schema/activityTitle> ?o }`
 - Get all statements `CONSTRUCT { ?s ?p ?o } WHERE { ?s ?p ?o }`
 - Get the vocabulary `CONSTRUCT { ?s ?p ?o . } WHERE { ?s ?p ?o ; <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://id.example.org/schema> . }`
-
-
-## How To
-
-### Publish Data
-
 
 
 
