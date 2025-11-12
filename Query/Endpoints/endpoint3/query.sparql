@@ -1,4 +1,4 @@
 ﻿DESCRIBE ?s
 WHERE {
-    ?s <https://id.example.org/schema/organizationName> @name ;
+    ?s <https://id.example.org/schema/organizationName> $name ;
 }

@@ -2,4 +2,4 @@
 WHERE {
     ?s ?p ?o .
 }
-LIMIT @limit
+LIMIT 5

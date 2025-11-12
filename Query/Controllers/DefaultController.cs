@@ -63,15 +63,13 @@ public class DefaultController(HttpClient httpClient) : ControllerBase
             foreach (var parameter in endpoint.Parameters)
             {
                 var value = Request.Query[parameter.Name].ToString();
-
-                switch (parameter.Type)
+                var valueNode = parameter.Type switch
                 {
-                    case NodeType.Literal:
-                        sparql.SetLiteral(parameter.Name, value, new Uri(parameter.Datatype), false);
-                        break;
-                    default:
-                        throw new InvalidOperationException("unknown node type");
-                }
+                    NodeType.Literal => new NodeFactory().CreateLiteralNode(value, new Uri(parameter.Datatype)),
+                    _ => throw new InvalidOperationException("unknown node type"),
+                };
+
+                sparql.SetVariable(parameter.Name, valueNode);
             }
         }
 
@@ -80,9 +78,6 @@ public class DefaultController(HttpClient httpClient) : ControllerBase
 
     internal static IDictionary<string, Endpoint> Endpoints => new Dictionary<string, Endpoint>
     {
-        ["endpoint1"] = new([
-            new("limit", NodeType.Literal, XmlSpecsHelper.XmlSchemaDataTypeInteger)
-        ]),
         ["endpoint3"] = new([
             new("name")
         ]),
