@@ -2,6 +2,6 @@
 
 DESCRIBE ?organisation
 WHERE {
-    ?organisation :organizationLabel ?name .
-    FILTER CONTAINS(lcase(?name), lcase($name))
+    ?organisation :organizationLabel ?orgLabel .
+    FILTER CONTAINS(lcase(?orgLabel), lcase($name))
 }
