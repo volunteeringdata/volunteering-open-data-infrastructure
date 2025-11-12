@@ -10,7 +10,7 @@ WHERE {
         :activityEcosystem ?ecosystem ;
         :activityOrganization ?organization ;
         :activityPublishedApps ?publishedApps ;
-        :activityTitle ?title ;
+        :activityLabel ?title ;
         :activityDescription ?description ;
         :activityType ?type ;
         :activityLocationOption ?locationOption ;
