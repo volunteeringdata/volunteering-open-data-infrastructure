@@ -3,6 +3,7 @@ PREFIX : <https://id.example.org/schema/>
 
 CONSTRUCT {
     ?activity
+        a :Activity ;
         :app ?app ;
         :name ?title ;
         :cause ?cause ;

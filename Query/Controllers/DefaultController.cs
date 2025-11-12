@@ -78,7 +78,7 @@ public class DefaultController(HttpClient httpClient) : ControllerBase
 
     internal static IDictionary<string, Endpoint> Endpoints => new Dictionary<string, Endpoint>
     {
-        ["endpoint2"] = new([
+        ["activity_by_id"] = new([
             new("id")
         ]),
         ["organisation_by_name"] = new([
