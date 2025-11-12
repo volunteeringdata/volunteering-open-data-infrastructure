@@ -1,13 +1,9 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy ASP.Net Core app to Azure Web App
 
 env:
   AZURE_WEBAPP_NAME: 'Query20251112104247'
   AZURE_WEBAPP_PACKAGE_PATH: 'Query/published'
   DOTNET_VERSION: '9.0.x'
-
 
 on:
   push:
@@ -19,8 +15,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      id-token: write #This is required for requesting the JWT
-      contents: read #This is required for actions/checkout
+      id-token: write # This is required for requesting the JWT
+      contents: read # This is required for actions/checkout
 
     steps:
       - uses: actions/checkout@v5
