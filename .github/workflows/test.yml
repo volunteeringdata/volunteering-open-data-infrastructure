@@ -8,7 +8,7 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: openvolunteeringapi
-  AZURE_WEBAPP_PACKAGE_PATH: '.'
+  AZURE_WEBAPP_PACKAGE_PATH: 'Query'
   DOTNET_VERSION: '9.x'
 
 jobs:
@@ -26,14 +26,14 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: ${{ env.DOTNET_VERSION }} 
+          dotnet-version: ${{ env.DOTNET_VERSION }}
       
       # Run dotnet build and publish
       - name: dotnet build and publish
         run: |
           dotnet restore
           dotnet build Query --configuration Release
-          dotnet publish Query -c Release --property:PublishDir='${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp' 
+          dotnet publish Query -c Release --property:PublishDir='${{ env.AZURE_WEBAPP_PACKAGE_PATH }}' 
 
       # Login to Azure
       - name: Login to Azure
@@ -48,4 +48,4 @@ jobs:
         uses: azure/webapps-deploy@v3
         with: 
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp'
+          package: '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
