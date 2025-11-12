@@ -12,7 +12,7 @@ CONSTRUCT {
 WHERE {
     ?activity
         :activityApp ?app ;
-        :activityTitle ?title ;
+        :activityLabel ?title ;
     .
 
     ?app :appName ?name .
