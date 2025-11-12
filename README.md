@@ -28,7 +28,7 @@ dotnet run ./data/doit/activities.json ./fuseki/data.ttl --project ./transform/D
 
 ```zsh
 source .env
-docker build --build-arg JENA_VERSION=5.6.0 --tag $INFRASTRUCTURE_DATA_CONTAINER ./fuseki
+docker build --tag $INFRASTRUCTURE_DATA_CONTAINER ./fuseki
 az login
 az acr login --name $INFRASTRUCTURE_CONTAINER_REGISTRY_NAME
 docker push $INFRASTRUCTURE_DATA_CONTAINER
@@ -104,7 +104,7 @@ A readonly triplestore with a sparql endpoint containing the latest data (includ
 ### Build Container
 
 ```zsh
-docker build --build-arg JENA_VERSION=5.6.0 --tag $INFRASTRUCTURE_DATA_CONTAINER ./fuseki
+docker build --tag $INFRASTRUCTURE_DATA_CONTAINER ./fuseki
 ```
 
 ### Deploy Container
