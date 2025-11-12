@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using VDS.RDF;
 using VDS.RDF.Parsing;
 using VDS.RDF.Query;
@@ -10,10 +11,13 @@ namespace Query.Controllers;
 [Route("/openapi.json")]
 [ApiController]
 [AllowSynchronousIO]
-public class OpenApiController() : ControllerBase
+public partial class OpenApiController() : ControllerBase
 {
     private const string graphResponse = "graphResponse";
     private const string nonGraphResponse = "nonGraphResponse";
+
+    [GeneratedRegex(@"(?<=Query\.Endpoints\.).+(?=\.query\.sparql)")]
+    private static partial Regex ResourceNameExtractor { get; }
 
     [HttpGet]
     public OpenApiDocument Get() => new()
@@ -57,10 +61,18 @@ public class OpenApiController() : ControllerBase
         {
             var paths = new OpenApiPaths();
 
-            foreach (var endpoint in DefaultController.Endpoints) // TODO: Iterate resources instead or ensure Endpoints has all of them
+
+            var endpointNames = Assembly.GetExecutingAssembly().GetManifestResourceNames()
+                .Select(name => ResourceNameExtractor.Match(name))
+                .Where(match => match.Success)
+                .Select(match => match.Value)
+                .Distinct();
+
+            foreach (var endpointName in endpointNames)
             {
-                var name = endpoint.Key;
-                var resourceName = $"Query.Endpoints.{name}.query.sparql";
+                DefaultController.Endpoints.TryGetValue(endpointName, out var endpoint);
+
+                var resourceName = $"Query.Endpoints.{endpointName}.query.sparql";
                 using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName);
                 using var reader = new StreamReader(stream!);
                 var sparqlText = reader.ReadToEnd();
@@ -83,7 +95,7 @@ public class OpenApiController() : ControllerBase
                     {
                         [HttpMethod.Get] = new OpenApiOperation
                         {
-                            Parameters = [.. endpoint.Value.Parameters.Select(p => new OpenApiParameter {
+                            Parameters = endpoint is null ? [] : [.. endpoint.Parameters.Select(p => new OpenApiParameter {
                                 Name = p.Name,
                                 In = ParameterLocation.Query,
                                 Schema = new OpenApiSchema {
@@ -96,7 +108,7 @@ public class OpenApiController() : ControllerBase
                     }
                 };
 
-                paths.Add($"/{endpoint.Key}", pathItem);
+                paths.Add($"/{endpointName}", pathItem);
             }
 
             return paths;
