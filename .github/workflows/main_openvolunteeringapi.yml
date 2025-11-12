@@ -4,7 +4,7 @@
 name: Build and deploy ASP.Net Core app to Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: 'test123zzz'
+  AZURE_WEBAPP_NAME: 'Query20251112104247'
   AZURE_WEBAPP_PACKAGE_PATH: 'Query/published'
   DOTNET_VERSION: '9.0.x'
 
@@ -34,14 +34,14 @@ jobs:
         run: dotnet build Query --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish Query -c Release --output ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        run: dotnet publish Query --configuration Release --output ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_60342768C2E6402F8107EA7317518A7E }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9CC34914B1764EE8AB5CF0815FEA4C4B }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_082FC03842724373AA163A431CA996D6 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_10DCAC6E209B43D2999CF14BAC091023 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_83921421B2E9492AAF654FE7F4E55479 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_BBDC26EEEF3544F189FA7CDE22C42000 }}
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
