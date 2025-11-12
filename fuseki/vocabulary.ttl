@@ -110,6 +110,22 @@ volunteering:url
     rdfs:subPropertyOf rdfs:seeAlso ;
     rdfs:label "url"@en .
 
+volunteering:address
+    a rdf:Property ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:label "address"@en .
+
+volunteering:longitude
+    a rdf:Property ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:label "longitude"@en .
+
+volunteering:latitude
+    a rdf:Property ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subPropertyOf rdfs:seeAlso ;
+    rdfs:label "latitude"@en .
+
 
 ## Linking Properties
 volunteering:activityOrganisation
@@ -236,7 +252,7 @@ volunteering:activityLabel
 volunteering:activityDescription
     a rdf:Property ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:title ;
+    rdfs:subPropertyOf volunteering:description ;
     rdfs:domain volunteering:Activity ;
     rdfs:label "activity description"@en .
 
@@ -246,6 +262,27 @@ volunteering:activityUrl
     rdfs:subPropertyOf volunteering:url ;
     rdfs:domain volunteering:Activity ;
     rdfs:label "activity URL"@en .
+
+volunteering:activityAddress
+    a rdf:Property ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subPropertyOf volunteering:url ;
+    rdfs:domain volunteering:Activity ;
+    rdfs:label "activity address"@en .
+
+volunteering:activityLongitude
+    a rdf:Property ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subPropertyOf volunteering:url ;
+    rdfs:domain volunteering:Activity ;
+    rdfs:label "activity longitude"@en .
+
+volunteering:activityLatitude
+    a rdf:Property ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subPropertyOf volunteering:url ;
+    rdfs:domain volunteering:Activity ;
+    rdfs:label "activity latitude"@en .
 
 volunteering:organisationLabel
     a rdf:Property ;
@@ -257,7 +294,7 @@ volunteering:organisationLabel
 volunteering:organisationDescription
     a rdf:Property ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:title ;
+    rdfs:subPropertyOf volunteering:description ;
     rdfs:domain volunteering:Organisation ;
     rdfs:label "organisation description"@en .
 
@@ -267,6 +304,27 @@ volunteering:organisationUrl
     rdfs:subPropertyOf volunteering:url ;
     rdfs:domain volunteering:Organisation ;
     rdfs:label "organisation URL"@en .
+
+volunteering:organisationAddress
+    a rdf:Property ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subPropertyOf volunteering:address ;
+    rdfs:domain volunteering:Organisation ;
+    rdfs:label "organisation address"@en .
+
+volunteering:organisationLongitude
+    a rdf:Property ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subPropertyOf volunteering:longitude ;
+    rdfs:domain volunteering:Organisation ;
+    rdfs:label "organisation longitude"@en .
+
+volunteering:organisationLatitude
+    a rdf:Property ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:subPropertyOf volunteering:latitude ;
+    rdfs:domain volunteering:Organisation ;
+    rdfs:label "organisation latitude"@en .
 
 volunteering:systemLabel
     a rdf:Property ;
@@ -278,7 +336,7 @@ volunteering:systemLabel
 volunteering:systemDescription
     a rdf:Property ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:title ;
+    rdfs:subPropertyOf volunteering:description ;
     rdfs:domain volunteering:System ;
     rdfs:label "system description"@en .
 

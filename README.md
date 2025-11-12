@@ -1,5 +1,8 @@
 # Open Volunteering Infrastructure
 
+## Data Model
+
+https://service.tib.eu/webvowl/#iri=https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/schema
 
 ## Data Transformation
 
@@ -103,6 +106,9 @@ Example Query (URI encode the query and use http://localhost:3030/sparql?query=)
 - Get the vocabulary `CONSTRUCT { ?s ?p ?o . } WHERE { ?s ?p ?o ; <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://id.example.org/schema> . }`
 
 
+## How To
+
+### Publish Data
 
 
 
@@ -125,4 +131,47 @@ Serve Swagger UI
 Serve YasGUI
 Finalize mapping
 Map ontologies
+
+
+# PRESENTATION
+
+10m presentation
+Settle narative backed by features
+
+Minimum investment of time into well known technologies to facilitate the purpose of the Hackathon.
+Know what the purpose is and show I support it.
+
+Data accessibility.
+
+Show GitHub
+Show exported docs (LODE)
+Show Apps
+This is live
+
+
+Search: themes, skills, geolocation and time
+Discoverability: Swagger UI with data model
+AI: Croissant format endpoint
+
+All of these are based on RDF, SPARQL, named query parameterised endpoint
+
+We have interoperability
+
+Make it so that at the end they ask so is this what we're doing instead of a triplestore? This is the triplestore.
+
+In question time, possibly Demo the service and show a data deploy.
+
+Becomes an asset rather than a hindrance
+
+# TODO NOW
+
+Improve Vocabulary
+GeoSPARQL Query
+Parameterised Query
+Swagger UI
+Fix up 
+
+
+http://localhost:5199/geo_example2.html?lat=51.36&lon=-0.37&within=50
+
 
