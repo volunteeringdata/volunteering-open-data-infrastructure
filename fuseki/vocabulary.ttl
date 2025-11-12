@@ -28,32 +28,43 @@ prefix vann:            <http://purl.org/vocab/vann/>
 
 
 ## Classes
+volunteering:Thing
+    a owl:Class ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:label "Volunteering Thing"@en ;
+    rdfs:comment "Anything that involves volunteers."@en .
+
 volunteering:Activity
     a owl:Class ;
+    rdfs:subClassOf volunteering:Thing ;
     rdfs:isDefinedBy :schema ;
     rdfs:label "Volunteering Activity"@en ;
     rdfs:comment "Any kind of activity that involves volunteers."@en .
 
 volunteering:Organisation
     a owl:Class ;
+    rdfs:subClassOf volunteering:Thing ;
     rdfs:isDefinedBy :schema ;
     rdfs:label "Volunteer Involving Organisation"@en ;
     rdfs:comment "Any organisation running activities that involve volunteers."@en .
 
 volunteering:System
     a owl:Class ;
+    rdfs:subClassOf volunteering:Thing ;
     rdfs:isDefinedBy :schema ;
     rdfs:label "Volunteering Management System"@en ;
     rdfs:comment "Any system that is used to manage activities that involve volunteers."@en .
 
 volunteering:Location
     a owl:Class ;
+    rdfs:subClassOf volunteering:Thing ;
     rdfs:isDefinedBy :schema ;
     rdfs:label "Volunteering Location"@en ;
     rdfs:comment "Any location related to volunteering activities."@en .
 
 volunteering:Contact
     a owl:Class ;
+    rdfs:subClassOf volunteering:Thing ;
     rdfs:isDefinedBy :schema ;
     rdfs:label "Volunteering Contact"@en ;
     rdfs:comment "Any contact related to volunteering activities."@en .
