@@ -1,10 +1,10 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - openvolunteeringapi
+name: Build and deploy ASP.Net Core app to Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: 'openvolunteeringapi'
+  AZURE_WEBAPP_NAME: 'test123zzz'
   AZURE_WEBAPP_PACKAGE_PATH: 'Query/published'
   DOTNET_VERSION: '9.0.x'
 
