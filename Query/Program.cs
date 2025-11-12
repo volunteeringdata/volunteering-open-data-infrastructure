@@ -29,5 +29,7 @@ builder.Services.AddControllers(options =>
 builder.Services.AddHttpClient();
 
 var app = builder.Build();
+
 app.MapControllers();
+app.UseSwaggerUI(static options => options.SwaggerEndpoint("/openapi.json", "live"));
 app.Run();
