@@ -57,7 +57,7 @@ internal class Vocabulary
     internal static IUriNode OrganizationPhone { get; } = Node("organizationPhone");
     internal static IUriNode OrganizationDeleted { get; } = Node("organizationDeleted");
     internal static IUriNode OrganizationDescription { get; } = Node("organizationDescription");
-    internal static IUriNode OrganizationName { get; } = Node("organizationName");
+    internal static IUriNode OrganizationName { get; } = Node("organizationLabel");
     internal static IUriNode OrganizationPurpose { get; } = Node("organizationPurpose");
     internal static IUriNode OrganizationTos { get; } = Node("organizationTos");
     internal static IUriNode OrganizationType { get; } = Node("organizationType");

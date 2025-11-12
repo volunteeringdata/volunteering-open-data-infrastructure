@@ -6,7 +6,7 @@ SELECT ?name1 ?distance {
     ?organization
         :latitude ?lat ;
         :longitude ?lon ;
-        :organizationName ?name1 ;
+        :organizationLabel ?name1 ;
     .
 
     BIND(spatialF:convertLatLon(?lat, ?lon) as ?orgLocation)
