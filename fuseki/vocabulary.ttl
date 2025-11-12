@@ -69,6 +69,20 @@ volunteering:Contact
     rdfs:label "Volunteering Contact"@en ;
     rdfs:comment "Any contact related to volunteering activities."@en .
 
+volunteering:Time
+    a owl:Class ;
+    rdfs:subClassOf volunteering:Thing ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:label "Volunteering Time"@en ;
+    rdfs:comment "Any time information related to volunteering activities."@en .
+
+volunteering:Concept
+    a owl:Class ;
+    rdfs:subClassOf volunteering:Thing ;
+    rdfs:isDefinedBy :schema ;
+    rdfs:label "Volunteering Concept"@en ;
+    rdfs:comment "Any conceptual information related to volunteering activities."@en .
+
 
 ## Object Properties
 volunteering:activity
