@@ -412,6 +412,34 @@ id:schema
     rdfs:domain :Activity ;
     rdfs:label "activity URL"@en .
 
+:conceptLabel
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :label ;
+    rdfs:domain :Concept ;
+    rdfs:label "concept label"@en .
+
+:contactLabel
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :label ;
+    rdfs:domain :Contact ;
+    rdfs:label "contact label"@en .
+
+:locationLabel
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :label ;
+    rdfs:domain :Location ;
+    rdfs:label "location label"@en .
+
+:locationDescription
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :description ;
+    rdfs:domain :System ;
+    rdfs:label "location description"@en .
+
 :organisationLabel
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
@@ -454,16 +482,9 @@ id:schema
     rdfs:domain :System ;
     rdfs:label "system URL"@en .
 
-:locationLabel
+:timeLabel
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf :label ;
-    rdfs:domain :Location ;
-    rdfs:label "location label"@en .
-
-:locationDescription
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :description ;
-    rdfs:domain :System ;
-    rdfs:label "location description"@en .
+    rdfs:domain :Time ;
+    rdfs:label "time label"@en .
