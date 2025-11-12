@@ -1,0 +1,18 @@
+BASE <https://id.example.org/>
+PREFIX : <https://id.example.org/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT {
+    ?vocabularyResource ?vocabularyResourceProperty ?vocabularyResourceValue .
+    ?vocabularyObjectProperty ?vocabularyObjectPropertyProperty ?vocabularyObjectPropertyValue .
+}
+WHERE {
+    ?vocabularyResource
+        ?vocabularyResourceProperty ?vocabularyResourceValue ;
+        a owl:Class .
+
+    ?vocabularyObjectProperty
+        ?vocabularyObjectPropertyProperty ?vocabularyObjectPropertyValue ;
+        a owl:ObjectProperty .
+}

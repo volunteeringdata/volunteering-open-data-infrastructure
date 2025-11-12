@@ -81,13 +81,16 @@ public class DefaultController(HttpClient httpClient) : ControllerBase
         ["activity_by_id"] = new([
             new("id")
         ]),
-        ["organisation_by_name"] = new([
-            new("name")
-        ]),
         ["geo_example2"] = new([
             new("lat", datatype: XmlSpecsHelper.XmlSchemaDataTypeDouble),
             new("lon", datatype: XmlSpecsHelper.XmlSchemaDataTypeDouble),
             new("within", datatype: XmlSpecsHelper.XmlSchemaDataTypeInteger),
+        ]),
+        ["organisation_by_name"] = new([
+            new("name")
+        ]),
+        ["schema_by_class"] = new([
+            new("class")
         ]),
     };
 }
