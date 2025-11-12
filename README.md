@@ -4,6 +4,15 @@
 
 https://service.tib.eu/webvowl/#iri=https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/schema
 
+Use classification properties whenever possible.
+
+
+## API
+
+https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/swagger
+
+https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/openapi.json
+
 
 ## How To
 
