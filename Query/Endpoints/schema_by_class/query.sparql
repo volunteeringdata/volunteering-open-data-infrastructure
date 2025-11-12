@@ -9,6 +9,7 @@ CONSTRUCT {
 }
 WHERE {
     FILTER(?vocabularyClass = IRI($class))
+    FILTER(?vocabularyPropertyProperty != IRI(rdfs:subPropertyOf))
     FILTER(?vocabularyPropertyProperty != IRI(owl:inverseOf))
     ?vocabularyClass ?vocabularyClassProperty ?vocabularyClassValue .
       
