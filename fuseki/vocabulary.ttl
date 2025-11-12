@@ -238,17 +238,20 @@ volunteering:url
 volunteering:address
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
+    rdfs:domain volunteering:Location ;
     rdfs:label "address"@en .
 
 volunteering:longitude
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
+    rdfs:domain volunteering:Location ;
     rdfs:label "longitude"@en .
 
 volunteering:latitude
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
     rdfs:subPropertyOf rdfs:seeAlso ;
+    rdfs:domain volunteering:Location ;
     rdfs:label "latitude"@en .
 
 
@@ -275,27 +278,6 @@ volunteering:activityUrl
     rdfs:domain volunteering:Activity ;
     rdfs:label "activity URL"@en .
 
-volunteering:activityAddress
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:url ;
-    rdfs:domain volunteering:Activity ;
-    rdfs:label "activity address"@en .
-
-volunteering:activityLongitude
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:url ;
-    rdfs:domain volunteering:Activity ;
-    rdfs:label "activity longitude"@en .
-
-volunteering:activityLatitude
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:url ;
-    rdfs:domain volunteering:Activity ;
-    rdfs:label "activity latitude"@en .
-
 volunteering:organisationLabel
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
@@ -316,27 +298,6 @@ volunteering:organisationUrl
     rdfs:subPropertyOf volunteering:url ;
     rdfs:domain volunteering:Organisation ;
     rdfs:label "organisation URL"@en .
-
-volunteering:organisationAddress
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:address ;
-    rdfs:domain volunteering:Organisation ;
-    rdfs:label "organisation address"@en .
-
-volunteering:organisationLongitude
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:longitude ;
-    rdfs:domain volunteering:Organisation ;
-    rdfs:label "organisation longitude"@en .
-
-volunteering:organisationLatitude
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:latitude ;
-    rdfs:domain volunteering:Organisation ;
-    rdfs:label "organisation latitude"@en .
 
 volunteering:systemLabel
     a owl:DatatypeProperty ;
@@ -366,23 +327,9 @@ volunteering:locationLabel
     rdfs:domain volunteering:Location ;
     rdfs:label "location label"@en .
 
-volunteering:locationAddress
+volunteering:locationDescription
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:address ;
-    rdfs:domain volunteering:Location ;
-    rdfs:label "location address"@en .
-
-volunteering:locationLatitude
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:latitude ;
-    rdfs:domain volunteering:Location ;
-    rdfs:label "location latitude"@en .
-
-volunteering:locationLongitude
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy :schema ;
-    rdfs:subPropertyOf volunteering:longitude ;
-    rdfs:domain volunteering:Location ;
-    rdfs:label "location longitude"@en .
+    rdfs:subPropertyOf volunteering:description ;
+    rdfs:domain volunteering:System ;
+    rdfs:label "location description"@en .
