@@ -13,6 +13,7 @@ prefix xsd:             <http://www.w3.org/2001/XMLSchema#>
 
 ### Other namespaces used
 prefix dc:              <http://purl.org/dc/terms/>
+prefix time:            <http://www.w3.org/2006/time#>
 prefix vann:            <http://purl.org/vocab/vann/>
 
 
@@ -387,6 +388,20 @@ id:schema
     rdfs:subPropertyOf rdfs:seeAlso ;
     rdfs:domain :Location ;
     rdfs:label "latitude"@en .
+
+:hasBeginning
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf time:hasBeginning ;
+    rdfs:domain :Time ;
+    rdfs:label "has beginning"@en .
+
+:hasEnd
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf time:hasEnd ;
+    rdfs:domain :Time ;
+    rdfs:label "has end"@en .
 
 
 ## Classification Datatype Properties
