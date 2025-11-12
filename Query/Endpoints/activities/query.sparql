@@ -2,8 +2,8 @@
 PREFIX : <https://id.example.org/schema/>
 
 CONSTRUCT {
+    <Activities> :activities ?activity .
     ?activity
-        a :Activity ;
         :app ?app ;
         :name ?title ;
         :cause ?cause ;
