@@ -1,4 +1,5 @@
 using Query.Formatters;
+using Query.Services;
 using VDS.RDF;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,6 +28,8 @@ builder.Services.AddControllers(options =>
 });
 
 builder.Services.AddHttpClient();
+
+builder.Services.AddSingleton<QueryService>();
 
 var app = builder.Build();
 
