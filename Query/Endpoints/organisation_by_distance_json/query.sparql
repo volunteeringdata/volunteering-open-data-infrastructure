@@ -1,0 +1,28 @@
+PREFIX : <https://id.example.org/schema/>
+PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/>
+PREFIX spatialF: <http://jena.apache.org/function/spatial#>
+
+CONSTRUCT
+{
+    <Organisations> :organisations ?organisation .
+    ?organization
+        :name ?name ;
+        :distance ?distance ;
+    .
+}
+WHERE
+{
+    ?organization
+        :latitude ?orgLat ;
+        :longitude ?orgLon ;
+        :organizationLabel ?name ;
+    .
+
+    BIND(spatialF:convertLatLon(?orgLat, ?orgLon) as ?orgLocation)
+    BIND(spatialF:convertLatLon($lat, $lon) as ?myLocation)
+
+    FILTER(spatialF:nearby(?orgLocation, ?myLocation, $within, units:kilometer))
+
+    BIND(spatialF:distance(?orgLocation, ?myLocation, units:kilometer) as ?distance)
+}
+ORDER BY ?distance
