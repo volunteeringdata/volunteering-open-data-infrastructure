@@ -86,6 +86,9 @@ public class DefaultController(HttpClient httpClient) : ControllerBase
             new("lon", datatype: XmlSpecsHelper.XmlSchemaDataTypeDouble),
             new("within", datatype: XmlSpecsHelper.XmlSchemaDataTypeInteger),
         ]),
+        ["organisation_by_id"] = new([
+            new("id")
+        ]),
         ["organisation_by_name"] = new([
             new("name")
         ]),

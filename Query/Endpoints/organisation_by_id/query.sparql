@@ -1,0 +1,21 @@
+﻿BASE <https://id.example.org/>
+PREFIX : <https://id.example.org/schema/>
+
+CONSTRUCT {
+    ?organisation
+        a :Organisation ;
+        :name ?label ;
+        :description ?description ;
+        :purpose ?purpose ;
+        :website ?website ;
+    .
+}
+WHERE {
+    FILTER(?organisation = IRI($id))
+    ?organisation
+        :organizationLabel ?label ;
+        :organizationDescription ?description ;
+        :organizationPurpose ?purpose ;
+        :organizationWebsite ?website ;
+    .
+}
