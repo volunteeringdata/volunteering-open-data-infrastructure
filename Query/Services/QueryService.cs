@@ -10,6 +10,8 @@ namespace Query.Services;
 
 public class QueryService(HttpClient httpClient, IOptions<QueryServiceOptions> options)
 {
+    private static readonly NodeFactory factory = new();
+
     private readonly QueryServiceOptions options = options.Value;
 
     public async Task<object?> ExecuteNamedQueryAsync(string name, Dictionary<string, string> parameters, CancellationToken ct)
@@ -60,7 +62,7 @@ public class QueryService(HttpClient httpClient, IOptions<QueryServiceOptions> o
             foreach (var parameter in endpoint.Parameters)
             {
                 var value = parameters[parameter.Name];
-                var valueNode = new NodeFactory().CreateLiteralNode(value, new Uri(parameter.Datatype));
+                var valueNode = factory.CreateLiteralNode(value, new Uri(parameter.Datatype));
 
                 sparql.SetVariable(parameter.Name, valueNode);
             }
