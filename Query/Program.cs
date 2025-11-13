@@ -31,8 +31,14 @@ builder.Services.AddHttpClient();
 
 builder.Services.AddSingleton<QueryService>();
 
+builder.Services.AddMcpServer()
+    .WithHttpTransport()
+    .WithToolsFromAssembly();
+
 var app = builder.Build();
 
 app.MapControllers();
 app.UseSwaggerUI(static options => options.SwaggerEndpoint("/openapi.json", "live"));
+app.MapMcp("mcp");
+
 app.Run();
