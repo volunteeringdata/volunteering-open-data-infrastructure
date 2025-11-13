@@ -1,3 +1,4 @@
+﻿using Microsoft.Extensions.Options;
 ﻿using Newtonsoft.Json.Linq;
 using Query.Controllers;
 using System.Reflection;
@@ -7,8 +8,10 @@ using VDS.RDF.Query;
 
 namespace Query.Services;
 
-public class QueryService(HttpClient httpClient)
+public class QueryService(HttpClient httpClient, IOptions<QueryServiceOptions> options)
 {
+    private readonly QueryServiceOptions options = options.Value;
+
     public async Task<object?> ExecuteNamedQueryAsync(string name, Dictionary<string, string> parameters, CancellationToken ct)
     {
         var resourceName = $"Query.Endpoints.{name}.query.sparql";
@@ -21,8 +24,7 @@ public class QueryService(HttpClient httpClient)
         var sparqlText = Parametrize(name, parameters, stream);
 
         var sparqlQuery = new SparqlQueryParser().ParseFromString(sparqlText);
-        // TODO: Extract endpoint uri to config
-        var sparqlClient = new SparqlQueryClient(httpClient, new Uri("https://openvolunteeringdata-edd0h6d2dwcaa8br.uksouth-01.azurewebsites.net/sparql"));
+        var sparqlClient = new SparqlQueryClient(httpClient, options.SparqlEndpointUri);
 
         if (sparqlQuery.QueryType == SparqlQueryType.Construct || sparqlQuery.QueryType == SparqlQueryType.Describe || sparqlQuery.QueryType == SparqlQueryType.DescribeAll)
         {

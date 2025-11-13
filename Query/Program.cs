@@ -38,6 +38,8 @@ builder.Services.AddMcpServer()
 
 builder.Services.AddCors();
 
+builder.Services.AddOptions<QueryServiceOptions>().BindConfiguration("QueryService");
+
 var app = builder.Build();
 
 app.MapControllers();
