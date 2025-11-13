@@ -1,6 +1,10 @@
-﻿PREFIX : <https://id.example.org/schema/>
+﻿BASE <https://id.example.org/>
+PREFIX : <https://id.example.org/schema/>
 
-DESCRIBE ?organisation
+CONSTRUCT {
+    <Organisations> :organisations ?organisation .
+    ?organisation :name ?orgLabel .
+}
 WHERE {
     ?organisation :organizationLabel ?orgLabel .
     FILTER CONTAINS(lcase(?orgLabel), lcase($name))
