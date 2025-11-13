@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Options;
 using Query.Formatters;
 using Query.Services;
 using VDS.RDF;
@@ -35,10 +36,16 @@ builder.Services.AddMcpServer()
     .WithHttpTransport()
     .WithToolsFromAssembly();
 
+builder.Services.AddCors();
+
 var app = builder.Build();
 
 app.MapControllers();
 app.UseSwaggerUI(static options => options.SwaggerEndpoint("/openapi.json", "live"));
 app.MapMcp("mcp");
+app.UseCors(builder => builder
+     .AllowAnyOrigin()
+     .AllowAnyMethod()
+     .AllowAnyHeader());
 
 app.Run();
