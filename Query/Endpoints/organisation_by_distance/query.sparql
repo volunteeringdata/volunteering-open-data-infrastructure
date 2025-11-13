@@ -2,11 +2,11 @@ PREFIX : <https://id.example.org/schema/>
 PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX spatialF: <http://jena.apache.org/function/spatial#>
 
-SELECT ?name1 ?distance {
+SELECT ?name ?distance {
     ?organization
         :latitude ?orgLat ;
         :longitude ?orgLon ;
-        :organizationLabel ?name1 ;
+        :organizationLabel ?name ;
     .
 
     BIND(spatialF:convertLatLon(?orgLat, ?orgLon) as ?orgLocation)
