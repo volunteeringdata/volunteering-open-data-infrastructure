@@ -60,11 +60,7 @@ public class QueryService(HttpClient httpClient, IOptions<QueryServiceOptions> o
             foreach (var parameter in endpoint.Parameters)
             {
                 var value = parameters[parameter.Name];
-                var valueNode = parameter.Type switch
-                {
-                    NodeType.Literal => new NodeFactory().CreateLiteralNode(value, new Uri(parameter.Datatype)),
-                    _ => throw new InvalidOperationException("unknown node type"),
-                };
+                var valueNode = new NodeFactory().CreateLiteralNode(value, new Uri(parameter.Datatype));
 
                 sparql.SetVariable(parameter.Name, valueNode);
             }

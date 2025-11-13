@@ -115,18 +115,13 @@ public partial class OpenApiController() : ControllerBase
         }
     }
 
-    private static JsonSchemaType AsJsonSchemaType(Param param) => param.Type switch
+    private static JsonSchemaType AsJsonSchemaType(Param param) => param.Datatype switch
     {
-        NodeType.Literal => param.Datatype switch
-        {
-            XmlSpecsHelper.XmlSchemaDataTypeInteger or
-            XmlSpecsHelper.XmlSchemaDataTypeDouble => JsonSchemaType.Number,
+        XmlSpecsHelper.XmlSchemaDataTypeInteger or
+        XmlSpecsHelper.XmlSchemaDataTypeDouble => JsonSchemaType.Number,
 
-            XmlSpecsHelper.XmlSchemaDataTypeString => JsonSchemaType.String,
+        XmlSpecsHelper.XmlSchemaDataTypeString => JsonSchemaType.String,
 
-            _ => throw new Exception($"unknown literal parameter datatype {param.Datatype}")
-        },
-
-        _ => throw new Exception($"unknown parameter type {param.Type}")
+        _ => throw new Exception($"unknown literal parameter datatype {param.Datatype}")
     };
 }
