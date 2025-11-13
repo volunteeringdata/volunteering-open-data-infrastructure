@@ -1,18 +1,17 @@
-using Microsoft.Extensions.Options;
 using Query.Formatters;
 using Query.Services;
-using VDS.RDF;
+using static VDS.RDF.MimeTypesHelper;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers(options =>
 {
-    options.FormatterMappings.SetMediaTypeMappingForFormat("csv", MimeTypesHelper.Csv[0]);
-    options.FormatterMappings.SetMediaTypeMappingForFormat("jsonld", MimeTypesHelper.JsonLd[0]);
-    options.FormatterMappings.SetMediaTypeMappingForFormat("ttl", MimeTypesHelper.Turtle[0]);
-    options.FormatterMappings.SetMediaTypeMappingForFormat("rdf", MimeTypesHelper.RdfXml[0]);
-    options.FormatterMappings.SetMediaTypeMappingForFormat("nt", MimeTypesHelper.NTriples[0]);
-    options.FormatterMappings.SetMediaTypeMappingForFormat("html", MimeTypesHelper.Html[0]);
+    options.FormatterMappings.SetMediaTypeMappingForFormat(DefaultCsvExtension, Csv[0]);
+    options.FormatterMappings.SetMediaTypeMappingForFormat(DefaultJsonLdExtension, JsonLd[0]);
+    options.FormatterMappings.SetMediaTypeMappingForFormat(DefaultTurtleExtension, Turtle[0]);
+    options.FormatterMappings.SetMediaTypeMappingForFormat(DefaultRdfXmlExtension, RdfXml[0]);
+    options.FormatterMappings.SetMediaTypeMappingForFormat(DefaultNTriplesExtension, NTriples[0]);
+    options.FormatterMappings.SetMediaTypeMappingForFormat(DefaultHtmlExtension, Html[0]);
 
     options.ReturnHttpNotAcceptable = true;
 
