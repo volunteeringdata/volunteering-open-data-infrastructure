@@ -1,34 +1,44 @@
-﻿BASE <https://id.example.org/>
-PREFIX : <https://id.example.org/schema/>
+﻿PREFIX : <https://id.example.org/schema/>
+PREFIX cr: <http://mlcommons.org/croissant/>
+PREFIX schema: <https://schema.org/>
+PREFIX dc: <http://purl.org/dc/terms/>
 
 CONSTRUCT {
-    <https://id.example.org/schema/activityDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mlcommons.org/croissant/Field> .
-    <https://id.example.org/schema/activityTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mlcommons.org/croissant/Field> .
-    <https://id.example.org/schema/organizationDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mlcommons.org/croissant/Field> .
-    <https://id.example.org/schema/organizationName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mlcommons.org/croissant/Field> .
-    <https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/all_activities.csv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mlcommons.org/croissant/FileObject> .
-    <https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/all_activities.csv> <https://schema.org/contentUrl> "https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/all_activities.csv"@en .
-    <https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/all_activities.csv> <https://schema.org/encodingFormat> "text/csv"@en .
-    <https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/all_activities.csv> <https://schema.org/name> "all_activities.csv"@en .
-    _:b0 <http://mlcommons.org/croissant/recordSet> _:b1 .
-    _:b0 <http://mlcommons.org/croissant/recordSet> _:b2 .
-    _:b0 <http://purl.org/dc/terms/conformsTo> "http://mlcommons.org/croissant/1.0"@en .
-    _:b0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Dataset> .
-    _:b0 <https://schema.org/creator> "Open Volunteering"@en .
-    _:b0 <https://schema.org/datePublished> "2025-11-07"@en .
-    _:b0 <https://schema.org/description> "Volunteering and social action opportunities in the UK"@en .
-    _:b0 <https://schema.org/distribution> <https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/all_activities.csv> .
-    _:b0 <https://schema.org/license> "https://creativecommons.org/licenses/by/4.0/"@en .
-    _:b0 <https://schema.org/name> "Volunteering and social action opportunities in the UK"@en .
-    _:b0 <https://schema.org/url> "https://example.org/opportunities"@en .
-    _:b1 <http://mlcommons.org/croissant/dataType> <https://id.example.org/schema/Activity> .
-    _:b1 <http://mlcommons.org/croissant/field> <https://id.example.org/schema/activityDescription> .
-    _:b1 <http://mlcommons.org/croissant/field> <https://id.example.org/schema/activityTitle> .
-    _:b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mlcommons.org/croissant/RecordSet> .
-    _:b2 <http://mlcommons.org/croissant/dataType> <https://id.example.org/schema/Organisation> .
-    _:b2 <http://mlcommons.org/croissant/field> <https://id.example.org/schema/organizationDescription> .
-    _:b2 <http://mlcommons.org/croissant/field> <https://id.example.org/schema/organizationName> .
-    _:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mlcommons.org/croissant/RecordSet> .
+    [
+        a schema:Dataset ;
+        cr:recordSet [
+            a cr:RecordSet ;
+            cr:dataType :Activity ;
+            cr:field :activityDescription ;
+            cr:field :activityTitle ;
+        ] ;
+
+        cr:recordSet [
+            a cr:RecordSet ;
+            cr:dataType :Organisation ;
+            cr:field :organizationDescription ;
+            cr:field :organizationName ;
+        ] ;
+
+        dc:conformsTo "http://mlcommons.org/croissant/1.0"@en ;
+        schema:creator "Open Volunteering"@en ;
+        schema:datePublished "2025-11-07"@en ;
+        schema:description "Volunteering and social action opportunities in the UK"@en ;
+        schema:distribution [
+            a cr:FileObject ;
+            schema:contentUrl "all_activities.csv"@en ;
+            schema:encodingFormat "text/csv"@en ;
+            schema:name "all_activities.csv"@en ;
+        ] ;
+
+        schema:license "https://creativecommons.org/licenses/by/4.0/"@en ;
+        schema:name "Volunteering and social action opportunities in the UK"@en ;
+        schema:url "https://example.org/opportunities"@en ;
+    ] .
+
+    :activityDescription a cr:Field .
+    :activityTitle a cr:Field .
+    :organizationDescription a cr:Field .
+    :organizationName a cr:Field .
 }
-WHERE {
-}
+WHERE {}

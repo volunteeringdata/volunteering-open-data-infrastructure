@@ -2,7 +2,6 @@
   "@context": {
     "@language": "en",
     "@vocab": "https://schema.org/",
-    "@base": "https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/",
     "volunteering": "https://id.example.org/schema/",
     "sc": "https://schema.org/",
     "cr": "http://mlcommons.org/croissant/",
@@ -46,51 +45,5 @@
     "subField": "cr:subField",
     "transform": "cr:transform"
   },
-  "@type": "sc:Dataset",
-  "conformsTo": "http://mlcommons.org/croissant/1.0",
-  "description": "Volunteering and social action opportunities in the UK",
-  "license": "https://creativecommons.org/licenses/by/4.0/",
-  "name": "Volunteering and social action opportunities in the UK",
-  "url": "https://example.org/opportunities",
-  "creator": "Open Volunteering",
-  "datePublished": "2025-11-07",
-  "distribution": [
-    {
-      "@type": "cr:FileObject",
-      "@id": "all_activities.csv",
-      "name": "all_activities.csv",
-      "contentUrl": "https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/all_activities.csv",
-      "encodingFormat": "text/csv"
-    }
-  ],
-  "recordSet": [
-    {
-      "@type": "cr:RecordSet",
-      "dataType": "volunteering:Activity",
-      "field": [
-        {
-          "@id": "volunteering:activityTitle",
-          "@type": "cr:Field"
-        },
-        {
-          "@id": "volunteering:activityDescription",
-          "@type": "cr:Field"
-        }
-      ]
-    },
-    {
-      "@type": "cr:RecordSet",
-      "dataType": "volunteering:Organisation",
-      "field": [
-        {
-          "@id": "volunteering:organizationName",
-          "@type": "cr:Field"
-        },
-        {
-          "@id": "volunteering:organizationDescription",
-          "@type": "cr:Field"
-        }
-      ]
-    }
-  ]
+  "@type": "sc:Dataset"
 }
