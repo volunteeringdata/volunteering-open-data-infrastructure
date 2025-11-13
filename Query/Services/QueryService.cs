@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
-﻿using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Linq;
 using Query.Controllers;
 using System.Reflection;
 using VDS.RDF;
