@@ -30,7 +30,7 @@ public class DefaultController(QueryService someService) : ControllerBase
         ["activity_by_id"] = new([
             new("id")
         ]),
-        ["geo_example2"] = new([
+        ["organisation_by_distance"] = new([
             new("lat", datatype: XmlSpecsHelper.XmlSchemaDataTypeDouble),
             new("lon", datatype: XmlSpecsHelper.XmlSchemaDataTypeDouble),
             new("within", datatype: XmlSpecsHelper.XmlSchemaDataTypeInteger),

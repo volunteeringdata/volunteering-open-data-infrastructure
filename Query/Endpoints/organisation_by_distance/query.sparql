@@ -4,12 +4,12 @@ PREFIX spatialF: <http://jena.apache.org/function/spatial#>
 
 SELECT ?name1 ?distance {
     ?organization
-        :latitude ?lat ;
-        :longitude ?lon ;
+        :latitude ?orgLat ;
+        :longitude ?orgLon ;
         :organizationLabel ?name1 ;
     .
 
-    BIND(spatialF:convertLatLon(?lat, ?lon) as ?orgLocation)
+    BIND(spatialF:convertLatLon(?orgLat, ?orgLon) as ?orgLocation)
     BIND(spatialF:convertLatLon($lat, $lon) as ?myLocation)
 
     FILTER(spatialF:nearby(?orgLocation, ?myLocation, $within, units:kilometer))
