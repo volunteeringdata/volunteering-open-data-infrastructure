@@ -26,7 +26,7 @@ CONSTRUCT {
         schema:description "Volunteering and social action opportunities in the UK"@en ;
         schema:distribution [
             a cr:FileObject ;
-            schema:contentUrl "all_activities.csv"@en ;
+            schema:contentUrl "https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/all_activities.csv"@en ;
             schema:encodingFormat "text/csv"@en ;
             schema:name "all_activities.csv"@en ;
         ] ;
