@@ -6,14 +6,14 @@ PREFIX spatialF: <http://jena.apache.org/function/spatial#>
 CONSTRUCT
 {
     <Organisations> :organisations ?organisation .
-    ?organization
+    ?organisation
         :name ?name ;
         :distance ?distance ;
     .
 }
 WHERE
 {
-    ?organization
+    ?organisation
         :latitude ?orgLat ;
         :longitude ?orgLon ;
         :organizationLabel ?name ;
