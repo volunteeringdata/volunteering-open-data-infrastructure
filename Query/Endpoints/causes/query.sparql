@@ -1,0 +1,17 @@
+﻿BASE <https://id.example.org/>
+PREFIX : <https://id.example.org/schema/>
+
+CONSTRUCT {
+    <Causes> :causes ?cause .
+
+    ?cause
+        :label ?label ;
+    .
+}
+WHERE {
+    ?activity :activityCause ?cause .
+
+    ?cause
+        :optionDisplayName ?label ;
+    .
+}

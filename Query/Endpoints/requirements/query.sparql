@@ -1,0 +1,17 @@
+﻿BASE <https://id.example.org/>
+PREFIX : <https://id.example.org/schema/>
+
+CONSTRUCT {
+    <Requirement> :requirements ?requirement .
+
+    ?requirement
+        :label ?label ;
+    .
+}
+WHERE {
+    ?activity :activityRequirement ?requirement .
+
+    ?requirement
+        :optionDisplayName ?label ;
+    .
+}

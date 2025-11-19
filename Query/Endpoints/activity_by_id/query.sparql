@@ -5,14 +5,15 @@ CONSTRUCT {
     ?activity
         a :Activity ;
         :app ?app ;
-        :name ?title ;
-        :cause ?cause ;
+        :label ?title ;
+        :cause ?causeName  ;
+        :requirement ?requirementName ;
     .
 
     ?app :name ?name .
-  
-    ?cause :name ?causeName ; :app ?causeApp .
-  
+
+    # ?cause a :Cause ; :label ?causeName ; :xxx ?causeName .
+
     ?causeApp :name ?causeAppName .
 }
 WHERE {
@@ -21,10 +22,13 @@ WHERE {
         :activityApp ?app ;
         :activityLabel ?title ;
         :activityCause ?cause ;
+        :activityRequirement ?requirement ;
     .
 
     ?app :appName ?name .
   
     ?causeApp :appName ?causeAppName .
     ?cause :optionDisplayName ?causeName ; :optionApp ?causeApp .
+
+    ?requirement :optionDisplayName ?requirementName .
 }

@@ -151,14 +151,15 @@ http://localhost:5199/geo_example2.html?lat=51.36&lon=-0.37&within=50
 
 ### Notes
 
-Only required properties for an activity are: organisation, label and description.
-TODO: Confirm that activities MUST have an organisation.
+What properties are required for a volunteering activity?
+    An activity MUST have an organisation, a label, and a description.
 
 If an activity has no Location, it is remote?
     An activity with no location might be remote but it is possible that location information is held in the activity's description.
 
 How to know with certainty if an activity is remote?
     An activity accomodates remote participation if the "allows remote participation" property is set to true.
+
 
 
 
