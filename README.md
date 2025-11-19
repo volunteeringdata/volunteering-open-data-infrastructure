@@ -70,6 +70,31 @@ Example Query (URI encode the query and use it as parameter to http://localhost:
 - Get the vocabulary `CONSTRUCT { ?s ?p ?o . } WHERE { ?s ?p ?o ; <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://id.example.org/schema> . }`
 
 
+### Run the API Locally
+
+#### Requirements
+
+Manage user secrets (right click Query.csproj > Manage User Secrets) and set the SparqlEndpointUri.
+
+The `secrets.json` file should look like this:
+
+```json
+{
+  "QueryService": {
+    "SparqlEndpointUri": "https://openvolunteeringdata-edd0h6d2dwcaa8br.uksouth-01.azurewebsites.net/sparql"
+  }
+}
+```
+
+#### Execution
+
+```zsh
+dotnet run --project Query
+```
+
+Go to: http://localhost:5199/swagger
+
+
 # TODO
 
 
@@ -121,4 +146,44 @@ Fix up
 
 http://localhost:5199/geo_example2.html?lat=51.36&lon=-0.37&within=50
 
+
+
+
+### Notes
+
+Only required properties for an activity are: organisation, label and description.
+TODO: Confirm that activities MUST have an organisation.
+
+If an activity has no Location, it is remote?
+    An activity with no location might be remote but it is possible that location information is held in the activity's description.
+
+How to know with certainty if an activity is remote?
+    An activity accomodates remote participation if the "allows remote participation" property is set to true.
+
+
+
+one activity can have multiple location so does each location have a different contact, location can be a wide area (neighbourhood).
+What if an activity has different locations depending on the session?
+    Then it is a different activity.
+
+Taxonomy must be refined. Concept should have classes: Skills/Requirements, Charitable Aims/Cause, Volunteer Rewards (training, networking, experience, cost reimbursement), Accessibilty, Language, Demographic Targetting.
+
+Organisation must have size.
+
+Contact has Activity, Organisation and Location.
+
+Systems API definitions should be discoverable (do we need a property to link to the API definition).
+
+Time must accomodate repeat (every monday...), there are volunteering roles without clear time constraints and others that are session-based.
+
+Contact is misleading maybe, it seems people think of it as a person rather than as a contact information/line of communication.
+
+
+### Questions:
+1. License
+2. Procure a Domain (openvolunteering.org or volunteeringdata.io)
+
+
+We could model it so that an activity has sessions:
+with specific times and place and contact
 
