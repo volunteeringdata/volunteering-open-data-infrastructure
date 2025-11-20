@@ -414,6 +414,13 @@ id:schema
     rdfs:domain :Location ;
     rdfs:label "has longitude"@en .
 
+:requiresEmergencyParticipation
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ; 
+    rdfs:domain :Activity ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "requires emergency participation" .
+
 :url
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
