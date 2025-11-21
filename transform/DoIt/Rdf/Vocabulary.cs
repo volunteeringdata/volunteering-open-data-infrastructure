@@ -28,11 +28,10 @@ internal class Vocabulary
     internal static IUriNode ActivityDescription { get; } = Node("activityDescription");
     internal static IUriNode ActivityType { get; } = Node("activityType");
     internal static IUriNode ActivityEventType { get; } = Node("activityEventType");
+    internal static IUriNode ActivityLocation { get; } = Node("activityLocation");
     internal static IUriNode ActivityLocationOption { get; } = Node("activityLocationOption");
     internal static IUriNode ActivityMeasurementUnit { get; } = Node("activityMeasurementUnit");
     internal static IUriNode ActivityRegion { get; } = Node("activityRegion");
-
-    internal static IUriNode Address { get; } = Node("activityAddress");
 
     internal static IUriNode AppBrandColor { get; } = Node("appBrandColor");
     internal static IUriNode AppEcosystem { get; } = Node("appEcosystem");
@@ -41,6 +40,9 @@ internal class Vocabulary
     internal static IUriNode AppName { get; } = Node("appName");
     internal static IUriNode AppOrganization { get; } = Node("appOrganization");
 
+    internal static IUriNode LocationLabel { get; } = Node("locationLabel");
+    internal static IUriNode LocationType { get; } = Node("locationType");
+    internal static IUriNode Address { get; } = Node("address");
     internal static IUriNode Latitude { get; } = Node("latitude");
     internal static IUriNode Longitude { get; } = Node("longitude");
 

@@ -47,7 +47,7 @@ foreach (var source in activities!)
         option.App = App.Create(source.Details.App.Id.Value, targetGraph);
         return option;
     }));
-    target.LocationOption = source.Details.LocationOption;
+    //target.LocationOption = source.Details.LocationOption;
     target.Organization = Organization.Create(source.Details.Organization.Id.Value, targetGraph);
     target.Organization.Logo = source.Details.Organization.Logo;
     target.Organization.Cause.UnionWith(source.Details.Organization.Causes.Select(c =>
@@ -70,9 +70,6 @@ foreach (var source in activities!)
     target.Organization.Tos = source.Details.Organization.TermsOfServicesLink;
     target.Organization.Type = source.Details.Organization.Type;
     target.Organization.Website = source.Details.Organization.WebsiteLink;
-    target.Address = source.Address?.Street;
-    target.Longitude = source.Address?.Location?.Coordinates[0];
-    target.Latitude = source.Address?.Location?.Coordinates[1];
     target.Attendees = source.AttendeesNumber;
     target.Bookings = source.BookingsNumber;
     target.Deleted = source.Deleted;
@@ -84,15 +81,26 @@ foreach (var source in activities!)
     target.IsVolunteerNumberLimited = source.IsVolunteerNumberLimited;
     target.Meeting = source.MeetingLink;
     target.PublishedApps.UnionWith(source.PublishedApp.Select(a => new Uri(Vocabulary.InstanceBaseUri, a.Value)));
-    target.Regions.UnionWith(source.Regions.Select(r => {
-        var region = Region.Create(r.Id.Value, targetGraph);
-        region.DisplayName = r.DisplayName;
-        region.RelatedTo = r.RelatedTo;
-        region.Type = r.Type;
-        region.Longitude = r.GeocenterLocation?.Lon;
-        region.Latitude = r.GeocenterLocation?.Lat;
-        return region;
+    target.Locations.UnionWith(source.Regions.Select(r =>
+    {
+        var location = Location.Create(r.Id.Value, targetGraph);
+        location.Label = r.DisplayName;
+        //location.RelatedTo = r.RelatedTo;
+        location.Type = r.Type;
+        location.Longitude = r.GeocenterLocation?.Lon;
+        location.Latitude = r.GeocenterLocation?.Lat;
+        return location;
     }));
+    if (source.Address is Json.Address address)
+    {
+        var location = Location.Create(address.Id.Value, targetGraph);
+        location.Type = "Address";
+        location.Address = address.Street;
+        location.Longitude = address.Location.Coordinates[0];
+        location.Latitude = address.Location.Coordinates[1];
+        target.Locations.Add(location);
+
+    }
     target.Start = source.StartDate?.Value;
     target.Volunteers = source.VolunteerNumber;
 }

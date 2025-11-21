@@ -51,7 +51,7 @@ public class Activity : GraphWrapperNode
 
     internal string? EventType { set => this.OverwriteNullable(Vocabulary.ActivityEventType, value); }
 
-    internal string LocationOption { set => this.Overwrite(Vocabulary.ActivityLocationOption, value); }
+    // internal string LocationOption { set => this.Overwrite(Vocabulary.ActivityLocationOption, value); }
 
     internal App App
     {
@@ -69,12 +69,5 @@ public class Activity : GraphWrapperNode
 
     internal ISet<Option> Requirement { get => this.Objects(Vocabulary.ActivityRequirement, Option.Wrap, Option.Wrap); }
 
-    internal string? Address { set => this.OverwriteNullable(Vocabulary.Address, value); }
-
-    internal double? Latitude { set => this.OverwriteNullable(Vocabulary.Latitude, value); }
-
-    internal double? Longitude { set => this.OverwriteNullable(Vocabulary.Longitude, value); }
-
-
-    internal ISet<Region> Regions { get => this.Objects(Vocabulary.ActivityRegion, Region.Wrap, Region.Wrap); }
+    internal ISet<Location> Locations { get => this.Objects(Vocabulary.ActivityLocation, Location.Wrap, Location.Wrap); }
 }
