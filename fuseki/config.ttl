@@ -1,6 +1,8 @@
+PREFIX schema: <https://id.example.org/schema/>
 PREFIX : <http://jena.apache.org/fuseki#>
 PREFIX ja: <http://jena.hpl.hp.com/2005/11/Assembler#>
 PREFIX tdb2: <http://jena.apache.org/2016/tdb#>
+PREFIX text: <http://jena.apache.org/text#>
 
 [
     a :Service ;
@@ -13,8 +15,29 @@ PREFIX tdb2: <http://jena.apache.org/2016/tdb#>
         a ja:DatasetRDFS ;
         ja:rdfsSchema <file:vocabulary.ttl> ;
         ja:dataset [
-            a tdb2:DatasetTDB ;
-            tdb2:location "./db" ;
+            a text:TextDataset ;
+            text:dataset [
+                a tdb2:DatasetTDB ;
+                tdb2:location "./db" ;
+            ] ;
+            text:index [
+                a text:TextIndexLucene ;
+                text:directory <file:Lucene> ;
+                text:entityMap :ENTITY_MAP_MUST_BE_URI_FOR_SOME_REASON ;
+            ] ;
         ] ;
     ] ;
 ] .
+
+:ENTITY_MAP_MUST_BE_URI_FOR_SOME_REASON
+    a text:EntityMap ;
+    text:entityField "uri" ;
+    text:defaultField "organizationDescription" ;
+    text:uidField "uid" ;
+    text:map (
+        [
+            text:field "organizationDescription" ;
+            text:predicate schema:organizationDescription ;
+        ]
+    ) ;
+.
