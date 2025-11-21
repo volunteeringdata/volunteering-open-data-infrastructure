@@ -54,6 +54,7 @@ internal class Vocabulary
     internal static IUriNode OptionIcon { get; } = Node("optionIcon");
     internal static IUriNode OptionApp { get; } = Node("optionApp");
 
+    internal static IUriNode OrganizationLocation { get; } = Node("organizationLocation");
     internal static IUriNode OrganizationLogo { get; } = Node("organizationLogo");
     internal static IUriNode OrganizationEmail { get; } = Node("organizationEmail");
     internal static IUriNode OrganizationPhone { get; } = Node("organizationPhone");

@@ -62,9 +62,15 @@ foreach (var source in activities!)
     target.Organization.Phone = source.Details.Organization.ContactPhoneNumber;
     target.Organization.Deleted = source.Details.Organization.Deleted;
     target.Organization.Description = source.Details.Organization.Description;
-    target.Organization.Address = source.Details.Organization.FullAddress?.Street;
-    target.Organization.Longitude = source.Details.Organization.FullAddress?.Location?.Coordinates[0];
-    target.Organization.Latitude = source.Details.Organization.FullAddress?.Location?.Coordinates[1];
+    if (source.Details.Organization.FullAddress is Json.Address fullAddress)
+    {
+        var location = Location.Create(fullAddress.Id.Value, targetGraph);
+        location.Type = "Address";
+        location.Address = fullAddress.Street;
+        location.Longitude = fullAddress.Location.Coordinates[0];
+        location.Latitude = fullAddress.Location.Coordinates[1];
+        target.Organization.Locations.Add(location);
+    }
     target.Organization.Name = source.Details.Organization.Name;
     target.Organization.Purpose = source.Details.Organization.Purpose;
     target.Organization.Tos = source.Details.Organization.TermsOfServicesLink;

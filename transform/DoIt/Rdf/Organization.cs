@@ -34,9 +34,5 @@ public class Organization : GraphWrapperNode
 
     internal ISet<Option> Cause { get => this.Objects(Vocabulary.OrganizationCause, Option.Wrap, Option.Wrap); }
 
-    internal string? Address { set => this.OverwriteNullable(Vocabulary.Address, value); }
-
-    internal double? Latitude { set => this.OverwriteNullable(Vocabulary.Latitude, value); }
-
-    internal double? Longitude { set => this.OverwriteNullable(Vocabulary.Longitude, value); }
+    internal ISet<Location> Locations { get => this.Objects(Vocabulary.OrganizationLocation, Location.Wrap, Location.Wrap); }
 }
