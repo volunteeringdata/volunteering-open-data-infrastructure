@@ -182,7 +182,7 @@ Contact is misleading maybe, it seems people think of it as a person rather than
 
 ### Questions:
 1. License
-2. Procure a Domain (openvolunteering.org or volunteeringdata.io)
+2. Procure a Domain (volunteeringdata.io)
 
 
 We could model it so that an activity has sessions:
