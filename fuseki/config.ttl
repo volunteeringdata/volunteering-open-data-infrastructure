@@ -1,0 +1,20 @@
+PREFIX : <http://jena.apache.org/fuseki#>
+PREFIX ja: <http://jena.hpl.hp.com/2005/11/Assembler#>
+PREFIX tdb2: <http://jena.apache.org/2016/tdb#>
+
+[
+    a :Service ;
+    :name "" ;
+    :endpoint [
+        :operation :query ;
+        :name "sparql"
+    ] ;
+    :dataset [
+        a ja:DatasetRDFS ;
+        ja:rdfsSchema <file:vocabulary.ttl> ;
+        ja:dataset [
+            a tdb2:DatasetTDB ;
+            tdb2:location "./db" ;
+        ] ;
+    ] ;
+] .

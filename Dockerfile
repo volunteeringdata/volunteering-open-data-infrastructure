@@ -145,4 +145,6 @@ EXPOSE 3030
 
 ENTRYPOINT ["./entrypoint.sh" ]
 
-CMD [ "--tdb2", "--loc", "./db", "/" ]
+ADD ./fuseki/config.ttl .
+
+CMD [ "--conf", "./config.ttl" ]
