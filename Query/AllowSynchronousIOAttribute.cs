@@ -5,12 +5,6 @@ namespace Query;
 
 public class AllowSynchronousIOAttribute : ActionFilterAttribute
 {
-    public override void OnResultExecuting(ResultExecutingContext context)
-    {
-        var syncIOFeature = context.HttpContext.Features.Get<IHttpBodyControlFeature>();
-        if (syncIOFeature is not null)
-        {
-            syncIOFeature.AllowSynchronousIO = true;
-        }
-    }
+    public override void OnResultExecuting(ResultExecutingContext context) => 
+        context.HttpContext.Features.Get<IHttpBodyControlFeature>()?.AllowSynchronousIO = true;
 }
