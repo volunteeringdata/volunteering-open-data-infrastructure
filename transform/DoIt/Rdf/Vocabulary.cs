@@ -7,6 +7,7 @@ internal class Vocabulary
 
     private static readonly NodeFactory Factory = new();
 
+    // Activity
     internal static IUriNode ActivityApp { get; } = Node("activityApp");
     internal static IUriNode ActivityAttendees { get; } = Node("activityAttendees");
     internal static IUriNode ActivityBookings { get; } = Node("activityBookings");
@@ -33,6 +34,7 @@ internal class Vocabulary
     internal static IUriNode ActivityMeasurementUnit { get; } = Node("activityMeasurementUnit");
     internal static IUriNode ActivityRegion { get; } = Node("activityRegion");
 
+    // Application
     internal static IUriNode AppBrandColor { get; } = Node("appBrandColor");
     internal static IUriNode AppEcosystem { get; } = Node("appEcosystem");
     internal static IUriNode AppDescription { get; } = Node("appDescription");
@@ -40,6 +42,7 @@ internal class Vocabulary
     internal static IUriNode AppName { get; } = Node("appName");
     internal static IUriNode AppOrganization { get; } = Node("appOrganization");
 
+    // Location
     internal static IUriNode LocationLabel { get; } = Node("locationLabel");
     internal static IUriNode LocationType { get; } = Node("locationType");
     internal static IUriNode Address { get; } = Node("address");
@@ -54,24 +57,21 @@ internal class Vocabulary
     internal static IUriNode OptionIcon { get; } = Node("optionIcon");
     internal static IUriNode OptionApp { get; } = Node("optionApp");
 
-    internal static IUriNode OrganizationLocation { get; } = Node("organizationLocation");
-    internal static IUriNode OrganizationLogo { get; } = Node("organizationLogo");
-    internal static IUriNode OrganizationEmail { get; } = Node("organizationEmail");
-    internal static IUriNode OrganizationPhone { get; } = Node("organizationPhone");
-    internal static IUriNode OrganizationDeleted { get; } = Node("organizationDeleted");
-    internal static IUriNode OrganizationDescription { get; } = Node("organizationDescription");
-    internal static IUriNode OrganizationName { get; } = Node("organizationLabel");
-    internal static IUriNode OrganizationPurpose { get; } = Node("organizationPurpose");
-    internal static IUriNode OrganizationTos { get; } = Node("organizationTos");
-    internal static IUriNode OrganizationType { get; } = Node("organizationType");
-    internal static IUriNode OrganizationWebsite { get; } = Node("organizationWebsite");
-    internal static IUriNode OrganizationCause { get; } = Node("organizationCause");
+    // Organisation
+    internal static IUriNode OrganizationLocation { get; } = Node("organisationLocation");
+    internal static IUriNode OrganizationLogo { get; } = Node("organisationLogo");
+    internal static IUriNode OrganizationEmail { get; } = Node("organisationEmail");
+    internal static IUriNode OrganizationPhone { get; } = Node("organisationPhone");
+    internal static IUriNode OrganizationDeleted { get; } = Node("organisationDeleted");
+    internal static IUriNode OrganizationDescription { get; } = Node("organisationDescription");
+    internal static IUriNode OrganizationName { get; } = Node("organisationLabel");
+    internal static IUriNode OrganizationPurpose { get; } = Node("organisationPurpose");
+    internal static IUriNode OrganizationTos { get; } = Node("organisationTos");
+    internal static IUriNode OrganizationType { get; } = Node("organisationType");
+    internal static IUriNode OrganizationWebsite { get; } = Node("organisationUrl");
+    internal static IUriNode OrganizationCause { get; } = Node("organisationCause");
 
     private static IUriNode Node(string name) => AnyNode($"{VocabularyBaseUri}{name}");
 
     private static IUriNode AnyNode(string uri) => Factory.CreateUriNode(Factory.UriFactory.Create(uri));
-
-    internal static IUriNode RegionDisplayName { get; } = Node("regionDisplayName");
-    internal static IUriNode RegionRelatedTo { get; } = Node("regionRelatedTo");
-    internal static IUriNode RegionType { get; } = Node("regionType");
 }
