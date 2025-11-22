@@ -38,6 +38,8 @@ PREFIX text: <http://jena.apache.org/text#>
             text:index [
                 a text:TextIndexLucene ;
 
+                text:storeValues true ;
+
                 # The location on disk where the index will be created by jena.textindexer
                 text:directory "./fts-index/" ;
 
