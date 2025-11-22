@@ -13,9 +13,9 @@ CONSTRUCT {
 WHERE {
     FILTER(?organisation = IRI($id))
     ?organisation
-        :organizationLabel ?label ;
-        :organizationDescription ?description ;
-        :organizationPurpose ?purpose ;
-        :organizationWebsite ?website ;
+        :organisationLabel ?label ;
+        :organisationDescription ?description ;
+        :organisationPurpose ?purpose ;
+        :organisationUrl ?website ;
     .
 }

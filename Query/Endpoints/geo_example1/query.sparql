@@ -6,13 +6,13 @@ SELECT ?name1 ?name2 ?distance {
     ?org1
         :latitude ?lat1 ;
         :longitude ?lon1 ;
-        :organizationLabel ?name1 ;
+        :organisationLabel ?name1 ;
     .
 
     ?org2
         :latitude ?lat2 ;
         :longitude ?lon2 ;
-        :organizationLabel ?name2 ;
+        :organisationLabel ?name2 ;
     .
 
     FILTER(?org1 != ?org2)

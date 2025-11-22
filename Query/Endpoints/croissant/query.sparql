@@ -16,8 +16,8 @@ CONSTRUCT {
         cr:recordSet [
             a cr:RecordSet ;
             cr:dataType :Organisation ;
-            cr:field :organizationDescription ;
-            cr:field :organizationName ;
+            cr:field :organisationDescription ;
+            cr:field :organisationName ;
         ] ;
 
         dc:conformsTo "http://mlcommons.org/croissant/1.0"@en ;
@@ -38,7 +38,7 @@ CONSTRUCT {
 
     :activityDescription a cr:Field .
     :activityTitle a cr:Field .
-    :organizationDescription a cr:Field .
-    :organizationName a cr:Field .
+    :organisationDescription a cr:Field .
+    :organisationName a cr:Field .
 }
 WHERE {}

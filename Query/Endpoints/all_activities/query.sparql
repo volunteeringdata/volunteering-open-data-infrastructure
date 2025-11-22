@@ -8,7 +8,7 @@ WHERE {
         :activityBookings ?bookings ;
         :activityDeleted ?deleted ;
         :activityEcosystem ?ecosystem ;
-        :activityOrganization ?organization ;
+        :activityOrganisation ?organisation ;
         :activityPublishedApps ?publishedApps ;
         :activityLabel ?title ;
         :activityDescription ?description ;

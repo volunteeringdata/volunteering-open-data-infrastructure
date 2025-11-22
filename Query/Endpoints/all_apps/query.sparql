@@ -8,7 +8,7 @@ WHERE {
         :appEcosystem ?ecosystem ;
         :appLogo ?logo ;
         :appName ?name ;
-        :appOrganization ?organization ;
+        :appOrganisation ?organisation ;
     .
 
     OPTIONAL { ?app :appBrandColor ?brandColor . }

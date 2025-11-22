@@ -1,11 +1,14 @@
 ﻿BASE <https://id.example.org/>
 PREFIX : <https://id.example.org/schema/>
+PREFIX text: <http://jena.apache.org/text#>
 
 CONSTRUCT {
     <Organisations> :organisations ?organisation .
-    ?organisation :name ?orgLabel .
+    ?organisation :label ?orgLabel .
 }
 WHERE {
-    ?organisation :organizationLabel ?orgLabel .
-    FILTER CONTAINS(lcase(?orgLabel), lcase($name))
+    ?organisation
+      text:query (:organisationLabel $name) ;
+      :label ?orgLabel ;
+    .
 }

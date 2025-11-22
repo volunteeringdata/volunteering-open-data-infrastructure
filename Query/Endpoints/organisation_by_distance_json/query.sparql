@@ -16,7 +16,7 @@ WHERE
     ?organisation
         :latitude ?orgLat ;
         :longitude ?orgLon ;
-        :organizationLabel ?name ;
+        :organisationLabel ?name ;
     .
 
     BIND(spatialF:convertLatLon(?orgLat, ?orgLon) as ?orgLocation)

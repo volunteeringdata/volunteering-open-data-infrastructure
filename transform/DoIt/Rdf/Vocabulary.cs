@@ -20,7 +20,7 @@ internal class Vocabulary
     internal static IUriNode ActivityIsOnline { get; } = Node("allowsRemoteParticipation");
     internal static IUriNode ActivityIsVolunteerNumberLimited { get; } = Node("activityIsVolunteerNumberLimited");
     internal static IUriNode ActivityMeeting { get; } = Node("activityMeeting");
-    internal static IUriNode ActivityOrganization { get; } = Node("activityOrganization");
+    internal static IUriNode ActivityOrganization { get; } = Node("activityOrganisation");
     internal static IUriNode ActivityPublishedApps { get; } = Node("activityPublishedApps");
     internal static IUriNode ActivityRequirement { get; } = Node("activityRequirement");
     internal static IUriNode ActivityStart { get; } = Node("activityStart");
@@ -40,7 +40,7 @@ internal class Vocabulary
     internal static IUriNode AppDescription { get; } = Node("appDescription");
     internal static IUriNode AppLogo { get; } = Node("appLogo");
     internal static IUriNode AppName { get; } = Node("appName");
-    internal static IUriNode AppOrganization { get; } = Node("appOrganization");
+    internal static IUriNode AppOrganization { get; } = Node("appOrganisation");
 
     // Location
     internal static IUriNode LocationLabel { get; } = Node("locationLabel");
