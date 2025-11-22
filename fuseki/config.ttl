@@ -59,12 +59,24 @@ PREFIX text: <http://jena.apache.org/text#>
 <entityMap>
     a text:EntityMap ;
     text:entityField "uri" ;
-    text:defaultField "organizationDescription" ;
+    text:defaultField "activityLabel" ;
     text:uidField "uid" ;
     text:map (
         [
-            text:field "organizationDescription" ;
-            text:predicate schema:organizationDescription ;
+            text:field "activityLabel" ;
+            text:predicate schema:activityLabel ;
+        ]
+        [
+            text:field "activityDescription" ;
+            text:predicate schema:activityDescription ;
+        ]
+        [
+            text:field "organisationLabel" ;
+            text:predicate schema:organisationLabel ;
+        ]
+        [
+            text:field "organisationDescription" ;
+            text:predicate schema:organisationDescription ;
         ]
     ) ;
 .
