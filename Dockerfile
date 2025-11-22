@@ -141,10 +141,12 @@ ADD ./vocabulary/vocabulary.ttl .
 
 RUN $JENA_HOME/bin/tdb2.tdbloader --loc $DATABASE vocabulary.ttl
 
+ADD ./fuseki/config.ttl .
+
+RUN "$JAVA_HOME/bin/java" -cp "${FUSEKI_DIR}/${FUSEKI_JAR}" jena.textindexer --desc config.ttl
+
 EXPOSE 3030
 
 ENTRYPOINT ["./entrypoint.sh" ]
-
-ADD ./fuseki/config.ttl .
 
 CMD [ "--conf", "./config.ttl" ]
