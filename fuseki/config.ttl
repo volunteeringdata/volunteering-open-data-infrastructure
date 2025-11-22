@@ -18,18 +18,19 @@ PREFIX text: <http://jena.apache.org/text#>
             a text:TextDataset ;
             text:dataset [
                 a tdb2:DatasetTDB ;
-                tdb2:location "./db" ;
+                tdb2:location "./db/" ;
             ] ;
             text:index [
                 a text:TextIndexLucene ;
-                text:directory <file:Lucene> ;
-                text:entityMap :ENTITY_MAP_MUST_BE_URI_FOR_SOME_REASON ;
+                text:directory "./fts-index/" ;
+                text:entityMap <entityMap> ;
             ] ;
         ] ;
     ] ;
 ] .
 
-:ENTITY_MAP_MUST_BE_URI_FOR_SOME_REASON
+# This must be a URI node for some reason.
+<entityMap>
     a text:EntityMap ;
     text:entityField "uri" ;
     text:defaultField "organizationDescription" ;
