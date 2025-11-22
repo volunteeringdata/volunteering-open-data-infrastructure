@@ -62,5 +62,8 @@ public class DefaultController(QueryService someService) : ControllerBase
         ["schema_by_class"] = new([
             new("class")
         ]),
+        ["organisation_search"] = new([
+            new("query")
+        ]),
     };
 }
