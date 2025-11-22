@@ -19,6 +19,13 @@ PREFIX text: <http://jena.apache.org/text#>
         :name "sparql"
     ] ;
 
+    :endpoint [
+        # A Graph Store Protocol endpoint
+        :operation :gsp-r ;
+
+        :name "graph"
+    ] ;
+
     # The data exposed by this service
     :dataset [
         # RDFS inferencing
