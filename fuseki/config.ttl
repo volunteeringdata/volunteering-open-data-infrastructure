@@ -6,24 +6,50 @@ PREFIX text: <http://jena.apache.org/text#>
 
 [
     a :Service ;
+
+    # The path prefix for this service
+    # Empty string makes it the root
     :name "" ;
+
     :endpoint [
+        # A SPARQL endpoint
         :operation :query ;
+
+        # The path prefix for this endpoint
         :name "sparql"
     ] ;
+
+    # The data exposed by this service
     :dataset [
+        # RDFS inferencing
+        # See https://jena.apache.org/documentation/rdfs/
+        # Might be better with https://jena.apache.org/documentation/inference/#rdfs
         a ja:DatasetRDFS ;
+
+        # The RDFS ontology used for inferencing
         ja:rdfsSchema "./vocabulary.ttl" ;
+
+        # The underlying instance graph we're inferring from
         ja:dataset [
+            # Full-text search
+            # See https://jena.apache.org/documentation/query/text-query.html
             a text:TextDataset ;
-            text:dataset [
-                a tdb2:DatasetTDB2 ;
-                tdb2:location "./db/" ;
-            ] ;
+
             text:index [
                 a text:TextIndexLucene ;
+
+                # The location on disk where the index will be created by jena.textindexer
                 text:directory "./fts-index/" ;
+
                 text:entityMap <entityMap> ;
+            ] ;
+
+            # The underlying instance graph we're indexing
+            text:dataset [
+                a tdb2:DatasetTDB2 ;
+
+                # The location on disk where the data will be populated from
+                tdb2:location "./db/" ;
             ] ;
         ] ;
     ] ;
