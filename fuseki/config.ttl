@@ -13,11 +13,11 @@ PREFIX text: <http://jena.apache.org/text#>
     ] ;
     :dataset [
         a ja:DatasetRDFS ;
-        ja:rdfsSchema <file:vocabulary.ttl> ;
+        ja:rdfsSchema "./vocabulary.ttl" ;
         ja:dataset [
             a text:TextDataset ;
             text:dataset [
-                a tdb2:DatasetTDB ;
+                a tdb2:DatasetTDB2 ;
                 tdb2:location "./db/" ;
             ] ;
             text:index [
