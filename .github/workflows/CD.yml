@@ -1,4 +1,4 @@
-name: Build and deploy ASP.Net Core app to Azure Web App
+name: Build and deploy Query API to Azure Web App
 
 env:
   AZURE_WEBAPP_NAME: 'Query20251112104247'
