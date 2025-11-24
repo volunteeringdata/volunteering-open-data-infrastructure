@@ -1,21 +1,78 @@
-BASE <https://id.example.org/>
-PREFIX : <https://id.example.org/>
+PREFIX this: <https://id.example.org/schema>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-CONSTRUCT {
-    ?vocabularyClass ?vocabularyClassProperty ?vocabularyClassValue .
-    ?vocabularyObjectProperty ?vocabularyObjectPropertyProperty ?vocabularyObjectPropertyValue .
-}
+SELECT *
 WHERE {
-    FILTER(?vocabularyClassProperty != IRI(rdfs:subClassOf))
+    ?class
+        a owl:Class ;
+        rdfs:isDefinedBy this: ;
+        rdfs:label ?classLabel ;
+        .
 
-    ?vocabularyClass
-        ?vocabularyClassProperty ?vocabularyClassValue ;
-        a owl:Class .
+    # Exclude classes that extend other classes in this ontology
+    FILTER NOT EXISTS {
+        ?super
+            ^rdfs:subClassOf ?class ;
+             rdfs:isDefinedBy this: ;
+             .
 
-    ?vocabularyObjectProperty
-        ?vocabularyObjectPropertyProperty ?vocabularyObjectPropertyValue ;
-        rdfs:domain ?domain ;
-        a owl:ObjectProperty .
+        FILTER(?super != ?class)
+    }                     
+
+    # Exclude classes that are extended by other classes in this ontology
+    FILTER NOT EXISTS {
+        ?sub
+            rdfs:subClassOf ?class ;
+            rdfs:isDefinedBy this: ;
+            .
+        FILTER(?sub != ?class)
+    }
+
+    FILTER(LANG(?classLabel) = "en")
+
+    OPTIONAL {
+        ?class rdfs:comment ?classComment
+
+        FILTER(LANG(?classComment) = "en")
+    }
+
+    ?property
+        a owl:ObjectProperty ;
+        rdfs:domain ?class ;
+        rdfs:range ?range ;
+        rdfs:label ?propertyLabel ;
+        .
+
+    # Exclude properties that extend other properties in this ontology
+    FILTER NOT EXISTS{
+        ?subProperty
+            rdfs:subPropertyOf ?property ;
+            rdfs:isDefinedBy this: ;
+            .
+
+        FILTER(?subProperty != ?property)
+    }
+
+    ?range 
+        rdfs:isDefinedBy this: ;
+        .
+
+    # Exclude ranges that extend other classes in this ontology
+    FILTER NOT EXISTS {
+        ?superRange
+            ^rdfs:subClassOf ?range ;
+             rdfs:isDefinedBy this: ;
+             .
+
+        FILTER(?superRange != ?range)
+    }        
+
+    FILTER(LANG(?propertyLabel) = "en")
+
+    OPTIONAL {
+        ?property rdfs:comment ?propertyComment . 
+        FILTER(LANG(?propertyComment) = "en")
+    }
 }
+
