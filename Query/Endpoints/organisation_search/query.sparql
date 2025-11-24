@@ -1,4 +1,4 @@
-﻿PREFIX : <https://id.example.org/schema/>
+﻿PREFIX : <https://id.volunteeringdata.io/schema/>
 PREFIX text: <http://jena.apache.org/text#>
 
 SELECT ?s ?label ?value

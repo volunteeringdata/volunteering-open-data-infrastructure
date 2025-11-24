@@ -1,4 +1,4 @@
-prefix :     <https://id.example.org/>
+prefix :     <https://id.volunteeringdata.io/>
 prefix cr:   <http://mlcommons.org/croissant/>
 prefix dc:   <http://purl.org/dc/terms/>
 prefix rai:  <http://mlcommons.org/croissant/RAI/>

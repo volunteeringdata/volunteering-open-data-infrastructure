@@ -2,8 +2,8 @@
 
 internal class Vocabulary
 {
-    internal const string VocabularyBaseUri = "https://id.example.org/schema/";
-    internal static Uri InstanceBaseUri => new("https://id.example.org/");
+    internal const string VocabularyBaseUri = "https://id.volunteeringdata.io/schema/";
+    internal static Uri InstanceBaseUri => new("https://id.volunteeringdata.io/");
 
     private static readonly NodeFactory Factory = new();
 

@@ -1,5 +1,5 @@
-﻿BASE <https://id.example.org/>
-PREFIX : <https://id.example.org/schema/>
+﻿BASE <https://id.volunteeringdata.io/>
+PREFIX : <https://id.volunteeringdata.io/schema/>
 
 CONSTRUCT {
     <Causes> :causes ?cause .

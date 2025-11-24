@@ -1,5 +1,5 @@
-BASE <https://id.example.org/>
-PREFIX : <https://id.example.org/schema/>
+BASE <https://id.volunteeringdata.io/>
+PREFIX : <https://id.volunteeringdata.io/schema/>
 PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX spatialF: <http://jena.apache.org/function/spatial#>
 
