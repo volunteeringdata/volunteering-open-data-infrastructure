@@ -1,48 +1,86 @@
+﻿using ModelContextProtocol.Protocol;
 using ModelContextProtocol.Server;
+using Query.Controllers;
 using Query.Services;
-using System.ComponentModel;
+using System.Reflection;
+using System.Text.Json.Nodes;
+using System.Text.RegularExpressions;
 using VDS.RDF;
+using VDS.RDF.Parsing;
 using VDS.RDF.Query;
 using VDS.RDF.Writing;
 using StringWriter = VDS.RDF.Writing.StringWriter;
 
 namespace Query;
 
-[McpServerToolType]
-public static class Mcp
+public static partial class Mcp
 {
     private static readonly IRdfWriter graphWriter = new CompressingTurtleWriter();
     private static readonly ISparqlResultsWriter sparqlWriter = new SparqlHtmlWriter();
 
-    [McpServerTool]
-    [Description("Searches for an organisation by name")]
-    public async static Task<string> OrganisationByName(
-        QueryService query,
-        [Description("The name of the organisation to search for")]
-        string organisationName,
-        CancellationToken ct
-    ) => Serialize(await query.ExecuteNamedQueryAsync(
-            "organisation_by_name",
-            new()
-            {
-                ["name"] = organisationName
-            },
-            ct));
+    [GeneratedRegex(@"(?<=Query\.Endpoints\.).+(?=\.query\.sparql)")]
+    private static partial Regex ResourceNameExtractor { get; }
 
-    [McpServerTool]
-    [Description("Retrieves the details of an organisation based on its identifier")]
-    public async static Task<string> OrganisationById(
-        QueryService query,
-        [Description("The identifier of the organisation to retrieve details for. This identifier is the local part of the URI of the organisation, e.g. for an organisation with URI http://example.com/1234, the identifier would be 1234")]
-        string organisationId,
-        CancellationToken ct
-    ) => Serialize(await query.ExecuteNamedQueryAsync(
-            "organisation_by_id",
-            new()
-            {
-                ["id"] = organisationId
-            },
-            ct));
+    internal static ValueTask<ListToolsResult> ListTools(RequestContext<ListToolsRequestParams> _, CancellationToken __) =>
+        ValueTask.FromResult(new ListToolsResult
+        {
+            Tools = Assembly.GetExecutingAssembly().GetManifestResourceNames()
+                .Select(static name => ResourceNameExtractor.Match(name))
+                .Where(static match => match.Success)
+                .Select(static match => match.Value)
+                .Select(static name => new
+                {
+                    Name = name,
+                    Parameters = DefaultController.Endpoints.TryGetValue(name, out var endpoint) ?
+                        endpoint.Parameters :
+                        []
+                })
+                .Select(static endpoint =>
+                    new Tool
+                    {
+                        Name = endpoint.Name,
+                        InputSchema = System.Text.Json.JsonSerializer.SerializeToElement(new
+                        {
+                            type = "object",
+                            properties = new JsonObject(endpoint.Parameters.ToDictionary(
+                                p => p.Name,
+                                p => new JsonObject
+                                {
+                                    ["type"] = AsJsonSchemaType(p.Datatype)
+                                } as JsonNode)!),
+                        })
+                    })
+                .ToList()
+        });
+
+    internal static async ValueTask<CallToolResult> CallTool(RequestContext<CallToolRequestParams> context, CancellationToken ct) =>
+        new()
+        {
+            Content = [
+                new TextContentBlock {
+                    Text = Serialize(
+                        await context.Services!.GetRequiredService<QueryService>().ExecuteNamedQueryAsync(
+                            context.Params!.Name,
+                            context.Params.Arguments!.ToDictionary(
+                                x => x.Key,
+                                x => x.Value.GetString()!
+                            ),
+                            ct
+                        )
+                    )
+                }
+            ]
+        };
+
+    private static string AsJsonSchemaType(string datatype) => datatype switch
+    {
+        XmlSpecsHelper.XmlSchemaDataTypeInteger or
+        XmlSpecsHelper.XmlSchemaDataTypeDouble => "number",
+
+        XmlSpecsHelper.XmlSchemaDataTypeString => "string",
+
+        _ => throw new Exception($"unknown literal parameter datatype {datatype}")
+    };
 
     private static string Serialize(object? result)
     {

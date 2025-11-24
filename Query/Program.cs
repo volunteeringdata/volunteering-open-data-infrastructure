@@ -1,3 +1,4 @@
+using Query;
 using Query.Formatters;
 using Query.Services;
 using static VDS.RDF.MimeTypesHelper;
@@ -33,7 +34,8 @@ builder.Services.AddSingleton<QueryService>();
 
 builder.Services.AddMcpServer()
     .WithHttpTransport()
-    .WithToolsFromAssembly();
+    .WithListToolsHandler(Mcp.ListTools)
+    .WithCallToolHandler(Mcp.CallTool);
 
 builder.Services.AddCors();
 
