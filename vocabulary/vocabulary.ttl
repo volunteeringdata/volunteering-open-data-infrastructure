@@ -494,7 +494,7 @@ id:schema
 
 :accessibilityOrganisation
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf :organisationConcept ;
+    rdfs:subPropertyOf :conceptOrganisation ;
     rdfs:isDefinedBy id:schema ;
     owl:inverseOf :organisationAccessibility ;
     rdfs:domain :OrganisationAccessibility ;
@@ -503,7 +503,7 @@ id:schema
 
 :causeOrganisation
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf :organisationConcept ;
+    rdfs:subPropertyOf :conceptOrganisation ;
     rdfs:isDefinedBy id:schema ;
     owl:inverseOf :organisationCause ;
     rdfs:domain :OrganisationCause ;
@@ -512,7 +512,7 @@ id:schema
 
 :demographyOrganisation
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf :organisationConcept ;
+    rdfs:subPropertyOf :conceptOrganisation ;
     rdfs:isDefinedBy id:schema ;
     owl:inverseOf :organisationDemography ;
     rdfs:domain :OrganisationDemography ;
@@ -521,7 +521,7 @@ id:schema
 
 :languageOrganisation
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf :organisationConcept ;
+    rdfs:subPropertyOf :conceptOrganisation ;
     rdfs:isDefinedBy id:schema ;
     owl:inverseOf :organisationLanguage ;
     rdfs:domain :OrganisationLanguage ;
@@ -530,7 +530,7 @@ id:schema
 
 :requirementOrganisation
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf :organisationConcept ;
+    rdfs:subPropertyOf :conceptOrganisation ;
     rdfs:isDefinedBy id:schema ;
     owl:inverseOf :organisationRequirement ;
     rdfs:domain :OrganisationRequirement ;
@@ -539,7 +539,7 @@ id:schema
 
 :rewardOrganisation
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf :organisationConcept ;
+    rdfs:subPropertyOf :conceptOrganisation ;
     rdfs:isDefinedBy id:schema ;
     owl:inverseOf :organisationReward ;
     rdfs:domain :OrganisationReward ;
@@ -548,7 +548,7 @@ id:schema
 
 :skillOrganisation
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf :organisationConcept ;
+    rdfs:subPropertyOf :conceptOrganisation ;
     rdfs:isDefinedBy id:schema ;
     owl:inverseOf :organisationSkill ;
     rdfs:domain :OrganisationSkill ;
