@@ -39,6 +39,8 @@ builder.Services.AddCors();
 
 builder.Services.AddOptions<QueryServiceOptions>().BindConfiguration("QueryService");
 
+builder.Services.AddRazorPages();
+
 var app = builder.Build();
 
 app.MapControllers();
@@ -48,6 +50,6 @@ app.UseCors(builder => builder
      .AllowAnyOrigin()
      .AllowAnyMethod()
      .AllowAnyHeader());
-app.UseStaticFiles();
+app.MapRazorPages();
 
 app.Run();

@@ -101,6 +101,7 @@ dotnet run --project Query
 ```
 
 Go to the [swagger endpoint on localhost](http://localhost:5199/swagger).
+Or go to the [SPARQL UI on localhost](http://localhost:5199/sparql).
 
 
 # TODO
