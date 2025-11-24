@@ -25,6 +25,11 @@ Some infrastructure as code (IaC) in the form of ARM templates is here to help o
 See the [infrastructure README](`./infrastructure/README.md`) for details.
 
 
+### Deploy the API and Data
+
+Both Data and API are continuously deployed via [GitHub actions](./github/workflows).
+
+
 ### Transform Data
 
 #### Run automated data transformation for DoIt Data sample
@@ -36,11 +41,13 @@ dotnet run ./data/doit/activities.json ./data/doit/data.ttl --project ./transfor
 
 ### Publish Data
 
-You need to login, build the data container and publish it. A WebHook automatically deploys the latest data container version available to the infrastructure.
+You can simply build the data container ([fuseki](https://jena.apache.org/documentation/fuseki2/)) using [this Dockerfile](./Dockerfile) and publish it to a container registry of your choice.
+
+A WebHook can automatically deploys the latest data container version available to an Azure App Service for example.
 
 The data container is a readonly triplestore with a public sparql endpoint containing the latest data (including this repos' `.ttl` files).
 
-#### Requirements
+#### Login
 
 ```zsh
 source .env
@@ -48,7 +55,7 @@ az login
 az acr login --name $INFRASTRUCTURE_CONTAINER_REGISTRY_NAME
 ```
 
-#### Execution
+#### Publishing the container
 
 ```zsh
 docker build --tag $INFRASTRUCTURE_DATA_CONTAINER .
@@ -59,6 +66,7 @@ docker push $INFRASTRUCTURE_DATA_CONTAINER
 ### Run the Data Container Locally
 
 ```zsh
+source .env
 docker run --rm -p 3030:3030 $INFRASTRUCTURE_DATA_CONTAINER
 ```
 
@@ -72,7 +80,7 @@ Example Query (URI encode the query and use it as parameter to http://localhost:
 
 ### Run the API Locally
 
-#### Requirements
+#### Configuring User Secrets
 
 Manage user secrets (right click Query.csproj > Manage User Secrets) and set the SparqlEndpointUri.
 
@@ -86,17 +94,16 @@ The `secrets.json` file should look like this:
 }
 ```
 
-#### Execution
+#### Running the Project
 
 ```zsh
 dotnet run --project Query
 ```
 
-Go to: http://localhost:5199/swagger
+Go to the [swagger endpoint on localhost](http://localhost:5199/swagger).
 
 
 # TODO
-
 
 ## Tooling
 
@@ -115,6 +122,7 @@ Do a very embedded format and one more distributed.
 
 CSV format.
 
+
 ## Others
 
 Try smaller or more optimized formats for RDF loading.
@@ -125,12 +133,11 @@ Export full arm template from Resource Group.
 ## IDEAS
 
 Make an ontology
-Turn on inferencing in Jena
 Make ontology serving endpoints (align vocabulary URI)
 Serve LODE documentation
 Serve WebVOWL
 Serve Swagger UI
-Serve YasGUI
+Serve YasGUI (cache minimized versions)
 Finalize mapping
 Map ontologies
 
