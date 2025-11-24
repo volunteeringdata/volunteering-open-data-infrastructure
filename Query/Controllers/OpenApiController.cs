@@ -61,7 +61,6 @@ public partial class OpenApiController() : ControllerBase
         {
             var paths = new OpenApiPaths();
 
-
             var endpointNames = Assembly.GetExecutingAssembly().GetManifestResourceNames()
                 .Select(name => ResourceNameExtractor.Match(name))
                 .Where(match => match.Success)
