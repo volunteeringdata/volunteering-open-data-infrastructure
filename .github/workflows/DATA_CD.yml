@@ -1,0 +1,27 @@
+name: Build and deploy Data to Azure Container Registry
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # This is required for requesting the JWT
+      contents: read # This is required for actions/checkout
+
+    steps:
+      - uses: actions/checkout@v5
+      
+      - uses: azure/docker-login@v2
+        with:
+          login-server: openvolunteering.azurecr.io/data:latest
+          username: ${{ secrets.AZURE_CONTAINER_REGISTRY_USERNAME }}
+          password: ${{ secrets.AZURE_CONTAINER_REGISTRY_PASSWORD }}
+
+      - run: |
+          docker build . -t openvolunteering.azurecr.io/data:latest
+          docker push openvolunteering.azurecr.io/data:latest
