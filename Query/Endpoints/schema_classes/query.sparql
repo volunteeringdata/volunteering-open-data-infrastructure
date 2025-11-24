@@ -2,30 +2,42 @@ PREFIX this: <https://id.example.org/schema>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT *
+CONSTRUCT {
+    ?class ?p ?o .
+
+    ?property
+        a owl:ObjectProperty ;
+        rdfs:domain ?class ;
+        rdfs:range ?range ;
+        rdfs:label ?propertyLabel ;
+    .
+
+    ?range rdfs:label ?rangeLabel .
+}
 WHERE {
     ?class
         a owl:Class ;
         rdfs:isDefinedBy this: ;
         rdfs:label ?classLabel ;
-        .
+        ?p ?o
+    .
 
     # Exclude classes that extend other classes in this ontology
     FILTER NOT EXISTS {
         ?super
             ^rdfs:subClassOf ?class ;
-             rdfs:isDefinedBy this: ;
-             .
+            rdfs:isDefinedBy this: ;
+    .
 
         FILTER(?super != ?class)
-    }                     
+    }
 
     # Exclude classes that are extended by other classes in this ontology
     FILTER NOT EXISTS {
         ?sub
             rdfs:subClassOf ?class ;
             rdfs:isDefinedBy this: ;
-            .
+        .
         FILTER(?sub != ?class)
     }
 
@@ -42,7 +54,7 @@ WHERE {
         rdfs:domain ?class ;
         rdfs:range ?range ;
         rdfs:label ?propertyLabel ;
-        .
+    .
 
     # Exclude properties that extend other properties in this ontology
     FILTER NOT EXISTS{
@@ -63,10 +75,10 @@ WHERE {
         ?superRange
             ^rdfs:subClassOf ?range ;
              rdfs:isDefinedBy this: ;
-             .
+    .
 
         FILTER(?superRange != ?range)
-    }        
+    }
 
     FILTER(LANG(?propertyLabel) = "en")
 
