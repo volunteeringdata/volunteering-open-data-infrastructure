@@ -200,6 +200,106 @@ id:schema
     rdfs:comment "Any system related to a volunteer involving organisation."@en .
 
 
+## Concept subclasses
+:ActivityAccessibility
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :ActivityConcept ;
+    rdfs:label "Activity Accessibility"@en ;
+.
+
+:ActivityCause
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :ActivityConcept ;
+    rdfs:label "Activity Cause"@en ;
+.
+
+:ActivityDemography
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :ActivityConcept ;
+    rdfs:label "Activity Demography"@en ;
+.
+
+:ActivityLanguage
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :ActivityConcept ;
+    rdfs:label "Activity Language"@en ;
+.
+
+:ActivityRequirement
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :ActivityConcept ;
+    rdfs:label "Activity Requirement"@en ;
+.
+
+:ActivityReward
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :ActivityConcept ;
+    rdfs:label "Activity Reward"@en ;
+.
+
+:ActivitySkill
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :ActivityConcept ;
+    rdfs:label "Activity Skill"@en ;
+.
+
+:OrganisationAccessibility
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :OrganisationConcept ;
+    rdfs:label "Organisation Accessibility"@en ;
+.
+
+:OrganisationCause
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :OrganisationConcept ;
+    rdfs:label "Organisation Cause"@en ;
+.
+
+:OrganisationDemography
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :OrganisationConcept ;
+    rdfs:label "Organisation Demography"@en ;
+.
+
+:OrganisationLanguage
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :OrganisationConcept ;
+    rdfs:label "Organisation Language"@en ;
+.
+
+:OrganisationRequirement
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :OrganisationConcept ;
+    rdfs:label "Organisation Requirement"@en ;
+.
+
+:OrganisationReward
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :OrganisationConcept ;
+    rdfs:label "Organisation Reward"@en ;
+.
+
+:OrganisationSkill
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :OrganisationConcept ;
+    rdfs:label "Organisation Skill"@en ;
+.
+
+
 ## Object Properties
 :activity
     a owl:ObjectProperty ;
