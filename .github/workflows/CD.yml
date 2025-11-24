@@ -9,6 +9,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - Query/**
   workflow_dispatch:
 
 jobs:
