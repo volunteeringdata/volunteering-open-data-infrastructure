@@ -1,24 +1,18 @@
-BASE <https://id.volunteeringdata.io/>
 PREFIX : <https://id.volunteeringdata.io/schema/>
 PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX spatialF: <http://jena.apache.org/function/spatial#>
 
-CONSTRUCT
-{
-    <Organisations> :organisations ?organisation .
+SELECT ?name ?distance {
     ?organisation
-        :name ?name ;
-        :distance ?distance ;
-    .
-}
-WHERE
-{
-    ?organisation
-        :latitude ?orgLat ;
-        :longitude ?orgLon ;
+        :organisationLocation ?location ;
         :organisationLabel ?name ;
     .
 
+    ?location 
+        :latitude ?orgLat ;
+        :longitude ?orgLon ;
+    .
+        
     BIND(spatialF:convertLatLon(?orgLat, ?orgLon) as ?orgLocation)
     BIND(spatialF:convertLatLon($lat, $lon) as ?myLocation)
 

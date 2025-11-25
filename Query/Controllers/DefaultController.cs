@@ -43,27 +43,22 @@ public class DefaultController(QueryService someService) : ControllerBase
         ["activity_by_id"] = new([
             new("id")
         ]),
-        ["organisation_by_distance"] = new([
-            new("lat", XmlSpecsHelper.XmlSchemaDataTypeDouble),
-            new("lon", XmlSpecsHelper.XmlSchemaDataTypeDouble),
-            new("within", XmlSpecsHelper.XmlSchemaDataTypeInteger),
-        ]),
-        ["organisation_by_distance_json"] = new([
-            new("lat", XmlSpecsHelper.XmlSchemaDataTypeDouble),
-            new("lon", XmlSpecsHelper.XmlSchemaDataTypeDouble),
-            new("within", XmlSpecsHelper.XmlSchemaDataTypeInteger),
-        ]),
         ["organisation_by_id"] = new([
             new("id")
+        ]),
+        ["organisation_by_location"] = new([
+            new("lat", XmlSpecsHelper.XmlSchemaDataTypeDouble),
+            new("lon", XmlSpecsHelper.XmlSchemaDataTypeDouble),
+            new("within", XmlSpecsHelper.XmlSchemaDataTypeInteger),
         ]),
         ["organisation_by_name"] = new([
             new("name")
         ]),
-        ["schema_by_class"] = new([
-            new("class")
-        ]),
         ["organisation_search"] = new([
             new("query")
+        ]),
+        ["schema_by_class"] = new([
+            new("class")
         ]),
     };
 }
