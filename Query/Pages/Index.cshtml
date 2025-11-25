@@ -1,0 +1,14 @@
+﻿@page
+@{
+    ViewBag.Title = "[home]";
+}
+
+@foreach (var n in Endpoints.Names)
+{
+    Endpoints.ParameterMapping.TryGetValue(n, out var p);
+    var ps = p?.Parameters ?? [];
+
+    var u = QueryHelpers.AddQueryString($"{n}.html", ps.ToDictionary(x => x.Name, x => x.Example));
+
+    <li><a href="/@u">@n</a></li>
+}
