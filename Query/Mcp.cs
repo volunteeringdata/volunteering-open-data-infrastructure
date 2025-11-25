@@ -36,9 +36,21 @@ public static partial class Mcp
                         []
                 })
                 .Select(static endpoint =>
-                    new Tool
+                {
+                    var resourceName = $"Query.Endpoints.{endpoint.Name}.query.sparql";
+                    using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName);
+                    using var reader = new StreamReader(stream!);
+                    var sparqlText = reader.ReadToEnd();
+
+                    return new Tool
                     {
                         Name = endpoint.Name,
+                        Description = $"""
+                            Underlying SPARQL query:
+                            ```sparql
+                            {sparqlText}
+                            ```
+                            """,
                         InputSchema = System.Text.Json.JsonSerializer.SerializeToElement(new
                         {
                             type = "object",
@@ -49,7 +61,8 @@ public static partial class Mcp
                                     ["type"] = AsJsonSchemaType(p.Datatype)
                                 } as JsonNode)!),
                         })
-                    })
+                    };
+                })
                 .ToList()
         });
 
