@@ -3,11 +3,11 @@ PREFIX : <https://id.volunteeringdata.io/schema/>
 
 CONSTRUCT {
     <Organisations> :organisations ?organisation .
-    ?organisation :organisationLabel ?organisationLabel .
+    ?organisation :label ?organisationLabel .
 }
 WHERE {
     ?organisation
         a :Organisation ;
-        :organisationLabel ?organisationLabel ;
+        :label ?organisationLabel ;
     .
 }
