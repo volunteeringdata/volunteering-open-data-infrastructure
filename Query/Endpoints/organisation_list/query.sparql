@@ -1,0 +1,3 @@
+﻿PREFIX : <https://id.volunteeringdata.io/schema/>
+
+SELECT * { ?organisation_id a :Organisation . }
