@@ -9,9 +9,8 @@ CONSTRUCT {
     .
 }
 WHERE {
-    ?activity :activityRequirement ?requirement .
-
     ?requirement
+        a :Requirement ;
         :optionDisplayName ?label ;
     .
 }

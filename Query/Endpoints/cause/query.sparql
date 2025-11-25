@@ -9,9 +9,8 @@ CONSTRUCT {
     .
 }
 WHERE {
-    ?activity :activityCause ?cause .
-
     ?cause
+        a :Cause ;
         :optionDisplayName ?label ;
     .
 }
