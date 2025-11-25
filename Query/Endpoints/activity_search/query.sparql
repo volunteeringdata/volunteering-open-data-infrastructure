@@ -1,0 +1,10 @@
+﻿PREFIX : <https://id.volunteeringdata.io/schema/>
+PREFIX text: <http://jena.apache.org/text#>
+
+SELECT ?activity_id ?activity_label ?search_match ?search_score
+WHERE {
+  (?activity_id ?search_score ?search_match) text:query (:activityDescription :activityLabel $query "highlight:s:<mark>|e:</mark>") .
+  
+  ?activity_id :activityLabel ?activity_label .
+}
+ORDER BY DESC(?score)

@@ -1,0 +1,21 @@
+﻿BASE <https://id.volunteeringdata.io/>
+PREFIX : <https://id.volunteeringdata.io/schema/>
+PREFIX text: <http://jena.apache.org/text#>
+
+CONSTRUCT {
+    <Activities> :activities ?activity .
+
+    ?activity
+        a :Activity ;
+        :label ?label ;
+        :indexMatchingScore ?score ;
+    .
+}
+WHERE {
+  
+    (?activity ?score ?value) text:query (:activityLabel $name) .
+    ?activity
+      :activityLabel ?label ;
+    .
+}
+ORDER BY ASC(?score)
