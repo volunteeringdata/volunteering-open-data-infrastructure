@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Linq;
-using Query.Controllers;
 using System.Reflection;
 using VDS.RDF;
 using VDS.RDF.Parsing;
@@ -48,7 +47,7 @@ public class QueryService(HttpClient httpClient, IOptions<QueryServiceOptions> o
     {
         var sparql = new SparqlParameterizedString(sparqlText);
 
-        if (DefaultController.Endpoints.TryGetValue(name, out var endpoint))
+        if (Endpoints.ParameterMapping.TryGetValue(name, out var endpoint))
         {
             foreach (var parameter in endpoint.Parameters)
             {

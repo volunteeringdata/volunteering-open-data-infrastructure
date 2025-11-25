@@ -31,7 +31,7 @@ public static partial class Mcp
                 .Select(static name => new
                 {
                     Name = name,
-                    Parameters = DefaultController.Endpoints.TryGetValue(name, out var endpoint) ?
+                    Parameters = Endpoints.ParameterMapping.TryGetValue(name, out var endpoint) ?
                         endpoint.Parameters :
                         []
                 })

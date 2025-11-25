@@ -67,7 +67,7 @@ public partial class OpenApiController() : ControllerBase
 
         foreach (var endpointName in endpointNames)
         {
-            DefaultController.Endpoints.TryGetValue(endpointName, out var endpoint);
+            Endpoints.ParameterMapping.TryGetValue(endpointName, out var endpoint);
 
             var sparqlText = await Endpoints.Sparql(endpointName, ct);
             var sparqlQuery = new SparqlQueryParser().ParseFromString(sparqlText);

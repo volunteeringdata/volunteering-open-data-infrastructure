@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Query.Services;
-using VDS.RDF.Parsing;
 
 namespace Query.Controllers;
 
@@ -13,7 +12,7 @@ public class DefaultController(QueryService someService) : ControllerBase
     [HttpGet]
     public async Task<IActionResult> Get(string name, CancellationToken ct)
     {
-        if (Endpoints.TryGetValue(name, out var endpoint))
+        if (Endpoints.ParameterMapping.TryGetValue(name, out var endpoint))
         {
             foreach (var item in endpoint.Parameters.Select(p => p.Name).Where(n => !Request.Query.TryGetValue(n, out _)))
             {
@@ -37,39 +36,4 @@ public class DefaultController(QueryService someService) : ControllerBase
             return Ok(result);
         }
     }
-
-    internal static IDictionary<string, Endpoint> Endpoints => new Dictionary<string, Endpoint>
-    {
-        ["activity_by_id"] = new([
-            new("id")
-        ]),
-        ["activity_by_location"] = new([
-            new("lat", XmlSpecsHelper.XmlSchemaDataTypeDouble),
-            new("lon", XmlSpecsHelper.XmlSchemaDataTypeDouble),
-            new("within", XmlSpecsHelper.XmlSchemaDataTypeInteger),
-        ]),
-        ["activity_by_name"] = new([
-            new("name")
-        ]),
-        ["activity_search"] = new([
-            new("query")
-        ]),
-        ["organisation_by_id"] = new([
-            new("id")
-        ]),
-        ["organisation_by_location"] = new([
-            new("lat", XmlSpecsHelper.XmlSchemaDataTypeDouble),
-            new("lon", XmlSpecsHelper.XmlSchemaDataTypeDouble),
-            new("within", XmlSpecsHelper.XmlSchemaDataTypeInteger),
-        ]),
-        ["organisation_by_name"] = new([
-            new("name")
-        ]),
-        ["organisation_search"] = new([
-            new("query")
-        ]),
-        ["schema_by_class"] = new([
-            new("class")
-        ]),
-    };
 }
