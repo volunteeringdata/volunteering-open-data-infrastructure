@@ -3,12 +3,20 @@
     ViewBag.Title = "[home]";
 }
 
-@foreach (var n in Endpoints.Names)
-{
-    Endpoints.ParameterMapping.TryGetValue(n, out var p);
-    var ps = p?.Parameters ?? [];
+<ul>
+    <li>
+        <a href="swagger">API playground</a>
+    </li>
+    <li>
+        <a href="sparql">SPARQL playground</a>
+    </li>
+    @foreach (var endpointName in Endpoints.Names)
+    {
+        var parameters = Endpoints.ParameterMapping.TryGetValue(endpointName, out var endpoint) ? endpoint.Parameters : [];
+        var endpointLink = QueryHelpers.AddQueryString($"{endpointName}.html", parameters.ToDictionary(parameter => parameter.Name!, parameter => parameter.Example));
 
-    var u = QueryHelpers.AddQueryString($"{n}.html", ps.ToDictionary(x => x.Name, x => x.Example));
-
-    <li><a href="/@u">@n</a></li>
-}
+        <li>
+            <a href="/@endpointLink">@endpointName</a>
+        </li>
+    }
+</ul>
