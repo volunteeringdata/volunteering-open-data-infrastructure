@@ -16,15 +16,7 @@ public class QueryService(HttpClient httpClient, IOptions<QueryServiceOptions> o
 
     public async Task<object?> ExecuteNamedQueryAsync(string name, Dictionary<string, string> parameters, CancellationToken ct)
     {
-        var resourceName = $"Query.Endpoints.{name}.query.sparql";
-        using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName);
-        if (stream is null)
-        {
-            return null;
-        }
-
-        var sparqlText = Parametrize(name, parameters, stream);
-
+        var sparqlText = Parametrize(name, parameters, await Endpoints.Sparql(name, ct));
         var sparqlQuery = new SparqlQueryParser().ParseFromString(sparqlText);
         var sparqlClient = new SparqlQueryClient(httpClient, options.SparqlEndpointUri);
 
@@ -52,10 +44,9 @@ public class QueryService(HttpClient httpClient, IOptions<QueryServiceOptions> o
         }
     }
 
-    private static string Parametrize(string name, Dictionary<string, string> parameters, Stream stream)
+    private static string Parametrize(string name, Dictionary<string, string> parameters, string sparqlText)
     {
-        using var reader = new StreamReader(stream);
-        var sparql = new SparqlParameterizedString(reader.ReadToEnd());
+        var sparql = new SparqlParameterizedString(sparqlText);
 
         if (DefaultController.Endpoints.TryGetValue(name, out var endpoint))
         {

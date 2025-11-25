@@ -20,14 +20,14 @@ public partial class OpenApiController() : ControllerBase
     private static partial Regex ResourceNameExtractor { get; }
 
     [HttpGet]
-    public OpenApiDocument Get() => new()
+    public async Task<OpenApiDocument> Get(CancellationToken ct) => new()
     {
         Info = new()
         {
             Title = "OpenVolunteering Hackathon API", // TODO: Don't hardcode
             Version = "1" // TODO: Don't hardcode
         },
-        Paths = Paths,
+        Paths = await GetPaths(ct),
         Components = new OpenApiComponents
         {
             Responses = new Dictionary<string, IOpenApiResponse>
@@ -55,52 +55,47 @@ public partial class OpenApiController() : ControllerBase
     };
 
 
-    private static OpenApiPaths Paths
+    private static async Task<OpenApiPaths> GetPaths(CancellationToken ct)
     {
-        get
+        var paths = new OpenApiPaths();
+
+        var endpointNames = Assembly.GetExecutingAssembly().GetManifestResourceNames()
+            .Select(name => ResourceNameExtractor.Match(name))
+            .Where(match => match.Success)
+            .Select(match => match.Value)
+            .Distinct();
+
+        foreach (var endpointName in endpointNames)
         {
-            var paths = new OpenApiPaths();
+            DefaultController.Endpoints.TryGetValue(endpointName, out var endpoint);
 
-            var endpointNames = Assembly.GetExecutingAssembly().GetManifestResourceNames()
-                .Select(name => ResourceNameExtractor.Match(name))
-                .Where(match => match.Success)
-                .Select(match => match.Value)
-                .Distinct();
-
-            foreach (var endpointName in endpointNames)
+            var sparqlText = await Endpoints.Sparql(endpointName, ct);
+            var sparqlQuery = new SparqlQueryParser().ParseFromString(sparqlText);
+            var responses = new OpenApiResponses
             {
-                DefaultController.Endpoints.TryGetValue(endpointName, out var endpoint);
-
-                var resourceName = $"Query.Endpoints.{endpointName}.query.sparql";
-                using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName);
-                using var reader = new StreamReader(stream!);
-                var sparqlText = reader.ReadToEnd();
-                var sparqlQuery = new SparqlQueryParser().ParseFromString(sparqlText);
-                var responses = new OpenApiResponses
+                ["200"] = sparqlQuery.QueryType switch
                 {
-                    ["200"] = sparqlQuery.QueryType switch
-                    {
-                        SparqlQueryType.Construct or
-                        SparqlQueryType.Describe or
-                        SparqlQueryType.DescribeAll => new OpenApiResponseReference(graphResponse),
+                    SparqlQueryType.Construct or
+                    SparqlQueryType.Describe or
+                    SparqlQueryType.DescribeAll => new OpenApiResponseReference(graphResponse),
 
-                        _ => new OpenApiResponseReference(nonGraphResponse),
-                    },
-                };
+                    _ => new OpenApiResponseReference(nonGraphResponse),
+                },
+            };
 
-                var pathItem = new OpenApiPathItem
+            var pathItem = new OpenApiPathItem
+            {
+                Operations = new()
                 {
-                    Operations = new()
+                    [HttpMethod.Get] = new OpenApiOperation
                     {
-                        [HttpMethod.Get] = new OpenApiOperation
-                        {
-                            Description = $"""
+                        Description = $"""
                             Underlying SPARQL query:
                             ```sparql
                             {sparqlText}
                             ```
                             """,
-                            Parameters = endpoint is null ? [] : [.. endpoint.Parameters.Select(p => new OpenApiParameter {
+                        Parameters = endpoint is null ? [] : [.. endpoint.Parameters.Select(p => new OpenApiParameter {
                                 Name = p.Name,
                                 In = ParameterLocation.Query,
                                 Schema = new OpenApiSchema {
@@ -108,16 +103,15 @@ public partial class OpenApiController() : ControllerBase
                                 },
                                 Required = true,
                             })],
-                            Responses = responses
-                        }
+                        Responses = responses
                     }
-                };
+                }
+            };
 
-                paths.Add($"/{endpointName}", pathItem);
-            }
-
-            return paths;
+            paths.Add($"/{endpointName}", pathItem);
         }
+
+        return paths;
     }
 
     private static JsonSchemaType AsJsonSchemaType(Param param) => param.Datatype switch

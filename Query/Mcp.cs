@@ -21,10 +21,10 @@ public static partial class Mcp
     [GeneratedRegex(@"(?<=Query\.Endpoints\.).+(?=\.query\.sparql)")]
     private static partial Regex ResourceNameExtractor { get; }
 
-    internal static ValueTask<ListToolsResult> ListTools(RequestContext<ListToolsRequestParams> _, CancellationToken __) =>
-        ValueTask.FromResult(new ListToolsResult
+    internal static async ValueTask<ListToolsResult> ListTools(RequestContext<ListToolsRequestParams> _, CancellationToken ct) =>
+        new()
         {
-            Tools = Assembly.GetExecutingAssembly().GetManifestResourceNames()
+            Tools = (await Task.WhenAll(Assembly.GetExecutingAssembly().GetManifestResourceNames()
                 .Select(static name => ResourceNameExtractor.Match(name))
                 .Where(static match => match.Success)
                 .Select(static match => match.Value)
@@ -35,12 +35,9 @@ public static partial class Mcp
                         endpoint.Parameters :
                         []
                 })
-                .Select(static endpoint =>
+                .Select(async endpoint =>
                 {
-                    var resourceName = $"Query.Endpoints.{endpoint.Name}.query.sparql";
-                    using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName);
-                    using var reader = new StreamReader(stream!);
-                    var sparqlText = reader.ReadToEnd();
+                    var sparqlText = await Endpoints.Sparql(endpoint.Name, ct);
 
                     return new Tool
                     {
@@ -62,9 +59,9 @@ public static partial class Mcp
                                 } as JsonNode)!),
                         })
                     };
-                })
-                .ToList()
-        });
+                })))
+            .ToList()
+        };
 
     internal static async ValueTask<CallToolResult> CallTool(RequestContext<CallToolRequestParams> context, CancellationToken ct) =>
         new()
