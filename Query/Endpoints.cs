@@ -19,35 +19,35 @@ public partial class Endpoints
     internal static IDictionary<string, Endpoint> ParameterMapping => new Dictionary<string, Endpoint>
     {
         ["activity_by_id"] = new([
-            new("id")
+            new("id", "68f792b0bf48f6d5969d0ead")
         ]),
         ["activity_by_location"] = new([
-            new("lat", XmlSpecsHelper.XmlSchemaDataTypeDouble),
-            new("lon", XmlSpecsHelper.XmlSchemaDataTypeDouble),
-            new("within", XmlSpecsHelper.XmlSchemaDataTypeInteger),
+            new("lat", "0", XmlSpecsHelper.XmlSchemaDataTypeDouble),
+            new("lon", "0", XmlSpecsHelper.XmlSchemaDataTypeDouble),
+            new("within", "0", XmlSpecsHelper.XmlSchemaDataTypeInteger),
         ]),
         ["activity_by_name"] = new([
-            new("name")
+            new("name", "Childbirth")
         ]),
         ["activity_search"] = new([
-            new("query")
+            new("query", "biodiversity")
         ]),
         ["organisation_by_id"] = new([
-            new("id")
+            new("id", "68f53f8346b712131f0148e8")
         ]),
         ["organisation_by_location"] = new([
-            new("lat", XmlSpecsHelper.XmlSchemaDataTypeDouble),
-            new("lon", XmlSpecsHelper.XmlSchemaDataTypeDouble),
-            new("within", XmlSpecsHelper.XmlSchemaDataTypeInteger),
+            new("lat", "0", XmlSpecsHelper.XmlSchemaDataTypeDouble),
+            new("lon", "0", XmlSpecsHelper.XmlSchemaDataTypeDouble),
+            new("within", "0", XmlSpecsHelper.XmlSchemaDataTypeInteger),
         ]),
         ["organisation_by_name"] = new([
-            new("name")
+            new("name", "Do it")
         ]),
         ["organisation_search"] = new([
-            new("query")
+            new("query", "network")
         ]),
         ["schema_by_class"] = new([
-            new("class")
+            new("class", "Activity")
         ]),
     };
 
