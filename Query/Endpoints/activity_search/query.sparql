@@ -7,4 +7,4 @@ WHERE {
   
   ?activity_id :activityLabel ?activity_label .
 }
-ORDER BY DESC(?score)
+ORDER BY DESC(?search_score)
