@@ -88,5 +88,9 @@ PREFIX text: <http://jena.apache.org/text#>
             text:field "organisationDescription" ;
             text:predicate schema:organisationDescription ;
         ]
+        [
+            text:field "organisationPurpose" ;
+            text:predicate schema:organisationPurpose ;
+        ]
     ) ;
 .
