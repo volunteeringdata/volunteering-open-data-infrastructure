@@ -46,7 +46,8 @@ public static partial class Mcp
                                 p => p.Name,
                                 p => new JsonObject
                                 {
-                                    ["type"] = AsJsonSchemaType(p.Datatype)
+                                    ["type"] = AsJsonSchemaType(p.Datatype),
+                                    ["description"] = $"Example value: {p.Example}",
                                 } as JsonNode)!),
                         })
                     };
