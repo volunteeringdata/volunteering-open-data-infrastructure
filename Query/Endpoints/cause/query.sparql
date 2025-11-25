@@ -11,6 +11,6 @@ CONSTRUCT {
 WHERE {
     ?cause
         a :Cause ;
-        :optionDisplayName ?label ;
+        :label ?label ;
     .
 }

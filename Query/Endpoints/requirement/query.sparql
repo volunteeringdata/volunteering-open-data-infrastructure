@@ -11,6 +11,6 @@ CONSTRUCT {
 WHERE {
     ?requirement
         a :Requirement ;
-        :optionDisplayName ?label ;
+        :label ?label ;
     .
 }

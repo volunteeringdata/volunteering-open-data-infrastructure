@@ -4,15 +4,48 @@ PREFIX : <https://id.volunteeringdata.io/schema/>
 CONSTRUCT {
     <Organisations> :organisations ?organisation .
 
-    ?organisation ?p ?o .
-}
-WHERE {
     ?organisation
         a :Organisation ;
         :organisationLabel ?organisationLabel ;
         :organisationDescription ?organisationDescription ;
         :organisationEmail ?organisationEmail ;
+        :organisationLocation ?organisationLocation ;
+        :organisationPurpose ?organisationPurpose ;
+        :organisationPhone ?organisationPhone ;
+        :organisationLogo ?organisationPhone ;
+        :organisationCause ?organisationCause ;
     .
 
-    ?organisation ?p ?o .
+    ?organisationLocation
+        :locationType ?locationType ;
+        :address ?address ;
+        :latitude ?latitude ;
+        :longitude ?longitude ;
+    .
+
+    ?organisationCause :label ?causeLabel .
+}
+WHERE {
+    ?organisation
+        a :Organisation ;
+        :organisationLabel ?organisationLabel ;
+    .
+
+    OPTIONAL { ?organisation :organisationDescription ?organisationDescription . }
+    OPTIONAL { ?organisation :organisationEmail ?organisationEmail . }
+    OPTIONAL { ?organisation :organisationPurpose ?organisationPurpose . }
+    OPTIONAL { ?organisation :organisationPhone ?organisationPhone . }
+    OPTIONAL { ?organisation :organisationLogo ?organisationLogo . }
+    OPTIONAL { ?organisation :organisationLogo ?organisationLogo . }
+    OPTIONAL {
+        ?organisation :organisationLocation ?organisationLocation .
+        OPTIONAL { ?organisationLocation :locationType ?locationType . }
+        OPTIONAL { ?organisationLocation :address ?address . }
+        OPTIONAL { ?organisationLocation :latitude ?latitude . }
+        OPTIONAL { ?organisationLocation :longitude ?longitude . }
+    }
+    OPTIONAL {
+        ?organisation :organisationCause ?organisationCause .
+        ?organisationCause :label ?causeLabel .
+    }
 }

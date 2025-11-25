@@ -53,7 +53,7 @@ internal class Vocabulary
     internal static IUriNode MeasurementUnitPluralLabel { get; } = Node("measurementUnitPluralLabel");
     internal static IUriNode MeasurementUnitSingularLabel { get; } = Node("measurementUnitSingularLabel");
 
-    internal static IUriNode OptionDisplayName { get; } = Node("optionDisplayName");
+    internal static IUriNode OptionDisplayName { get; } = Node("label");
     internal static IUriNode OptionIcon { get; } = Node("optionIcon");
     internal static IUriNode OptionApp { get; } = Node("optionApp");
 
