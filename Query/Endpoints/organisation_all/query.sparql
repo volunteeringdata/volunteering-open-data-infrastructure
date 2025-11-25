@@ -6,14 +6,13 @@ CONSTRUCT {
 
     ?organisation
         a :Organisation ;
-        :organisationLabel ?organisationLabel ;
-        :organisationDescription ?organisationDescription ;
-        :organisationEmail ?organisationEmail ;
-        :organisationLocation ?organisationLocation ;
-        :organisationPurpose ?organisationPurpose ;
-        :organisationPhone ?organisationPhone ;
-        :organisationLogo ?organisationLogo ;
-        :organisationCause ?organisationCause ;
+        :label ?organisationLabel ;
+        :activity ?organisationActivity ;
+        :description ?organisationDescription ;
+        :purpose ?organisationPurpose ;
+        :location ?organisationLocation ;
+        :contact ?organisationContact ;
+        :cause ?organisationCause ;
     .
 
     ?organisationLocation
@@ -23,28 +22,38 @@ CONSTRUCT {
         :longitude ?longitude ;
     .
 
+    ?organisationContact
+        :label ?contactLabel ;
+        :email ?contactEmail ;
+        :phone ?contactPhone ;
+    .
+
     ?organisationCause :label ?causeLabel .
 }
 WHERE {
     ?organisation
         a :Organisation ;
-        :organisationLabel ?organisationLabel ;
+        :label ?organisationLabel ;
+        :activity ?organisationActivity ;
     .
 
-    OPTIONAL { ?organisation :organisationDescription ?organisationDescription . }
-    OPTIONAL { ?organisation :organisationEmail ?organisationEmail . }
-    OPTIONAL { ?organisation :organisationPurpose ?organisationPurpose . }
-    OPTIONAL { ?organisation :organisationPhone ?organisationPhone . }
-    OPTIONAL { ?organisation :organisationLogo ?organisationLogo . }
+    OPTIONAL { ?organisation :description ?organisationDescription . }
+    OPTIONAL { ?organisation :purpose ?organisationPurpose . }
     OPTIONAL {
-        ?organisation :organisationLocation ?organisationLocation .
+        ?organisation :location ?organisationLocation .
         OPTIONAL { ?organisationLocation :locationType ?locationType . }
         OPTIONAL { ?organisationLocation :address ?address . }
         OPTIONAL { ?organisationLocation :latitude ?latitude . }
         OPTIONAL { ?organisationLocation :longitude ?longitude . }
     }
     OPTIONAL {
-        ?organisation :organisationCause ?organisationCause .
+        ?organisation :contact ?organisationContact .
+        OPTIONAL { ?organisationContact :label ?contactLabel . }
+        OPTIONAL { ?organisationContact :email ?contactEmail . }
+        OPTIONAL { ?organisationContact :phone ?contactPhone . }
+    }
+    OPTIONAL {
+        ?organisation :cause ?organisationCause .
         ?organisationCause :label ?causeLabel .
     }
 }

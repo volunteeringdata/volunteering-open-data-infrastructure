@@ -390,6 +390,14 @@ id:schema
     rdfs:label "description"@en ;
 .
 
+:email
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf dc:description ;
+    rdfs:domain :Contact ;
+    rdfs:label "email"@en ;
+.
+
 :end
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
