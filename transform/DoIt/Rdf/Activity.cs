@@ -33,8 +33,8 @@ public class Activity : GraphWrapperNode
     internal Uri? Meeting { set => this.OverwriteNullable(Vocabulary.ActivityMeeting, value); }
 
     internal Organization Organization { 
-        get => this.Singular(Vocabulary.ActivityOrganization, Organization.Wrap); 
-        set => this.Overwrite(Vocabulary.ActivityOrganization, value, Organization.Wrap); 
+        get => this.Singular(Vocabulary.ActivityOrganisation, Organization.Wrap); 
+        set => this.Overwrite(Vocabulary.ActivityOrganisation, value, Organization.Wrap); 
     }
 
     internal ISet<Uri> PublishedApps { get => this.Objects(Vocabulary.ActivityPublishedApps, NodeMappings.From, ValueMappings.As<Uri>); }

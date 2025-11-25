@@ -20,7 +20,7 @@ internal class Vocabulary
     internal static IUriNode ActivityIsOnline { get; } = Node("allowsRemoteParticipation");
     internal static IUriNode ActivityIsVolunteerNumberLimited { get; } = Node("activityIsVolunteerNumberLimited");
     internal static IUriNode ActivityMeeting { get; } = Node("activityMeeting");
-    internal static IUriNode ActivityOrganization { get; } = Node("activityOrganisation");
+    internal static IUriNode ActivityOrganisation { get; } = Node("activityOrganisation");
     internal static IUriNode ActivityPublishedApps { get; } = Node("activityPublishedApps");
     internal static IUriNode ActivityRequirement { get; } = Node("activityRequirement");
     internal static IUriNode ActivityStart { get; } = Node("activityStart");
