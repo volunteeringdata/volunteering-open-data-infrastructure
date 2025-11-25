@@ -1,4 +1,5 @@
-﻿PREFIX : <https://id.volunteeringdata.io/schema/>
+﻿BASE <https://id.volunteeringdata.io/>
+PREFIX : <https://id.volunteeringdata.io/schema/>
 PREFIX text: <http://jena.apache.org/text#>
 
 SELECT ?organisation_id ?organisation_label ?search_match ?search_score

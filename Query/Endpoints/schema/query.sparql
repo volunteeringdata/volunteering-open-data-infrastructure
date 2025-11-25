@@ -1,5 +1,6 @@
-PREFIX id:      <https://id.volunteeringdata.io/>
-PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+BASE <https://id.volunteeringdata.io/>
+PREFIX id: <https://id.volunteeringdata.io/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 CONSTRUCT {
     ?ontologyTerm ?p ?o .

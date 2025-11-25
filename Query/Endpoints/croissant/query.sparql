@@ -1,4 +1,5 @@
-﻿PREFIX : <https://id.volunteeringdata.io/schema/>
+﻿BASE <https://id.volunteeringdata.io/>
+PREFIX : <https://id.volunteeringdata.io/schema/>
 PREFIX cr: <http://mlcommons.org/croissant/>
 PREFIX schema: <https://schema.org/>
 PREFIX dc: <http://purl.org/dc/terms/>

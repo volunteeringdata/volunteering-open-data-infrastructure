@@ -1,24 +1,14 @@
-BASE <https://id.example.org/>
-PREFIX : <https://id.example.org/>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
+BASE <https://id.volunteeringdata.io/>
+PREFIX : <https://id.volunteeringdata.io/schema/>
+PREFIX id: <https://id.volunteeringdata.io/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 CONSTRUCT {
-    ?vocabularyClass ?vocabularyClassProperty ?vocabularyClassValue .
-    ?vocabularyObjectProperty ?vocabularyObjectPropertyProperty ?vocabularyObjectPropertyValue .
+    ?ontologyTerm ?p ?o .
 }
 WHERE {
-    ?vocabularyClass
-        a owl:Class ;
-        ?vocabularyClassProperty ?vocabularyClassValue ;
-    .
+    ?ontologyTerm rdfs:isDefinedBy id:schema .
 
-    FILTER NOT EXISTS {
-        ?vocabularyClass rdfs:subClassOf ?vocabularyClassValue .
-    }
-
-    ?vocabularyObjectProperty
-        a owl:ObjectProperty ;
-        ?vocabularyObjectPropertyProperty ?vocabularyObjectPropertyValue ;
-    .
+    ?ontologyTerm ?p ?o .
 }
