@@ -43,6 +43,17 @@ public class DefaultController(QueryService someService) : ControllerBase
         ["activity_by_id"] = new([
             new("id")
         ]),
+        ["activity_by_location"] = new([
+            new("lat", XmlSpecsHelper.XmlSchemaDataTypeDouble),
+            new("lon", XmlSpecsHelper.XmlSchemaDataTypeDouble),
+            new("within", XmlSpecsHelper.XmlSchemaDataTypeInteger),
+        ]),
+        ["activity_by_name"] = new([
+            new("name")
+        ]),
+        ["activity_search"] = new([
+            new("query")
+        ]),
         ["organisation_by_id"] = new([
             new("id")
         ]),
