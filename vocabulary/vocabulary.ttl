@@ -26,7 +26,8 @@ id:schema
     vann:preferredNamespacePrefix "volunteering" ;
     vann:preferredNamespaceUri "https://id.volunteeringdata.io/schema/"^^xsd:anyURI ;
     rdfs:label "Volunteering and Social Action Ontology"@en ;
-    dc:description "Defines a vocabulary to describe volunteering activities, volunteer-involving organisations and volunteering management systems."@en .
+    dc:description "Defines a vocabulary to describe volunteering activities, volunteer-involving organisations and volunteering management systems."@en ;
+.
 
 
 ## Classes
@@ -35,93 +36,122 @@ id:schema
     rdfs:isDefinedBy id:schema ;
     rdfs:label "Volunteering Activity" ;
     rdfs:label "Activity"@en ;
-    rdfs:comment "Any kind of activity that involves volunteers."@en .
+    rdfs:comment "Any kind of activity that involves volunteers."@en ;
+.
 
 :Contact
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:label "Volunteering Contact Information" ;
     rdfs:label "Contact"@en ;
-    rdfs:comment "Any contact information related to volunteering activities."@en .
+    rdfs:comment "Any contact information related to volunteering activities."@en ;
+.
 
 :Location
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:label "Volunteering Location" ;
     rdfs:label "Location"@en ;
-    rdfs:comment "Any location related to volunteering activities."@en .
+    rdfs:comment "Any location related to volunteering activities."@en ;
+.
 
 :Organisation
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:label "Volunteer-Involving Organisation" ;
     rdfs:label "Organisation"@en ;
-    rdfs:comment "Any organisation running activities that involve volunteers."@en .
+    rdfs:comment "Any organisation running activities that involve volunteers."@en ;
+.
 
 :System
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:label "Volunteering Management System" ;
     rdfs:label "System"@en ;
-    rdfs:comment "Any system that is used to manage activities that involve volunteers."@en .
+    rdfs:comment "Any system that is used to manage activities that involve volunteers."@en ;
+.
 
 :Time
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:label "Volunteering Time Information" ;
     rdfs:label "Time"@en ;
-    rdfs:comment "Any time information related to volunteering activities."@en .
+    rdfs:comment "Any time information related to volunteering activities."@en ;
+.
 
 
 ## Subclasses
+### Activity Subclasses
+:ActivityThing
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:label "Activity Thing"@en ;
+    rdfs:comment "Any class related to a volunteering activity."@en ;
+.
+
 :ActivityContact
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Contact ;
+    rdfs:subClassOf :Contact, :ActivityThing;
     rdfs:label "Activity Contact"@en ;
-    rdfs:comment "Any contact information related to a volunteering activity."@en .
+    rdfs:comment "Any contact information related to a volunteering activity."@en ;
+.
 
 :ActivityLocation
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Location ;
+    rdfs:subClassOf :Location, :ActivityThing ;
     rdfs:label "Activity Location"@en ;
-    rdfs:comment "Any location information related to a volunteering activity."@en .
+    rdfs:comment "Any location information related to a volunteering activity."@en ;
+.
 
 :ActivitySystem
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :System ;
+    rdfs:subClassOf :System, :ActivityThing ;
     rdfs:label "Activity System"@en ;
-    rdfs:comment "Any system related to a volunteering activity."@en .
+    rdfs:comment "Any system related to a volunteering activity."@en ;
+.
 
 :ActivityTime
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Time ;
+    rdfs:subClassOf :Time, :ActivityThing ;
     rdfs:label "Activity Time"@en ;
-    rdfs:comment "Any time information related to a volunteering activity."@en .
+    rdfs:comment "Any time information related to a volunteering activity."@en ;
+.
+
+### Organisation Subclasses
+:OrganisationThing
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:label "Organisation Thing"@en ;
+    rdfs:comment "Any class related to a volunteer involving organisation."@en ;
+.
 
 :OrganisationContact
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Contact ;
+    rdfs:subClassOf :Contact, :OrganisationThing ;
     rdfs:label "Organisation Contact"@en ;
-    rdfs:comment "Any contact information related to a volunteer involving organisation."@en .
+    rdfs:comment "Any contact information related to a volunteer involving organisation."@en ;
+.
 
 :OrganisationLocation
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Location ;
+    rdfs:subClassOf :Location, :OrganisationThing ;
     rdfs:label "Organisation Location"@en ;
-    rdfs:comment "Any location information related to a volunteer involving organisation."@en .
+    rdfs:comment "Any location information related to a volunteer involving organisation."@en ;
+.
 
 :OrganisationSystem
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :System ;
+    rdfs:subClassOf :System, :OrganisationThing ;
     rdfs:label "Organisation System"@en ;
-    rdfs:comment "Any system related to a volunteer involving organisation."@en .
+    rdfs:comment "Any system related to a volunteer involving organisation."@en ;
+.
 
 
 ## Object Properties
@@ -129,112 +159,46 @@ id:schema
     a owl:ObjectProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:range :Activity ;
-    rdfs:label "has activity"@en .
+    rdfs:label "has activity"@en ;
+.
 
 :contact
     a owl:ObjectProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:range :Contact ;
-    rdfs:label "has contact"@en .
+    rdfs:label "has contact"@en ;
+.
 
 :location
     a owl:ObjectProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:range :Location ;
-    rdfs:label "has location"@en .
+    rdfs:label "has location"@en ;
+.
 
 :organisation
     a owl:ObjectProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:range :Organisation ;
-    rdfs:label "has organisation"@en .
+    rdfs:label "has organisation"@en ;
+.
 
 :system
     a owl:ObjectProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:range :System ;
-    rdfs:label "has system"@en .
+    rdfs:label "has system"@en ;
+.
 
 :time
     a owl:ObjectProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:range :Time ;
-    rdfs:label "has time"@en .
+    rdfs:label "has time"@en ;
+.
 
 
 ## Classification Object Properties
-:activityConcept
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :concept ;
-    owl:inverseOf :conceptActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivityConcept ;
-    rdfs:label "activity has concept"@en .
-
-:activityAccessibility
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :activityConcept, :accessibility ;
-    owl:inverseOf :accessibilityActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivityAccessibility ;
-    rdfs:label "activity has accessibility information"@en .
-
-:activityCause
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :activityConcept, :cause ;
-    owl:inverseOf :causeActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivityCause ;
-    rdfs:label "activity has cause"@en .
-
-:activityDemography
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :activityConcept, :demography ;
-    owl:inverseOf :demographyActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivityDemography ;
-    rdfs:label "activity has demography"@en .
-
-:activityLanguage
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :activityConcept, :language ;
-    owl:inverseOf :languageActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivityLanguage ;
-    rdfs:label "activity has language"@en .
-
-:activityRequirement
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :activityConcept, :requirement ;
-    owl:inverseOf :requirementActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivityRequirement ;
-    rdfs:label "activity has requirement"@en .
-
-:activityReward
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :activityConcept, :reward ;
-    owl:inverseOf :rewardActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivityReward ;
-    rdfs:label "activity has reward"@en .
-
-:activitySkill
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :activityConcept, :skill ;
-    owl:inverseOf :skillActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivitySkill ;
-    rdfs:label "activity has skill"@en .
-
 :activityContact
     a owl:ObjectProperty ;
     rdfs:isDefinedBy id:schema ;
@@ -242,187 +206,8 @@ id:schema
     owl:inverseOf :contactActivity ;
     rdfs:domain :Activity ;
     rdfs:range :ActivityContact ;
-    rdfs:label "activity has contact"@en .
-
-:activityLocation
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :location ;
-    owl:inverseOf :locationActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivityLocation ;
-    rdfs:label "activity has location"@en .
-
-:activityOrganisation
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :organisation ;
-    owl:inverseOf :organisationActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :Organisation ;
-    rdfs:label "activity has organisation"@en .
-
-:activitySystem
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :system ;
-    owl:inverseOf :systemActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivitySystem ;
-    rdfs:label "activity has system"@en .
-
-:activityTime
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :time ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :timeActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivityTime ;
-    rdfs:label "activity has time"@en .
-
-:conceptActivity
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :activity ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :activityConcept ;
-    rdfs:domain :ActivityConcept ;
-    rdfs:range :Activity ;
-    rdfs:label "concept has activity"@en .
-
-:accessibilityActivity
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :conceptActivity ;
-    owl:inverseOf :activityAccessibility ;
-    rdfs:domain :ActivityAccessibility ;
-    rdfs:range :Activity ;
-    rdfs:label "accessibility information has activity"@en .
-
-:causeActivity
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :conceptActivity ;
-    owl:inverseOf :activityCause ;
-    rdfs:domain :ActivityCause ;
-    rdfs:range :Activity ;
-    rdfs:label "cause has activity"@en .
-
-:demographyActivity
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :conceptActivity ;
-    owl:inverseOf :activityDemography ;
-    rdfs:domain :ActivityDemography ;
-    rdfs:range :Demography ;
-    rdfs:label "demography has activity"@en .
-
-:languageActivity
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :conceptActivity ;
-    owl:inverseOf :activityLanguage ;
-    rdfs:domain :ActivityLanguage ;
-    rdfs:range :Activity ;
-    rdfs:label "language has activity"@en .
-
-:requirementActivity
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :conceptActivity ;
-    owl:inverseOf :activityRequirement ;
-    rdfs:domain :ActivityRequirement ;
-    rdfs:range :Activity ;
-    rdfs:label "requirement has activity"@en .
-
-:rewardActivity
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :conceptActivity ;
-    owl:inverseOf :activityReward ;
-    rdfs:domain :ActivityReward ;
-    rdfs:range :Activity ;
-    rdfs:label "reward has activity"@en .
-
-:skillActivity
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :conceptActivity ;
-    owl:inverseOf :activitySkill ;
-    rdfs:domain :ActivitySkill ;
-    rdfs:range :Activity ;
-    rdfs:label "skill has activity"@en .
-
-:conceptOrganisation
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :organisation ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :organisationConcept ;
-    rdfs:domain :OrganisationConcept ;
-    rdfs:range :Organisation ;
-    rdfs:label "concept has organisation"@en .
-
-:accessibilityOrganisation
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :conceptOrganisation ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :organisationAccessibility ;
-    rdfs:domain :OrganisationAccessibility ;
-    rdfs:range :Organisation ;
-    rdfs:label "accessibility has organisation"@en .
-
-:causeOrganisation
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :conceptOrganisation ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :organisationCause ;
-    rdfs:domain :OrganisationCause ;
-    rdfs:range :Organisation ;
-    rdfs:label "cause has organisation"@en .
-
-:demographyOrganisation
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :conceptOrganisation ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :organisationDemography ;
-    rdfs:domain :OrganisationDemography ;
-    rdfs:range :Organisation ;
-    rdfs:label "demography has organisation"@en .
-
-:languageOrganisation
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :conceptOrganisation ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :organisationLanguage ;
-    rdfs:domain :OrganisationLanguage ;
-    rdfs:range :Organisation ;
-    rdfs:label "language has organisation"@en .
-
-:requirementOrganisation
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :conceptOrganisation ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :organisationRequirement ;
-    rdfs:domain :OrganisationRequirement ;
-    rdfs:range :Organisation ;
-    rdfs:label "requirement has organisation"@en .
-
-:rewardOrganisation
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :conceptOrganisation ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :organisationReward ;
-    rdfs:domain :OrganisationReward ;
-    rdfs:range :Organisation ;
-    rdfs:label "reward has organisation"@en .
-
-:skillOrganisation
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :conceptOrganisation ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :organisationSkill ;
-    rdfs:domain :OrganisationSkill ;
-    rdfs:range :Organisation ;
-    rdfs:label "skill has organisation"@en .
+    rdfs:label "activity has contact"@en ;
+.
 
 :contactActivity
     a owl:ObjectProperty ;
@@ -431,16 +216,18 @@ id:schema
     owl:inverseOf :activityContact ;
     rdfs:domain :ActivityContact ;
     rdfs:range :Activity ;
-    rdfs:label "contact has activity"@en .
+    rdfs:label "contact has activity"@en ;
+.
 
-:contactOrganisation
+:activityLocation
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf :organisation ;
     rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :organisationContact ;
-    rdfs:domain :OrganisationContact ;
-    rdfs:range :Organisation ;
-    rdfs:label "contact has organisation"@en .
+    rdfs:subPropertyOf :location ;
+    owl:inverseOf :locationActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivityLocation ;
+    rdfs:label "activity has location"@en ;
+.
 
 :locationActivity
     a owl:ObjectProperty ;
@@ -449,7 +236,88 @@ id:schema
     owl:inverseOf :activityLocation ;
     rdfs:domain :ActivityLocation ;
     rdfs:range :Activity ;
-    rdfs:label "location has activity"@en .
+    rdfs:label "location has activity"@en ;
+.
+
+:activityOrganisation
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :organisation ;
+    owl:inverseOf :organisationActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :Organisation ;
+    rdfs:label "activity has organisation"@en ;
+.
+
+:organisationActivity
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :activity ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :activityOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :Activity ;
+    rdfs:label "organisation has activity"@en ;
+.
+
+:activitySystem
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :system ;
+    owl:inverseOf :systemActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivitySystem ;
+    rdfs:label "activity has system"@en ;
+.
+
+:systemActivity
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :activity ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :activitySystem ;
+    rdfs:domain :ActivitySystem ;
+    rdfs:range :Activity ;
+    rdfs:label "system has activity"@en ;
+.
+
+:activityTime
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :time ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :timeActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivityTime ;
+    rdfs:label "activity has time"@en ;
+.
+
+:timeActivity
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :time ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :activityTime ;
+    rdfs:domain :ActivityTime ;
+    rdfs:range :Activity ;
+    rdfs:label "time has activity"@en ;
+.
+
+:contactOrganisation
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :organisation ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :organisationContact ;
+    rdfs:domain :OrganisationContact ;
+    rdfs:range :Organisation ;
+    rdfs:label "contact has organisation"@en ;
+.
+
+:organisationContact
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :contact ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :contactOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :OrganisationContact ;
+    rdfs:label "organisation has contact"@en ;
+.
 
 :locationOrganisation
     a owl:ObjectProperty ;
@@ -460,96 +328,6 @@ id:schema
     rdfs:range :Organisation ;
     rdfs:label "location has organisation"@en .
 
-:organisationActivity
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :activity ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :activityOrganisation ;
-    rdfs:domain :Organisation ;
-    rdfs:range :Activity ;
-    rdfs:label "organisation has activity"@en .
-
-:organisationConcept
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :concept ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :conceptOrganisation ;
-    rdfs:domain :Organisation ;
-    rdfs:range :OrganisationConcept ;
-    rdfs:label "organisation has concept"@en .
-
-:organisationAccessibility
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :organisationConcept, :accessibility ;
-    owl:inverseOf :accessibilityOrganisation ;
-    rdfs:domain :Organisation ;
-    rdfs:range :OrganisationAccessibility ;
-    rdfs:label "organisation has accessibility information"@en .
-
-:organisationCause
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :organisationConcept, :cause ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :causeOrganisation ;
-    rdfs:domain :Organisation ;
-    rdfs:range :OrganisationCause ;
-    rdfs:label "organisation has cause"@en .
-
-:organisationDemography
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :organisationConcept, :demography ;
-    owl:inverseOf :demographyOrganisation ;
-    rdfs:domain :Organisation ;
-    rdfs:range :OrganisationDemography ;
-    rdfs:label "organisation has demography"@en .
-
-:organisationLanguage
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :organisationConcept, :language ;
-    owl:inverseOf :languageOrganisation ;
-    rdfs:domain :Organisation ;
-    rdfs:range :OrganisationLanguage ;
-    rdfs:label "organisation has language"@en .
-
-:organisationRequirement
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :organisationConcept, :requirement ;
-    owl:inverseOf :requirementOrganisation ;
-    rdfs:domain :Organisation ;
-    rdfs:range :OrganisationRequirement ;
-    rdfs:label "organisation has requirement"@en .
-
-:organisationReward
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :organisationConcept, :reward ;
-    owl:inverseOf :rewardOrganisation ;
-    rdfs:domain :Organisation ;
-    rdfs:range :OrganisationReward ;
-    rdfs:label "organisation has reward"@en .
-
-:organisationSkill
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :organisationConcept, :skill ;
-    owl:inverseOf :skillOrganisation ;
-    rdfs:domain :Organisation ;
-    rdfs:range :OrganisationSkill ;
-    rdfs:label "organisation has skill"@en .
-
-:organisationContact
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :contact ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :contactOrganisation ;
-    rdfs:domain :Organisation ;
-    rdfs:range :OrganisationContact ;
-    rdfs:label "organisation has contact"@en .
-
 :organisationLocation
     a owl:ObjectProperty ;
     rdfs:subPropertyOf :location ;
@@ -557,7 +335,8 @@ id:schema
     owl:inverseOf :locationOrganisation ;
     rdfs:domain :Organisation ;
     rdfs:range :OrganisationLocation ;
-    rdfs:label "organisation has location"@en .
+    rdfs:label "organisation has location"@en ;
+.
 
 :organisationSystem
     a owl:ObjectProperty ;
@@ -566,16 +345,8 @@ id:schema
     owl:inverseOf :systemOrganisation ;
     rdfs:domain :Organisation ;
     rdfs:range :OrganisationSystem ;
-    rdfs:label "organisation has system"@en .
-
-:systemActivity
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :activity ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :activitySystem ;
-    rdfs:domain :ActivitySystem ;
-    rdfs:range :Activity ;
-    rdfs:label "system has activity"@en .
+    rdfs:label "organisation has system"@en ;
+.
 
 :systemOrganisation
     a owl:ObjectProperty ;
@@ -584,7 +355,8 @@ id:schema
     owl:inverseOf :organisationSystem ;
     rdfs:domain :OrganisationSystem ;
     rdfs:range :Organisation ;
-    rdfs:label "system has organisation"@en .
+    rdfs:label "system has organisation"@en ;
+.
 
 
 ## Datatype Properties
@@ -592,160 +364,90 @@ id:schema
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:domain :Location ;
-    rdfs:label "has address"@en .
+    rdfs:label "has address"@en ;
+.
 
 :allowsRemoteParticipation
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ; 
     rdfs:domain :Activity ;
     rdfs:range xsd:boolean ;
-    rdfs:label "allows remote participation" .
+    rdfs:label "allows remote participation" ;
+.
 
 :beginning
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf time:hasBeginning ;
     rdfs:domain :Time ;
-    rdfs:label "has beginning"@en .
+    rdfs:label "has beginning"@en ;
+.
 
 :description
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf dc:description ;
-    rdfs:label "description"@en .
+    rdfs:label "description"@en ;
+.
 
 :end
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf time:hasEnd ;
     rdfs:domain :Time ;
-    rdfs:label "has end"@en .
+    rdfs:label "has end"@en ;
+.
 
 :label
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf rdfs:label ;
-    rdfs:label "has label"@en .
+    rdfs:label "has label"@en ;
+.
 
 :latitude
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf rdfs:seeAlso ;
     rdfs:domain :Location ;
-    rdfs:label "has latitude"@en .
+    rdfs:label "has latitude"@en ;
+.
 
 :longitude
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:domain :Location ;
-    rdfs:label "has longitude"@en .
+    rdfs:label "has longitude"@en ;
+.
+
+:phone
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:domain :Contact ;
+    rdfs:label "has phone number"@en ;
+.
+
+:purpose
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:domain :Organisation ;
+    rdfs:label "has purpose"@en ;
+.
 
 :requiresEmergencyParticipation
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ; 
     rdfs:domain :Activity ;
     rdfs:range xsd:boolean ;
-    rdfs:label "requires emergency participation" .
+    rdfs:label "requires emergency participation" ;
+.
 
 :url
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf rdfs:seeAlso ;
-    rdfs:label "has url"@en .
-
-
-## Classification Datatype sub-properties
-:activityDescription
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :description ;
-    rdfs:domain :Activity ;
-    rdfs:label "activity has description"@en .
-
-:activityLabel
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :label ;
-    rdfs:domain :Activity ;
-    rdfs:Range rdfs:Literal ;
-    rdfs:label "activity has label"@en .
-
-:activityUrl
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :url ;
-    rdfs:domain :Activity ;
-    rdfs:label "activity has URL"@en .
-
-:contactLabel
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :label ;
-    rdfs:domain :Contact ;
-    rdfs:label "contact has label"@en .
-
-:locationDescription
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :description ;
-    rdfs:domain :System ;
-    rdfs:label "location has description"@en .
-
-:locationLabel
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :label ;
-    rdfs:domain :Location ;
-    rdfs:label "location has label"@en .
-
-:organisationDescription
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :description ;
-    rdfs:domain :Organisation ;
-    rdfs:label "organisation has description"@en .
-
-:organisationLabel
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :label ;
-    rdfs:domain :Organisation ;
-    rdfs:label "organisation has label"@en .
-
-:organisationUrl
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :url ;
-    rdfs:domain :Organisation ;
-    rdfs:label "organisation has URL"@en .
-
-:systemDescription
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :description ;
-    rdfs:domain :System ;
-    rdfs:label "system has description"@en .
-
-:systemLabel
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :label ;
-    rdfs:domain :System ;
-    rdfs:label "system has label"@en .
-
-:systemUrl
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :url ;
-    rdfs:domain :System ;
-    rdfs:label "system has URL"@en .
-
-:timeLabel
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :label ;
-    rdfs:domain :Time ;
-    rdfs:label "time has label"@en .
+    rdfs:label "has url"@en ;
+.
 
 
 ## Concept Scheme
@@ -765,7 +467,7 @@ id:schema
     rdfs:label "Volunteering Concept Scheme" ;
     rdfs:label "Concept Scheme"@en ;
     rdfs:comment "A taxonomy of concepts related to volunteering activities."@en ;
-    skos:hasTopConcept :Accessibility, :CharitableCause, :Demography, :Language, :Requirement, :Reward, :Skill ;
+    skos:hasTopConcept :Accessibility, :Cause, :Demography, :Language, :Requirement, :Reward, :Skill ;
 .
 
 :conceptLabel
@@ -783,6 +485,8 @@ id:schema
     rdfs:label "Concept"@en ;
     rdfs:comment "Any conceptual information related to volunteering activities."@en .
 
+skos:Concept rdfs:label "SKOS Concept" .
+
 :Accessibility
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
@@ -790,7 +494,7 @@ id:schema
     :conceptLabel "Accessibility"@en ;
     rdfs:comment "Any accessibility information related to volunteering activities."@en .
 
-:CharitableCause
+:Cause
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subClassOf :Concept ;
@@ -946,7 +650,7 @@ id:schema
 .
 
 
-## Concept Object Properties
+### Concept Object Properties
 :concept
     a owl:ObjectProperty ;
     rdfs:isDefinedBy id:schema ;
@@ -1001,3 +705,293 @@ id:schema
     rdfs:subPropertyOf :concept ;
     rdfs:range :Skill ;
     rdfs:label "has skill"@en .
+
+
+### Concept Classification Object Properties
+:activityConcept
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :concept ;
+    owl:inverseOf :conceptActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivityConcept ;
+    rdfs:label "activity has concept"@en .
+
+:activityAccessibility
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :activityConcept, :accessibility ;
+    owl:inverseOf :accessibilityActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivityAccessibility ;
+    rdfs:label "activity has accessibility information"@en .
+
+:activityCause
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :activityConcept, :cause ;
+    owl:inverseOf :causeActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivityCause ;
+    rdfs:label "activity has cause"@en .
+
+:activityDemography
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :activityConcept, :demography ;
+    owl:inverseOf :demographyActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivityDemography ;
+    rdfs:label "activity has demography"@en .
+
+:activityLanguage
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :activityConcept, :language ;
+    owl:inverseOf :languageActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivityLanguage ;
+    rdfs:label "activity has language"@en .
+
+:activityRequirement
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :activityConcept, :requirement ;
+    owl:inverseOf :requirementActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivityRequirement ;
+    rdfs:label "activity has requirement"@en .
+
+:activityReward
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :activityConcept, :reward ;
+    owl:inverseOf :rewardActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivityReward ;
+    rdfs:label "activity has reward"@en .
+
+:activitySkill
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :activityConcept, :skill ;
+    owl:inverseOf :skillActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :ActivitySkill ;
+    rdfs:label "activity has skill"@en .
+
+:conceptActivity
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :activity ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :activityConcept ;
+    rdfs:domain :ActivityConcept ;
+    rdfs:range :Activity ;
+    rdfs:label "concept has activity"@en .
+
+:accessibilityActivity
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :conceptActivity ;
+    owl:inverseOf :activityAccessibility ;
+    rdfs:domain :ActivityAccessibility ;
+    rdfs:range :Activity ;
+    rdfs:label "accessibility information has activity"@en .
+
+:causeActivity
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :conceptActivity ;
+    owl:inverseOf :activityCause ;
+    rdfs:domain :ActivityCause ;
+    rdfs:range :Activity ;
+    rdfs:label "cause has activity"@en .
+
+:demographyActivity
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :conceptActivity ;
+    owl:inverseOf :activityDemography ;
+    rdfs:domain :ActivityDemography ;
+    rdfs:range :Demography ;
+    rdfs:label "demography has activity"@en .
+
+:languageActivity
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :conceptActivity ;
+    owl:inverseOf :activityLanguage ;
+    rdfs:domain :ActivityLanguage ;
+    rdfs:range :Activity ;
+    rdfs:label "language has activity"@en .
+
+:requirementActivity
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :conceptActivity ;
+    owl:inverseOf :activityRequirement ;
+    rdfs:domain :ActivityRequirement ;
+    rdfs:range :Activity ;
+    rdfs:label "requirement has activity"@en .
+
+:rewardActivity
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :conceptActivity ;
+    owl:inverseOf :activityReward ;
+    rdfs:domain :ActivityReward ;
+    rdfs:range :Activity ;
+    rdfs:label "reward has activity"@en .
+
+:skillActivity
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :conceptActivity ;
+    owl:inverseOf :activitySkill ;
+    rdfs:domain :ActivitySkill ;
+    rdfs:range :Activity ;
+    rdfs:label "skill has activity"@en .
+
+:organisationConcept
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :concept ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :conceptOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :OrganisationConcept ;
+    rdfs:label "organisation has concept"@en .
+
+:organisationAccessibility
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :organisationConcept, :accessibility ;
+    owl:inverseOf :accessibilityOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :OrganisationAccessibility ;
+    rdfs:label "organisation has accessibility information"@en .
+
+:organisationCause
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :organisationConcept, :cause ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :causeOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :OrganisationCause ;
+    rdfs:label "organisation has cause"@en .
+
+:organisationDemography
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :organisationConcept, :demography ;
+    owl:inverseOf :demographyOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :OrganisationDemography ;
+    rdfs:label "organisation has demography"@en .
+
+:organisationLanguage
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :organisationConcept, :language ;
+    owl:inverseOf :languageOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :OrganisationLanguage ;
+    rdfs:label "organisation has language"@en .
+
+:organisationRequirement
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :organisationConcept, :requirement ;
+    owl:inverseOf :requirementOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :OrganisationRequirement ;
+    rdfs:label "organisation has requirement"@en .
+
+:organisationReward
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :organisationConcept, :reward ;
+    owl:inverseOf :rewardOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :OrganisationReward ;
+    rdfs:label "organisation has reward"@en .
+
+:organisationSkill
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :organisationConcept, :skill ;
+    owl:inverseOf :skillOrganisation ;
+    rdfs:domain :Organisation ;
+    rdfs:range :OrganisationSkill ;
+    rdfs:label "organisation has skill"@en .
+
+:conceptOrganisation
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :organisation ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :organisationConcept ;
+    rdfs:domain :OrganisationConcept ;
+    rdfs:range :Organisation ;
+    rdfs:label "concept has organisation"@en .
+
+:accessibilityOrganisation
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :conceptOrganisation ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :organisationAccessibility ;
+    rdfs:domain :OrganisationAccessibility ;
+    rdfs:range :Organisation ;
+    rdfs:label "accessibility has organisation"@en .
+
+:causeOrganisation
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :conceptOrganisation ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :organisationCause ;
+    rdfs:domain :OrganisationCause ;
+    rdfs:range :Organisation ;
+    rdfs:label "cause has organisation"@en .
+
+:demographyOrganisation
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :conceptOrganisation ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :organisationDemography ;
+    rdfs:domain :OrganisationDemography ;
+    rdfs:range :Organisation ;
+    rdfs:label "demography has organisation"@en .
+
+:languageOrganisation
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :conceptOrganisation ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :organisationLanguage ;
+    rdfs:domain :OrganisationLanguage ;
+    rdfs:range :Organisation ;
+    rdfs:label "language has organisation"@en .
+
+:requirementOrganisation
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :conceptOrganisation ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :organisationRequirement ;
+    rdfs:domain :OrganisationRequirement ;
+    rdfs:range :Organisation ;
+    rdfs:label "requirement has organisation"@en .
+
+:rewardOrganisation
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :conceptOrganisation ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :organisationReward ;
+    rdfs:domain :OrganisationReward ;
+    rdfs:range :Organisation ;
+    rdfs:label "reward has organisation"@en .
+
+:skillOrganisation
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :conceptOrganisation ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :organisationSkill ;
+    rdfs:domain :OrganisationSkill ;
+    rdfs:range :Organisation ;
+    rdfs:label "skill has organisation"@en .
