@@ -1,0 +1,18 @@
+﻿BASE <https://id.volunteeringdata.io/>
+PREFIX : <https://id.volunteeringdata.io/schema/>
+
+CONSTRUCT {
+    <Organisations> :organisations ?organisation .
+
+    ?organisation ?p ?o .
+}
+WHERE {
+    ?organisation
+        a :Organisation ;
+        :organisationLabel ?organisationLabel ;
+        :organisationDescription ?organisationDescription ;
+        :organisationEmail ?organisationEmail ;
+    
+
+    ?organisation ?p ?o .
+}
