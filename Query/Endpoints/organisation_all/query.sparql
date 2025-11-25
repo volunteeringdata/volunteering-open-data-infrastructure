@@ -12,7 +12,7 @@ WHERE {
         :organisationLabel ?organisationLabel ;
         :organisationDescription ?organisationDescription ;
         :organisationEmail ?organisationEmail ;
-    
+    .
 
     ?organisation ?p ?o .
 }
