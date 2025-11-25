@@ -8,14 +8,17 @@ CONSTRUCT {
     ?vocabularyObjectProperty ?vocabularyObjectPropertyProperty ?vocabularyObjectPropertyValue .
 }
 WHERE {
-    FILTER(?vocabularyClassProperty != IRI(rdfs:subClassOf))
-
     ?vocabularyClass
+        a owl:Class ;
         ?vocabularyClassProperty ?vocabularyClassValue ;
-        a owl:Class .
+    .
+
+    FILTER NOT EXISTS {
+        ?vocabularyClass rdfs:subClassOf ?vocabularyClassValue .
+    }
 
     ?vocabularyObjectProperty
+        a owl:ObjectProperty ;
         ?vocabularyObjectPropertyProperty ?vocabularyObjectPropertyValue ;
-        rdfs:domain ?domain ;
-        a owl:ObjectProperty .
+    .
 }
