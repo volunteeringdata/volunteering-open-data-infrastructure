@@ -196,10 +196,9 @@ Contact is misleading maybe, it seems people think of it as a person rather than
 We could model it so that an activity has sessions:
 with specific times and place and contact
 
-## MCP
+## Configure the MCP Server
 
-To access the MCP server locally using Claude Desktop, first see Running the Project above.
-Then modify the Claude Desktop config file (see [docs](https://modelcontextprotocol.io/docs/develop/connect-local-servers#installing-the-filesystem-server)), adding the following:
+See for example [Claude's Documentation](https://modelcontextprotocol.io/docs/develop/connect-local-servers#installing-the-filesystem-server)), and add the following config:
 
 ```json
 {
@@ -207,7 +206,7 @@ Then modify the Claude Desktop config file (see [docs](https://modelcontextproto
         "volunteering": {
             "args": [
                 "mcp-remote",
-                "http://localhost:5199/mcp"
+                "https://api.volunteeringdata.io/mcp"
             ],
             "command": "npx"
         }
