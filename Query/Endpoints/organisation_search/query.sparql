@@ -3,8 +3,8 @@ PREFIX text: <http://jena.apache.org/text#>
 
 SELECT ?s ?label ?value
 WHERE {
-  (?s ?score ?value) text:query (:organizationDescription :organizationLabel :organizationPurpose $query "highlight:s:<mark>|e:</mark>") .
+  (?s ?score ?value) text:query (:organisationDescription :organisationLabel :organisationPurpose $query "highlight:s:<mark>|e:</mark>") .
   
-  ?s :organizationLabel ?label .
+  ?s :organisationLabel ?label .
 }
 ORDER BY DESC(?score)
