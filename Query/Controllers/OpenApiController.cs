@@ -94,6 +94,12 @@ public partial class OpenApiController() : ControllerBase
                     {
                         [HttpMethod.Get] = new OpenApiOperation
                         {
+                            Description = $"""
+                            Underlying SPARQL query:
+                            ```sparql
+                            {sparqlText}
+                            ```
+                            """,
                             Parameters = endpoint is null ? [] : [.. endpoint.Parameters.Select(p => new OpenApiParameter {
                                 Name = p.Name,
                                 In = ParameterLocation.Query,
