@@ -1,10 +1,7 @@
 ﻿using ModelContextProtocol.Protocol;
 using ModelContextProtocol.Server;
-using Query.Controllers;
 using Query.Services;
-using System.Reflection;
 using System.Text.Json.Nodes;
-using System.Text.RegularExpressions;
 using VDS.RDF;
 using VDS.RDF.Parsing;
 using VDS.RDF.Query;
@@ -18,16 +15,10 @@ public static partial class Mcp
     private static readonly IRdfWriter graphWriter = new CompressingTurtleWriter();
     private static readonly ISparqlResultsWriter sparqlWriter = new SparqlHtmlWriter();
 
-    [GeneratedRegex(@"(?<=Query\.Endpoints\.).+(?=\.query\.sparql)")]
-    private static partial Regex ResourceNameExtractor { get; }
-
     internal static async ValueTask<ListToolsResult> ListTools(RequestContext<ListToolsRequestParams> _, CancellationToken ct) =>
         new()
         {
-            Tools = (await Task.WhenAll(Assembly.GetExecutingAssembly().GetManifestResourceNames()
-                .Select(static name => ResourceNameExtractor.Match(name))
-                .Where(static match => match.Success)
-                .Select(static match => match.Value)
+            Tools = (await Task.WhenAll(Endpoints.Names
                 .Select(static name => new
                 {
                     Name = name,

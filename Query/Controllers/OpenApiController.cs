@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi;
-using System.Reflection;
-using System.Text.RegularExpressions;
 using VDS.RDF;
 using VDS.RDF.Parsing;
 using VDS.RDF.Query;
@@ -15,9 +13,6 @@ public partial class OpenApiController() : ControllerBase
 {
     private const string graphResponse = "graphResponse";
     private const string nonGraphResponse = "nonGraphResponse";
-
-    [GeneratedRegex(@"(?<=Query\.Endpoints\.).+(?=\.query\.sparql)")]
-    private static partial Regex ResourceNameExtractor { get; }
 
     [HttpGet]
     public async Task<OpenApiDocument> Get(CancellationToken ct) => new()
@@ -59,13 +54,7 @@ public partial class OpenApiController() : ControllerBase
     {
         var paths = new OpenApiPaths();
 
-        var endpointNames = Assembly.GetExecutingAssembly().GetManifestResourceNames()
-            .Select(name => ResourceNameExtractor.Match(name))
-            .Where(match => match.Success)
-            .Select(match => match.Value)
-            .Distinct();
-
-        foreach (var endpointName in endpointNames)
+        foreach (var endpointName in Endpoints.Names)
         {
             Endpoints.ParameterMapping.TryGetValue(endpointName, out var endpoint);
 

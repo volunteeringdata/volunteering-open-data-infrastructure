@@ -1,10 +1,21 @@
 ﻿using System.Reflection;
+using System.Text.RegularExpressions;
 using VDS.RDF.Parsing;
 
 namespace Query;
 
-public class Endpoints
+public partial class Endpoints
 {
+    [GeneratedRegex(@"(?<=Query\.Endpoints\.).+(?=\.query\.sparql)")]
+    private static partial Regex ResourceNameExtractor { get; }
+
+    internal static ISet<string> Names =>
+        Assembly.GetExecutingAssembly().GetManifestResourceNames()
+            .Select(name => ResourceNameExtractor.Match(name))
+            .Where(match => match.Success)
+            .Select(match => match.Value)
+            .ToHashSet();
+
     internal static IDictionary<string, Endpoint> ParameterMapping => new Dictionary<string, Endpoint>
     {
         ["activity_by_id"] = new([
