@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi;
+using System.Text.Json.Nodes;
 using VDS.RDF;
 using VDS.RDF.Parsing;
 using VDS.RDF.Query;
@@ -91,6 +92,7 @@ public partial class OpenApiController() : ControllerBase
                                     Type = AsJsonSchemaType(p),
                                 },
                                 Required = true,
+                                Example = JsonValue.Create(p.Example),
                             })],
                         Responses = responses
                     }
