@@ -73,20 +73,20 @@ PREFIX text: <http://jena.apache.org/text#>
     text:uidField "uid" ;
     text:map (
         [
-            text:field "activityLabel" ;
-            text:predicate schema:activityLabel ;
-        ]
-        [
             text:field "activityDescription" ;
             text:predicate schema:activityDescription ;
         ]
         [
-            text:field "organisationLabel" ;
-            text:predicate schema:organisationLabel ;
+            text:field "activityLabel" ;
+            text:predicate schema:activityLabel ;
         ]
         [
             text:field "organisationDescription" ;
             text:predicate schema:organisationDescription ;
+        ]
+        [
+            text:field "organisationLabel" ;
+            text:predicate schema:organisationLabel ;
         ]
         [
             text:field "organisationPurpose" ;
