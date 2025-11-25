@@ -1,0 +1,35 @@
+{
+    "id": "",
+    "type": "Organisation",
+    "cause": [
+        {
+            "id": "",
+            "label": ""
+        }
+    ],
+    "contact": [
+        {
+            "id": "",
+            "label": "",
+            "phone": ""
+        }
+    ],
+    "description": "",
+    "label": "",
+    "location": [
+        {
+            "id": "",
+            "locationType": "",
+            "address": "",
+            "latitude": {
+                "@value": "51.5072178e0",
+                "type": "http://www.w3.org/2001/XMLSchema#double"
+            },
+            "longitude": {
+                "@value": "-0.1275862e0",
+                "type": "http://www.w3.org/2001/XMLSchema#double"
+            }
+        }
+    ],
+    "purpose": ""
+}
