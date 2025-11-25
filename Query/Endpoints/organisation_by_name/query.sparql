@@ -4,11 +4,18 @@ PREFIX text: <http://jena.apache.org/text#>
 
 CONSTRUCT {
     <Organisations> :organisations ?organisation .
-    ?organisation :label ?orgLabel .
-}
-WHERE {
+
     ?organisation
-      text:query (:organisationLabel $name) ;
-      :label ?orgLabel ;
+        a :Organisation ;
+        :label ?label ;
+        :indexMatchingScore ?score ;
     .
 }
+WHERE {
+  
+    (?organisation ?score ?value) text:query (:organisationLabel $name) .
+    ?organisation
+      :organisationLabel ?label ;
+    .
+}
+ORDER BY ASC(?score)
