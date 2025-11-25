@@ -5,7 +5,9 @@ This repository holds code for modeling and accessing open data for volunteering
 
 ## Data Model
 
-See the [volunteering data model repository](https://github.com/volunteeringdata/data-model).
+1. [Volunteering data model repository](https://github.com/volunteeringdata/data-model)
+1. [Data Model Classes Visualisation](https://service.tib.eu/webvowl/#iri=https://api.volunteeringdata.io/schema_classes.ttl)
+1. 
 
 
 ## API
