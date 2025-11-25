@@ -13,6 +13,7 @@ prefix xsd:             <http://www.w3.org/2001/XMLSchema#>
 
 ### Other namespaces used
 prefix dc:              <http://purl.org/dc/terms/>
+prefix skos:            <http://www.w3.org/2004/02/skos/core#>
 prefix time:            <http://www.w3.org/2006/time#>
 prefix vann:            <http://purl.org/vocab/vann/>
 
@@ -23,9 +24,9 @@ id:schema
     rdfs:isDefinedBy id:schema ;
     dc:issued "2025-11-20"^^xsd:date ;
     vann:preferredNamespacePrefix "volunteering" ;
-    vann:preferredNamespaceUri "https://id.volunteeringdata.io/schema"^^xsd:anyURI ;
+    vann:preferredNamespaceUri "https://id.volunteeringdata.io/schema/"^^xsd:anyURI ;
     rdfs:label "Volunteering and Social Action Ontology"@en ;
-    rdfs:comment "Defines a vocabulary to describe volunteering activities, volunteer-involving organisations and volunteering management systems."@en .
+    dc:description "Defines a vocabulary to describe volunteering activities, volunteer-involving organisations and volunteering management systems."@en .
 
 
 ## Classes
@@ -35,69 +36,6 @@ id:schema
     rdfs:label "Volunteering Activity" ;
     rdfs:label "Activity"@en ;
     rdfs:comment "Any kind of activity that involves volunteers."@en .
-
-:Concept
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:label "Volunteering Concept" ;
-    rdfs:label "Concept"@en ;
-    rdfs:comment "Any conceptual information related to volunteering activities."@en .
-
-:Accessibility
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Concept ;
-    rdfs:label "Accessibility" ;
-    rdfs:label "Accessibility"@en ;
-    rdfs:comment "Any accessibility information related to volunteering activities."@en .
-
-:Cause
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Concept ;
-    rdfs:label "Charitable Cause" ;
-    rdfs:label "Cause"@en ;
-    rdfs:comment "Any charitable cause related to volunteering activities."@en .
-
-:Demography
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Concept ;
-    rdfs:label "Charitable Cause" ;
-    rdfs:label "Cause"@en ;
-    rdfs:comment "Any demographic information related to volunteering activities."@en .
-
-:Language
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Concept ;
-    rdfs:label "Language" ;
-    rdfs:label "Language"@en ;
-    rdfs:comment "Any language related to volunteering activities."@en .
-
-:Requirement
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Concept ;
-    rdfs:label "Requirement" ;
-    rdfs:label "Requirement"@en ;
-    rdfs:comment "Any requirement related to volunteering activities."@en .
-
-:Reward
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Concept ;
-    rdfs:label "Reward" ;
-    rdfs:label "Reward"@en ;
-    rdfs:comment "Any reward related to volunteering activities."@en .
-
-:Skill
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Concept ;
-    rdfs:label "Skill" ;
-    rdfs:label "Skill"@en ;
-    rdfs:comment "Any skill related to volunteering activities."@en .
 
 :Contact
     a owl:Class ;
@@ -135,14 +73,7 @@ id:schema
     rdfs:comment "Any time information related to volunteering activities."@en .
 
 
-## Sub-Classes
-:ActivityConcept
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Concept ;
-    rdfs:label "Activity Concept"@en ;
-    rdfs:comment "Any concept related to a volunteering activity."@en .
-
+## Subclasses
 :ActivityContact
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
@@ -171,13 +102,6 @@ id:schema
     rdfs:label "Activity Time"@en ;
     rdfs:comment "Any time information related to a volunteering activity."@en .
 
-:OrganisationConcept
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Concept ;
-    rdfs:label "Organisation Concept"@en ;
-    rdfs:comment "Any concept related to a volunteer involving organisation."@en .
-
 :OrganisationContact
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
@@ -200,167 +124,12 @@ id:schema
     rdfs:comment "Any system related to a volunteer involving organisation."@en .
 
 
-## Concept subclasses
-:ActivityAccessibility
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :ActivityConcept ;
-    rdfs:label "Activity Accessibility"@en ;
-.
-
-:ActivityCause
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :ActivityConcept ;
-    rdfs:label "Activity Cause"@en ;
-.
-
-:ActivityDemography
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :ActivityConcept ;
-    rdfs:label "Activity Demography"@en ;
-.
-
-:ActivityLanguage
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :ActivityConcept ;
-    rdfs:label "Activity Language"@en ;
-.
-
-:ActivityRequirement
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :ActivityConcept ;
-    rdfs:label "Activity Requirement"@en ;
-.
-
-:ActivityReward
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :ActivityConcept ;
-    rdfs:label "Activity Reward"@en ;
-.
-
-:ActivitySkill
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :ActivityConcept ;
-    rdfs:label "Activity Skill"@en ;
-.
-
-:OrganisationAccessibility
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :OrganisationConcept ;
-    rdfs:label "Organisation Accessibility"@en ;
-.
-
-:OrganisationCause
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :OrganisationConcept ;
-    rdfs:label "Organisation Cause"@en ;
-.
-
-:OrganisationDemography
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :OrganisationConcept ;
-    rdfs:label "Organisation Demography"@en ;
-.
-
-:OrganisationLanguage
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :OrganisationConcept ;
-    rdfs:label "Organisation Language"@en ;
-.
-
-:OrganisationRequirement
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :OrganisationConcept ;
-    rdfs:label "Organisation Requirement"@en ;
-.
-
-:OrganisationReward
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :OrganisationConcept ;
-    rdfs:label "Organisation Reward"@en ;
-.
-
-:OrganisationSkill
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :OrganisationConcept ;
-    rdfs:label "Organisation Skill"@en ;
-.
-
-
 ## Object Properties
 :activity
     a owl:ObjectProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:range :Activity ;
     rdfs:label "has activity"@en .
-
-:concept
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:range :Concept ;
-    rdfs:label "has concept"@en .
-
-:accessibility
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :concept ;
-    rdfs:range :Accessibility ;
-    rdfs:label "has accessibility information"@en .
-
-:cause
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :concept ;
-    rdfs:range :Cause ;
-    rdfs:label "has charitable cause"@en .
-
-:demography
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :concept ;
-    rdfs:range :Demography ;
-    rdfs:label "has demographic target"@en .
-
-:language
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :concept ;
-    rdfs:range :Language ;
-    rdfs:label "has language"@en .
-
-:requirement
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :concept ;
-    rdfs:range :Requirement ;
-    rdfs:label "has requirement"@en .
-
-:reward
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :concept ;
-    rdfs:range :Reward ;
-    rdfs:label "has reward"@en .
-
-:skill
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :concept ;
-    rdfs:range :Skill ;
-    rdfs:label "has skill"@en .
 
 :contact
     a owl:ObjectProperty ;
@@ -908,13 +677,6 @@ id:schema
     rdfs:domain :Activity ;
     rdfs:label "activity has URL"@en .
 
-:conceptLabel
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :label ;
-    rdfs:domain :Concept ;
-    rdfs:label "concept has label"@en .
-
 :contactLabel
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
@@ -984,3 +746,258 @@ id:schema
     rdfs:subPropertyOf :label ;
     rdfs:domain :Time ;
     rdfs:label "time has label"@en .
+
+
+## Concept Scheme
+### Scheme Properties
+:topConcept
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf skos:hasTopConcept ;
+    rdfs:range :ConceptScheme ;
+    rdfs:label "has top concept"@en ;
+.
+
+:ConceptScheme
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf skos:ConceptScheme ;
+    rdfs:label "Volunteering Concept Scheme" ;
+    rdfs:label "Concept Scheme"@en ;
+    rdfs:comment "A taxonomy of concepts related to volunteering activities."@en ;
+    skos:hasTopConcept :Accessibility, :CharitableCause, :Demography, :Language, :Requirement, :Reward, :Skill ;
+.
+
+:conceptLabel
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :label, skos:prefLabel ;
+    rdfs:domain :Concept ;
+    rdfs:label "concept has label"@en .
+
+:Concept
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Volunteering Concept" ;
+    rdfs:label "Concept"@en ;
+    rdfs:comment "Any conceptual information related to volunteering activities."@en .
+
+:Accessibility
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :Concept ;
+    :conceptLabel "Accessibility"@en ;
+    rdfs:comment "Any accessibility information related to volunteering activities."@en .
+
+:CharitableCause
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :Concept ;
+    :conceptLabel "Charitable Cause"@en ;
+    rdfs:comment "Any charitable cause related to volunteering activities."@en .
+
+:Demography
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :Concept ;
+    :conceptLabel "Demographic Target"@en ;
+    rdfs:comment "Any demographic information related to volunteering activities."@en .
+
+:Language
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :Concept ;
+    :conceptLabel "Language"@en ;
+    rdfs:comment "Any language related to volunteering activities."@en .
+
+:Requirement
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :Concept ;
+    :conceptLabel "Requirement"@en ;
+    rdfs:comment "Any requirement related to volunteering activities."@en .
+
+:Reward
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :Concept ;
+    :conceptLabel "Reward"@en ;
+    rdfs:comment "Any reward related to volunteering activities."@en .
+
+:Skill
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :Concept ;
+    :conceptLabel "Skill"@en ;
+    rdfs:comment "Any skill related to volunteering activities."@en .
+
+:ActivityConcept
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :Concept ;
+    rdfs:label "Activity Concept"@en ;
+    rdfs:comment "Any concept related to a volunteering activity."@en .
+
+:OrganisationConcept
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :Concept ;
+    rdfs:label "Organisation Concept"@en ;
+    rdfs:comment "Any concept related to a volunteer involving organisation."@en .
+
+## Concept Subclasses
+:ActivityAccessibility
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :ActivityConcept ;
+    rdfs:label "Activity Accessibility"@en ;
+.
+
+:ActivityCause
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :ActivityConcept ;
+    rdfs:label "Activity Cause"@en ;
+.
+
+:ActivityDemography
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :ActivityConcept ;
+    rdfs:label "Activity Demography"@en ;
+.
+
+:ActivityLanguage
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :ActivityConcept ;
+    rdfs:label "Activity Language"@en ;
+.
+
+:ActivityRequirement
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :ActivityConcept ;
+    rdfs:label "Activity Requirement"@en ;
+.
+
+:ActivityReward
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :ActivityConcept ;
+    rdfs:label "Activity Reward"@en ;
+.
+
+:ActivitySkill
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :ActivityConcept ;
+    rdfs:label "Activity Skill"@en ;
+.
+
+:OrganisationAccessibility
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :OrganisationConcept ;
+    rdfs:label "Organisation Accessibility"@en ;
+.
+
+:OrganisationCause
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :OrganisationConcept ;
+    rdfs:label "Organisation Cause"@en ;
+.
+
+:OrganisationDemography
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :OrganisationConcept ;
+    rdfs:label "Organisation Demography"@en ;
+.
+
+:OrganisationLanguage
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :OrganisationConcept ;
+    rdfs:label "Organisation Language"@en ;
+.
+
+:OrganisationRequirement
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :OrganisationConcept ;
+    rdfs:label "Organisation Requirement"@en ;
+.
+
+:OrganisationReward
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :OrganisationConcept ;
+    rdfs:label "Organisation Reward"@en ;
+.
+
+:OrganisationSkill
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :OrganisationConcept ;
+    rdfs:label "Organisation Skill"@en ;
+.
+
+
+## Concept Object Properties
+:concept
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:range :Concept ;
+    rdfs:label "has concept"@en .
+
+:accessibility
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :concept ;
+    rdfs:range :Accessibility ;
+    rdfs:label "has accessibility information"@en .
+
+:cause
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :concept ;
+    rdfs:range :Cause ;
+    rdfs:label "has charitable cause"@en .
+
+:demography
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :concept ;
+    rdfs:range :Demography ;
+    rdfs:label "has demographic target"@en .
+
+:language
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :concept ;
+    rdfs:range :Language ;
+    rdfs:label "has language"@en .
+
+:requirement
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :concept ;
+    rdfs:range :Requirement ;
+    rdfs:label "has requirement"@en .
+
+:reward
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :concept ;
+    rdfs:range :Reward ;
+    rdfs:label "has reward"@en .
+
+:skill
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :concept ;
+    rdfs:range :Skill ;
+    rdfs:label "has skill"@en .
