@@ -108,6 +108,25 @@ Go to the [swagger endpoint on localhost](http://localhost:5199/swagger).
 Or go to the [SPARQL UI on localhost](http://localhost:5199/sparql).
 
 
+## Configuring the MCP Server
+
+See for example [Claude's Documentation](https://modelcontextprotocol.io/docs/develop/connect-local-servers#installing-the-filesystem-server)), and add the following local config:
+
+```json
+{
+    "mcpServers": {
+        "volunteering": {
+            "args": [
+                "mcp-remote",
+                "https://api.volunteeringdata.io/mcp"
+            ],
+            "command": "npx"
+        }
+    }
+}
+```
+
+
 ## Endpoints Examples
 
 Organisations:
@@ -132,62 +151,53 @@ Taxonomy:
 - https://api.volunteeringdata.io/requirement
 
 
+---------------------------------
+---------------------------------
+
 # TODO
 
-## Tooling
+Put Vocabulary in its own graph.
+- Expose in its own endpoint
+
+IO optimisation:
+- JSON input
+- CSV input
+- Optimised RDF formats (TriG/TriX/BinaryRDF)
 
 Validator service:
 - Based on a SHACL document
 - Give it a URI for the SHACL doc
 - Give it a URI for the data
 
-Give a proper JSON format for the main classes.
+Data Portal endpoints:
+- DCAT
+- Croissant
+- DCAT-AP
+- MLDCAT-AP
 
-Do a very embedded format and one more distributed.
+Infrastructure as Code:
+- Create service principal for CD
+- Export full arm template from Resource Group, or
+- Improve modular ARM templates
 
-(flat vs nested structure and json ld doesn't care)
+Documentation:
+- Serve LODE documentation
+- Serve WebVOWL
 
-CSV format.
+Modeling:
+- Improve model
+- Map ontologies (alignment)
 
+Search:
+- Improve geo location search (GeoSPARQL Query not supported)
+- Improve Lucene indexing
 
-## Others
-
-Try smaller or more optimized formats for RDF loading.
-Create service principal route? (only useful for CD, probs overkill right now).
-Export full arm template from Resource Group.
-
-
-## IDEAS
-
-Make an ontology
-Make ontology serving endpoints (align vocabulary URI)
-Serve LODE documentation
-Serve WebVOWL
-Serve Swagger UI
-Serve YasGUI (cache minimized versions)
-Finalize mapping
-Map ontologies
-
-
-## TODO NOW
-
-Improve Vocabulary
-GeoSPARQL Query
-Parameterised Query
-Swagger UI
-Fix up 
-
-
-http://localhost:5199/geo_example2.html?lat=51.36&lon=-0.37&within=50
-
-## Context notes
 
 Organisation:
 - URL should be singular and direct URL (not url > id)
 - probably remove type
 - activity should be an array of id (not { id })
 - cause should always be an array of causes (with id and label)
-
 
 
 ### Notes
@@ -200,8 +210,6 @@ If an activity has no Location, it is remote?
 
 How to know with certainty if an activity is remote?
     An activity accomodates remote participation if the "allows remote participation" property is set to true.
-
-
 
 
 one activity can have multiple location so does each location have a different contact, location can be a wide area (neighbourhood).
@@ -220,29 +228,5 @@ Time must accomodate repeat (every monday...), there are volunteering roles with
 
 Contact is misleading maybe, it seems people think of it as a person rather than as a contact information/line of communication.
 
-
-### Questions:
-1. License
-2. Procure a Domain (volunteeringdata.io)
-
-
 We could model it so that an activity has sessions:
 with specific times and place and contact
-
-## Configure the MCP Server
-
-See for example [Claude's Documentation](https://modelcontextprotocol.io/docs/develop/connect-local-servers#installing-the-filesystem-server)), and add the following config:
-
-```json
-{
-    "mcpServers": {
-        "volunteering": {
-            "args": [
-                "mcp-remote",
-                "https://api.volunteeringdata.io/mcp"
-            ],
-            "command": "npx"
-        }
-    }
-}
-```
