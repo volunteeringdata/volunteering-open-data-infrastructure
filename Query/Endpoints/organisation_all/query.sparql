@@ -10,6 +10,7 @@ CONSTRUCT {
         :activity ?organisationActivity ;
         :description ?organisationDescription ;
         :purpose ?organisationPurpose ;
+        :url ?organisationUrl ;
         :location ?organisationLocation ;
         :contact ?organisationContact ;
         :cause ?organisationCause ;
@@ -39,6 +40,7 @@ WHERE {
 
     OPTIONAL { ?organisation :description ?organisationDescription . }
     OPTIONAL { ?organisation :purpose ?organisationPurpose . }
+    OPTIONAL { ?organisation :url ?organisationUrl . }
     OPTIONAL {
         ?organisation :location ?organisationLocation .
         OPTIONAL { ?organisationLocation :locationType ?locationType . }
