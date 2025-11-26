@@ -4,18 +4,55 @@ PREFIX : <https://id.volunteeringdata.io/schema/>
 CONSTRUCT {
     ?organisation
         a :Organisation ;
-        :name ?label ;
-        :description ?description ;
-        :purpose ?purpose ;
-        :website ?website ;
+        :label ?organisationLabel ;
+        :activity ?organisationActivity ;
+        :description ?organisationDescription ;
+        :purpose ?organisationPurpose ;
+        :url ?organisationUrl ;
+        :location ?organisationLocation ;
+        :contact ?organisationContact ;
+        :cause ?organisationCause ;
     .
+
+    ?organisationLocation
+        :locationType ?locationType ;
+        :address ?address ;
+        :latitude ?latitude ;
+        :longitude ?longitude ;
+    .
+
+    ?organisationContact
+        :email ?contactEmail ;
+        :phone ?contactPhone ;
+    .
+
+    ?organisationCause :label ?causeLabel .
 }
 WHERE {
     FILTER(?organisation = IRI($id))
     ?organisation
-        :organisationLabel ?label ;
-        :organisationDescription ?description ;
-        :organisationPurpose ?purpose ;
-        :organisationUrl ?website ;
+        a :Organisation ;
+        :label ?organisationLabel ;
+        :activity ?organisationActivity ;
     .
+
+    OPTIONAL { ?organisation :description ?organisationDescription . }
+    OPTIONAL { ?organisation :purpose ?organisationPurpose . }
+    OPTIONAL { ?organisation :url ?organisationUrl . }
+    OPTIONAL {
+        ?organisation :location ?organisationLocation .
+        OPTIONAL { ?organisationLocation :locationType ?locationType . }
+        OPTIONAL { ?organisationLocation :address ?address . }
+        OPTIONAL { ?organisationLocation :latitude ?latitude . }
+        OPTIONAL { ?organisationLocation :longitude ?longitude . }
+    }
+    OPTIONAL {
+        ?organisation :organisationContact ?organisationContact .
+        OPTIONAL { ?organisationContact :email ?contactEmail . }
+        OPTIONAL { ?organisationContact :phone ?contactPhone . }
+    }
+    OPTIONAL {
+        ?organisation :cause ?organisationCause .
+        ?organisationCause :label ?causeLabel .
+    }
 }
