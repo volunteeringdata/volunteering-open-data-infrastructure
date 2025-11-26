@@ -464,7 +464,8 @@ id:schema
     a owl:ObjectProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf skos:hasTopConcept ;
-    rdfs:range :ConceptScheme ;
+    rdfs:domain :ConceptScheme ;
+    rdfs:range :Concept ;
     rdfs:label "has top concept"@en ;
 .
 
