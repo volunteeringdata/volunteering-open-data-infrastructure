@@ -14,7 +14,7 @@ public class DefaultController(QueryService someService) : ControllerBase
     {
         if (Endpoints.ParameterMapping.TryGetValue(name, out var endpoint))
         {
-            foreach (var item in endpoint.Parameters.Select(p => p.Name).Where(n => !Request.Query.TryGetValue(n, out _)))
+            foreach (var item in endpoint.Parameters.Select(p => p.Name).Where(n => !Request.Query.ContainsKey(n)))
             {
                 ModelState.AddModelError(item, "This query string parameter is required");
             }
