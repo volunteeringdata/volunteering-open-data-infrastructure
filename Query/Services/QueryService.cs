@@ -15,7 +15,13 @@ public class QueryService(HttpClient httpClient, IOptions<QueryServiceOptions> o
 
     public async Task<object?> ExecuteNamedQueryAsync(string name, Dictionary<string, string> parameters, CancellationToken ct)
     {
-        var sparqlText = Parametrize(name, parameters, await Endpoints.Sparql(name, ct));
+        var sparql = await Endpoints.Sparql(name, ct);
+        if (sparql is null)
+        {
+            return null;
+        }
+
+        var sparqlText = Parametrize(name, parameters, sparql);
         var sparqlQuery = new SparqlQueryParser().ParseFromString(sparqlText);
         var sparqlClient = new SparqlQueryClient(httpClient, options.SparqlEndpointUri);
 
