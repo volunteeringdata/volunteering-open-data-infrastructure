@@ -1,0 +1,48 @@
+name: Build and deploy Dereference service to Azure Web App
+
+env:
+  AZURE_WEBAPP_NAME: 'id'
+  AZURE_WEBAPP_PACKAGE_PATH: 'Dereference/published'
+  DOTNET_VERSION: '10.x'
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - Dereference/**
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # This is required for requesting the JWT
+      contents: read # This is required for actions/checkout
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Build with dotnet
+        run: dotnet build Dereference --configuration Release
+
+      - name: dotnet publish
+        run: dotnet publish Dereference --configuration Release --output ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+
+      - name: Login to Azure
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_0ADF9A99AA7844DEA05E27A2C4DC5234 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5E62A268B7544B12A9E58A0241993F6A }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E0604FB3DED645C8BE37F954F8F3460E }}
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
