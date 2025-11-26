@@ -18,14 +18,8 @@
         {
             "locationType": "",
             "address": "",
-            "latitude": {
-                "value": "",
-                "type": "http://www.w3.org/2001/XMLSchema#double"
-            },
-            "longitude": {
-                "value": "",
-                "type": "http://www.w3.org/2001/XMLSchema#double"
-            }
+            "latitude": "",
+            "longitude": ""
         }
     ],
     "purpose": "",
