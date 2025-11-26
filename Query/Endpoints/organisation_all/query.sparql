@@ -24,7 +24,6 @@ CONSTRUCT {
     .
 
     ?organisationContact
-        :label ?contactLabel ;
         :email ?contactEmail ;
         :phone ?contactPhone ;
     .
@@ -49,8 +48,7 @@ WHERE {
         OPTIONAL { ?organisationLocation :longitude ?longitude . }
     }
     OPTIONAL {
-        ?organisation :contact ?organisationContact .
-        OPTIONAL { ?organisationContact :label ?contactLabel . }
+        ?organisation :organisationContact ?organisationContact .
         OPTIONAL { ?organisationContact :email ?contactEmail . }
         OPTIONAL { ?organisationContact :phone ?contactPhone . }
     }
