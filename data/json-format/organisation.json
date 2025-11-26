@@ -1,8 +1,8 @@
 {
-    "id": "",
     "type": "Organisation",
-    "description": "",
     "label": "",
+    "description": "",
+    "purpose": "",
     "cause": [
         {
             "label": ""
@@ -22,6 +22,5 @@
             "longitude": ""
         }
     ],
-    "purpose": "",
     "@context": "http://api.volunteeringdata.io/context/v1"
 }
