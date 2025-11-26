@@ -484,7 +484,7 @@ id:schema
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf :label, skos:prefLabel ;
     rdfs:domain :Concept ;
-    rdfs:label "concept has label"@en .
+    rdfs:label "concept has preferred label"@en .
 
 :Concept
     a owl:Class ;
