@@ -21,7 +21,7 @@ public class DefaultController(QueryService someService) : ControllerBase
 
             if (!ModelState.IsValid)
             {
-                return BadRequest(ModelState);
+                return BadRequest(ProblemDetailsFactory.CreateValidationProblemDetails(HttpContext, ModelState));
             }
         }
 
