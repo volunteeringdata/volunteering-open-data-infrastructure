@@ -15,7 +15,7 @@ WHERE {
   
     (?organisation ?score ?value) text:query (:organisationLabel $name) .
     ?organisation
-      :organisationLabel ?label ;
+      :label ?label ;
     .
 }
 ORDER BY ASC(?score)

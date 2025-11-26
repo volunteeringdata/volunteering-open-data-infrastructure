@@ -387,7 +387,23 @@ id:schema
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf dc:description ;
-    rdfs:label "description"@en ;
+    rdfs:label "has description"@en ;
+.
+
+:activityDescription
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf dc:description ;
+    rdfs:domain :Activity ;
+    rdfs:label "has description"@en ;
+.
+
+:organisationDescription
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf dc:description ;
+    rdfs:domain :Organisation ;
+    rdfs:label "has description"@en ;
 .
 
 :email
@@ -395,7 +411,7 @@ id:schema
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf dc:description ;
     rdfs:domain :Contact ;
-    rdfs:label "email"@en ;
+    rdfs:label "has email"@en ;
 .
 
 :end
@@ -410,6 +426,22 @@ id:schema
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf rdfs:label ;
+    rdfs:label "has label"@en ;
+.
+
+:activityLabel
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf rdfs:label ;
+    rdfs:domain :Activity ;
+    rdfs:label "has label"@en ;
+.
+
+:organisationLabel
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf rdfs:label ;
+    rdfs:domain :Organisation ;
     rdfs:label "has label"@en ;
 .
 
@@ -454,7 +486,7 @@ id:schema
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf rdfs:seeAlso ;
-    rdfs:label "has url"@en ;
+    rdfs:label "has URL"@en ;
 .
 
 

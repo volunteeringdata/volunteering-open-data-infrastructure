@@ -25,8 +25,8 @@ internal class Vocabulary
     internal static IUriNode ActivityRequirement { get; } = Node("activityRequirement");
     internal static IUriNode ActivityStart { get; } = Node("activityStart");
     internal static IUriNode ActivityVolunteers { get; } = Node("activityVolunteers");
-    internal static IUriNode ActivityTitle { get; } = Node("label");
-    internal static IUriNode ActivityDescription { get; } = Node("description");
+    internal static IUriNode ActivityTitle { get; } = Node("activityLabel");
+    internal static IUriNode ActivityDescription { get; } = Node("activityDescription");
     internal static IUriNode ActivityType { get; } = Node("activityType");
     internal static IUriNode ActivityEventType { get; } = Node("activityEventType");
     internal static IUriNode ActivityLocation { get; } = Node("activityLocation");
@@ -67,8 +67,8 @@ internal class Vocabulary
     internal static IUriNode OrganizationEmail { get; } = Node("email");
     internal static IUriNode OrganizationPhone { get; } = Node("phone");
     internal static IUriNode OrganizationDeleted { get; } = Node("organisationDeleted");
-    internal static IUriNode OrganizationDescription { get; } = Node("description");
-    internal static IUriNode OrganizationName { get; } = Node("label");
+    internal static IUriNode OrganizationDescription { get; } = Node("organisationDescription");
+    internal static IUriNode OrganizationName { get; } = Node("organisationLabel");
     internal static IUriNode OrganizationPurpose { get; } = Node("purpose");
     internal static IUriNode OrganizationTos { get; } = Node("organisationTos");
     internal static IUriNode OrganizationType { get; } = Node("organisationType");
