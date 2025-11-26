@@ -2,10 +2,10 @@ PREFIX : <https://id.volunteeringdata.io/schema/>
 PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX spatialF: <http://jena.apache.org/function/spatial#>
 
-SELECT ?name ?distance {
+SELECT ?label ?distance {
     ?organisation
+        :label ?label ;
         :organisationLocation ?location ;
-        :organisationLabel ?name ;
     .
 
     ?location 

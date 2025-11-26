@@ -36,9 +36,9 @@ public partial class Endpoints
             new("id", "68f53f8346b712131f0148e8")
         ]),
         ["organisation_by_location"] = new([
-            new("lat", "0", XmlSpecsHelper.XmlSchemaDataTypeDouble),
-            new("lon", "0", XmlSpecsHelper.XmlSchemaDataTypeDouble),
-            new("within", "0", XmlSpecsHelper.XmlSchemaDataTypeInteger),
+            new("lat", "51.509", XmlSpecsHelper.XmlSchemaDataTypeDouble),
+            new("lon", "-0.118", XmlSpecsHelper.XmlSchemaDataTypeDouble),
+            new("within", "10", XmlSpecsHelper.XmlSchemaDataTypeInteger),
         ]),
         ["organisation_by_name"] = new([
             new("name", "Do it")
