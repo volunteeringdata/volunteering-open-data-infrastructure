@@ -1,21 +1,19 @@
 {
     "id": "",
     "type": "Organisation",
+    "description": "",
+    "label": "",
     "cause": [
         {
-            "id": "",
             "label": ""
         }
     ],
     "contact": [
         {
-            "id": "",
-            "label": "",
+            "email": "",
             "phone": ""
         }
     ],
-    "description": "",
-    "label": "",
     "location": [
         {
             "id": "",
