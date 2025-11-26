@@ -13,6 +13,9 @@
     <li>
         <a href="context/v1">JSON-LD context document</a>
     </li>
+    <li>
+        <a href="openapi.json">OpenAPI definition</a>
+    </li>
     @foreach (var endpointName in Endpoints.Names)
     {
         var parameters = Endpoints.ParameterMapping.TryGetValue(endpointName, out var endpoint) ? endpoint.Parameters : [];

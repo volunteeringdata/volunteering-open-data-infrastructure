@@ -13,8 +13,9 @@ This repository holds code for modeling and accessing open data for volunteering
 ## API
 
 1. [OpenAPI description document](https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/openapi.json)
-2. [Swagger UI](https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/swagger)
-2. [JSON-LD context document](https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/context/v1)
+1. [Swagger UI](https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/swagger)
+1. [JSON-LD context document](https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/context/v1)
+1. [SPARQL UI](https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/sparql)
 
 
 ## How To
