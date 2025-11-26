@@ -1,5 +1,6 @@
 ﻿BASE <https://id.volunteeringdata.io/>
 PREFIX : <https://id.volunteeringdata.io/schema/>
+PREFIX id: <https://id.volunteeringdata.io/>
 
 CONSTRUCT {
     ?organisation
