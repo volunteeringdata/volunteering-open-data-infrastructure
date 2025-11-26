@@ -6,16 +6,11 @@ CONSTRUCT {
     <Activities> :activities ?activity .
 
     ?activity
-        a :Activity ;
         :label ?label ;
         :indexMatchingScore ?score ;
     .
 }
 WHERE {
-  
     (?activity ?score ?value) text:query (:activityLabel $name) .
-    ?activity
-      :activityLabel ?label ;
-    .
+    ?activity :label ?label .
 }
-ORDER BY ASC(?score)

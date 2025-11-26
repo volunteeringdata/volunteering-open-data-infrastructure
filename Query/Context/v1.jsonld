@@ -7,11 +7,12 @@
         "value": "@value",
         "latitude": { "@type": "http://www.w3.org/2001/XMLSchema#double" },
         "longitude": { "@type": "http://www.w3.org/2001/XMLSchema#double" },
+        "website": { "@type": "@id" },
         "activity": { "@container": "@set", "@type": "@id" },
-        "cause": { "@container": "@set" },
+        "organisation": { "@container": "@set", "@type": "@id" },
         "contact": { "@container": "@set" },
         "location": { "@container": "@set" },
-        "requirement": { "@container": "@set" },
-        "website": { "@type": "@id" }
+        "cause": { "@container": "@set" },
+        "requirement": { "@container": "@set" }
     }
 }

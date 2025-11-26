@@ -12,7 +12,5 @@ CONSTRUCT {
 }
 WHERE {
     (?organisation ?score ?value) text:query (:organisationLabel $name) .
-    ?organisation
-      :label ?label ;
-    .
+    ?organisation :label ?label .
 }

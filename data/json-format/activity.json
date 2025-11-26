@@ -2,24 +2,67 @@
     "id": "",
     "type": "Activity",
     "description": "",
-    "label": "",
+    "organisation": [ "" ],
+    "session": [
+        {
+            "allowsRemoteParticipation": "",
+            "contact": [
+                {
+                    "email": "",
+                    "phone": ""
+                }
+            ],
+            "location": [
+                {
+                    "locationType": "",
+                    "address": "",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            ],
+            "time": [
+                {
+                    "locationType": "",
+                    "address": "",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            ]
+        }
+    ],
+    "accessibility": [
+        {
+            "label": ""
+        }
+    ],
     "cause": [
         {
             "label": ""
         }
     ],
-    "contact": [
+    "demography": [
         {
-            "email": "",
-            "phone": ""
+            "label": ""
         }
     ],
-    "location": [
+    "language": [
         {
-            "locationType": "",
-            "address": "",
-            "latitude": "",
-            "longitude": ""
+            "label": ""
+        }
+    ],
+    "requirement": [
+        {
+            "label": ""
+        }
+    ],
+    "reward": [
+        {
+            "label": ""
+        }
+    ],
+    "skill": [
+        {
+            "label": ""
         }
     ],
     "@context": "http://api.volunteeringdata.io/context/v1"

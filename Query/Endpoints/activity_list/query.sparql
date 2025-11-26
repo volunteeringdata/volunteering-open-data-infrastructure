@@ -1,0 +1,4 @@
+﻿BASE <https://id.volunteeringdata.io/>
+PREFIX : <https://id.volunteeringdata.io/schema/>
+
+SELECT * { ?activity_id a :Activity . }
