@@ -1,0 +1,8 @@
+﻿{
+  "@context": {
+    "@base": "https://id.volunteeringdata.io/",
+    "@vocab": "https://id.volunteeringdata.io/schema/",
+    "id": "@id",
+    "type": "@type"
+  }
+}

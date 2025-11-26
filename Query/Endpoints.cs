@@ -32,6 +32,9 @@ public partial class Endpoints
         ["activity_search"] = new([
             new("query", "biodiversity")
         ]),
+        ["describe_entity_by_id"] = new([
+            new("id", "68f5406090268edd4a86435a")
+        ]),
         ["organisation_by_id"] = new([
             new("id", "68f53f8346b712131f0148e8")
         ]),
