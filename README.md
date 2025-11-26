@@ -14,6 +14,7 @@ This repository holds code for modeling and accessing open data for volunteering
 
 1. [OpenAPI description document](https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/openapi.json)
 2. [Swagger UI](https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/swagger)
+2. [JSON-LD context document](https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/context/v1)
 
 
 ## How To
@@ -138,8 +139,6 @@ Validator service:
 - Based on a SHACL document
 - Give it a URI for the SHACL doc
 - Give it a URI for the data
-
-Publish a JSON-LD context (so that all you get is @context: URI and a JSON format).
 
 Give a proper JSON format for the main classes.
 

@@ -10,6 +10,9 @@
     <li>
         <a href="sparql">SPARQL playground</a>
     </li>
+    <li>
+        <a href="context/v1">JSON-LD context document</a>
+    </li>
     @foreach (var endpointName in Endpoints.Names)
     {
         var parameters = Endpoints.ParameterMapping.TryGetValue(endpointName, out var endpoint) ? endpoint.Parameters : [];

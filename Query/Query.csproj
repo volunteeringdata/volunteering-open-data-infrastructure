@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Endpoints\**\*.*" />
+    <EmbeddedResource Include="Context\**\*.*" />
   </ItemGroup>
 
   <ItemGroup>
