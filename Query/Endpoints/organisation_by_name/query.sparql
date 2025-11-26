@@ -6,7 +6,6 @@ CONSTRUCT {
     <Organisations> :organisations ?organisation .
 
     ?organisation
-        a :Organisation ;
         :label ?label ;
         :indexMatchingScore ?score ;
     .
@@ -18,4 +17,3 @@ WHERE {
       :label ?label ;
     .
 }
-ORDER BY ASC(?score)
