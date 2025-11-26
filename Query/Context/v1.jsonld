@@ -4,6 +4,8 @@
         "@vocab": "https://id.volunteeringdata.io/schema/",
         "id": "@id",
         "type": "@type",
-        "value": "@value"
+        "value": "@value",
+        "latitude": { "@type": "http://www.w3.org/2001/XMLSchema#double" },
+        "longitude": { "@type": "http://www.w3.org/2001/XMLSchema#double" }
     }
 }

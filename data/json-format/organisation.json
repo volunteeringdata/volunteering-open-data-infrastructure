@@ -16,18 +16,18 @@
     ],
     "location": [
         {
-            "id": "",
             "locationType": "",
             "address": "",
             "latitude": {
-                "@value": "51.5072178e0",
+                "value": "",
                 "type": "http://www.w3.org/2001/XMLSchema#double"
             },
             "longitude": {
-                "@value": "-0.1275862e0",
+                "value": "",
                 "type": "http://www.w3.org/2001/XMLSchema#double"
             }
         }
     ],
-    "purpose": ""
+    "purpose": "",
+    "@context": "http://api.volunteeringdata.io/context/v1"
 }
