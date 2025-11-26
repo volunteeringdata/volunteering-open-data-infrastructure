@@ -58,8 +58,6 @@ foreach (var source in activities!)
         option.App = App.Create(source.Details.App.Id.Value, targetGraph);
         return option;
     }));
-    target.Organization.Email = source.Details.Organization.ContactEmail;
-    target.Organization.Phone = source.Details.Organization.ContactPhoneNumber;
     target.Organization.Deleted = source.Details.Organization.Deleted;
     target.Organization.Description = source.Details.Organization.Description;
     if (source.Details.Organization.FullAddress is Json.Address fullAddress)
@@ -70,6 +68,14 @@ foreach (var source in activities!)
         location.Longitude = fullAddress.Location.Coordinates[0];
         location.Latitude = fullAddress.Location.Coordinates[1];
         target.Organization.Locations.Add(location);
+    }
+    if (source.Details.Organization.ContactEmail is not null || source.Details.Organization.ContactPhoneNumber is not null)
+    {
+        // TODO: can we make the GUID deterministic based on values of email and phone?
+        var contact = Contact.Create(Guid.NewGuid().ToString(), targetGraph);
+        contact.Email = source.Details.Organization.ContactEmail;
+        contact.Phone = source.Details.Organization.ContactPhoneNumber;
+        target.Organization.OrganisationContact.Add(contact);
     }
     target.Organization.Name = source.Details.Organization.Name;
     target.Organization.Purpose = source.Details.Organization.Purpose;

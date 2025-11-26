@@ -180,6 +180,13 @@ Fix up
 
 http://localhost:5199/geo_example2.html?lat=51.36&lon=-0.37&within=50
 
+## Context notes
+
+Organisation:
+- URL should be singular and direct URL (not url > id)
+- probably remove type
+- activity should be an array of id (not { id })
+- cause should always be an array of causes (with id and label)
 
 
 

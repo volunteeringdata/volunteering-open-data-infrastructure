@@ -49,6 +49,10 @@ internal class Vocabulary
     internal static IUriNode Latitude { get; } = Node("latitude");
     internal static IUriNode Longitude { get; } = Node("longitude");
 
+    // Contact
+    internal static IUriNode Email { get; } = Node("email");
+    internal static IUriNode Phone { get; } = Node("contact");
+
     internal static IUriNode MeasurementUnitCategory { get; } = Node("measurementUnitCategory");
     internal static IUriNode MeasurementUnitPluralLabel { get; } = Node("measurementUnitPluralLabel");
     internal static IUriNode MeasurementUnitSingularLabel { get; } = Node("measurementUnitSingularLabel");
@@ -70,6 +74,7 @@ internal class Vocabulary
     internal static IUriNode OrganizationType { get; } = Node("organisationType");
     internal static IUriNode OrganizationWebsite { get; } = Node("url");
     internal static IUriNode OrganizationCause { get; } = Node("organisationCause");
+    internal static IUriNode OrganizationContact { get; } = Node("organisationContact");
 
     private static IUriNode Node(string name) => AnyNode($"{VocabularyBaseUri}{name}");
 

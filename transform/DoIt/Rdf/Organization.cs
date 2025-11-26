@@ -14,10 +14,6 @@ public class Organization : GraphWrapperNode
 
     internal Uri? Logo { set => this.OverwriteNullable(Vocabulary.OrganizationLogo, value); }
 
-    internal string? Email { set => this.OverwriteNullable(Vocabulary.OrganizationEmail, value); }
-
-    internal string? Phone { set => this.OverwriteNullable(Vocabulary.OrganizationPhone, value); }
-
     internal bool? Deleted { set => this.OverwriteNullable(Vocabulary.OrganizationDeleted, value); }
 
     internal string? Description { set => this.OverwriteNullable(Vocabulary.OrganizationDescription, value); }
@@ -33,6 +29,8 @@ public class Organization : GraphWrapperNode
     internal Uri? Website { set => this.OverwriteNullable(Vocabulary.OrganizationWebsite, value); }
 
     internal ISet<Option> Cause { get => this.Objects(Vocabulary.OrganizationCause, Option.Wrap, Option.Wrap); }
+
+    internal ISet<Contact> OrganisationContact { get => this.Objects(Vocabulary.OrganizationContact, Contact.Wrap, Contact.Wrap); }
 
     internal ISet<Location> Locations { get => this.Objects(Vocabulary.OrganizationLocation, Location.Wrap, Location.Wrap); }
 }
