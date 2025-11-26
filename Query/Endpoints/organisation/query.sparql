@@ -6,8 +6,5 @@ CONSTRUCT {
     ?organisation :label ?organisationLabel .
 }
 WHERE {
-    ?organisation
-        a :Organisation ;
-        :label ?organisationLabel ;
-    .
+    ?organisation :organisationLabel ?organisationLabel .
 }
