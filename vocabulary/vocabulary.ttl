@@ -489,6 +489,14 @@ id:schema
     rdfs:label "has URL"@en ;
 .
 
+:website
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:domain :Organisation ;
+    rdfs:subPropertyOf :url ;
+    rdfs:label "has website"@en ;
+.
+
 
 ## Concept Scheme
 ### Scheme Properties

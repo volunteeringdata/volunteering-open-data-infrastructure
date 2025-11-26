@@ -2,13 +2,16 @@
     "@context": {
         "@base": "https://id.volunteeringdata.io/",
         "@vocab": "https://id.volunteeringdata.io/schema/",
+        "id": "@id",
         "type": "@type",
         "value": "@value",
         "latitude": { "@type": "http://www.w3.org/2001/XMLSchema#double" },
         "longitude": { "@type": "http://www.w3.org/2001/XMLSchema#double" },
+        "activity": { "@container": "@set", "@type": "@id" },
         "cause": { "@container": "@set" },
         "contact": { "@container": "@set" },
         "location": { "@container": "@set" },
-        "requirement": { "@container": "@set" }
+        "requirement": { "@container": "@set" },
+        "website": { "@type": "@id" }
     }
 }

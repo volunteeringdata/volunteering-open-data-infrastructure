@@ -1,0 +1,26 @@
+{
+    "id": "",
+    "type": "Activity",
+    "description": "",
+    "label": "",
+    "cause": [
+        {
+            "label": ""
+        }
+    ],
+    "contact": [
+        {
+            "email": "",
+            "phone": ""
+        }
+    ],
+    "location": [
+        {
+            "locationType": "",
+            "address": "",
+            "latitude": "",
+            "longitude": ""
+        }
+    ],
+    "@context": "http://api.volunteeringdata.io/context/v1"
+}

@@ -72,7 +72,7 @@ internal class Vocabulary
     internal static IUriNode OrganizationPurpose { get; } = Node("purpose");
     internal static IUriNode OrganizationTos { get; } = Node("organisationTos");
     internal static IUriNode OrganizationType { get; } = Node("organisationType");
-    internal static IUriNode OrganizationWebsite { get; } = Node("url");
+    internal static IUriNode OrganizationWebsite { get; } = Node("website");
     internal static IUriNode OrganizationCause { get; } = Node("organisationCause");
     internal static IUriNode OrganizationContact { get; } = Node("organisationContact");
 
