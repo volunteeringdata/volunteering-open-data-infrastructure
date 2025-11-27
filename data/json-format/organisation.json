@@ -3,6 +3,7 @@
     "label": "",
     "description": "",
     "purpose": "",
+    "applyLink": "",
     "website": "",
     "cause": [
         {
@@ -23,5 +24,6 @@
             "longitude": ""
         }
     ],
+    "activity": [ "" ],
     "@context": "http://api.volunteeringdata.io/context/v1"
 }

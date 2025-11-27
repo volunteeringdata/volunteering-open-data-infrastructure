@@ -35,6 +35,7 @@ public class Activity : Identified
 
     [JsonPropertyName("isVolunteerNumberLimited")] public required bool IsVolunteerNumberLimited { get; set; }
 
+    // TODO: check if there is a difference between external apply link and meeting link
     [JsonPropertyName("meetingLink")] public string? MeetingLinkString { get; set; }
     [JsonIgnore] public Uri? MeetingLink => string.IsNullOrWhiteSpace(MeetingLinkString) ? null : new Uri(MeetingLinkString);
 

@@ -489,6 +489,29 @@ id:schema
     rdfs:label "has URL"@en ;
 .
 
+:applyLink
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :url ;
+    rdfs:label "has apply link"@en ;
+.
+
+:activityApplyLink
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:domain :Activity ;
+    rdfs:subPropertyOf :url ;
+    rdfs:label "has apply link"@en ;
+.
+
+:organisationApplyLink
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:domain :Organisation ;
+    rdfs:subPropertyOf :url ;
+    rdfs:label "has apply link"@en ;
+.
+
 :website
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;

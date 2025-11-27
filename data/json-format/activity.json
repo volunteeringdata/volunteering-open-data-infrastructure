@@ -3,9 +3,12 @@
     "type": "Activity",
     "description": "",
     "organisation": [ "" ],
+    "allowsRemoteParticipation": "",
+    "requiresEmergencyParticipation": "",
+    "applyLink": "",
     "session": [
         {
-            "allowsRemoteParticipation": "",
+            "applyLink": "",
             "contact": [
                 {
                     "email": "",
