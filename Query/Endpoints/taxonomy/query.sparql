@@ -7,11 +7,25 @@ CONSTRUCT {
         :description ?description ;
         :topConcept ?topConcept ;
     .
+
+    ?topConcept :label ?topConceptLabel .
+
+    ?concept
+        a ?topConcept ;
+        :label ?conceptLabel ;
+    .
 }
 WHERE {
     :ConceptScheme
         :label ?label ;
         :description ?description ;
         :topConcept ?topConcept ;
+    .
+
+    ?topConcept :label ?topConceptLabel .
+
+    ?concept
+        a ?topConcept ;
+        :label ?conceptLabel ;
     .
 }
