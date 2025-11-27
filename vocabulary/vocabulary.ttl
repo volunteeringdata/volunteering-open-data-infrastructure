@@ -546,15 +546,16 @@ id:schema
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf :label, skos:prefLabel ;
     rdfs:domain :Concept ;
-    rdfs:label "concept has preferred label"@en .
+    rdfs:label "concept has preferred label"@en ;
+.
 
 :Concept
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subClassOf skos:Concept ;
-    rdfs:label "Volunteering Concept" ;
-    rdfs:label "Concept"@en ;
-    rdfs:comment "Any conceptual information related to volunteering activities."@en .
+    :label "Volunteering Concept"@en ;
+    :description "Any conceptual information related to volunteering activities."@en ;
+.
 
 skos:Concept rdfs:label "SKOS Concept" .
 
@@ -563,56 +564,64 @@ skos:Concept rdfs:label "SKOS Concept" .
     rdfs:isDefinedBy id:schema ;
     rdfs:subClassOf :Concept ;
     :conceptLabel "Accessibility"@en ;
-    rdfs:comment "Any accessibility information related to volunteering activities."@en .
+    :description "Any accessibility information related to volunteering activities."@en ;
+.
 
 :Cause
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subClassOf :Concept ;
     :conceptLabel "Charitable Cause"@en ;
-    rdfs:comment "Any charitable cause related to volunteering activities."@en .
+    :description "Any charitable cause related to volunteering activities."@en ;
+.
 
 :Demography
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subClassOf :Concept ;
     :conceptLabel "Demographic Target"@en ;
-    rdfs:comment "Any demographic information related to volunteering activities."@en .
+    :description "Any demographic information related to volunteering activities."@en ;
+.
 
 :Language
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subClassOf :Concept ;
     :conceptLabel "Language"@en ;
-    rdfs:comment "Any language related to volunteering activities."@en .
+    :description "Any language related to volunteering activities."@en ;
+.
 
 :Requirement
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subClassOf :Concept ;
     :conceptLabel "Requirement"@en ;
-    rdfs:comment "Any requirement related to volunteering activities."@en .
+    :description "Any requirement related to volunteering activities."@en ;
+.
 
 :Reward
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subClassOf :Concept ;
     :conceptLabel "Reward"@en ;
-    rdfs:comment "Any reward related to volunteering activities."@en .
+    :description "Any reward related to volunteering activities."@en ;
+.
 
 :Skill
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subClassOf :Concept ;
     :conceptLabel "Skill"@en ;
-    rdfs:comment "Any skill related to volunteering activities."@en .
+    :description "Any skill related to volunteering activities."@en ;
+.
 
 :ActivityConcept
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subClassOf :Concept ;
     rdfs:label "Activity Concept"@en ;
-    rdfs:comment "Any concept related to a volunteering activity."@en .
+    :description "Any concept related to a volunteering activity."@en ;
+.
 
 :OrganisationConcept
     a owl:Class ;
