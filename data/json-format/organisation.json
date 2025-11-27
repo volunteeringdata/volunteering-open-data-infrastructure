@@ -1,29 +1,31 @@
 {
-    "type": "Organisation",
-    "label": "",
-    "description": "",
-    "purpose": "",
-    "applyLink": "",
-    "website": "",
-    "cause": [
+    "@context": "http://api.volunteeringdata.io/context/v1",
+    "@graph": [
         {
-            "label": ""
-        }
-    ],
-    "contact": [
-        {
+            "id": "",
+            "type": "Organisation",
+            "label": "",
+            "description": "",
+            "purpose": "",
+            "applyLink": "",
             "email": "",
-            "phone": ""
+            "phone": "",
+            "website": "",
+            "cause": [
+                {
+                    "id": "",
+                    "label": ""
+                }
+            ],
+            "location": [
+                {
+                    "id": "",
+                    "locationType": "",
+                    "address": "",
+                    "latitude": "",
+                    "longitude": ""
+                }
+            ]
         }
-    ],
-    "location": [
-        {
-            "locationType": "",
-            "address": "",
-            "latitude": "",
-            "longitude": ""
-        }
-    ],
-    "activity": [ "" ],
-    "@context": "http://api.volunteeringdata.io/context/v1"
+    ]
 }

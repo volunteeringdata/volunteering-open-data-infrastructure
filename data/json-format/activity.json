@@ -1,72 +1,82 @@
 {
-    "id": "",
-    "type": "Activity",
-    "description": "",
-    "organisation": [ "" ],
-    "allowsRemoteParticipation": "",
-    "requiresEmergencyParticipation": "",
-    "applyLink": "",
-    "session": [
+    "@context": "http://api.volunteeringdata.io/context/v1",
+    "@graph": [
         {
+            "id": "",
+            "type": "Activity",
+            "description": "",
+            "organisation": "",
+            "allowsRemoteParticipation": "",
+            "requiresEmergencyParticipation": "",
             "applyLink": "",
-            "contact": [
+            "email": "",
+            "phone": "",
+            "session": [
                 {
+                    "id": "",
+                    "applyLink": "",
                     "email": "",
-                    "phone": ""
+                    "phone": "",
+                    "location": [
+                        {
+                            "id": "",
+                            "locationType": "",
+                            "address": "",
+                            "latitude": "",
+                            "longitude": ""
+                        }
+                    ],
+                    "time": [
+                        {
+                            "id": "",
+                            "beginning": "",
+                            "end": ""
+                        }
+                    ]
                 }
             ],
-            "location": [
+            "accessibility": [
                 {
-                    "locationType": "",
-                    "address": "",
-                    "latitude": "",
-                    "longitude": ""
+                    "id": "",
+                    "label": ""
                 }
             ],
-            "time": [
+            "cause": [
                 {
-                    "locationType": "",
-                    "address": "",
-                    "latitude": "",
-                    "longitude": ""
+                    "id": "",
+                    "label": ""
+                }
+            ],
+            "demography": [
+                {
+                    "id": "",
+                    "label": ""
+                }
+            ],
+            "language": [
+                {
+                    "id": "",
+                    "label": ""
+                }
+            ],
+            "requirement": [
+                {
+                    "id": "",
+                    "label": ""
+                }
+            ],
+            "reward": [
+                {
+                    "id": "",
+                    "label": ""
+                }
+            ],
+            "skill": [
+                {
+                    "id": "",
+                    "label": ""
                 }
             ]
         }
-    ],
-    "accessibility": [
-        {
-            "label": ""
-        }
-    ],
-    "cause": [
-        {
-            "label": ""
-        }
-    ],
-    "demography": [
-        {
-            "label": ""
-        }
-    ],
-    "language": [
-        {
-            "label": ""
-        }
-    ],
-    "requirement": [
-        {
-            "label": ""
-        }
-    ],
-    "reward": [
-        {
-            "label": ""
-        }
-    ],
-    "skill": [
-        {
-            "label": ""
-        }
-    ],
-    "@context": "http://api.volunteeringdata.io/context/v1"
+    ]
 }
