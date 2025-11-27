@@ -1,0 +1,62 @@
+﻿BASE <https://id.volunteeringdata.io/>
+PREFIX : <https://id.volunteeringdata.io/schema/>
+PREFIX id: <https://id.volunteeringdata.io/>
+
+CONSTRUCT {
+    <Activities> :activities ?activity .
+
+    ?activity
+        a :Activity ;
+        :label ?activityLabel ;
+        :organisation ?activityOrganisation ;
+        :description ?activityDescription ;
+        :activityApplyLink ?activityApplyLink ;
+        :location ?activityLocation ;
+        :contact ?activityContact ;
+        :cause ?activityCause ;
+    .
+
+    ?activityOrganisation :label ?activityOrganisationLabel .
+
+    ?activityLocation
+        :locationType ?locationType ;
+        :address ?address ;
+        :latitude ?latitude ;
+        :longitude ?longitude ;
+    .
+
+    ?activityContact
+        :email ?contactEmail ;
+        :phone ?contactPhone ;
+    .
+
+    ?activityCause :label ?causeLabel .
+}
+WHERE {
+    ?activity
+        a :Activity ;
+        :label ?activityLabel ;
+        :organisation ?activityOrganisation ;
+    .
+
+    ?activityOrganisation :label ?activityOrganisationLabel .
+
+    OPTIONAL { ?activity :activityDescription ?activityDescription . }
+    OPTIONAL { ?activity :activityApplyLink ?activityApplyLink . }
+    OPTIONAL {
+        ?activity :location ?activityLocation .
+        OPTIONAL { ?activityLocation :locationType ?locationType . }
+        OPTIONAL { ?activityLocation :address ?address . }
+        OPTIONAL { ?activityLocation :latitude ?latitude . }
+        OPTIONAL { ?activityLocation :longitude ?longitude . }
+    }
+    OPTIONAL {
+        ?activity :activityContact ?activityContact .
+        OPTIONAL { ?activityContact :email ?contactEmail . }
+        OPTIONAL { ?activityContact :phone ?contactPhone . }
+    }
+    OPTIONAL {
+        ?activity :cause ?activityCause .
+        ?activityCause :label ?causeLabel .
+    }
+}
