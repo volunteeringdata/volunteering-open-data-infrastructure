@@ -536,10 +536,9 @@ id:schema
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subClassOf skos:ConceptScheme ;
-    rdfs:label "Volunteering Concept Scheme" ;
-    rdfs:label "Concept Scheme"@en ;
-    rdfs:comment "A taxonomy of concepts related to volunteering activities."@en ;
-    skos:hasTopConcept :Accessibility, :Cause, :Demography, :Language, :Requirement, :Reward, :Skill ;
+    :label "Volunteering Concept Scheme"@en ;
+    :description "A taxonomy of concepts related to volunteering activities."@en ;
+    :topConcept :Accessibility, :Cause, :Demography, :Language, :Requirement, :Reward, :Skill ;
 .
 
 :conceptLabel

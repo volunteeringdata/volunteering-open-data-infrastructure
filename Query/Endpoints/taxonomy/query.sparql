@@ -1,0 +1,17 @@
+﻿BASE <https://id.volunteeringdata.io/>
+PREFIX : <https://id.volunteeringdata.io/schema/>
+
+CONSTRUCT {
+    :ConceptScheme
+        :label ?label ;
+        :description ?description ;
+        :topConcept ?topConcept ;
+    .
+}
+WHERE {
+    :ConceptScheme
+        :label ?label ;
+        :description ?description ;
+        :topConcept ?topConcept ;
+    .
+}
