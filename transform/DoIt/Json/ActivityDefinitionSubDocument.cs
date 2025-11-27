@@ -25,4 +25,8 @@ public class ActivityDefinitionSubDocument : Identified
     [JsonPropertyName("locationOption")] public required string LocationOption { get; set; }
 
     [JsonPropertyName("organizationSubDocument")] public required OrganizationSubDocument Organization { get; set; }
+
+    [JsonPropertyName("volunteerRequirements")] public required IEnumerable<string> VolunteerRequirements { get; set; }
+
+    [JsonPropertyName("volunteerRewards")] public required IEnumerable<string> VolunteerRewards { get; set; }
 }

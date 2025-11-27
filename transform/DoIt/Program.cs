@@ -78,6 +78,24 @@ foreach (var source in activities!)
         contact.Phone = source.Details.Organization.ContactPhoneNumber;
         target.Organization.OrganisationContact.Add(contact);
     }
+    if (source.Details.VolunteerRequirements.Any())
+    {
+        target.Requirement.UnionWith(source.Details.VolunteerRequirements.Select(x =>
+        {
+            var option = Option.Create(new { x }.GetHashCode().ToString(), targetGraph);
+            option.DisplayName = x;
+            return option;
+        }));
+    }
+    if (source.Details.VolunteerRewards.Any())
+    {
+        target.Reward.UnionWith(source.Details.VolunteerRewards.Select(x =>
+        {
+            var option = Option.Create(new { x }.GetHashCode().ToString(), targetGraph);
+            option.DisplayName = x;
+            return option;
+        }));
+    }
     target.Organization.Name = source.Details.Organization.Name;
     target.Organization.Purpose = source.Details.Organization.Purpose;
     target.Organization.Tos = source.Details.Organization.TermsOfServicesLink;

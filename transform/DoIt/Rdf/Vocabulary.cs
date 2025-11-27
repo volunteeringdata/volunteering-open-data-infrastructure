@@ -16,13 +16,14 @@ internal class Vocabulary
     internal static IUriNode ActivityDue { get; } = Node("activityDue");
     internal static IUriNode ActivityEcosystem { get; } = Node("activityEcosystem");
     internal static IUriNode ActivityEnd { get; } = Node("activityEnd");
-    internal static IUriNode ActivityExternalApplyLink { get; } = Node("activityExternalApplyLink");
+    internal static IUriNode ActivityExternalApplyLink { get; } = Node("activityApplyLink");
     internal static IUriNode ActivityIsOnline { get; } = Node("allowsRemoteParticipation");
     internal static IUriNode ActivityIsVolunteerNumberLimited { get; } = Node("activityIsVolunteerNumberLimited");
     internal static IUriNode ActivityMeeting { get; } = Node("activityMeeting");
     internal static IUriNode ActivityOrganisation { get; } = Node("activityOrganisation");
     internal static IUriNode ActivityPublishedApps { get; } = Node("activityPublishedApps");
     internal static IUriNode ActivityRequirement { get; } = Node("activityRequirement");
+    internal static IUriNode ActivityReward { get; } = Node("activityReward");
     internal static IUriNode ActivityStart { get; } = Node("activityStart");
     internal static IUriNode ActivityVolunteers { get; } = Node("activityVolunteers");
     internal static IUriNode ActivityTitle { get; } = Node("activityLabel");

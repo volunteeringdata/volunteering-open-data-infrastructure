@@ -69,5 +69,7 @@ public class Activity : GraphWrapperNode
 
     internal ISet<Option> Requirement { get => this.Objects(Vocabulary.ActivityRequirement, Option.Wrap, Option.Wrap); }
 
+    internal ISet<Option> Reward { get => this.Objects(Vocabulary.ActivityReward, Option.Wrap, Option.Wrap); }
+
     internal ISet<Location> Locations { get => this.Objects(Vocabulary.ActivityLocation, Location.Wrap, Location.Wrap); }
 }
