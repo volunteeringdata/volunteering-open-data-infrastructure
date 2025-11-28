@@ -69,15 +69,8 @@ foreach (var source in activities!)
         location.Latitude = fullAddress.Location.Coordinates[1];
         target.Organization.Locations.Add(location);
     }
-    // TODO: Review if contact should really be a separate entity
-    // TODO: Review if contact should be a singular property instead
-    if (source.Details.Organization.ContactEmail is not null || source.Details.Organization.ContactPhoneNumber is not null)
-    {
-        var contact = Contact.Create(new { e = source.Details.Organization.ContactEmail, p = source.Details.Organization.ContactPhoneNumber }.GetHashCode().ToString(), targetGraph);
-        contact.Email = source.Details.Organization.ContactEmail;
-        contact.Phone = source.Details.Organization.ContactPhoneNumber;
-        target.Organization.OrganisationContact.Add(contact);
-    }
+    target.Organization.Email = source.Details.Organization.ContactEmail;
+    target.Organization.Phone = source.Details.Organization.ContactPhoneNumber;
     if (source.Details.VolunteerRequirements.Any())
     {
         target.Requirement.UnionWith(source.Details.VolunteerRequirements.Select(x =>

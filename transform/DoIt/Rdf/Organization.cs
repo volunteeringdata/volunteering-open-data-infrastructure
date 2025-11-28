@@ -30,7 +30,9 @@ public class Organization : GraphWrapperNode
 
     internal ISet<Option> Cause { get => this.Objects(Vocabulary.OrganizationCause, Option.Wrap, Option.Wrap); }
 
-    internal ISet<Contact> OrganisationContact { get => this.Objects(Vocabulary.OrganizationContact, Contact.Wrap, Contact.Wrap); }
+    internal string? Email { set => this.OverwriteNullable(Vocabulary.Email, value); }
+
+    internal string? Phone { set => this.OverwriteNullable(Vocabulary.Phone, value); }
 
     internal ISet<Location> Locations { get => this.Objects(Vocabulary.OrganizationLocation, Location.Wrap, Location.Wrap); }
 }

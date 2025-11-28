@@ -11,7 +11,8 @@ CONSTRUCT {
         :purpose ?organisationPurpose ;
         :website ?organisationWebsite ;
         :location ?organisationLocation ;
-        :contact ?organisationContact ;
+        :email ?organisationEmail ;
+        :phone ?organisationPhone ;
         :cause ?organisationCause ;
     .
 
@@ -20,11 +21,6 @@ CONSTRUCT {
         :address ?address ;
         :latitude ?latitude ;
         :longitude ?longitude ;
-    .
-
-    ?organisationContact
-        :email ?contactEmail ;
-        :phone ?contactPhone ;
     .
 
     ?organisationCause :label ?causeLabel .
@@ -40,17 +36,14 @@ WHERE {
     OPTIONAL { ?organisation :description ?organisationDescription . }
     OPTIONAL { ?organisation :purpose ?organisationPurpose . }
     OPTIONAL { ?organisation :website ?organisationWebsite . }
+    OPTIONAL { ?organisation :email ?organisationEmail . }
+    OPTIONAL { ?organisation :phone ?organisationPhone . }
     OPTIONAL {
         ?organisation :location ?organisationLocation .
         OPTIONAL { ?organisationLocation :locationType ?locationType . }
         OPTIONAL { ?organisationLocation :address ?address . }
         OPTIONAL { ?organisationLocation :latitude ?latitude . }
         OPTIONAL { ?organisationLocation :longitude ?longitude . }
-    }
-    OPTIONAL {
-        ?organisation :organisationContact ?organisationContact .
-        OPTIONAL { ?organisationContact :email ?contactEmail . }
-        OPTIONAL { ?organisationContact :phone ?contactPhone . }
     }
     OPTIONAL {
         ?organisation :cause ?organisationCause .
