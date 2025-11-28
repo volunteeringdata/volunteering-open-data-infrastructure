@@ -4,9 +4,8 @@ PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX spatialF: <http://jena.apache.org/function/spatial#>
 
 SELECT ?name ?distance {
-    ?activity
-        :activityLocation ?location ;
-        :activityLabel ?name ;
+    ?session
+        :sessionLocation ?location ;
     .
 
     ?location 
@@ -20,5 +19,7 @@ SELECT ?name ?distance {
     FILTER(spatialF:nearby(?orgLocation, ?myLocation, $within, units:kilometer))
 
     BIND(spatialF:distance(?orgLocation, ?myLocation, units:kilometer) as ?distance)
+
+    ?activity :activitySession ?session ; :label ?name ;
 }
 ORDER BY ?distance

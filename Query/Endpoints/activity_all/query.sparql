@@ -21,11 +21,12 @@ CONSTRUCT {
         :sessionApplyLink ?activitySessionApplyLink ;
         :sessionDue ?activitySessionDue ;
         :sessionEnd ?activitySessionEnd ;
+        :location ?activitySessionLocation ;
     .
 
     ?activityOrganisation :label ?activityOrganisationLabel .
 
-    ?activityLocation
+    ?activitySessionLocation
         :locationType ?locationType ;
         :address ?address ;
         :latitude ?latitude ;
@@ -48,18 +49,17 @@ WHERE {
     OPTIONAL { ?activity :email ?activityEmail . }
     OPTIONAL { ?activity :phone ?activityPhone . }
     OPTIONAL {
-        ?activity :location ?activityLocation .
-        OPTIONAL { ?activityLocation :locationType ?locationType . }
-        OPTIONAL { ?activityLocation :address ?address . }
-        OPTIONAL { ?activityLocation :latitude ?latitude . }
-        OPTIONAL { ?activityLocation :longitude ?longitude . }
-    }
-    OPTIONAL {
         ?activity :session ?activitySession .
         OPTIONAL { ?activitySession :sessionApplyLink ?activitySessionApplyLink . }
         OPTIONAL { ?activitySession :sessionDue ?activitySessionDue . }
         OPTIONAL { ?activitySession :sessionEnd ?activitySessionEnd . }
-
+        OPTIONAL {
+            ?activitySession :location ?activitySessionLocation .
+            OPTIONAL { ?activitySessionLocation :locationType ?locationType . }
+            OPTIONAL { ?activitySessionLocation :address ?address . }
+            OPTIONAL { ?activitySessionLocation :latitude ?latitude . }
+            OPTIONAL { ?activitySessionLocation :longitude ?longitude . }
+        }
     }
     OPTIONAL {
         ?activity :cause ?activityCause .
