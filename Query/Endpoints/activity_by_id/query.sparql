@@ -6,12 +6,19 @@ CONSTRUCT {
     ?activity
         a :Activity ;
         :label ?activityLabel ;
-        :organisation ?activityOrganisation ;
         :description ?activityDescription ;
-        :activityApplyLink ?activityApplyLink ;
-        :location ?activityLocation ;
-        :contact ?activityContact ;
+        :applyLink ?activityApplyLink ;
+        :email ?activityEmail ;
+        :phone ?activityPhone ;
+        :session ?activitySession ;
+        :organisation ?activityOrganisation ;
         :cause ?activityCause ;
+    .
+
+    ?activitySession
+        :sessionApplyLink ?activitySessionApplyLink ;
+        :sessionDue ?activitySessionDue ;
+        :sessionEnd ?activitySessionEnd ;
     .
 
     ?activityOrganisation :label ?activityOrganisationLabel .
@@ -21,11 +28,6 @@ CONSTRUCT {
         :address ?address ;
         :latitude ?latitude ;
         :longitude ?longitude ;
-    .
-
-    ?activityContact
-        :email ?contactEmail ;
-        :phone ?contactPhone ;
     .
 
     ?activityCause :label ?causeLabel .
@@ -40,8 +42,10 @@ WHERE {
 
     ?activityOrganisation :label ?activityOrganisationLabel .
 
-    OPTIONAL { ?activity :activityDescription ?activityDescription . }
-    OPTIONAL { ?activity :activityApplyLink ?activityApplyLink . }
+    OPTIONAL { ?activity :description ?activityDescription . }
+    OPTIONAL { ?activity :applyLink ?activityApplyLink . }
+    OPTIONAL { ?activity :email ?activityEmail . }
+    OPTIONAL { ?activity :phone ?activityPhone . }
     OPTIONAL {
         ?activity :location ?activityLocation .
         OPTIONAL { ?activityLocation :locationType ?locationType . }
@@ -50,47 +54,14 @@ WHERE {
         OPTIONAL { ?activityLocation :longitude ?longitude . }
     }
     OPTIONAL {
-        ?activity :activityContact ?activityContact .
-        OPTIONAL { ?activityContact :email ?contactEmail . }
-        OPTIONAL { ?activityContact :phone ?contactPhone . }
+        ?activity :session ?activitySession .
+        OPTIONAL { ?activitySession :sessionApplyLink ?activitySessionApplyLink . }
+        OPTIONAL { ?activitySession :sessionDue ?activitySessionDue . }
+        OPTIONAL { ?activitySession :sessionEnd ?activitySessionEnd . }
+
     }
     OPTIONAL {
         ?activity :cause ?activityCause .
         ?activityCause :label ?causeLabel .
     }
 }
-
-
-# SELECT *
-# WHERE {
-#     ?activity
-#         :activityAttendees ?attendees ;
-#         :activityBookings ?bookings ;
-#         :activityDeleted ?deleted ;
-#         :activityEcosystem ?ecosystem ;
-#         :activityOrganisation ?organisation ;
-#         :activityPublishedApps ?publishedApps ;
-#         :activityLabel ?title ;
-#         :activityDescription ?description ;
-#         :activityType ?type ;
-#         :activityLocationOption ?locationOption ;
-#         :activityApp ?app ;
-#         :activityMeasurementUnit ?measurementUnit ;
-#         :activityCause ?cause ;
-#     .
-
-#     OPTIONAL { ?activity :activityDue ?due . }
-#     OPTIONAL { ?activity :activityEnd ?end . }
-#     OPTIONAL { ?activity :activityExternalApplyLink ?externalApplyLink . }
-#     OPTIONAL { ?activity :activityIsOnline ?isOnline . }
-#     OPTIONAL { ?activity :activityIsVolunteerNumberLimited ?isVolunteerNumberLimited . }
-#     OPTIONAL { ?activity :activityMeeting ?meeting . }
-#     OPTIONAL { ?activity :activityStart ?start . }
-#     OPTIONAL { ?activity :activityVolunteers ?volunteers . }
-#     OPTIONAL { ?activity :activityEventType ?eventType . }
-#     OPTIONAL { ?activity :activityRequirement ?requirement . }
-#     OPTIONAL { ?activity :activityAddress ?address . }
-#     OPTIONAL { ?activity :activityLatitude ?latitude . }
-#     OPTIONAL { ?activity :activityLongitude ?longitude . }
-#     OPTIONAL { ?activity :activityRegion ?region . }
-# }
