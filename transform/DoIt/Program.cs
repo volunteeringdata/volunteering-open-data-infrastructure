@@ -13,6 +13,8 @@ var targetGraph = new Graph();
 foreach (var source in activities!)
 {
     var target = Activity.Create(source.Id.Value, targetGraph);
+    var session = Session.Create($"s{source.Id.Value}", targetGraph);
+    session.Activity = target;
 
     target.App = App.Create(source.Details.App.Id.Value, targetGraph);
     target.App.BrandColor = source.Details.App.BrandColor;
@@ -97,15 +99,15 @@ foreach (var source in activities!)
     target.Attendees = source.AttendeesNumber;
     target.Bookings = source.BookingsNumber;
     target.Deleted = source.Deleted;
-    target.Due = source.DueDate?.Value;
+    session.Due = source.DueDate?.Value;
     target.Ecosystem = Ecosystem.Create(source.Ecosystem.Value, targetGraph);
-    target.End = source.DueDate?.Value;
-    target.ExternalApplyLink = source.ExternalApplyLink;
+    session.End = source.DueDate?.Value;
+    session.ExternalApplyLink = source.ExternalApplyLink;
     target.IsOnline = source.IsOnline;
     target.IsVolunteerNumberLimited = source.IsVolunteerNumberLimited;
     target.Meeting = source.MeetingLink;
     target.PublishedApps.UnionWith(source.PublishedApp.Select(a => new Uri(Vocabulary.InstanceBaseUri, a.Value)));
-    target.Locations.UnionWith(source.Regions.Select(r =>
+    session.Locations.UnionWith(source.Regions.Select(r =>
     {
         var location = Location.Create(r.Id.Value, targetGraph);
         location.Label = r.DisplayName;
@@ -122,10 +124,10 @@ foreach (var source in activities!)
         location.Address = address.Street;
         location.Longitude = address.Location.Coordinates[0];
         location.Latitude = address.Location.Coordinates[1];
-        target.Locations.Add(location);
+        session.Locations.Add(location);
 
     }
-    target.Start = source.StartDate?.Value;
+    session.Start = source.StartDate?.Value;
     target.Volunteers = source.VolunteerNumber;
 }
 

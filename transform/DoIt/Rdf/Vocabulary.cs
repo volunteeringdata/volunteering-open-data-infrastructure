@@ -77,6 +77,14 @@ internal class Vocabulary
     internal static IUriNode OrganizationCause { get; } = Node("organisationCause");
     internal static IUriNode OrganizationContact { get; } = Node("organisationContact");
 
+    // Session
+    internal static INode SessionActivity { get; } = Node("sessionActivity");
+    internal static INode SessionStart{ get; } = Node("sessionStart");
+    internal static INode SessionDue{ get; } = Node("sessionDue");
+    internal static INode SessionEnd{ get; } = Node("sessionEnd");
+    internal static INode SessionApplyLink{ get; } = Node("sessionApplyLink");
+    internal static INode SessionLocation{ get; } = Node("sessionLocation");
+
     private static IUriNode Node(string name) => AnyNode($"{VocabularyBaseUri}{name}");
 
     private static IUriNode AnyNode(string uri) => Factory.CreateUriNode(Factory.UriFactory.Create(uri));
