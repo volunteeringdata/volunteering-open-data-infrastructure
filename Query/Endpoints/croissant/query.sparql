@@ -27,14 +27,14 @@ CONSTRUCT {
         schema:description "Volunteering and social action opportunities in the UK"@en ;
         schema:distribution [
             a cr:FileObject ;
-            schema:contentUrl "https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/all_activities.csv"@en ;
+            schema:contentUrl "https://api.volunteeringdata.io/activity_all.csv"@en ;
             schema:encodingFormat "text/csv"@en ;
-            schema:name "all_activities.csv"@en ;
+            schema:name "activity_all.csv"@en ;
         ] ;
 
         schema:license "https://creativecommons.org/licenses/by/4.0/"@en ;
         schema:name "Volunteering and social action opportunities in the UK"@en ;
-        schema:url "https://example.org/opportunities"@en ;
+        schema:url "https://api.volunteeringdata.io/"@en ;
     ] .
 
     :activityDescription a cr:Field .
