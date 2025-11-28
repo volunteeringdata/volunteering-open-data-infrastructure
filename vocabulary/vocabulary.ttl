@@ -63,6 +63,14 @@ id:schema
     rdfs:comment "Any organisation running activities that involve volunteers."@en ;
 .
 
+:Session
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:label "Volunteering Activity Session" ;
+    rdfs:label "Session"@en ;
+    rdfs:comment "Any session of an activity that involves volunteers."@en ;
+.
+
 :System
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
@@ -97,12 +105,12 @@ id:schema
     rdfs:comment "Any contact information related to a volunteering activity."@en ;
 .
 
-:ActivityLocation
+:ActivitySession
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Location, :ActivityThing ;
-    rdfs:label "Activity Location"@en ;
-    rdfs:comment "Any location information related to a volunteering activity."@en ;
+    rdfs:subClassOf :Session, :ActivityThing ;
+    rdfs:label "Activity Session"@en ;
+    rdfs:comment "Any session related to a volunteering activity."@en ;
 .
 
 :ActivitySystem
@@ -113,12 +121,28 @@ id:schema
     rdfs:comment "Any system related to a volunteering activity."@en ;
 .
 
-:ActivityTime
+### Session Subclasses
+:SessionThing
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Time, :ActivityThing ;
-    rdfs:label "Activity Time"@en ;
-    rdfs:comment "Any time information related to a volunteering activity."@en ;
+    rdfs:label "Session Thing"@en ;
+    rdfs:comment "Any class related to a volunteering activity session."@en ;
+.
+
+:SessionLocation
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :Location, :SessionThing ;
+    rdfs:label "Session Location"@en ;
+    rdfs:comment "Any location information related to a volunteering activity session."@en ;
+.
+
+:SessionTime
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :Time, :SessionThing ;
+    rdfs:label "Session Time"@en ;
+    rdfs:comment "Any time information related to a volunteering activity session."@en ;
 .
 
 ### Organisation Subclasses
@@ -181,6 +205,13 @@ id:schema
     rdfs:isDefinedBy id:schema ;
     rdfs:range :Organisation ;
     rdfs:label "has organisation"@en ;
+.
+
+:session
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:range :Session ;
+    rdfs:label "has session"@en ;
 .
 
 :system
@@ -257,6 +288,26 @@ id:schema
     rdfs:domain :Organisation ;
     rdfs:range :Activity ;
     rdfs:label "organisation has activity"@en ;
+.
+
+:activitySession
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :session ;
+    owl:inverseOf :sessionActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :Session ;
+    rdfs:label "activity has session"@en ;
+.
+
+:sessionActivity
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :activity ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :activityOrganisation ;
+    rdfs:domain :Session ;
+    rdfs:range :Activity ;
+    rdfs:label "session has activity"@en ;
 .
 
 :activitySystem
