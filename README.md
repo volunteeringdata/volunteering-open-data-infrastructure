@@ -159,9 +159,6 @@ Taxonomy:
 Enable CORS.
 - Test CORS is correctly configured for our purpose (MCP, API)
 
-Put Vocabulary in its own graph.
-- Expose in its own endpoint
-
 IO optimisation:
 - JSON input
 - CSV input
@@ -194,13 +191,6 @@ Modeling:
 Search:
 - Improve geo location search (GeoSPARQL Query not supported)
 - Improve Lucene indexing
-
-
-Organisation:
-- URL should be singular and direct URL (not url > id)
-- probably remove type
-- activity should be an array of id (not { id })
-- cause should always be an array of causes (with id and label)
 
 
 # License
