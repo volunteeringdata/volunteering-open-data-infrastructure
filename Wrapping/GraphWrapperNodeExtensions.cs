@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using VDS.RDF.Writing;
+﻿using VDS.RDF.Writing;
 
 namespace VDS.RDF.Wrapping;
 

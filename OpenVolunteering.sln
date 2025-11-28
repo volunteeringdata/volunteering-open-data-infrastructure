@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Query", "Query\Query.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dereference", "Dereference\Dereference.csproj", "{3E57FB5C-CDAE-4222-A403-4BBC22A707E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wrapping", "Wrapping\Wrapping.csproj", "{2F79EE19-8230-4168-B41C-26278EFF1AAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{3E57FB5C-CDAE-4222-A403-4BBC22A707E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E57FB5C-CDAE-4222-A403-4BBC22A707E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E57FB5C-CDAE-4222-A403-4BBC22A707E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F79EE19-8230-4168-B41C-26278EFF1AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F79EE19-8230-4168-B41C-26278EFF1AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F79EE19-8230-4168-B41C-26278EFF1AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F79EE19-8230-4168-B41C-26278EFF1AAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
