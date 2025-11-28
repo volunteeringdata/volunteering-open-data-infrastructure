@@ -72,4 +72,8 @@ public class Activity : GraphWrapperNode
     internal ISet<Option> Reward { get => this.Objects(Vocabulary.ActivityReward, Option.Wrap, Option.Wrap); }
 
     internal ISet<Location> Locations { get => this.Objects(Vocabulary.ActivityLocation, Location.Wrap, Location.Wrap); }
+
+    internal string? Email { set => this.OverwriteNullable(Vocabulary.Email, value); }
+
+    internal string? Phone { set => this.OverwriteNullable(Vocabulary.Phone, value); }
 }
