@@ -202,3 +202,9 @@ Organisation:
 - activity should be an array of id (not { id })
 - cause should always be an array of causes (with id and label)
 
+
+# License
+
+This work is [licensed under MIT](./LICENSE.md).
+
+`SPDX-License-Identifier: MIT`
