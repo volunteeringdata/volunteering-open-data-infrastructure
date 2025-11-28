@@ -1,6 +1,6 @@
 ﻿{
   "@context": [
-    "http://api.volunteeringdata.io/context/v1",
+    "https://api.volunteeringdata.io/context/v1",
     {
       "volunteering": "https://id.volunteeringdata.io/",
       "schema": "https://id.volunteeringdata.io/schema/",

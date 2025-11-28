@@ -1,9 +1,10 @@
 ﻿{
   "@type": "Organisation",
   "@context": [
-    "http://api.volunteeringdata.io/context/v1",
+    "https://api.volunteeringdata.io/context/v1",
     {
-      "@base": "https://id.volunteeringdata.io/"
+      "@base": "https://id.volunteeringdata.io/",
+      "vol": "https://id.volunteeringdata.io/"
     }
   ]
 }

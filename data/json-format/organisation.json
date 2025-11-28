@@ -1,5 +1,5 @@
 {
-    "@context": "http://api.volunteeringdata.io/context/v1",
+    "@context": "https://api.volunteeringdata.io/context/v1",
     "@graph": [
         {
             "id": "",
