@@ -156,6 +156,9 @@ Taxonomy:
 
 # TODO
 
+Enable CORS.
+- Test CORS is correctly configured for our purpose (MCP, API)
+
 Put Vocabulary in its own graph.
 - Expose in its own endpoint
 
