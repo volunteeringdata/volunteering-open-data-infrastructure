@@ -68,7 +68,7 @@ id:schema
     rdfs:isDefinedBy id:schema ;
     rdfs:label "Volunteering Activity Session" ;
     rdfs:label "Session"@en ;
-    rdfs:comment "Any session of an activity that involves volunteers."@en ;
+    rdfs:comment "A session describes a time and place for an activity that involves volunteers."@en ;
 .
 
 :System
@@ -559,6 +559,14 @@ id:schema
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:domain :Organisation ;
+    rdfs:subPropertyOf :url ;
+    rdfs:label "has apply link"@en ;
+.
+
+:sessionApplyLink
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:domain :Session ;
     rdfs:subPropertyOf :url ;
     rdfs:label "has apply link"@en ;
 .
