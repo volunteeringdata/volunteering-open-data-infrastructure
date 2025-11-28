@@ -39,14 +39,6 @@ id:schema
     rdfs:comment "Any kind of activity that involves volunteers."@en ;
 .
 
-:Contact
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:label "Volunteering Contact Information" ;
-    rdfs:label "Contact"@en ;
-    rdfs:comment "Any contact information related to volunteering activities."@en ;
-.
-
 :Location
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
@@ -61,6 +53,14 @@ id:schema
     rdfs:label "Volunteer-Involving Organisation" ;
     rdfs:label "Organisation"@en ;
     rdfs:comment "Any organisation running activities that involve volunteers."@en ;
+.
+
+:Session
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:label "Volunteering Activity Session" ;
+    rdfs:label "Session"@en ;
+    rdfs:comment "A session describes a time and place for an activity that involves volunteers."@en ;
 .
 
 :System
@@ -89,20 +89,12 @@ id:schema
     rdfs:comment "Any class related to a volunteering activity."@en ;
 .
 
-:ActivityContact
+:ActivitySession
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Contact, :ActivityThing;
-    rdfs:label "Activity Contact"@en ;
-    rdfs:comment "Any contact information related to a volunteering activity."@en ;
-.
-
-:ActivityLocation
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Location, :ActivityThing ;
-    rdfs:label "Activity Location"@en ;
-    rdfs:comment "Any location information related to a volunteering activity."@en ;
+    rdfs:subClassOf :Session, :ActivityThing ;
+    rdfs:label "Activity Session"@en ;
+    rdfs:comment "Any session related to a volunteering activity."@en ;
 .
 
 :ActivitySystem
@@ -113,12 +105,28 @@ id:schema
     rdfs:comment "Any system related to a volunteering activity."@en ;
 .
 
-:ActivityTime
+### Session Subclasses
+:SessionThing
     a owl:Class ;
     rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Time, :ActivityThing ;
-    rdfs:label "Activity Time"@en ;
-    rdfs:comment "Any time information related to a volunteering activity."@en ;
+    rdfs:label "Session Thing"@en ;
+    rdfs:comment "Any class related to a volunteering activity session."@en ;
+.
+
+:SessionLocation
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :Location, :SessionThing ;
+    rdfs:label "Session Location"@en ;
+    rdfs:comment "Any location information related to a volunteering activity session."@en ;
+.
+
+:SessionTime
+    a owl:Class ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subClassOf :Time, :SessionThing ;
+    rdfs:label "Session Time"@en ;
+    rdfs:comment "Any time information related to a volunteering activity session."@en ;
 .
 
 ### Organisation Subclasses
@@ -127,14 +135,6 @@ id:schema
     rdfs:isDefinedBy id:schema ;
     rdfs:label "Organisation Thing"@en ;
     rdfs:comment "Any class related to a volunteer involving organisation."@en ;
-.
-
-:OrganisationContact
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :Contact, :OrganisationThing ;
-    rdfs:label "Organisation Contact"@en ;
-    rdfs:comment "Any contact information related to a volunteer involving organisation."@en ;
 .
 
 :OrganisationLocation
@@ -162,13 +162,6 @@ id:schema
     rdfs:label "has activity"@en ;
 .
 
-:contact
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:range :Contact ;
-    rdfs:label "has contact"@en ;
-.
-
 :location
     a owl:ObjectProperty ;
     rdfs:isDefinedBy id:schema ;
@@ -181,6 +174,13 @@ id:schema
     rdfs:isDefinedBy id:schema ;
     rdfs:range :Organisation ;
     rdfs:label "has organisation"@en ;
+.
+
+:session
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:range :Session ;
+    rdfs:label "has session"@en ;
 .
 
 :system
@@ -199,46 +199,7 @@ id:schema
 
 
 ## Classification Object Properties
-:activityContact
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :contact ;
-    owl:inverseOf :contactActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivityContact ;
-    rdfs:label "activity has contact"@en ;
-.
-
-:contactActivity
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :activity ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :activityContact ;
-    rdfs:domain :ActivityContact ;
-    rdfs:range :Activity ;
-    rdfs:label "contact has activity"@en ;
-.
-
-:activityLocation
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :location ;
-    owl:inverseOf :locationActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivityLocation ;
-    rdfs:label "activity has location"@en ;
-.
-
-:locationActivity
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :activity ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :activityLocation ;
-    rdfs:domain :ActivityLocation ;
-    rdfs:range :Activity ;
-    rdfs:label "location has activity"@en ;
-.
-
+### Activity
 :activityOrganisation
     a owl:ObjectProperty ;
     rdfs:isDefinedBy id:schema ;
@@ -257,6 +218,26 @@ id:schema
     rdfs:domain :Organisation ;
     rdfs:range :Activity ;
     rdfs:label "organisation has activity"@en ;
+.
+
+:activitySession
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :session ;
+    owl:inverseOf :sessionActivity ;
+    rdfs:domain :Activity ;
+    rdfs:range :Session ;
+    rdfs:label "activity has session"@en ;
+.
+
+:sessionActivity
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :activity ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :activitySession ;
+    rdfs:domain :Session ;
+    rdfs:range :Activity ;
+    rdfs:label "session has activity"@en ;
 .
 
 :activitySystem
@@ -299,24 +280,36 @@ id:schema
     rdfs:label "time has activity"@en ;
 .
 
-:contactOrganisation
+### Session
+:sessionLocation
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf :organisation ;
     rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :organisationContact ;
-    rdfs:domain :OrganisationContact ;
-    rdfs:range :Organisation ;
-    rdfs:label "contact has organisation"@en ;
+    rdfs:subPropertyOf :location ;
+    owl:inverseOf :locationSession ;
+    rdfs:domain :Session ;
+    rdfs:range :SessionLocation ;
+    rdfs:label "session has location"@en ;
 .
 
-:organisationContact
+:locationSession
     a owl:ObjectProperty ;
-    rdfs:subPropertyOf :contact ;
+    rdfs:subPropertyOf :session ;
     rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :contactOrganisation ;
+    owl:inverseOf :sessionLocation ;
+    rdfs:domain :SessionLocation ;
+    rdfs:range :Session ;
+    rdfs:label "location has session"@en ;
+.
+
+### Organisation
+:organisationLocation
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :location ;
+    rdfs:isDefinedBy id:schema ;
+    owl:inverseOf :locationOrganisation ;
     rdfs:domain :Organisation ;
-    rdfs:range :OrganisationContact ;
-    rdfs:label "organisation has contact"@en ;
+    rdfs:range :OrganisationLocation ;
+    rdfs:label "organisation has location"@en ;
 .
 
 :locationOrganisation
@@ -326,16 +319,7 @@ id:schema
     owl:inverseOf :organisationLocation ;
     rdfs:domain :OrganisationLocation ;
     rdfs:range :Organisation ;
-    rdfs:label "location has organisation"@en .
-
-:organisationLocation
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :location ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :locationOrganisation ;
-    rdfs:domain :Organisation ;
-    rdfs:range :OrganisationLocation ;
-    rdfs:label "organisation has location"@en ;
+    rdfs:label "location has organisation"@en ;
 .
 
 :organisationSystem
@@ -410,7 +394,6 @@ id:schema
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf dc:description ;
-    rdfs:domain :Contact ;
     rdfs:label "has email"@en ;
 .
 
@@ -463,7 +446,6 @@ id:schema
 :phone
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
-    rdfs:domain :Contact ;
     rdfs:label "has phone number"@en ;
 .
 
@@ -500,7 +482,7 @@ id:schema
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:domain :Activity ;
-    rdfs:subPropertyOf :url ;
+    rdfs:subPropertyOf :applyLink ;
     rdfs:label "has apply link"@en ;
 .
 
@@ -508,7 +490,15 @@ id:schema
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy id:schema ;
     rdfs:domain :Organisation ;
-    rdfs:subPropertyOf :url ;
+    rdfs:subPropertyOf :applyLink ;
+    rdfs:label "has apply link"@en ;
+.
+
+:sessionApplyLink
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:domain :Session ;
+    rdfs:subPropertyOf :applyLink ;
     rdfs:label "has apply link"@en ;
 .
 

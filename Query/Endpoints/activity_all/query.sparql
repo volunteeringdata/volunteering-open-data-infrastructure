@@ -8,12 +8,19 @@ CONSTRUCT {
     ?activity
         a :Activity ;
         :label ?activityLabel ;
-        :organisation ?activityOrganisation ;
         :description ?activityDescription ;
-        :activityApplyLink ?activityApplyLink ;
-        :location ?activityLocation ;
-        :contact ?activityContact ;
+        :applyLink ?activityApplyLink ;
+        :email ?activityEmail ;
+        :phone ?activityPhone ;
+        :session ?activitySession ;
+        :organisation ?activityOrganisation ;
         :cause ?activityCause ;
+    .
+
+    ?activitySession
+        :sessionApplyLink ?activitySessionApplyLink ;
+        :sessionDue ?activitySessionDue ;
+        :sessionEnd ?activitySessionEnd ;
     .
 
     ?activityOrganisation :label ?activityOrganisationLabel .
@@ -23,11 +30,6 @@ CONSTRUCT {
         :address ?address ;
         :latitude ?latitude ;
         :longitude ?longitude ;
-    .
-
-    ?activityContact
-        :email ?contactEmail ;
-        :phone ?contactPhone ;
     .
 
     ?activityCause :label ?causeLabel .
@@ -41,8 +43,10 @@ WHERE {
 
     ?activityOrganisation :label ?activityOrganisationLabel .
 
-    OPTIONAL { ?activity :activityDescription ?activityDescription . }
-    OPTIONAL { ?activity :activityApplyLink ?activityApplyLink . }
+    OPTIONAL { ?activity :description ?activityDescription . }
+    OPTIONAL { ?activity :applyLink ?activityApplyLink . }
+    OPTIONAL { ?activity :email ?activityEmail . }
+    OPTIONAL { ?activity :phone ?activityPhone . }
     OPTIONAL {
         ?activity :location ?activityLocation .
         OPTIONAL { ?activityLocation :locationType ?locationType . }
@@ -51,9 +55,11 @@ WHERE {
         OPTIONAL { ?activityLocation :longitude ?longitude . }
     }
     OPTIONAL {
-        ?activity :activityContact ?activityContact .
-        OPTIONAL { ?activityContact :email ?contactEmail . }
-        OPTIONAL { ?activityContact :phone ?contactPhone . }
+        ?activity :session ?activitySession .
+        OPTIONAL { ?activitySession :sessionApplyLink ?activitySessionApplyLink . }
+        OPTIONAL { ?activitySession :sessionDue ?activitySessionDue . }
+        OPTIONAL { ?activitySession :sessionEnd ?activitySessionEnd . }
+
     }
     OPTIONAL {
         ?activity :cause ?activityCause .
