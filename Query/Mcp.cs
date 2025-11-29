@@ -24,7 +24,10 @@ public static class Mcp
                     new Tool
                     {
                         Name = endpoint.Path,
+                        Title = endpoint.Name,
                         Description = $"""
+                            {endpoint.Description}
+
                             Underlying SPARQL query:
                             ```sparql
                             {endpoint.Sparql}
@@ -37,8 +40,14 @@ public static class Mcp
                                 p => p.Name,
                                 p => new JsonObject
                                 {
+                                    ["title"] = p.Name,
                                     ["type"] = p.JsonSchemaTypeNodeString,
-                                    ["description"] = $"Example value: {p.Example}",
+                                    ["description"] = $"""
+                                    {p.Description}
+                                    
+                                    Example value: {p.Example}
+                                    """,
+                                    
                                 } as JsonNode)!),
                         })
                     }

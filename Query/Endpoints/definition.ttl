@@ -3,34 +3,46 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 [
 	:path "activity" ;
+	:endpointName "ENDPOINT NAME ACTIVITY" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY" ;
 ] .
 
 [
 	:path "activity_all" ;
+	:endpointName "ENDPOINT NAME ACTIVITY_ALL" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY_ALL" ;
 ] .
 
 [
 	:path "activity_by_id" ;
+	:endpointName "ENDPOINT NAME ACTIVITY_BY_ID" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY_BY_ID" ;
 	:parameter [
-		:name "id" ;
+		:parameterName "id" ;
+		:parameterDescription "PARAMETER DESCRIPTION ID" ;
 		:example "68f792b0bf48f6d5969d0ead"
 	] ;
 ] .
 
 [
 	:path "activity_by_location" ;
+	:endpointName "ENDPOINT NAME ACTIVITY_BY_LOCATION" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY_BY_LOCATION" ;
 	:parameter [
-		:name "lat" ;
+		:parameterName "lat" ;
+		:parameterDescription "PARAMETER DESCRIPTION LAT" ;
 		:datatype xsd:double ;
 		:example "51.509"
 	] ;
 	:parameter [
-		:name "lon" ;
+		:parameterName "lon" ;
+		:parameterDescription "PARAMETER DESCRIPTION LON" ;
 		:datatype xsd:double ;
 		:example "-0.118"
 	] ;
 	:parameter [
-		:name "within" ;
+		:parameterName "within" ;
+		:parameterDescription "PARAMETER DESCRIPTION WITHIN" ;
 		:datatype xsd:integer ;
 		:example "10"
 	] ;
@@ -38,86 +50,121 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 [
 	:path "activity_by_name" ;
+	:endpointName "ENDPOINT NAME ACTIVITY_BY_NAME" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY_BY_NAME" ;
 	:parameter [
-		:name "name" ;
+		:parameterName "name" ;
+		:parameterDescription "PARAMETER DESCRIPTION NAME" ;
 		:example "Childbirth"
 	] ;
 ] .
 
 [
 	:path "activity_count" ;
+	:endpointName "ENDPOINT NAME ACTIVITY_COUNT" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY_COUNT" ;
 ] .
 
 [
 	:path "activity_list" ;
+	:endpointName "ENDPOINT NAME ACTIVITY_LIST" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY_LIST" ;
 ] .
 
 [
 	:path "activity_search" ;
+	:endpointName "ENDPOINT NAME ACTIVITY_SEARCH" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY_SEARCH" ;
 	:parameter [
-		:name "query" ;
+		:parameterName "query" ;
+		:parameterDescription "PARAMETER DESCRIPTION QUERY" ;
 		:example "biodiversity"
 	] ;
 ] .
 
 [
 	:path "all_apps" ;
+	:endpointName "ENDPOINT NAME ALL_APPS" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ALL_APPS" ;
 ] .
 
 [
 	:path "all_measurement_units" ;
+	:endpointName "ENDPOINT NAME ALL_MEASUREMENT_UNITS" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ALL_MEASUREMENT_UNITS" ;
 ] .
 
 [
 	:path "all_options" ;
+	:endpointName "ENDPOINT NAME ALL_OPTIONS" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ALL_OPTIONS" ;
 ] .
 
 [
 	:path "cause" ;
+	:endpointName "ENDPOINT NAME CAUSE" ;
+	:endpointDescription "ENDPOINT DESCRIPTION CAUSE" ;
 ] .
 
 [
 	:path "croissant" ;
+	:endpointName "ENDPOINT NAME CROISSANT" ;
+	:endpointDescription "ENDPOINT DESCRIPTION CROISSANT" ;
 ] .
 
 [
 	:path "describe" ;
+	:endpointName "ENDPOINT NAME DESCRIBE" ;
+	:endpointDescription "ENDPOINT DESCRIPTION DESCRIBE" ;
 	:parameter [
-		:name "id" ;
+		:parameterName "id" ;
+		:parameterDescription "PARAMETER DESCRIPTION ID" ;
 		:example "68f5406090268edd4a86435a"
 	] ;
 ] .
 
 [
 	:path "organisation" ;
+	:endpointName "ENDPOINT NAME ORGANISATION" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION" ;
 ] .
 
 [
 	:path "organisation_all" ;
+	:endpointName "ENDPOINT NAME ORGANISATION_ALL" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION_ALL" ;
 ] .
 
 [
 	:path "organisation_by_id" ;
+	:endpointName "ENDPOINT NAME ORGANISATION_BY_ID" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION_BY_ID" ;
 	:parameter [
-		:name "id" ;
+		:parameterName "id" ;
+		:parameterDescription "PARAMETER DESCRIPTION ID" ;
 		:example "68f53f8346b712131f0148e8"
 	] ;
 ] .
 
 [
 	:path "organisation_by_location" ;
+	:endpointName "ENDPOINT NAME ORGANISATION_BY_LOCATION" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION_BY_LOCATION" ;
 	:parameter [
-		:name "lat" ;
+		:parameterName "lat" ;
+		:parameterDescription "PARAMETER DESCRIPTION LAT" ;
 		:datatype xsd:double ;
 		:example "51.509"
 	] ;
 	:parameter [
-		:name "lon" ;
+		:parameterName "lon" ;
+		:parameterDescription "PARAMETER DESCRIPTION LON" ;
 		:datatype xsd:double ;
 		:example "-0.118"
 	] ;
 	:parameter [
-		:name "within" ;
+		:parameterName "within" ;
+		:parameterDescription "PARAMETER DESCRIPTION WITHIN" ;
 		:datatype xsd:integer ;
 		:example "10"
 	] ;
@@ -125,48 +172,52 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 [
 	:path "organisation_by_name" ;
+	:endpointName "ENDPOINT NAME ORGANISATION_BY_NAME" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION_BY_NAME" ;
 	:parameter [
-		:name "name" ;
+		:parameterName "name" ;
+		:parameterDescription "PARAMETER DESCRIPTION NAME" ;
 		:example "green~"
 	] ;
 ] .
 
 [
 	:path "organisation_count" ;
+	:endpointName "ENDPOINT NAME ORGANISATION_COUNT" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION_COUNT" ;
 ] .
 
 [
 	:path "organisation_list" ;
+	:endpointName "ENDPOINT NAME ORGANISATION_LIST" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION_LIST" ;
 ] .
 
 [
 	:path "organisation_search" ;
+	:endpointName "ENDPOINT NAME ORGANISATION_SEARCH" ;
+	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION_SEARCH" ;
 	:parameter [
-		:name "query" ;
+		:parameterName "query" ;
+		:parameterDescription "PARAMETER DESCRIPTION QUERY" ;
 		:example "network"
 	] ;
 ] .
 
 [
 	:path "requirement" ;
+	:endpointName "ENDPOINT NAME REQUIREMENT" ;
+	:endpointDescription "ENDPOINT DESCRIPTION REQUIREMENT" ;
 ] .
 
 [
 	:path "schema" ;
-] .
-
-[
-	:path "schema_by_class" ;
-	:parameter [
-		:name "class" ;
-		:example "Activity"
-	] ;
-] .
-
-[
-	:path "schema_classes" ;
+	:endpointName "ENDPOINT NAME SCHEMA" ;
+	:endpointDescription "ENDPOINT DESCRIPTION SCHEMA" ;
 ] .
 
 [
 	:path "taxonomy" ;
+	:endpointName "ENDPOINT NAME TAXONOMY" ;
+	:endpointDescription "ENDPOINT DESCRIPTION TAXONOMY" ;
 ] .

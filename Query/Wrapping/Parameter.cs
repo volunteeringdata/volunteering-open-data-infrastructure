@@ -13,7 +13,9 @@ internal class Parameter : GraphWrapperNode
 
     internal static Parameter Wrap(GraphWrapperNode node) => Wrap(node, node.Graph);
 
-    internal string Name { get => this.Singular(Vocabulary.Name, ValueMappings.As<string>); }
+    internal string Name { get => this.Singular(Vocabulary.ParameterName, ValueMappings.As<string>); }
+ 
+    internal string Description { get => this.Singular(Vocabulary.ParameterDescription, ValueMappings.As<string>); }
 
     private Uri? DatatypeInternal { get => this.Singular(Vocabulary.Datatype, ValueMappings.As<Uri>); }
 

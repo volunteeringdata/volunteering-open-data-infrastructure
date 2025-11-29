@@ -18,6 +18,10 @@ internal class Endpoint : GraphWrapperNode
 
     internal string Path { get => this.Singular(Vocabulary.Path, ValueMappings.As<string>); }
 
+    internal string Name { get => this.Singular(Vocabulary.EndpointName, ValueMappings.As<string>); }
+
+    internal string Description { get => this.Singular(Vocabulary.EndpointDescription, ValueMappings.As<string>); }
+
     internal ISet<Parameter> Parameters { get => this.Objects(Vocabulary.Parameter, Parameter.Wrap, Parameter.Wrap); }
 
     internal string Sparql

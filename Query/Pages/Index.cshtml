@@ -20,7 +20,7 @@
     @foreach (var endpoint in EndpointGraph.Instance.Endpoints)
     {
         <li>
-            <a href="/@endpoint.Link">@endpoint.Path</a>
+            <a href="/@endpoint.Link">@endpoint.Name (@endpoint.Description)</a>
         </li>
     }
 </ul>
