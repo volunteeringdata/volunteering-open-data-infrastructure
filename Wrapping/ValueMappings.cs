@@ -26,6 +26,13 @@ public static class ValueMappings
 
     public static Uri UriFromStringLiteral(GraphWrapperNode? node) => new((node as ILiteralNode).Value);
 
+    public static string? StringFromUri(GraphWrapperNode subject) => subject switch
+    {
+        null => null,
+        IUriNode { NodeType: NodeType.Uri } uriNode => uriNode.Uri.ToString(),
+        _ => throw new InvalidCastException(), // TODO: describe
+    };
+
     public static DateTimeOffset DateTimeOffsetFromStringLiteral(GraphWrapperNode? node) => DateTimeOffset.Parse((node as ILiteralNode).Value);
 
     public static IGraph? GraphFromGraphLiteral(GraphWrapperNode? node) => (node as IGraphLiteralNode)?.SubGraph;

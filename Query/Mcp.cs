@@ -1,16 +1,17 @@
 ﻿using ModelContextProtocol.Protocol;
 using ModelContextProtocol.Server;
 using Query.Services;
+using Query.Wrapping;
+using System.Text.Json;
 using System.Text.Json.Nodes;
 using VDS.RDF;
-using VDS.RDF.Parsing;
 using VDS.RDF.Query;
 using VDS.RDF.Writing;
 using StringWriter = VDS.RDF.Writing.StringWriter;
 
 namespace Query;
 
-public static partial class Mcp
+public static class Mcp
 {
     private static readonly IRdfWriter graphWriter = new CompressingTurtleWriter();
     private static readonly ISparqlResultsWriter sparqlWriter = new SparqlHtmlWriter();
@@ -18,40 +19,30 @@ public static partial class Mcp
     internal static async ValueTask<ListToolsResult> ListTools(RequestContext<ListToolsRequestParams> _, CancellationToken ct) =>
         new()
         {
-            Tools = (await Task.WhenAll(Endpoints.Names
-                .Select(static name => new
-                {
-                    Name = name,
-                    Parameters = Endpoints.ParameterMapping.TryGetValue(name, out var endpoint) ?
-                        endpoint.Parameters :
-                        []
-                })
-                .Select(async endpoint =>
-                {
-                    var sparqlText = await Endpoints.Sparql(endpoint.Name, ct);
-
-                    return new Tool
+            Tools = EndpointGraph.Instance.Endpoints
+                .Select(static endpoint =>
+                    new Tool
                     {
-                        Name = endpoint.Name,
+                        Name = endpoint.Path,
                         Description = $"""
                             Underlying SPARQL query:
                             ```sparql
-                            {sparqlText}
+                            {endpoint.Sparql}
                             ```
                             """,
-                        InputSchema = System.Text.Json.JsonSerializer.SerializeToElement(new
+                        InputSchema = JsonSerializer.SerializeToElement(new
                         {
                             type = "object",
                             properties = new JsonObject(endpoint.Parameters.ToDictionary(
                                 p => p.Name,
                                 p => new JsonObject
                                 {
-                                    ["type"] = AsJsonSchemaType(p.Datatype),
+                                    ["type"] = p.JsonSchemaTypeNodeString,
                                     ["description"] = $"Example value: {p.Example}",
                                 } as JsonNode)!),
                         })
-                    };
-                })))
+                    }
+                )
             .ToList()
         };
 
@@ -62,7 +53,7 @@ public static partial class Mcp
                 new TextContentBlock {
                     Text = Serialize(
                         await context.Services!.GetRequiredService<QueryService>().ExecuteNamedQueryAsync(
-                            context.Params!.Name,
+                            EndpointGraph.Instance[context.Params.Name],
                             context.Params.Arguments!.ToDictionary(
                                 x => x.Key,
                                 x => x.Value.GetString()!
@@ -73,16 +64,6 @@ public static partial class Mcp
                 }
             ]
         };
-
-    private static string AsJsonSchemaType(string datatype) => datatype switch
-    {
-        XmlSpecsHelper.XmlSchemaDataTypeInteger or
-        XmlSpecsHelper.XmlSchemaDataTypeDouble => "number",
-
-        XmlSpecsHelper.XmlSchemaDataTypeString => "string",
-
-        _ => throw new Exception($"unknown literal parameter datatype {datatype}")
-    };
 
     private static string Serialize(object? result)
     {

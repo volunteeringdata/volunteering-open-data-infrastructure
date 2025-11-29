@@ -1,0 +1,172 @@
+﻿PREFIX : <urn:named-query:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+[
+	:path "activity" ;
+] .
+
+[
+	:path "activity_all" ;
+] .
+
+[
+	:path "activity_by_id" ;
+	:parameter [
+		:name "id" ;
+		:example "68f792b0bf48f6d5969d0ead"
+	] ;
+] .
+
+[
+	:path "activity_by_location" ;
+	:parameter [
+		:name "lat" ;
+		:datatype xsd:double ;
+		:example "51.509"
+	] ;
+	:parameter [
+		:name "lon" ;
+		:datatype xsd:double ;
+		:example "-0.118"
+	] ;
+	:parameter [
+		:name "within" ;
+		:datatype xsd:integer ;
+		:example "10"
+	] ;
+] .
+
+[
+	:path "activity_by_name" ;
+	:parameter [
+		:name "name" ;
+		:example "Childbirth"
+	] ;
+] .
+
+[
+	:path "activity_count" ;
+] .
+
+[
+	:path "activity_list" ;
+] .
+
+[
+	:path "activity_search" ;
+	:parameter [
+		:name "query" ;
+		:example "biodiversity"
+	] ;
+] .
+
+[
+	:path "all_apps" ;
+] .
+
+[
+	:path "all_measurement_units" ;
+] .
+
+[
+	:path "all_options" ;
+] .
+
+[
+	:path "cause" ;
+] .
+
+[
+	:path "croissant" ;
+] .
+
+[
+	:path "describe" ;
+	:parameter [
+		:name "id" ;
+		:example "68f5406090268edd4a86435a"
+	] ;
+] .
+
+[
+	:path "organisation" ;
+] .
+
+[
+	:path "organisation_all" ;
+] .
+
+[
+	:path "organisation_by_id" ;
+	:parameter [
+		:name "id" ;
+		:example "68f53f8346b712131f0148e8"
+	] ;
+] .
+
+[
+	:path "organisation_by_location" ;
+	:parameter [
+		:name "lat" ;
+		:datatype xsd:double ;
+		:example "51.509"
+	] ;
+	:parameter [
+		:name "lon" ;
+		:datatype xsd:double ;
+		:example "-0.118"
+	] ;
+	:parameter [
+		:name "within" ;
+		:datatype xsd:integer ;
+		:example "10"
+	] ;
+] .
+
+[
+	:path "organisation_by_name" ;
+	:parameter [
+		:name "name" ;
+		:example "green~"
+	] ;
+] .
+
+[
+	:path "organisation_count" ;
+] .
+
+[
+	:path "organisation_list" ;
+] .
+
+[
+	:path "organisation_search" ;
+	:parameter [
+		:name "query" ;
+		:example "network"
+	] ;
+] .
+
+[
+	:path "requirement" ;
+] .
+
+[
+	:path "schema" ;
+] .
+
+[
+	:path "schema_by_class" ;
+	:parameter [
+		:name "class" ;
+		:example "Activity"
+	] ;
+] .
+
+[
+	:path "schema_classes" ;
+] .
+
+[
+	:path "taxonomy" ;
+] .

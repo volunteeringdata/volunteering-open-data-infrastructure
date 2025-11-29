@@ -1,4 +1,5 @@
 ﻿@page
+@using Query.Wrapping
 @{
     ViewBag.Title = "[home]";
 }
@@ -16,13 +17,10 @@
     <li>
         <a href="openapi.json">OpenAPI definition</a>
     </li>
-    @foreach (var endpointName in Endpoints.Names)
+    @foreach (var endpoint in EndpointGraph.Instance.Endpoints)
     {
-        var parameters = Endpoints.ParameterMapping.TryGetValue(endpointName, out var endpoint) ? endpoint.Parameters : [];
-        var endpointLink = QueryHelpers.AddQueryString($"{endpointName}.html", parameters.ToDictionary(parameter => parameter.Name!, parameter => parameter.Example));
-
         <li>
-            <a href="/@endpointLink">@endpointName</a>
+            <a href="/@endpoint.Link">@endpoint.Path</a>
         </li>
     }
 </ul>

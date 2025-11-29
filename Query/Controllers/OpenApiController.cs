@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi;
+using Query.Wrapping;
 using System.Text.Json.Nodes;
 using VDS.RDF;
 using VDS.RDF.Parsing;
@@ -55,12 +56,9 @@ public partial class OpenApiController() : ControllerBase
     {
         var paths = new OpenApiPaths();
 
-        foreach (var endpointName in Endpoints.Names)
+        foreach (var endpoint in EndpointGraph.Instance.Endpoints)
         {
-            Endpoints.ParameterMapping.TryGetValue(endpointName, out var endpoint);
-
-            var sparqlText = await Endpoints.Sparql(endpointName, ct);
-            var sparqlQuery = new SparqlQueryParser().ParseFromString(sparqlText);
+            var sparqlQuery = new SparqlQueryParser().ParseFromString(endpoint.Sparql);
             var responses = new OpenApiResponses
             {
                 ["200"] = sparqlQuery.QueryType switch
@@ -82,14 +80,14 @@ public partial class OpenApiController() : ControllerBase
                         Description = $"""
                             Underlying SPARQL query:
                             ```sparql
-                            {sparqlText}
+                            {endpoint.Sparql}
                             ```
                             """,
                         Parameters = endpoint is null ? [] : [.. endpoint.Parameters.Select(p => new OpenApiParameter {
                                 Name = p.Name,
                                 In = ParameterLocation.Query,
                                 Schema = new OpenApiSchema {
-                                    Type = AsJsonSchemaType(p),
+                                    Type = p.JsonSchemaType,
                                 },
                                 Required = true,
                                 Example = JsonValue.Create(p.Example),
@@ -99,19 +97,9 @@ public partial class OpenApiController() : ControllerBase
                 }
             };
 
-            paths.Add($"/{endpointName}", pathItem);
+            paths.Add($"/{endpoint.Path}", pathItem);
         }
 
         return paths;
     }
-
-    private static JsonSchemaType AsJsonSchemaType(Param param) => param.Datatype switch
-    {
-        XmlSpecsHelper.XmlSchemaDataTypeInteger or
-        XmlSpecsHelper.XmlSchemaDataTypeDouble => JsonSchemaType.Number,
-
-        XmlSpecsHelper.XmlSchemaDataTypeString => JsonSchemaType.String,
-
-        _ => throw new Exception($"unknown literal parameter datatype {param.Datatype}")
-    };
 }

@@ -3,17 +3,17 @@ using VDS.RDF.Parsing;
 
 namespace VDS.RDF.Wrapping;
 
-internal static class Extensions
+public static class Extensions
 {
-    internal static GraphWrapperNode In(this INode node, IGraph graph) => node switch
+    public static GraphWrapperNode In(this INode node, IGraph graph) => node switch
     {
         GraphWrapperNode { Graph: var otherGraph } nodeWithGraph when ReferenceEquals(otherGraph, graph) => nodeWithGraph,
         _ => new(node, graph),
     };
 
-    internal static IEnumerable<GraphWrapperNode> In(this IEnumerable<INode> nodes, IGraph graph) => nodes.Select(node => node.In(graph));
+    public static IEnumerable<GraphWrapperNode> In(this IEnumerable<INode> nodes, IGraph graph) => nodes.Select(node => node.In(graph));
 
-    internal static object? AsObject(this INode node) =>
+    public static object? AsObject(this INode node) =>
         node.AsValuedNode() switch
         {
             null => null,
