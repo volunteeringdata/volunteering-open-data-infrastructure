@@ -3,46 +3,46 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 [
 	:path "activity" ;
-	:endpointName "ENDPOINT NAME ACTIVITY" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY" ;
+	:endpointName "All activities" ;
+	:endpointDescription "List of volunteering activity identifiers and their labels" ;
 ] .
 
 [
 	:path "activity_all" ;
-	:endpointName "ENDPOINT NAME ACTIVITY_ALL" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY_ALL" ;
+	:endpointName "All activities with details" ;
+	:endpointDescription "List of all volunteering activities with all available details" ;
 ] .
 
 [
 	:path "activity_by_id" ;
-	:endpointName "ENDPOINT NAME ACTIVITY_BY_ID" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY_BY_ID" ;
+	:endpointName "Specific identified activity with details" ;
+	:endpointDescription "A single volunteering activity with all available details" ;
 	:parameter [
 		:parameterName "id" ;
-		:parameterDescription "PARAMETER DESCRIPTION ID" ;
+		:parameterDescription "The identifier of the activity to retrieve. Should be the local part of the full URI of the activity. E.g. for an activity with URI http://example.com/1234, use just the last part: 1234" ;
 		:example "68f792b0bf48f6d5969d0ead"
 	] ;
 ] .
 
 [
 	:path "activity_by_location" ;
-	:endpointName "ENDPOINT NAME ACTIVITY_BY_LOCATION" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY_BY_LOCATION" ;
+	:endpointName "Activities near location" ;
+	:endpointDescription "List of volunteering activities with sessions that are located within a certain distance from a certain geographical point" ;
 	:parameter [
 		:parameterName "lat" ;
-		:parameterDescription "PARAMETER DESCRIPTION LAT" ;
+		:parameterDescription "The latitude of the point to search around" ;
 		:datatype xsd:double ;
 		:example "51.509"
 	] ;
 	:parameter [
 		:parameterName "lon" ;
-		:parameterDescription "PARAMETER DESCRIPTION LON" ;
+		:parameterDescription "The longitude of the point to search around" ;
 		:datatype xsd:double ;
 		:example "-0.118"
 	] ;
 	:parameter [
 		:parameterName "within" ;
-		:parameterDescription "PARAMETER DESCRIPTION WITHIN" ;
+		:parameterDescription "The distance in metres within which to search" ;
 		:datatype xsd:integer ;
 		:example "10"
 	] ;
@@ -50,121 +50,121 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 [
 	:path "activity_by_name" ;
-	:endpointName "ENDPOINT NAME ACTIVITY_BY_NAME" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY_BY_NAME" ;
+	:endpointName "Activities with matching names" ;
+	:endpointDescription "List of volunteering activities whose label matches the given name" ;
 	:parameter [
 		:parameterName "name" ;
-		:parameterDescription "PARAMETER DESCRIPTION NAME" ;
+		:parameterDescription "The search query to match activity labels against. A Lucene query string." ;
 		:example "Childbirth"
 	] ;
 ] .
 
 [
 	:path "activity_count" ;
-	:endpointName "ENDPOINT NAME ACTIVITY_COUNT" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY_COUNT" ;
+	:endpointName "Activity count" ;
+	:endpointDescription "Number of volunteering activities in the system" ;
 ] .
 
 [
 	:path "activity_list" ;
-	:endpointName "ENDPOINT NAME ACTIVITY_LIST" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY_LIST" ;
+	:endpointName "Activity list" ;
+	:endpointDescription "Simple list of all volunteering activity identifiers" ;
 ] .
 
 [
 	:path "activity_search" ;
-	:endpointName "ENDPOINT NAME ACTIVITY_SEARCH" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ACTIVITY_SEARCH" ;
+	:endpointName "Activity search" ;
+	:endpointDescription "List of identifiers and labels of activity whose label or description match the given search query, sorted by descending order of relevance" ;
 	:parameter [
 		:parameterName "query" ;
-		:parameterDescription "PARAMETER DESCRIPTION QUERY" ;
+		:parameterDescription "The search query to match activities against. A Lucene query string." ;
 		:example "biodiversity"
 	] ;
 ] .
 
 [
 	:path "all_apps" ;
-	:endpointName "ENDPOINT NAME ALL_APPS" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ALL_APPS" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 ] .
 
 [
 	:path "all_measurement_units" ;
-	:endpointName "ENDPOINT NAME ALL_MEASUREMENT_UNITS" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ALL_MEASUREMENT_UNITS" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 ] .
 
 [
 	:path "all_options" ;
-	:endpointName "ENDPOINT NAME ALL_OPTIONS" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ALL_OPTIONS" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 ] .
 
 [
 	:path "cause" ;
-	:endpointName "ENDPOINT NAME CAUSE" ;
-	:endpointDescription "ENDPOINT DESCRIPTION CAUSE" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 ] .
 
 [
 	:path "croissant" ;
-	:endpointName "ENDPOINT NAME CROISSANT" ;
-	:endpointDescription "ENDPOINT DESCRIPTION CROISSANT" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 ] .
 
 [
 	:path "describe" ;
-	:endpointName "ENDPOINT NAME DESCRIBE" ;
-	:endpointDescription "ENDPOINT DESCRIPTION DESCRIBE" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 	:parameter [
 		:parameterName "id" ;
-		:parameterDescription "PARAMETER DESCRIPTION ID" ;
+		:parameterDescription "TODO: Write" ;
 		:example "68f5406090268edd4a86435a"
 	] ;
 ] .
 
 [
 	:path "organisation" ;
-	:endpointName "ENDPOINT NAME ORGANISATION" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 ] .
 
 [
 	:path "organisation_all" ;
-	:endpointName "ENDPOINT NAME ORGANISATION_ALL" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION_ALL" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 ] .
 
 [
 	:path "organisation_by_id" ;
-	:endpointName "ENDPOINT NAME ORGANISATION_BY_ID" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION_BY_ID" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 	:parameter [
 		:parameterName "id" ;
-		:parameterDescription "PARAMETER DESCRIPTION ID" ;
+		:parameterDescription "TODO: Write" ;
 		:example "68f53f8346b712131f0148e8"
 	] ;
 ] .
 
 [
 	:path "organisation_by_location" ;
-	:endpointName "ENDPOINT NAME ORGANISATION_BY_LOCATION" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION_BY_LOCATION" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 	:parameter [
 		:parameterName "lat" ;
-		:parameterDescription "PARAMETER DESCRIPTION LAT" ;
+		:parameterDescription "TODO: Write" ;
 		:datatype xsd:double ;
 		:example "51.509"
 	] ;
 	:parameter [
 		:parameterName "lon" ;
-		:parameterDescription "PARAMETER DESCRIPTION LON" ;
+		:parameterDescription "TODO: Write" ;
 		:datatype xsd:double ;
 		:example "-0.118"
 	] ;
 	:parameter [
 		:parameterName "within" ;
-		:parameterDescription "PARAMETER DESCRIPTION WITHIN" ;
+		:parameterDescription "TODO: Write" ;
 		:datatype xsd:integer ;
 		:example "10"
 	] ;
@@ -172,52 +172,52 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 [
 	:path "organisation_by_name" ;
-	:endpointName "ENDPOINT NAME ORGANISATION_BY_NAME" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION_BY_NAME" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 	:parameter [
 		:parameterName "name" ;
-		:parameterDescription "PARAMETER DESCRIPTION NAME" ;
+		:parameterDescription "TODO: Write" ;
 		:example "green~"
 	] ;
 ] .
 
 [
 	:path "organisation_count" ;
-	:endpointName "ENDPOINT NAME ORGANISATION_COUNT" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION_COUNT" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 ] .
 
 [
 	:path "organisation_list" ;
-	:endpointName "ENDPOINT NAME ORGANISATION_LIST" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION_LIST" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 ] .
 
 [
 	:path "organisation_search" ;
-	:endpointName "ENDPOINT NAME ORGANISATION_SEARCH" ;
-	:endpointDescription "ENDPOINT DESCRIPTION ORGANISATION_SEARCH" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 	:parameter [
 		:parameterName "query" ;
-		:parameterDescription "PARAMETER DESCRIPTION QUERY" ;
+		:parameterDescription "TODO: Write" ;
 		:example "network"
 	] ;
 ] .
 
 [
 	:path "requirement" ;
-	:endpointName "ENDPOINT NAME REQUIREMENT" ;
-	:endpointDescription "ENDPOINT DESCRIPTION REQUIREMENT" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 ] .
 
 [
 	:path "schema" ;
-	:endpointName "ENDPOINT NAME SCHEMA" ;
-	:endpointDescription "ENDPOINT DESCRIPTION SCHEMA" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 ] .
 
 [
 	:path "taxonomy" ;
-	:endpointName "ENDPOINT NAME TAXONOMY" ;
-	:endpointDescription "ENDPOINT DESCRIPTION TAXONOMY" ;
+	:endpointName "TODO: Write" ;
+	:endpointDescription "TODO: Write" ;
 ] .
