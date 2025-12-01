@@ -44,7 +44,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		:parameterName "within" ;
 		:parameterDescription "The distance in metres within which to search" ;
 		:datatype xsd:integer ;
-		:example "10"
+		:example "1000"
 	] ;
 ] .
 

@@ -1,25 +1,29 @@
-BASE <https://id.volunteeringdata.io/>
-PREFIX : <https://id.volunteeringdata.io/schema/>
-PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/>
-PREFIX spatialF: <http://jena.apache.org/function/spatial#>
+BASE                    <https://id.volunteeringdata.io/>
 
-SELECT ?name ?distance {
+PREFIX id:              <https://id.volunteeringdata.io/>
+PREFIX :                <https://id.volunteeringdata.io/schema/>
+
+PREFIX units:           <http://www.opengis.net/def/uom/OGC/1.0/>
+PREFIX spatialF:        <http://jena.apache.org/function/spatial#>
+prefix xsd:             <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?activity_id ?activity_name ?activity_latitude ?activity_longitude (xsd:integer(?activity_distance_from_search_location) as ?activity_distance_from_search_location_in_metres) {
     ?session
         :sessionLocation ?location ;
     .
 
     ?location 
-        :latitude ?orgLat ;
-        :longitude ?orgLon ;
+        :latitude ?activity_latitude ;
+        :longitude ?activity_longitude ;
     .
-        
-    BIND(spatialF:convertLatLon(?orgLat, ?orgLon) as ?orgLocation)
-    BIND(spatialF:convertLatLon($lat, $lon) as ?myLocation)
 
-    FILTER(spatialF:nearby(?orgLocation, ?myLocation, $within, units:kilometer))
+    BIND(spatialF:convertLatLon(?activity_latitude, ?activity_longitude) as ?activity_location)
+    BIND(spatialF:convertLatLon($lat, $lon) as ?search_location)
 
-    BIND(spatialF:distance(?orgLocation, ?myLocation, units:kilometer) as ?distance)
+    FILTER(spatialF:nearby(?activity_location, ?search_location, $within, units:metre))
 
-    ?activity :activitySession ?session ; :label ?name ;
+    BIND(spatialF:distance(?activity_location, ?search_location, units:metre) as ?activity_distance_from_search_location)
+
+    ?activity_id :activitySession ?session ; :label ?activity_name ;
 }
-ORDER BY ?distance
+ORDER BY ?activity_distance_from_search_location

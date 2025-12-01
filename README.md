@@ -93,7 +93,7 @@ The `secrets.json` file should look like this:
 ```json
 {
   "QueryService": {
-    "SparqlEndpointUri": "https://openvolunteeringdata-edd0h6d2dwcaa8br.uksouth-01.azurewebsites.net/sparql"
+    "SparqlEndpointUri": "https://sparql.volunteeringdata.io/sparql"
   }
 }
 ```
