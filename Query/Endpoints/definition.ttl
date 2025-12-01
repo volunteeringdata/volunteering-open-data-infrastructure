@@ -84,38 +84,38 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 [
 	:path "all_apps" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "All apps" ;
+	:endpointDescription "" ;
 ] .
 
 [
 	:path "all_measurement_units" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "All measurment units" ;
+	:endpointDescription "" ;
 ] .
 
 [
 	:path "all_options" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "All options" ;
+	:endpointDescription "" ;
 ] .
 
 [
 	:path "cause" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "Cause" ;
+	:endpointDescription "" ;
 ] .
 
 [
 	:path "croissant" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "Croissant" ;
+	:endpointDescription "" ;
 ] .
 
 [
 	:path "describe" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "Give a concise bounded description of a single identified thing" ;
+	:endpointDescription "" ;
 	:parameter [
 		:parameterName "id" ;
 		:parameterDescription "TODO: Write" ;
@@ -126,98 +126,98 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 [
 	:path "organisation" ;
 	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointDescription "" ;
 ] .
 
 [
 	:path "organisation_all" ;
 	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointDescription "" ;
 ] .
 
 [
 	:path "organisation_by_id" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "Organisation by identifier" ;
+	:endpointDescription "" ;
 	:parameter [
 		:parameterName "id" ;
-		:parameterDescription "TODO: Write" ;
+		:parameterDescription "The identifier of the activity to retrieve. Should be the local part of the full URI of the activity. E.g. for an activity with URI http://example.com/1234, use just the last part: 1234" ;
 		:example "68f53f8346b712131f0148e8"
 	] ;
 ] .
 
 [
 	:path "organisation_by_location" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "Organisations near location" ;
+	:endpointDescription "List of volunteering organisations with activities with sessions that are located within a certain distance from a certain geographical point" ;
 	:parameter [
 		:parameterName "lat" ;
-		:parameterDescription "TODO: Write" ;
+		:parameterDescription "The latitude of the point to search around" ;
 		:datatype xsd:double ;
 		:example "51.509"
 	] ;
 	:parameter [
 		:parameterName "lon" ;
-		:parameterDescription "TODO: Write" ;
+		:parameterDescription "The longitude of the point to search around" ;
 		:datatype xsd:double ;
 		:example "-0.118"
 	] ;
 	:parameter [
 		:parameterName "within" ;
-		:parameterDescription "TODO: Write" ;
+		:parameterDescription "The distance in metres within which to search" ;
 		:datatype xsd:integer ;
-		:example "10"
+		:example "1000"
 	] ;
 ] .
 
 [
 	:path "organisation_by_name" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "Organisation by name" ;
+	:endpointDescription "" ;
 	:parameter [
 		:parameterName "name" ;
-		:parameterDescription "TODO: Write" ;
+		:parameterDescription "The name of the organisation to find" ;
 		:example "green~"
 	] ;
 ] .
 
 [
 	:path "organisation_count" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "Count of organisations" ;
+	:endpointDescription "" ;
 ] .
 
 [
 	:path "organisation_list" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "List of all organisations" ;
+	:endpointDescription "" ;
 ] .
 
 [
 	:path "organisation_search" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "Organisation search" ;
+	:endpointDescription "" ;
 	:parameter [
 		:parameterName "query" ;
-		:parameterDescription "TODO: Write" ;
+		:parameterDescription "The query to search organisations by" ;
 		:example "network"
 	] ;
 ] .
 
 [
 	:path "requirement" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "Requirement" ;
+	:endpointDescription "" ;
 ] .
 
 [
 	:path "schema" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "Schema" ;
+	:endpointDescription "Data model / ontology" ;
 ] .
 
 [
 	:path "taxonomy" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "TODO: Write" ;
+	:endpointName "Taxonomy" ;
+	:endpointDescription "Categories / concept scheme" ;
 ] .
