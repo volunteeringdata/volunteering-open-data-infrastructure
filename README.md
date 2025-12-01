@@ -151,12 +151,19 @@ Taxonomy:
 - https://api.volunteeringdata.io/requirement
 
 
+# License
+
+This work is [licensed under MIT](./LICENSE.md).
+
+`SPDX-License-Identifier: MIT`
+
+
 ---------------------------------
 ---------------------------------
 
 # TODO
 
-Enable CORS.
+Enable CORS:
 - Test CORS is correctly configured for our purpose (MCP, API)
 
 IO optimisation:
@@ -192,9 +199,6 @@ Search:
 - Improve geo location search (GeoSPARQL Query not supported)
 - Improve Lucene indexing
 
-
-# License
-
-This work is [licensed under MIT](./LICENSE.md).
-
-`SPDX-License-Identifier: MIT`
+Endpoints modeling:
+- Improve response formats of endpoints
+- Improve OpenAPI description
