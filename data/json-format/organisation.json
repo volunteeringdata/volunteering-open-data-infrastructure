@@ -20,6 +20,7 @@
             "location": [
                 {
                     "id": "",
+                    "locationLabel": "",
                     "locationType": "",
                     "address": "",
                     "latitude": "",

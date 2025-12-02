@@ -97,14 +97,6 @@ id:schema
     rdfs:comment "Any session related to a volunteering activity."@en ;
 .
 
-:ActivitySystem
-    a owl:Class ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subClassOf :System, :ActivityThing ;
-    rdfs:label "Activity System"@en ;
-    rdfs:comment "Any system related to a volunteering activity."@en ;
-.
-
 ### Session Subclasses
 :SessionThing
     a owl:Class ;
@@ -240,46 +232,6 @@ id:schema
     rdfs:label "session has activity"@en ;
 .
 
-:activitySystem
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy id:schema ;
-    rdfs:subPropertyOf :system ;
-    owl:inverseOf :systemActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivitySystem ;
-    rdfs:label "activity has system"@en ;
-.
-
-:systemActivity
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :activity ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :activitySystem ;
-    rdfs:domain :ActivitySystem ;
-    rdfs:range :Activity ;
-    rdfs:label "system has activity"@en ;
-.
-
-:activityTime
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :time ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :timeActivity ;
-    rdfs:domain :Activity ;
-    rdfs:range :ActivityTime ;
-    rdfs:label "activity has time"@en ;
-.
-
-:timeActivity
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf :time ;
-    rdfs:isDefinedBy id:schema ;
-    owl:inverseOf :activityTime ;
-    rdfs:domain :ActivityTime ;
-    rdfs:range :Activity ;
-    rdfs:label "time has activity"@en ;
-.
-
 ### Session
 :sessionLocation
     a owl:ObjectProperty ;
@@ -299,6 +251,26 @@ id:schema
     rdfs:domain :SessionLocation ;
     rdfs:range :Session ;
     rdfs:label "location has session"@en ;
+.
+
+:sessionTime
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :time ;
+    owl:inverseOf :timeSession ;
+    rdfs:domain :Session ;
+    rdfs:range :SessionTime ;
+    rdfs:label "session has time"@en ;
+.
+
+:timeSession
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :session ;
+    owl:inverseOf :timeSession ;
+    rdfs:domain :SessionTime ;
+    rdfs:range :Session ;
+    rdfs:label "time has session"@en ;
 .
 
 ### Organisation
@@ -417,6 +389,14 @@ id:schema
     rdfs:isDefinedBy id:schema ;
     rdfs:subPropertyOf :label ;
     rdfs:domain :Activity ;
+    rdfs:label "has label"@en ;
+.
+
+:locationLabel
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy id:schema ;
+    rdfs:subPropertyOf :label ;
+    rdfs:domain :Location ;
     rdfs:label "has label"@en ;
 .
 
