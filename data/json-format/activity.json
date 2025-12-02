@@ -4,6 +4,7 @@
         {
             "id": "",
             "type": "Activity",
+            "label": "",
             "description": "",
             "organisation": "",
             "allowsRemoteParticipation": "",
