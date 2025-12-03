@@ -82,23 +82,23 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	] ;
 ] .
 
-[
-	:path "all_apps" ;
-	:endpointName "All apps" ;
-	:endpointDescription "" ;
-] .
+# [
+# 	:path "all_apps" ;
+# 	:endpointName "All apps" ;
+# 	:endpointDescription "" ;
+# ] .
 
-[
-	:path "all_measurement_units" ;
-	:endpointName "All measurment units" ;
-	:endpointDescription "" ;
-] .
+# [
+# 	:path "all_measurement_units" ;
+# 	:endpointName "All measurment units" ;
+# 	:endpointDescription "" ;
+# ] .
 
-[
-	:path "all_options" ;
-	:endpointName "All options" ;
-	:endpointDescription "" ;
-] .
+# [
+# 	:path "all_options" ;
+# 	:endpointName "All options" ;
+# 	:endpointDescription "" ;
+# ] .
 
 [
 	:path "cause" ;
