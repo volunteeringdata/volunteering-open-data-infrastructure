@@ -9,8 +9,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 [
 	:path "activity_all" ;
-	:endpointName "All activities with details" ;
-	:endpointDescription "List of all volunteering activities with all available details" ;
+	:endpointName "All activities data" ;
+	:endpointDescription "List of all volunteering activities with all available details, that is, all the data associated with volunteering activities" ;
 ] .
 
 [
@@ -103,36 +103,36 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 [
 	:path "cause" ;
 	:endpointName "Cause" ;
-	:endpointDescription "" ;
+	:endpointDescription "List of charitable causes that can be linked to volunteering activities and volunteer involving organisations" ;
 ] .
 
-[
-	:path "croissant" ;
-	:endpointName "Croissant" ;
-	:endpointDescription "" ;
-] .
+# [
+# 	:path "croissant" ;
+# 	:endpointName "Croissant" ;
+# 	:endpointDescription "" ;
+# ] .
 
 [
 	:path "describe" ;
-	:endpointName "Give a concise bounded description of a single identified thing" ;
-	:endpointDescription "" ;
+	:endpointName "Describe resource" ;
+	:endpointDescription "Gives a concise bounded description of a single identified thing, that is, all the details attached to one identifier, without traversing to details of other linked identifiers" ;
 	:parameter [
 		:parameterName "id" ;
-		:parameterDescription "TODO: Write" ;
+		:parameterDescription "The identifier of something in the system" ;
 		:example "68f5406090268edd4a86435a"
 	] ;
 ] .
 
 [
 	:path "organisation" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "" ;
+	:endpointName "All organisations" ;
+	:endpointDescription "List of volunteering involving organisations identifiers and their labels" ;
 ] .
 
 [
 	:path "organisation_all" ;
-	:endpointName "TODO: Write" ;
-	:endpointDescription "" ;
+	:endpointName "All organisations data" ;
+	:endpointDescription "All volunteering involving organisations with details, that is, all the data associated with VIOs" ;
 ] .
 
 [
@@ -173,7 +173,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 [
 	:path "organisation_by_name" ;
 	:endpointName "Organisation by name" ;
-	:endpointDescription "" ;
+	:endpointDescription "List of volunteering involving organisations whose label matches the given name" ;
 	:parameter [
 		:parameterName "name" ;
 		:parameterDescription "The name of the organisation to find" ;
@@ -184,19 +184,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 [
 	:path "organisation_count" ;
 	:endpointName "Count of organisations" ;
-	:endpointDescription "" ;
+	:endpointDescription "Number of volunteering involving organisations in the system" ;
 ] .
 
 [
 	:path "organisation_list" ;
 	:endpointName "List of all organisations" ;
-	:endpointDescription "" ;
+	:endpointDescription "Simple list of all volunteer involving organisations identifiers" ;
 ] .
 
 [
 	:path "organisation_search" ;
 	:endpointName "Organisation search" ;
-	:endpointDescription "" ;
+	:endpointDescription "List of identifiers and labels of organisations whose label, description or purpose match the given search query, sorted by descending order of relevance" ;
 	:parameter [
 		:parameterName "query" ;
 		:parameterDescription "The query to search organisations by" ;
@@ -207,17 +207,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 [
 	:path "requirement" ;
 	:endpointName "Requirement" ;
-	:endpointDescription "" ;
+	:endpointDescription "List of requirements that can be linked to volunteering activities and volunteer involving organisations" ;
 ] .
 
 [
 	:path "schema" ;
 	:endpointName "Schema" ;
-	:endpointDescription "Data model / ontology" ;
+	:endpointDescription "The Volunteering and Social Action Data Model / Ontology. A vocabulary to describe volunteering activities, volunteer-involving organisations and volunteering management systems." ;
 ] .
 
 [
 	:path "taxonomy" ;
 	:endpointName "Taxonomy" ;
-	:endpointDescription "Categories / concept scheme" ;
+	:endpointDescription "Categories and concepts related to volunteering activities." ;
 ] .
