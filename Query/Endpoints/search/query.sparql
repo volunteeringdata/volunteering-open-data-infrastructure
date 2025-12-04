@@ -1,0 +1,31 @@
+PREFIX : <https://id.volunteeringdata.io/schema/>
+PREFIX text: <http://jena.apache.org/text#>
+
+CONSTRUCT {
+	?activity
+		:activityLabel ?activityLabel ;
+		:activityDescription ?activityDescription ;
+		:activityOrganisation ?organisation ;
+	.
+
+	?organisation 
+		:organisationLabel ?organisationLabel ;
+		:organisationDescription ?organisationDescription ;
+	.
+}
+WHERE {
+	(?activity ?activity_search_score) text:query (:activityDescription :activityLabel $activityQuery) .
+	(?organisation ?organisation_search_score) text:query (:organisationDescription :organisationLabel $organisationQuery) .
+
+	?activity
+		:activityLabel ?activityLabel ;
+		:activityDescription ?activityDescription ;
+		:activityOrganisation ?organisation ;
+	.
+
+	?organisation 
+		:organisationLabel ?organisationLabel ;
+		:organisationDescription ?organisationDescription ;
+	.
+}
+ORDER BY DESC(?activity_score) DESC(?organisation_score)

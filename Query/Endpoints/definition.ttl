@@ -221,3 +221,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	:endpointName "Taxonomy" ;
 	:endpointDescription "Categories and concepts related to volunteering activities." ;
 ] .
+
+[
+	:path "search" ;
+	:endpointName "Search" ;
+	:endpointDescription "Free text search in activities and organisations" ;
+	:parameter [
+		:parameterName "activityQuery" ;
+		:parameterDescription "The search query for activities" ;
+		:datatype xsd:string ;
+		:example "training"
+	] ;
+	:parameter [
+		:parameterName "organisationQuery" ;
+		:parameterDescription "The search query for organisations" ;
+		:datatype xsd:string ;
+		:example "community"
+	] ;
+] .
