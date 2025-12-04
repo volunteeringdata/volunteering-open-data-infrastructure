@@ -27,11 +27,6 @@ public static class Mcp
                         Title = endpoint.Name,
                         Description = $"""
                             {endpoint.Description}
-
-                            Underlying SPARQL query:
-                            ```sparql
-                            {endpoint.Sparql}
-                            ```
                             """,
                         InputSchema = JsonSerializer.SerializeToElement(new
                         {

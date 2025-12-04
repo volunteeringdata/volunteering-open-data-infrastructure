@@ -35,7 +35,8 @@ builder.Services.AddSingleton<QueryService>();
 builder.Services.AddMcpServer()
     .WithHttpTransport()
     .WithListToolsHandler(Mcp.ListTools)
-    .WithCallToolHandler(Mcp.CallTool);
+    .WithCallToolHandler(Mcp.CallTool)
+    .WithTools<EchoTool>();
 
 builder.Services.AddCors();
 
