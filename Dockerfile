@@ -133,6 +133,14 @@ ENV \
     FUSEKI_DIR="${FUSEKI_DIR}"          \
     JENA_HOME="${JENA_DIR}"
 
+ADD ./data/teamkinetic/organisations.jsonld .
+
+RUN $JENA_HOME/bin/tdb2.tdbloader --loc $DATABASE organisations.jsonld
+
+ADD ./data/teamkinetic/activities.jsonld .
+
+RUN $JENA_HOME/bin/tdb2.tdbloader --loc $DATABASE activities.jsonld
+
 ADD ./data/doit/data.ttl .
 
 RUN $JENA_HOME/bin/tdb2.tdbloader --loc $DATABASE data.ttl
