@@ -14,13 +14,11 @@
             "phone": "",
             "session": [
                 {
-                    "id": "",
                     "applyLink": "",
                     "email": "",
                     "phone": "",
                     "location": [
                         {
-                            "id": "",
                             "locationLabel": "",
                             "locationType": "",
                             "address": "",
@@ -30,7 +28,6 @@
                     ],
                     "time": [
                         {
-                            "id": "",
                             "beginning": "",
                             "end": ""
                         }
