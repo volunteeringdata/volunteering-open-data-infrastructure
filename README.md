@@ -5,17 +5,16 @@ This repository holds code for modeling and accessing open data for volunteering
 
 ## Data Model
 
-1. [Volunteering data model repository](https://github.com/volunteeringdata/data-model)
-1. [Data Model Classes Visualisation](https://service.tib.eu/webvowl/#iri=https://api.volunteeringdata.io/schema_classes.ttl)
-1. 
+1. [Volunteering Data Model](https://model.volunteeringdata.io/)
+1. [Data Model Visualisation](https://service.tib.eu/webvowl/#opts=doc=0;filter_sco=true;mode_compact=true;iri=https://service.tib.eu/webvowl/#iri=https://api.volunteeringdata.io/schema.ttl)
 
 
 ## API
 
-1. [OpenAPI description document](https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/openapi.json)
-1. [Swagger UI](https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/swagger)
-1. [JSON-LD context document](https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/context/v1)
-1. [SPARQL UI](https://query20251112104247-h6affebdd4gfa4bs.uksouth-01.azurewebsites.net/sparql)
+1. [OpenAPI description document](https://api.volunteeringdata.io/openapi.json)
+1. [Swagger UI](https://api.volunteeringdata.io/swagger)
+1. [JSON-LD context document](https://api.volunteeringdata.io/context/v1)
+1. [SPARQL UI](https://api.volunteeringdata.io/sparql)
 
 
 ## How To
